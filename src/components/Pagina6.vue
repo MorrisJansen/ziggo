@@ -1,0 +1,173 @@
+<template>
+
+  <center>
+    <div class="overkoepelende-container">
+  <div class="container-center-horizontal">
+    <div class="pagina-6 screen">
+      <div class="overlap-group3-2">
+        <div class="rectangle-30-2"></div>
+        <img class="samsung-1-2" :src="samsung1" alt="Samsung 1" />
+        <div class="background-2"></div>
+        <frame1 />
+        <img
+          class="jouw-postcode-is-goedgekeurd"
+          :src="jouwPostcodeIsGoedgekeurd"
+          alt="Jouw postcode is goedgekeurd!"
+        /><img class="bolcom-bon-1-2" :src="bolcomBon1" alt="bolcom-bon 1" /><img
+          class="image-2-2"
+          :src="image2"
+          alt="image 2"
+        /><group1 :text1="group11Props.text1" :className="group11Props.className" />
+        <group1 :text1="group12Props.text1" :className="group12Props.className" />
+        <group1 :text1="group13Props.text1" :className="group13Props.className" />
+        <img
+          class="defaultoutlinetick-circle"
+          src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/default-outline-tick-circle.svg"
+          alt="default/outline/tick-circle"
+        />
+        <frame1000004784
+          :group="frame1000004784Props.group"
+          :className="frame1000004784Props.className"
+          :group116046944Props="frame1000004784Props.group116046944Props"
+        />
+      </div>
+      <img
+        class="line-2-2"
+        src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/line-2.svg"
+        alt="Line 2"
+      />
+      <p class="meervoordeelnl-is-2 diodrumcyrillic-regular-normal-silver-16px" v-html="meervoordeelNlIs"></p>
+    </div>
+  </div>
+</div>
+</center>
+
+</template>
+
+<script>
+import Frame1 from "./Frame1";
+import Group1 from "./Group1";
+import Frame1000004784 from "./Frame1000004784";
+export default {
+  name: "Pagina6",
+  components: {
+    Frame1,
+    Group1,
+    Frame1000004784,
+  },
+  props: [
+    "samsung1",
+    "jouwPostcodeIsGoedgekeurd",
+    "bolcomBon1",
+    "image2",
+    "meervoordeelNlIs",
+    "group11Props",
+    "group12Props",
+    "group13Props",
+    "frame1000004784Props",
+  ],
+  mounted() {
+    // Start a 3-second timer
+    setTimeout(() => {
+      // Redirect to /pagina-5 after 3 seconds
+      this.$router.push("/pagina-5");
+    }, 3000);
+  },
+};
+</script>
+
+<style lang="sass">
+@import '../../variables'
+
+
+
+.overkoepelende-container
+  max-width: 100vw
+  min-width: 100vw
+  overflow-y: hidden
+
+
+.pagina-6
+  align-items: center
+  background-color: $white
+  display: flex
+  flex-direction: column
+  height: 1274px
+  overflow: hidden
+  width: 1920px
+
+.overlap-group3-2
+  height: 1049px
+  margin-right: 5.0px
+  position: relative
+  width: 1925px
+
+.rectangle-30-2
+  background: linear-gradient(180deg, rgb(7, 33, 72) 0%, rgb(64, 165, 159) 100%)
+  height: 830px
+  left: 5px
+  position: absolute
+  top: 138px
+  width: 1920px
+
+.samsung-1-2
+  height: 493px
+  left: 1029px
+  position: absolute
+  top: 231px
+  width: 764px
+
+.background-2
+  background-color: $white
+  border-radius: 12px
+  box-shadow: 0px 31px 81px #00104c33
+  height: 395px
+  left: 151px
+  position: absolute
+  top: 329px
+  width: 968px
+
+.jouw-postcode-is-goedgekeurd
+  height: 32px
+  left: 389px
+  position: absolute
+  top: 427px
+  width: 490px
+
+.bolcom-bon-1-2
+  height: 308px
+  left: 1119px
+  position: absolute
+  top: 604px
+  width: 441px
+
+.image-2-2
+  height: 596px
+  left: 1193px
+  position: absolute
+  top: 453px
+  width: 568px
+
+.defaultoutlinetick-circle
+  height: 119px
+  left: 575px
+  position: absolute
+  top: 510px
+  width: 119px
+
+.line-2-2
+  height: 1px
+  margin-left: 1.0px
+  margin-top: 114px
+  object-fit: cover
+  width: 1751px
+
+.meervoordeelnl-is-2
+  letter-spacing: 0
+  line-height: 24px
+  margin-right: 14.0px
+  margin-top: 23px
+  min-height: 48px
+  text-align: center
+  width: 874px
+</style>

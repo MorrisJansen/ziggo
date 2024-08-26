@@ -1,0 +1,196 @@
+<template>
+  <center>
+    <div class="overkoepelende-container">
+
+
+  <div class="container-center-horizontal">
+    <div class="pagina-4 screen">
+      <div class="overlap-group3-5">
+        <div class="rectangle-30-5"></div>
+        <img class="samsung-1-5" :src="samsung1" alt="Samsung 1" />
+        <div class="background-5"></div>
+        <div class="frame-1-6">
+          <img class="pagina-9" :src="pagina9" alt="Pagina 9" /><img class="image-6-6" :src="image6" alt="image 6" />
+        </div>
+        <img
+          class="meervoordeelnl-check"
+          :src="meervoordeelNlChecktNuOfJijKansMaak"
+          alt="Meervoordeel.nl checkt nu of jij kans maakt op de prijs..."
+        /><img class="bolcom-bon-1-5" :src="bolcomBon1" alt="bolcom-bon 1" /><img
+          class="image-2-5"
+          :src="image2"
+          alt="image 2"
+        /><img
+          class="loading-sign-1"
+          src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/loading-sign-1.svg"
+          alt="loading-sign 1"
+        />
+        <group1 :text1="group11Props.text1" :className="group11Props.className" />
+        <group1 :text1="group12Props.text1" :className="group12Props.className" />
+        <group1 :text1="group13Props.text1" :className="group13Props.className" />
+        <frame1000004784
+          :group="frame1000004784Props.group"
+          :group116046944Props="frame1000004784Props.group116046944Props"
+        />
+      </div>
+      <img
+        class="line-2-5"
+        src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/line-2.svg"
+        alt="Line 2"
+      />
+      <p class="meervoordeelnl-is-5 diodrumcyrillic-regular-normal-silver-16px" v-html="meervoordeelNlIs"></p>
+    </div>
+  </div>
+</div>
+
+</center>
+</template>
+
+<script>
+import Group1 from "./Group1";
+import Frame1000004784 from "./Frame1000004784";
+export default {
+  name: "Pagina4",
+  components: {
+    Group1,
+    Frame1000004784,
+  },
+  props: [
+    "samsung1",
+    "pagina9",
+    "image6",
+    "meervoordeelNlChecktNuOfJijKansMaak",
+    "bolcomBon1",
+    "image2",
+    "meervoordeelNlIs",
+    "group11Props",
+    "group12Props",
+    "group13Props",
+    "frame1000004784Props",
+  ],
+  mounted() {
+    // Start a 3-second timer
+    setTimeout(() => {
+      // Redirect to /pagina-5 after 3 seconds
+      this.$router.push("/pagina-6");
+    }, 3000);
+  },
+};
+</script>
+
+<style lang="sass">
+@import '../../variables'
+
+.overkoepelende-container
+  min-width: 100vw
+  max-width: 100vw
+  overflow-x: hidden
+
+.pagina-4
+  align-items: center
+  background-color: $white
+  display: flex
+  flex-direction: column
+  height: 1274px
+  width: 1920px
+
+.overlap-group3-5
+  height: 1049px
+  position: relative
+  width: 1920px
+
+.rectangle-30-5
+  background: linear-gradient(180deg, rgb(7, 33, 72) 0%, rgb(64, 165, 159) 100%)
+  height: 830px
+  left: 0
+  position: absolute
+  top: 138px
+  width: 1920px
+
+.samsung-1-5
+  height: 493px
+  left: 1024px
+  position: absolute
+  top: 231px
+  width: 764px
+
+.background-5
+  background-color: $white
+  border-radius: 12px
+  box-shadow: 0px 31px 81px #00104c33
+  height: 395px
+  left: 146px
+  position: absolute
+  top: 329px
+  width: 968px
+
+.frame-1-6
+  align-items: center
+  background-color: $white
+  box-shadow: 0px 5px 39px #00000014
+  display: flex
+  gap: 9997px
+  height: 138px
+  left: 0
+  overflow: hidden
+  position: absolute
+  top: 0
+  width: 1920px
+
+.pagina-9
+  align-self: flex-end
+  height: 1274px
+  margin-bottom: -3141.63px
+  margin-left: -10248px
+  width: 1920px
+
+.image-6-6
+  height: 60px
+  margin-bottom: 0.06px
+  object-fit: cover
+  width: 99px
+
+.meervoordeelnl-check
+  height: 85px
+  left: 381px
+  position: absolute
+  top: 427px
+  width: 499px
+
+.bolcom-bon-1-5
+  height: 308px
+  left: 1114px
+  position: absolute
+  top: 604px
+  width: 441px
+
+.image-2-5
+  height: 596px
+  left: 1188px
+  position: absolute
+  top: 453px
+  width: 568px
+
+.loading-sign-1
+  height: 94px
+  left: 583px
+  position: absolute
+  top: 557px
+  width: 94px
+
+.line-2-5
+  height: 1px
+  margin-left: 1.0px
+  margin-top: 114px
+  object-fit: cover
+  width: 1751px
+
+.meervoordeelnl-is-5
+  letter-spacing: 0
+  line-height: 24px
+  margin-right: 14.0px
+  margin-top: 23px
+  min-height: 48px
+  text-align: center
+  width: 874px
+</style>
