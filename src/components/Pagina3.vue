@@ -36,6 +36,13 @@ export default {
     this.chosenProduct = antwoordenLijst[antwoordenLijst.length - 2] || 'geen basta gekozen';
     console.log('Gekozen product:', this.chosenProduct);
     localStorage.setItem('antwoorden', JSON.stringify(antwoordenLijst));
+
+    // Voeg een event listener toe voor de Enter-toets
+    window.addEventListener('keydown', this.handleKeyDown);
+  },
+  beforeDestroy() {
+    // Verwijder de event listener om geheugenlekken te voorkomen
+    window.removeEventListener('keydown', this.handleKeyDown);
   },
   methods: {
     validatePostcode(postcode) {
@@ -47,11 +54,21 @@ export default {
       if (this.validatePostcode(inputValue)) {
         this.postcodeError = ''; // Reset de foutmelding
         console.log("Postcode is geldig:", inputValue);
+        
+        // Sla de postcode op in localStorage
+        localStorage.setItem('postcode', inputValue);
+
         // Hier kun je doorgaan naar de volgende pagina
         this.$router.push('/pagina-4'); // Navigeer naar de volgende pagina
       } else {
         this.postcodeError = 'Voer een geldige postcode in (bijv. 2222 AB)'; // Zet de foutmelding
         console.log("Postcode is ongeldig:", inputValue);
+      }
+    },
+    handleKeyDown(event) {
+      // Controleer of de Enter-toets is ingedrukt
+      if (event.key === 'Enter') {
+        this.checkPostcode(); // Roep de checkPostcode methode aan
       }
     }
   }
@@ -143,7 +160,8 @@ export default {
 .invisible-button
   background: transparent
   border: none
-  
+  width: 100%
+
 
 
 .overkoepelende-container 

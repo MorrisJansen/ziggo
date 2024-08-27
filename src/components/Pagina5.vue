@@ -1,5 +1,3 @@
-
-
 <script>
 import Frame1 from "./Frame1";
 import Frame1000004784 from "./Frame1000004784";
@@ -31,25 +29,87 @@ export default {
   data() {
     return {
       chosenProduct: '',
-      voornaam: '', // Zorg ervoor dat deze leeg is
-      achternaam: '', // Zorg ervoor dat deze leeg is
-      email: '', // Zorg ervoor dat deze leeg is
-      telefoonnummer: '', // Zorg ervoor dat deze leeg is
+      voornaam: '',
+      achternaam: '',
+      email: '',
+      telefoonnummer: '',
     };
   },
   mounted() {
     // Haal de antwoorden op uit localStorage
     const antwoordenLijst = JSON.parse(localStorage.getItem('antwoorden')) || [];
-
-    // Log het om te controleren wat je hebt opgehaald
-    console.log('Antwoordenlijst op Pagina 5:', antwoordenLijst); 
-
-    // Toewijzen van het gekozen product
     this.chosenProduct = antwoordenLijst[antwoordenLijst.length - 2] || 'geen product gekozen';
-    console.log('Gekozen product:', this.chosenProduct);
+  },
+  methods: {
+    async submitForm() {
+
+      const antwoordenLijst = JSON.parse(localStorage.getItem('antwoorden')) || [];
+      const gekozenProductId = this.getProductId(this.chosenProduct);
+      const gekozenMerkId = this.getMerkId(antwoordenLijst);
+
+      // Configuratie voor de API-aanroep
+      const url = 'https://leadgen.republish.nl/api/sponsors/2410/leads';
+      const username = '199';
+      const password = 'b41c7c41c8d595fbd66dea6a4f70836fbc5e3afe';
+      const authHeader = 'Basic ' + btoa(`${username}:${password}`);
+      
+      const data = {
+        language: 'nl_NL',
+        publisher_id: 'morris de publisher :)',
+        site_custom_url: 'https://ziggoprijswinnnen.nl',
+        site_custom_name: 'ziggo prijs winnen',
+        ip: '123.45.67.89', // een voorbeeld van een IP-adres
+        optin_timestamp: new Date().toISOString().slice(0, 19).replace('T', ' '),
+        firstname: this.voornaam,
+        lastname: this.achternaam,
+        email: this.email,
+        phone_number: this.telefoonnummer,
+        answers: [5269, gekozenProductId, gekozenMerkId]
+      };
+
+      try {
+        const response = await fetch(url, {
+          method: 'POST',
+          headers: {
+            'Authorization': authHeader,
+            'Content-Type': 'application/json; charset=utf-8'
+          },
+          body: JSON.stringify(data)
+        });
+
+        if (response.ok) {
+          console.log('Lead succesvol verstuurd.');
+          // Eventueel een succesmelding of redirect hier
+        } else {
+          console.error('Fout bij versturen van lead:', await response.text());
+        }
+      } catch (error) {
+        console.error('Netwerk- of serverfout:', error);
+      }
+    },
+    getProductId(product) {
+      const productMap = {
+        'SAMSUNG 60" TV': 5284,
+        'Playstation 5 Slim Disk': 5287,
+        'Bol.com cadeaubon t.w.v. €400': 5290
+      };
+      return productMap[product] || null;
+    },
+    getMerkId(antwoordenLijst) {
+      const merkMap = {
+        'Odido': 5272,
+        'KPN': 5275,
+        'Ziggo': 5278,
+        'Anders': 5281
+      };
+      for (let antwoord of antwoordenLijst) {
+        if (merkMap[antwoord]) {
+          return merkMap[antwoord];
+        }
+      }
+      return null;
+    }
   }
-
-
 };
 </script>
 
@@ -137,12 +197,17 @@ export default {
           <!-- dit is de knop -->
           <div class="frame-427320570">
             <div class="frame-2-1">
-              <div class="bevestig-mijn-deelname diodrumcyrillic-normal-white-23-7px">{{ bevestigMijnDeelname }}</div>
-              <img
-                class="right-arrow-4"
-                src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/rightarrow-4.svg"
-                alt="rightArrow"
-              />
+
+              <button class="frame-2-1 invisible-button" @click="submitForm">
+                <div class="bevestig-mijn-deelname diodrumcyrillic-normal-white-23-7px">{{ bevestigMijnDeelname }}</div>
+                <img
+                  class="right-arrow-4"
+                  src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/rightarrow-4.svg"
+                  alt="rightArrow"
+                />
+              </button>
+              
+
             </div>
           </div>
 
