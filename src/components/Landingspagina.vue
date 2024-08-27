@@ -37,6 +37,12 @@ export default {
     "group42Props",
     "frame1000004784Props",
   ],
+  async navigateToNextPage() {
+      const isValid = await this.validateAddress();
+      if (!isValid) return;
+
+      this.$router.push('/pagina-1');
+    },
 };
 </script>
 
@@ -67,16 +73,19 @@ export default {
 
 
         <!-- dit is de button -->
-         <a href="/pagina-1">
-        <div class="frame-427320541">
-          <div class="doe-nu-mee diodrumcyrillic-normal-white-23-7px">Doe nu mee</div>
-          <img
-            class="right-arrow"
-            src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/rightarrow.svg"
-            alt="rightArrow"
-          />
-        </div>
-        </a>
+         <button @click="navigateToNextPage">
+          <a href="/pagina-1">
+            <div class="frame-427320541">
+              <div class="doe-nu-mee diodrumcyrillic-normal-white-23-7px">Doe nu mee</div>
+              <img
+                class="right-arrow"
+                src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/rightarrow.svg"
+                alt="rightArrow"
+              />
+            </div>
+            </a>
+         </button>
+
 
 
 
