@@ -22,7 +22,7 @@ Vue.use(Router);
 
 export default new Router({
   mode: "history",
-  // base: "/ziggo/",
+  base: "/Ziggo/",
   routes: [
     {
       path: "/",
