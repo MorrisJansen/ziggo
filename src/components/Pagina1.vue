@@ -59,6 +59,7 @@ export default {
 </script>
 
 
+
 <template>
   <center>
     <div class="overkoepelende-container">
@@ -104,6 +105,8 @@ export default {
     </div>
   </center>
 </template>
+
+
 
 
 <style lang="sass">

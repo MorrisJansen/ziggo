@@ -19,9 +19,8 @@ import {
 } from "./data";
 
 Vue.use(Router);
-
 export default new Router({
-  mode: "history",
+  mode: "hash",  // Wijzig dit van "history" naar "hash"
   base: "/ziggo/",
   routes: [
     {
