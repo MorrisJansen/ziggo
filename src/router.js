@@ -56,8 +56,8 @@ export default new Router({
     },
     {
       path: "*",
-      component: Pagina1,
       props: { ...pagina1Data },
+      redirect: '/'
     },
   ],
 });
