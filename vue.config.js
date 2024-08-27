@@ -1,3 +1,7 @@
 module.exports = {
-  publicPath : './'
-}
+  publicPath: process.env.NODE_ENV === 'production' ? '/ziggo/' : '/',
+  configureWebpack: {
+    optimization: {
+      minimize: false
+    }
+  }};
