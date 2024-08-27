@@ -1,75 +1,9 @@
-<template>
-<center>
-  <div class="overkoepelende-container">
-
-
-  <div class="container-center-horizontal">
-    <div class="pagina-3 screen">
-      <div class="overlap-group3-4">
-        <div class="rectangle-30-4"></div>
-        <img class="samsung-1-4" :src="samsung1" alt="Samsung 1" />
-        <div class="background-4"></div>
-        <frame1 />
-        <div class="frame-427320545-2">
-          <img class="stap-3-van-3" :src="stap3Van3" alt="Stap 3 van 3" /><img
-            class="vul-je-postcode-in-e"
-            :src="vulJePostcodeInEnCheckOfJeKansMaakt"
-            alt="Vul je postcode in en check of je kans maakt op {jouw gekozen prijs}:"
-          />
-        </div>
-        <img class="bolcom-bon-1-4" :src="bolcomBon1" alt="bolcom-bon 1" /><img
-          class="image-2-4"
-          :src="image2"
-          alt="image 2"
-        />
-
-
-
-        <div class="frame-427320538">
-          <input 
-            type="text" 
-            class="x2000-ab-input" 
-            placeholder="Voer hier je waarde in"
-          />
-        </div>
-
-        <a href="/pagina-4">
-        <div class="frame-427320541-3">
-          <div class="check-mijn-postcode diodrumcyrillic-normal-white-23-7px">Check mijn postcode</div>
-          <img
-            class="right-arrow-3"
-            src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/rightarrow.svg"
-            alt="rightArrow"
-          />
-        </div>
-      </a>
-        <group1 :text1="group11Props.text1" :className="group11Props.className" />
-        <group1 :text1="group12Props.text1" :className="group12Props.className" />
-        <group1 :text1="group13Props.text1" :className="group13Props.className" />
-        <frame1000004784
-          :group="frame1000004784Props.group"
-          :group116046944Props="frame1000004784Props.group116046944Props"
-        />
-      </div>
-      <img
-        class="line-2-4"
-        src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/line-2.svg"
-        alt="Line 2"
-      />
-      
-      <p class="meervoordeelnl-is-4 diodrumcyrillic-regular-normal-silver-16px" v-html="meervoordeelNlIs"></p>
-    </div>
-  </div>
-</div>
-
-</center>
-
-</template>
-
 <script>
 import Frame1 from "./Frame1";
 import Group1 from "./Group1";
 import Frame1000004784 from "./Frame1000004784";
+import { getAntwoorden } from '../antwoorden';
+
 export default {
   name: "Pagina3",
   components: {
@@ -91,17 +25,152 @@ export default {
     "group13Props",
     "frame1000004784Props",
   ],
+  data() {
+    return {
+      chosenProduct: '',
+      postcodeError: '', // Foutmelding voor de postcode
+    };
+  },
+  mounted() {
+    const antwoordenLijst = getAntwoorden();
+    this.chosenProduct = antwoordenLijst[antwoordenLijst.length - 2] || 'geen basta gekozen';
+    console.log('Gekozen product:', this.chosenProduct);
+    localStorage.setItem('antwoorden', JSON.stringify(antwoordenLijst));
+  },
+  methods: {
+    validatePostcode(postcode) {
+      const postcodeRegex = /^\d{4}[- ]?[a-zA-Z]{2}$/;
+      return postcodeRegex.test(postcode);
+    },
+    checkPostcode() {
+      const inputValue = this.$refs.postcodeInput.value; // Gebruik refs om toegang te krijgen tot het inputveld
+      if (this.validatePostcode(inputValue)) {
+        this.postcodeError = ''; // Reset de foutmelding
+        console.log("Postcode is geldig:", inputValue);
+        // Hier kun je doorgaan naar de volgende pagina
+        this.$router.push('/pagina-4'); // Navigeer naar de volgende pagina
+      } else {
+        this.postcodeError = 'Voer een geldige postcode in (bijv. 2222 AB)'; // Zet de foutmelding
+        console.log("Postcode is ongeldig:", inputValue);
+      }
+    }
+  }
 };
 </script>
 
+
+
+
+<template>
+  <center>
+    <div class="overkoepelende-container">
+      <div class="container-center-horizontal">
+        <div class="pagina-3 screen">
+          <div class="overlap-group3-4">
+            <div class="rectangle-30-4"></div>
+            <img class="samsung-1-4" :src="samsung1" alt="Samsung 1" />
+            <div class="background-4"></div>
+            <frame1 />
+            <div class="frame-427320545-2">
+              <img class="stap-3-van-3" :src="stap3Van3" alt="Stap 3 van 3" />
+
+              <p class="maak-kans-op">Vul je postcode in en check of je kans maakt op <span class="gekozen-product">{{ chosenProduct }}</span></p>
+
+            </div>
+            <img class="bolcom-bon-1-4" :src="bolcomBon1" alt="bolcom-bon 1" />
+            <img class="image-2-4" :src="image2" alt="image 2" />
+
+            <div class="frame-427320538">
+              <input 
+                type="text" 
+                class="x2000-ab-input" 
+                placeholder="Vul hier je postcode in"
+                ref="postcodeInput" 
+              />
+            </div>
+
+            <div class="frame-427320541-3">
+              <button @click="checkPostcode" class="invisible-button check-mijn-postcode diodrumcyrillic-normal-white-23-7px">Check mijn postcode</button>
+              <img
+                class="right-arrow-3"
+                src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/rightarrow.svg"
+                alt="rightArrow"
+              />
+            </div>
+
+            <p v-if="postcodeError" class="error-message-pagina-3">{{ postcodeError }}</p>
+
+            <group1 :text1="group11Props.text1" :className="group11Props.className" />
+            <group1 :text1="group12Props.text1" :className="group12Props.className" />
+            <group1 :text1="group13Props.text1" :className="group13Props.className" />
+            <frame1000004784
+              :group="frame1000004784Props.group"
+              :group116046944Props="frame1000004784Props.group116046944Props"
+            />
+          </div>
+          <img
+            class="line-2-4"
+            src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/line-2.svg"
+            alt="Line 2"
+          />
+          
+          <p class="meervoordeelnl-is-4 diodrumcyrillic-regular-normal-silver-16px" v-html="meervoordeelNlIs"></p>
+          <div>{{ chosenProduct }}</div>
+        </div>
+      </div>
+    </div>
+  </center>
+</template>
+
+
 <style lang="sass">
 @import '../../variables'
+
+
+.error-message-pagina-3
+  color: red
+  font-size: 26px
+  margin-top: 10px
+  text-align: center
+  z-index: 9999
+  position: relative
+  top: 665px
+  right: 470px
+  font-weight: 700
+  font-family: $font-family-diodrum_cyrillic-regular
+
+
+.invisible-button
+  background: transparent
+  border: none
+  
+
 
 .overkoepelende-container 
   max-width: 100vw
   max-height: 100vw
   overflow-x: hidden
 
+
+.maak-kans-op
+  font-size: 34px
+  max-width: 70%
+  text-align: start
+  color: #072249
+  font-family: $font-family-diodrum_cyrillic-regular
+  font-size: 2.1875rem
+  font-style: normal
+  font-weight: 700
+  line-height: 150%
+
+
+.gekozen-product
+  color: #F48C02
+  font-family: $font-family-diodrum_cyrillic-regular
+  font-size: 2.1875rem
+  font-style: normal
+  font-weight: 600
+  line-height: 150%
 
 
 .x2000-ab-input

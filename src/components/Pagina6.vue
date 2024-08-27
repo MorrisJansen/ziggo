@@ -48,6 +48,8 @@
 import Frame1 from "./Frame1";
 import Group1 from "./Group1";
 import Frame1000004784 from "./Frame1000004784";
+import { getAntwoorden } from '../antwoorden';
+
 export default {
   name: "Pagina6",
   components: {
@@ -66,6 +68,17 @@ export default {
     "group13Props",
     "frame1000004784Props",
   ],
+  data() {
+    return {
+      chosenProduct: '',
+    };
+  },
+  mounted() {
+    const antwoordenLijst = getAntwoorden();
+    // Toewijzen van het laatste antwoord aan chosenProduct
+    this.chosenProduct = antwoordenLijst[antwoordenLijst.length - 2] || 'geen basta gekozen';
+    console.log('Gekozen product:', this.chosenProduct);
+  },
   mounted() {
     // Start a 3-second timer
     setTimeout(() => {

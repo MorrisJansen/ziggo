@@ -1,11 +1,16 @@
 <template>
+  <a href="/">
   <div class="frame-1">
+    <a href="/">
     <img
       class="image-6"
       src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/image-6.png"
       alt="image 6"
     />
+  </a>
   </div>
+</a>
+
 </template>
 
 <script>
@@ -44,4 +49,5 @@ export default {
   margin-left: 1517px
   object-fit: cover
   width: 99px
+
 </style>

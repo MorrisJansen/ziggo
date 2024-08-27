@@ -7,6 +7,7 @@ import Pagina3 from "./components/Pagina3";
 import Pagina4 from "./components/Pagina4";
 import Pagina5 from "./components/Pagina5";
 import Pagina6 from "./components/Pagina6";
+import antwoorden from "./antwoorden.js";
 import {
   landingspaginaData,
   pagina1Data,
@@ -21,6 +22,7 @@ Vue.use(Router);
 
 export default new Router({
   mode: "history",
+  // base: "/ziggo/",
   routes: [
     {
       path: "/",

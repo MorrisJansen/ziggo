@@ -1,142 +1,40 @@
-<template>
-  <center>
-  <div class="overkoepelende-container">
 
-  <div class="container-center-horizontal">
-    <div class="pagina-2 screen">
-      <div class="overlap-group3-3">
-        <div class="overlap-group4">
-          <div class="rectangle-30-3"></div>
-          <img class="samsung-1-3" :src="samsung1" alt="Samsung 1" />
-          <div class="background-3"></div>
-          <frame1 />
-          <div class="frame-427320545-1">
-            <img class="frame-427320545-item-1" :src="stap2Van3" alt="Stap 2 van 3" /><img
-              class="frame-427320545-item-1"
-              :src="watIsJouwHuidigeProvider"
-              alt="Wat is jouw huidige provider?"
-            />
-          </div>
-          <img class="bolcom-bon-1-3" :src="bolcomBon1" alt="bolcom-bon 1" /><img
-            class="image-2-3"
-            :src="image2"
-            alt="image 2"
-          />
-
-
-
-          <a href="/pagina-3">
-          <div class="frame-427320541-2">
-            <p class="ga-naar-de-laatste-stap diodrumcyrillic-normal-white-23-7px">Ga naar de laatste stap</p>
-            <img
-              class="right-arrow-2"
-              src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/rightarrow.svg"
-              alt="rightArrow"
-            />
-          </div>
-        </a>
-
-
-
-          <group1 :text1="group11Props.text1" :className="group11Props.className" />
-          <group1 :text1="group12Props.text1" :className="group12Props.className" />
-          <group1 :text1="group13Props.text1" :className="group13Props.className" />
-          <frame1000004784
-            :group="frame1000004784Props.group"
-            :group116046944Props="frame1000004784Props.group116046944Props"
-          />
-
-        </div>
-
-
-
-        <div class="frame-427320542-1">
-          <div class="frame-2">
-            <div class="rectangle-40377"></div>
-            <div class="frame-107-1">
-              <input type="radio" id="ziggo" name="provider" value="Ziggo">
-              <label for="ziggo" class="label2">
-                <p class="ziggo diodrumcyrillic-regular-normal-downriver-25px">
-                <span class="pointer">
-                  Ziggo
-                </span>  
-                </p>
-              </label>
-            </div>
-          </div>
-          <div class="frame-2">
-            <div class="rectangle-40377"></div>
-            <div class="frame-107-1">
-              <input type="radio" id="anders" name="provider" value="Anders">
-              <label for="anders" class="label2">
-                <p class="anders diodrumcyrillic-regular-normal-downriver-25px">
-                  <span class="pointer">
-                    Anders
-                  </span>  
-                </p>
-              </label>
-            </div>
-          </div>
-        </div>
-        
-        <div class="frame-427320542-2">
-          <div class="frame-2">
-            <div class="rectangle-40377"></div>
-            <div class="frame-107-1">
-              <input type="radio" id="odido" name="provider" value="Odido">
-              <label for="odido" class="label2">
-                <p class="odido diodrumcyrillic-regular-normal-downriver-25px">
-                  <span class="pointer">
-                    Odido
-                  </span>  
-                </p>
-              </label>
-            </div>
-          </div>
-          <div class="frame-2">
-            <div class="rectangle-40377"></div>
-            <div class="frame-107-1">
-              <input type="radio" id="kpn" name="provider" value="KPN">
-              <label for="kpn" class="label2">
-                <p class="kpn diodrumcyrillic-regular-normal-downriver-25px">
-                  <span class="pointer">
-                    KPN
-                  </span>                   
-                </p>
-              </label>
-            </div>
-          </div>
-        </div>
-
-
-
-
-
-      </div>
-      <img
-        class="line-2-3"
-        src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/line-2.svg"
-        alt="Line 2"
-      />
-      <p class="meervoordeelnl-is-3 diodrumcyrillic-regular-normal-silver-16px" v-html="meervoordeelNlIs"></p>
-    </div>
-  </div>
-</div>
-</center>
-</template>
 
 <script>
 import Frame1 from "./Frame1";
 import Group1 from "./Group1";
 import Frame1000004784 from "./Frame1000004784";
-import RadioButtonSelected from "./RadioButtonSelected";
+import { addAntwoord, getAntwoorden } from '../antwoorden';
+
 export default {
   name: "Pagina2",
   components: {
     Frame1,
     Group1,
     Frame1000004784,
-    RadioButtonSelected,
+  },
+  data() {
+    return {
+      gekozenProduct: '',
+      gekozenProvider: '', // Nieuwe eigenschap voor de geselecteerde provider
+    };
+  },
+  mounted() {
+    const antwoordenLijst = getAntwoorden();
+    console.log('Alle antwoorden:', antwoordenLijst);
+  },
+  methods: {
+    selectProvider(event) {
+      this.gekozenProvider = event.target.value; // Sla de gekozen provider op
+    },
+    goToStep3() {
+      if (!this.gekozenProvider) {
+        alert('Kies alstublieft een provider voordat u doorgaat.'); // Waarschuwing als er geen provider is geselecteerd
+        return; // Stop de navigatie
+      }
+      addAntwoord(this.gekozenProvider);
+      this.$router.push({ path: '/pagina-3' }); // Navigeer naar Pagina 3
+    },
   },
   props: [
     "samsung1",
@@ -158,6 +56,113 @@ export default {
   ],
 };
 </script>
+
+
+
+<template>
+  <center>
+    <div class="overkoepelende-container">
+      <div class="container-center-horizontal">
+        <div class="pagina-2 screen">
+          <div class="overlap-group3-3">
+            <div class="overlap-group4">
+              <div class="rectangle-30-3"></div>
+              <img class="samsung-1-3" :src="samsung1" alt="Samsung 1" />
+              <div class="background-3"></div>
+              <frame1 />
+              <div class="frame-427320545-1">
+                <img class="frame-427320545-item-1" :src="stap2Van3" alt="Stap 2 van 3" />
+                <img
+                  class="frame-427320545-item-1"
+                  :src="watIsJouwHuidigeProvider"
+                  alt="Wat is jouw huidige provider?"
+                />
+              </div>
+              <img class="bolcom-bon-1-3" :src="bolcomBon1" alt="bolcom-bon 1" />
+              <img class="image-2-3" :src="image2" alt="image 2" />
+
+              <a href="/pagina-3" @click.prevent="goToStep3">
+                <div class="frame-427320541-2">
+                  <p class="ga-naar-de-laatste-stap diodrumcyrillic-normal-white-23-7px">Ga naar de laatste stap</p>
+                  <img
+                    class="right-arrow-2"
+                    src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/rightarrow.svg"
+                    alt="rightArrow"
+                  />
+                </div>
+              </a>
+
+              <group1 :text1="group11Props.text1" :className="group11Props.className" />
+              <group1 :text1="group12Props.text1" :className="group12Props.className" />
+              <group1 :text1="group13Props.text1" :className="group13Props.className" />
+              <frame1000004784
+                :group="frame1000004784Props.group"
+                :group116046944Props="frame1000004784Props.group116046944Props"
+              />
+            </div>
+
+            <div class="frame-427320542-1">
+              <div class="frame-2">
+                <div class="rectangle-40377"></div>
+                <div class="frame-107-1">
+                  <input type="radio" id="ziggo" name="provider" value="Ziggo" @change="selectProvider">
+                  <label for="ziggo" class="label2">
+                    <p class="ziggo diodrumcyrillic-regular-normal-downriver-25px">
+                      <span class="pointer">Ziggo</span>  
+                    </p>
+                  </label>
+                </div>
+              </div>
+              <div class="frame-2">
+                <div class="rectangle-40377"></div>
+                <div class="frame-107-1">
+                  <input type="radio" id="anders" name="provider" value="Anders" @change="selectProvider">
+                  <label for="anders" class="label2">
+                    <p class="anders diodrumcyrillic-regular-normal-downriver-25px">
+                      <span class="pointer">Anders</span>  
+                    </p>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="frame-427320542-2">
+              <div class="frame-2">
+                <div class="rectangle-40377"></div>
+                <div class="frame-107-1">
+                  <input type="radio" id="odido" name="provider" value="Odido" @change="selectProvider">
+                  <label for="odido" class="label2">
+                    <p class="odido diodrumcyrillic-regular-normal-downriver-25px">
+                      <span class="pointer">Odido</span>  
+                    </p>
+                  </label>
+                </div>
+              </div>
+              <div class="frame-2">
+                <div class="rectangle-40377"></div>
+                <div class="frame-107-1">
+                  <input type="radio" id="kpn" name="provider" value="KPN" @change="selectProvider">
+                  <label for="kpn" class="label2">
+                    <p class="kpn diodrumcyrillic-regular-normal-downriver-25px">
+                      <span class="pointer">KPN</span>                   
+                    </p>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <img
+            class="line-2-3"
+            src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/line-2.svg"
+            alt="Line 2"
+          />
+          <p class="meervoordeelnl-is-3 diodrumcyrillic-regular-normal-silver-16px" v-html="meervoordeelNlIs"></p>
+        </div>
+      </div>
+    </div>
+  </center>
+</template>
+
 
 <style lang="sass">
 @import '../../variables'

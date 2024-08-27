@@ -1,3 +1,63 @@
+
+
+<script>
+import Frame1 from "./Frame1";
+import Frame1000004784 from "./Frame1000004784";
+import { getAntwoorden } from '../antwoorden';
+
+export default {
+  name: "Pagina5",
+  components: {
+    Frame1,
+    Frame1000004784,
+  },
+  props: [
+    "hoeKunnenWijJouBereiken",
+    "layer21",
+    "layer22",
+    "layer23",
+    "group",
+    "bevestigMijnDeelname",
+    "metHetBevestigenV",
+    "gefeliciteerdJijMaaktNuKansOpDeGeko",
+    "image2",
+    "tWV",
+    "text19",
+    "jouwGekozenPrijs",
+    "playstation5SlimDisk",
+    "meervoordeelNlIs",
+    "frame1000004784Props",
+  ],
+  data() {
+    return {
+      chosenProduct: '',
+      voornaam: '', // Zorg ervoor dat deze leeg is
+      achternaam: '', // Zorg ervoor dat deze leeg is
+      email: '', // Zorg ervoor dat deze leeg is
+      telefoonnummer: '', // Zorg ervoor dat deze leeg is
+    };
+  },
+  mounted() {
+    // Haal de antwoorden op uit localStorage
+    const antwoordenLijst = JSON.parse(localStorage.getItem('antwoorden')) || [];
+
+    // Log het om te controleren wat je hebt opgehaald
+    console.log('Antwoordenlijst op Pagina 5:', antwoordenLijst); 
+
+    // Toewijzen van het gekozen product
+    this.chosenProduct = antwoordenLijst[antwoordenLijst.length - 2] || 'geen product gekozen';
+    console.log('Gekozen product:', this.chosenProduct);
+  }
+
+
+};
+</script>
+
+
+
+
+
+
 <template>
   <center>
     <div class="overkoepelende-container">
@@ -6,39 +66,75 @@
       <div class="overlap-group1">
         <div class="rectangle-30-6"></div>
         <div class="background-6"></div>
-        <p class="hoe-kunnen-wij-jou-bereiken">{{ hoeKunnenWijJouBereiken }}</p>
         <img
-          class="line-4"
-          src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/line-4.svg"
-          alt="Line 4"
-        />
+        class="line-4"
+        src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/line-4.svg"
+        alt="Line 4"
+      />
+        <p class="hoe-kunnen-wij-jou-bereiken">{{ hoeKunnenWijJouBereiken }}</p>
+
+
+
         <div class="frame-427320569">
-          <div class="frame-427320568">
-            <div class="frame-42732056">
-              <div class="frame-107-2">
-                <img class="layer-2" :src="layer21" alt="Layer 2" />
-                <div class="voornaam diodrumcyrillic-regular-normal-nobel-25px">{{ voornaam }}</div>
+
+          <form class="form-pagina5" @submit.prevent="submitForm">
+            <div class="name-group">
+              <div class="form-group">
+                <label for="voornaam"></label>
+                <img class="form-icoon" src="./naam-icoon.svg" alt="Naam Icon">
+                <input
+                  type="text"
+                  id="voornaam"
+                  v-model="voornaam"
+                  required
+                  placeholder="Vul je voornaam in"
+                />
+              </div>
+          
+              <div class="form-group">
+                <label for="achternaam"></label>
+                <img class="form-icoon" src="./naam-icoon.svg" alt="Achternaam Icon">
+                <input
+                  type="text"
+                  id="achternaam"
+                  v-model="achternaam"
+                  required
+                  placeholder="Vul je achternaam in"
+                />
               </div>
             </div>
-            <div class="frame-42732056">
-              <div class="frame-107-2">
-                <img class="layer-2" :src="layer22" alt="Layer 2" />
-                <div class="achternaam diodrumcyrillic-regular-normal-nobel-25px">{{ achternaam }}</div>
-              </div>
+          
+            <div class="form-group full-width">
+              <label for="email"></label>
+              <img class="form-icoon-2" src="./email-icoon.svg" alt="Email Icon">
+              <input
+                type="email"
+                id="email"
+                v-model="email"
+                required
+                placeholder="Vul je e-mailadres in"
+              />
             </div>
-          </div>
-          <div class="frame-42732056-1">
-            <div class="frame-107-2">
-              <img class="layer-2-1" :src="layer23" alt="Layer 2" />
-              <div class="e-mailadres diodrumcyrillic-regular-normal-nobel-25px">{{ eMailadres }}</div>
+          
+            <div class="form-group full-width">
+              <label for="telefoonnummer"></label>
+              <img class="form-icoon-2" src="./tel-nummer-icoon.svg" alt="Telefoonnummer Icon">
+              <input
+                type="tel"
+                id="telefoonnummer"
+                v-model="telefoonnummer"
+                required
+                placeholder="Vul je telefoonnummer in"
+              />
             </div>
-          </div>
-          <div class="frame-42732056-1">
-            <div class="frame-107-3">
-              <img class="group-13" :src="group" alt="Group" />
-              <div class="telefoonnummer diodrumcyrillic-regular-normal-nobel-25px">{{ telefoonnummer }}</div>
-            </div>
-          </div>
+          </form>
+          
+          
+
+
+
+
+          <!-- dit is de knop -->
           <div class="frame-427320570">
             <div class="frame-2-1">
               <div class="bevestig-mijn-deelname diodrumcyrillic-normal-white-23-7px">{{ bevestigMijnDeelname }}</div>
@@ -49,14 +145,29 @@
               />
             </div>
           </div>
+
+
+
+          <!-- tekst onder knop -->
           <p class="met-het-bevestigen-v">{{ metHetBevestigenV }}</p>
         </div>
         <frame1 />
-        <img
+
+
+
+        <p class="gewonnen"><span class="gefeliciteerd">Gefeliciteerd!<br></span> Jij maakt nu kans op de <span class="gekozen-prijs">{{ chosenProduct }}</span></p>
+        
+        <!-- <img
           class="gefeliciteerd-jij-ma"
           :src="gefeliciteerdJijMaaktNuKansOpDeGeko"
           alt="Gefeliciteerd! Jij maakt nu kans op de {gekozen prijs}."
-        /><img class="image-2-6" :src="image2" alt="image 2" />
+        /> -->
+        
+        
+        <img class="image-2-6" :src="image2" alt="image 2" />
+        
+        
+        
         <div class="group-2-6">
           <div class="overlap-group-2">
             <div class="twv-18">{{ tWV }}</div>
@@ -88,46 +199,111 @@
 
 </template>
 
-<script>
-import Frame1 from "./Frame1";
-import Frame1000004784 from "./Frame1000004784";
-export default {
-  name: "Pagina5",
-  components: {
-    Frame1,
-    Frame1000004784,
-  },
-  props: [
-    "hoeKunnenWijJouBereiken",
-    "layer21",
-    "voornaam",
-    "layer22",
-    "achternaam",
-    "layer23",
-    "eMailadres",
-    "group",
-    "telefoonnummer",
-    "bevestigMijnDeelname",
-    "metHetBevestigenV",
-    "gefeliciteerdJijMaaktNuKansOpDeGeko",
-    "image2",
-    "tWV",
-    "text19",
-    "jouwGekozenPrijs",
-    "playstation5SlimDisk",
-    "meervoordeelNlIs",
-    "frame1000004784Props",
-  ],
-};
-</script>
-
 <style lang="sass">
 @import '../../variables'
+
+
+
+
+
+.form-pagina5
+  width: 100%
+
+.form-group
+  display: flex
+  flex-direction: column
+
+.name-group
+  display: flex
+  gap: 2%
+
+  .form-group
+    flex: 1
+    width: 46%!important
+
+.full-width
+  width: 100%
+  border-radius: 2.5rem
+
+
+
+
+.form-group input
+  width: 100%
+  padding: 0.625rem 0.625rem 0.625rem 4rem
+  border-radius: 2.5rem
+  border: 1px solid #ccc
+  height: 70px
+  color: #B5B5B5
+  font-family: $font-family-diodrum_cyrillic-regular
+  font-size: 1.5625rem
+  font-style: normal
+  font-weight: 400
+  line-height: normal
+  background-color: #f1f1f1
+
+
+
+// Specifieke stijlen voor de full-width velden
+.form-group.full-width
+  display: flex
+  align-items: flex-start
+  gap: 0.625rem
+
+
+.form-icoon
+  width: 20px
+  height: 20px
+  position: relative
+  top: 50%
+  left: 8%
+
+
+.form-icoon-2
+  width: 20px
+  height: 20px
+  position: relative
+  top: 57px
+  left: 3%
+
+
+
+
+
 
 .overkoepelende-container
   max-width: 100vw
   min-width: 100vw
   overflow-y: hidden
+
+.gefeliciteerd
+  color: #f48c02  
+  font-size: 2.1875rem
+  font-style: normal
+  font-weight: 600
+  line-height: 150%
+  font-family: $font-family-diodrum_cyrillic-regular
+
+.gewonnen
+  font-size: 44px
+  z-index: 999
+  position: relative
+  top: 300px
+  left: 220px
+  text-align: start
+  font-weight: 700
+  color: #072249
+  font-family: $font-family-diodrum_cyrillic-regular
+  line-height: 150%
+  font-size: 2.1875rem
+
+.gekozen-prijs
+  color: #F48C02
+  font-family: $font-family-diodrum_cyrillic-regular
+  font-size: 2.1875rem
+  font-style: normal
+  font-weight: 600
+  line-height: 150%
 
 .pagina-5
   align-items: center

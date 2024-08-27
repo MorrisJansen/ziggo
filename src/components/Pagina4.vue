@@ -1,3 +1,51 @@
+<script>
+import Group1 from "./Group1";
+import Frame1000004784 from "./Frame1000004784";
+import { getAntwoorden } from '../antwoorden';
+
+export default {
+  name: "Pagina4",
+  components: {
+    Group1,
+    Frame1000004784,
+  },
+  props: [
+    "samsung1",
+    "pagina9",
+    "image6",
+    "meervoordeelNlChecktNuOfJijKansMaak",
+    "bolcomBon1",
+    "image2",
+    "meervoordeelNlIs",
+    "group11Props",
+    "group12Props",
+    "group13Props",
+    "frame1000004784Props",
+  ],
+  data() {
+    return {
+      chosenProduct: '',
+    };
+  },
+  mounted() {
+    const antwoordenLijst = getAntwoorden();
+    // Toewijzen van het laatste antwoord aan chosenProduct
+    this.chosenProduct = antwoordenLijst[antwoordenLijst.length - 2] || 'geen basta gekozen';
+    console.log('Gekozen product:', this.chosenProduct);
+  },
+  mounted() {
+    // Start a 3-second timer
+    setTimeout(() => {
+      // Redirect to /pagina-5 after 3 seconds
+      this.$router.push("/pagina-6");
+    }, 3000);
+  },
+};
+</script>
+
+
+
+
 <template>
   <center>
     <div class="overkoepelende-container">
@@ -44,39 +92,7 @@
 </div>
 
 </center>
-</template>
-
-<script>
-import Group1 from "./Group1";
-import Frame1000004784 from "./Frame1000004784";
-export default {
-  name: "Pagina4",
-  components: {
-    Group1,
-    Frame1000004784,
-  },
-  props: [
-    "samsung1",
-    "pagina9",
-    "image6",
-    "meervoordeelNlChecktNuOfJijKansMaak",
-    "bolcomBon1",
-    "image2",
-    "meervoordeelNlIs",
-    "group11Props",
-    "group12Props",
-    "group13Props",
-    "frame1000004784Props",
-  ],
-  mounted() {
-    // Start a 3-second timer
-    setTimeout(() => {
-      // Redirect to /pagina-5 after 3 seconds
-      this.$router.push("/pagina-6");
-    }, 3000);
-  },
-};
-</script>
+</template>=
 
 <style lang="sass">
 @import '../../variables'

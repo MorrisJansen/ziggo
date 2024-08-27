@@ -1,106 +1,13 @@
-<template>
-  <center>
 
-  <div class="overkoepelende-container">
-  <div class="container-center-horizontal">
-    <div class="pagina-1 screen">
-      <div class="overlap-group3-1">
-        <div class="rectangle-30-1"></div>
-        <img class="samsung-1-1" :src="samsung1" alt="Samsung 1" />
-        <div class="background-1"></div>
-        <frame1 />
-        <div class="frame-427320545">
-          <img class="frame-427320545-item" :src="stap1Van3" alt="Stap 1 van 3" /><img
-            class="frame-427320545-item"
-            :src="vertelOnsWelkePrijsJeWiltWinnen"
-            alt="Vertel ons welke prijs je wilt winnen:"
-          />
-        </div>
-        <img class="bolcom-bon-1-1" :src="bolcomBon1" alt="bolcom-bon 1" /><img
-          class="image-2-1"
-          :src="image2"
-          alt="image 2"
-        />
-
-
-
-
-
-        <form class="frame-427320542">
-          
-          <div class="frame">
-            <input type="radio" id="samsung-tv" name="product" value="SAMSUNG TV 60">
-            <label for="samsung-tv">
-              <p class="x-twv diodrumcyrillic-regular-normal-downriver-25px">
-                <span class="pointer-1">
-                  SAMSUNG 60" TV t.w.v. €699,-
-                </span>
-              </p>
-            </label>
-          </div>
-        
-          <div class="frame">
-            <input type="radio" id="ps5" name="product" value="Playstation 5 Slim Disk">
-            <label for="ps5">
-              <p class="x-twv diodrumcyrillic-regular-normal-downriver-25px">
-                <span class="pointer-1">
-                  Playstation 5 Slim Disk t.w.v. €549,-
-                </span>
-              </p>
-            </label>
-          </div>
-        
-          <div class="frame" style="display: inline-flex;">
-            <input type="radio" id="bol-com-cadeaubon" name="product" value="Bol.com cadeaubon">
-            <label for="bol-com-cadeaubon">
-                <p class="diodrumcyrillic-regular-normal-downriver-25px">
-                  <span class="pointer-1">
-                    Bol.com cadeaubon t.w.v. €400,-
-                  </span>
-                </p>
-            </label>
-          </div>
-        </form>
-
-
-        <a href="/pagina-2">
-        <div class="frame-427320541-1">
-          <div class="ga-naar-stap-2 diodrumcyrillic-normal-white-23-7px">Ga naar stap 2</div>
-          <img
-            class="right-arrow-1"
-            src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/rightarrow.svg"
-            alt="rightArrow"
-          />
-        </div>
-      </a>
-
-
-        <group1 :text1="group11Props.text1" :className="group11Props.className" />
-        <group1 :text1="group12Props.text1" :className="group12Props.className" />
-        <group1 :text1="group13Props.text1" :className="group13Props.className" />
-        <frame1000004784
-          :group="frame1000004784Props.group"
-          :group116046944Props="frame1000004784Props.group116046944Props"
-        />
-      </div>
-      <img
-        class="line-2-1"
-        src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/line-2.svg"
-        alt="Line 2"
-      />
-      <p class="meervoordeelnl-is-1 diodrumcyrillic-regular-normal-silver-16px" v-html="meervoordeelNlIs"></p>
-    </div>
-  </div>
-  </div>
-</center>
-
-</template>
 
 <script>
 import Frame1 from "./Frame1";
 import RadioButtonSelected from "./RadioButtonSelected";
 import Group1 from "./Group1";
 import Frame1000004784 from "./Frame1000004784";
+import { addAntwoord } from '../antwoorden';
+
+
 export default {
   name: "Pagina1",
   components: {
@@ -108,6 +15,16 @@ export default {
     RadioButtonSelected,
     Group1,
     Frame1000004784,
+  },
+  data() {
+    return {
+      chosenProduct: '',
+      products: [
+        { id: 1, name: "SAMSUNG 60\" TV t.w.v. €699,-", value: "SAMSUNG TV 60" },
+        { id: 2, name: "Playstation 5 Slim Disk t.w.v. €549,-", value: "Playstation 5 Slim Disk" },
+        { id: 3, name: "Bol.com cadeaubon t.w.v. €400,-", value: "Bol.com cadeaubon" },
+      ],
+    };
   },
   props: [
     "samsung1",
@@ -127,8 +44,67 @@ export default {
     "group13Props",
     "frame1000004784Props",
   ],
+  methods: {
+  goToStep2() {
+    console.log(this.chosenProduct)
+    if (this.chosenProduct) {
+      addAntwoord(this.chosenProduct); 
+      this.$router.push({ path: '/pagina-2' });
+    } else {
+      alert('Kies alstublieft een product voordat je verder gaat.');
+    }
+  },
+ }
 };
 </script>
+
+
+<template>
+  <center>
+    <div class="overkoepelende-container">
+      <div class="container-center-horizontal">
+        <div class="pagina-1 screen">
+          <div class="overlap-group3-1">
+            <div class="rectangle-30-1"></div>
+            <img class="samsung-1-1" :src="samsung1" alt="Samsung 1" />
+            <div class="background-1"></div>
+            <frame1 />
+            <div class="frame-427320545">
+              <img class="frame-427320545-item" :src="stap1Van3" alt="Stap 1 van 3" />
+              <img class="frame-427320545-item" :src="vertelOnsWelkePrijsJeWiltWinnen" alt="Vertel ons welke prijs je wilt winnen:" />
+            </div>
+            <img class="bolcom-bon-1-1" :src="bolcomBon1" alt="bolcom-bon 1" />
+            <img class="image-2-1" :src="image2" alt="image 2" />
+
+            <form class="frame-427320542">
+              <div v-for="product in products" :key="product.id" class="frame">
+                <input type="radio" :id="'product-' + product.id" name="product" :value="product.value" v-model="chosenProduct" />
+                <label class="label-1" :for="'product-' + product.id">
+                  <p class="x-twv diodrumcyrillic-regular-normal-downriver-25px">
+                    <span class="pointer-1">{{ product.name }}</span>
+                  </p>
+                </label>
+              </div>
+            </form>
+
+            <div @click="goToStep2" class="frame-427320541-1">
+              <div class="ga-naar-stap-2 diodrumcyrillic-normal-white-23-7px">Ga naar stap 2</div>
+              <img class="right-arrow-1" src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/rightarrow.svg" alt="rightArrow"/>
+            </div>
+
+            <group1 :text1="group11Props.text1" :className="group11Props.className" />
+            <group1 :text1="group12Props.text1" :className="group12Props.className" />
+            <group1 :text1="group13Props.text1" :className="group13Props.className" />
+            <frame1000004784 :group="frame1000004784Props.group" :group116046944Props="frame1000004784Props.group116046944Props" />
+          </div>
+          <img class="line-2-1" src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/line-2.svg" alt="Line 2" />
+          <p class="meervoordeelnl-is-1 diodrumcyrillic-regular-normal-silver-16px" v-html="meervoordeelNlIs"></p>
+        </div>
+      </div>
+    </div>
+  </center>
+</template>
+
 
 <style lang="sass">
 @import '../../variables'
@@ -245,19 +221,19 @@ input[type="radio"]
 
 .frame
   align-items: flex-start
-  display: flex // verander van inline-flex naar flex voor betere uitlijning
+  display: flex
   flex-direction: row
   gap: 10%
   position: relative
   background-color: #f1f1f1
   border-radius: 35px
   align-items: center
-  cursor: pointer // cursor pointer voor de hele frame
+  cursor: pointer
   max-width: 100%
 
-label
+.label-1
   width: 100%
-  cursor: pointer // cursor pointer voor de label zelt
+  cursor: pointer
   position: relative
   top: 0%
 
