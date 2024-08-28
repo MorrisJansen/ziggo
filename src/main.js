@@ -6,7 +6,6 @@ import "../globals.sass"
 
 
 
-import { createApp } from 'vue';
 import store from './antwoorden'; 
 
 Vue.config.productionTip = false;

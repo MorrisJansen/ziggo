@@ -20,43 +20,46 @@ import {
 
 Vue.use(Router);
 export default new Router({
-  mode: "hash",  // Wijzig dit van "history" naar "hash"
-  base: "/ziggo/",
+  mode: 'hash',  // Gebruik hash mode
   routes: [
     {
-      path: "/",
+      path: '/',
       component: Landingspagina,
       props: { ...landingspaginaData },
     },
     {
-      path: "/pagina-2",
+      path: '/pagina-1',  // Gebruik de juiste pad zonder de basis voor hash mode
+      component: Pagina1,
+      props: { ...pagina1Data },
+    },
+    {
+      path: '/pagina-2',
       component: Pagina2,
       props: { ...pagina2Data },
     },
     {
-      path: "/pagina-3",
+      path: '/pagina-3',
       component: Pagina3,
       props: { ...pagina3Data },
     },
     {
-      path: "/pagina-4",
+      path: '/pagina-4',
       component: Pagina4,
       props: { ...pagina4Data },
     },
     {
-      path: "/pagina-5",
+      path: '/pagina-5',
       component: Pagina5,
       props: { ...pagina5Data },
     },
     {
-      path: "/pagina-6",
+      path: '/pagina-6',
       component: Pagina6,
       props: { ...pagina6Data },
     },
     {
-      path: "*",
-      props: { ...pagina1Data },
-      redirect: '/'
+      path: '*',
+      redirect: '/',
     },
   ],
 });

@@ -38,8 +38,8 @@ export default {
     "frame1000004784Props",
   ],
   async navigateToNextPage() {
-      const isValid = await this.validateAddress();
-      if (!isValid) return;
+      // const isValid = await this.validateAddress();
+      // if (!isValid) return;
 
       this.$router.push('/pagina-1');
     },
