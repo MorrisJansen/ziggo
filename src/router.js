@@ -36,6 +36,7 @@ export default new Router({
     {
       path: "/pagina-2",
       component: Pagina2,
+      name: 'pagina-2',
       props: { ...pagina2Data },
     },
     {

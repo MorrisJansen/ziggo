@@ -3,6 +3,7 @@ import Frame1 from "./Frame1";
 import Group1 from "./Group1";
 import Group4 from "./Group4";
 import Frame1000004784 from "./Frame1000004784";
+
 export default {
   name: "Landingspagina",
   components: {
@@ -37,14 +38,18 @@ export default {
     "group42Props",
     "frame1000004784Props",
   ],
-  async navigateToNextPage() {
+  methods: {
+    async navigateToNextPage() {
       // const isValid = await this.validateAddress();
       // if (!isValid) return;
 
+      console.log('Navigating to pagina-2');
       this.$router.push('/pagina-2');
     },
+  },
 };
 </script>
+
 
 
 
