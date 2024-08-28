@@ -24,16 +24,15 @@ export default new Router({
   // base: "/ziggo/", 
   routes: [
     {
-      path: "/pagina-1",
-      component: Pagina1,
-      props: { ...pagina1Data },
-    },
-    {
       path: "/landingspagina",
       component: Landingspagina,
       props: { ...landingspaginaData },
     },
-
+    {
+      path: "/pagina-1",
+      component: Pagina1,
+      props: { ...pagina1Data },
+    },
     {
       path: "/pagina-2",
       component: Pagina2,
