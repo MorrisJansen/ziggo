@@ -24,7 +24,7 @@ export default new Router({
   // base: "/ziggo/",
   routes: [
     {
-      path: "/",
+      path: "/landingspagina",
       component: Landingspagina,
       props: { ...landingspaginaData },
     },
@@ -58,10 +58,9 @@ export default new Router({
       component: Pagina6,
       props: { ...pagina6Data },
     },
-    // Redirect all unknown paths to the landing page
     {
       path: "*",
-      redirect: "/",
+      redirect: "/landingspagina",
     },
   ],
 });
