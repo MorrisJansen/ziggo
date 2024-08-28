@@ -54,7 +54,13 @@ export default {
       alert('Kies alstublieft een product voordat je verder gaat.');
     }
   },
- }
+ },
+ created() {
+    console.log("Pagina1 component is aangemaakt.");
+  },
+  mounted() {
+    console.log("Pagina1 component is gemonteerd.");
+  },
 };
 </script>
 
