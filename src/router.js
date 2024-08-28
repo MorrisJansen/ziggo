@@ -21,8 +21,7 @@ Vue.use(Router);
 
 export default new Router({
   mode: "history",
-  base: "/ziggo/", // Vervang dit met de naam van je GitHub-repository
-
+  // base: "/ziggo/", 
   routes: [
     {
       path: "/landingspagina",
