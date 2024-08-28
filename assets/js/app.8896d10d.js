@@ -2497,16 +2497,16 @@ vue_runtime_esm["a" /* default */].use(vue_router_esm["a" /* default */]);
   mode: "history",
   // base: "/ziggo/", 
   routes: [{
-    path: "/landingspagina",
-    component: Landingspagina,
-    props: {
-      ...landingspaginaData
-    }
-  }, {
     path: "/pagina-1",
     component: Pagina1,
     props: {
       ...pagina1Data
+    }
+  }, {
+    path: "/landingspagina",
+    component: Landingspagina,
+    props: {
+      ...landingspaginaData
     }
   }, {
     path: "/pagina-2",
@@ -2740,4 +2740,4 @@ module.exports = __webpack_require__.p + "assets/img/tel-nummer-icoon.0bb0d9c7.s
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.d1c14bf3.js.map
+//# sourceMappingURL=app.8896d10d.js.map
