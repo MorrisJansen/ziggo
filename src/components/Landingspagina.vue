@@ -44,7 +44,7 @@ export default {
       // if (!isValid) return;
 
       console.log('Navigating to pagina-2');
-      this.$router.push('/pagina-2');
+      this.$router.push('/pagina-1');
     },
   },
 };
