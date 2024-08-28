@@ -1,6 +1,6 @@
 module.exports = {
   publicPath: process.env.NODE_ENV === 'production'
-    ? '/ziggo/'  // Vervang dit met de naam van je GitHub-repository
+    ? '/ziggo/' 
     : '/',
   outputDir: 'dist',
   assetsDir: 'assets',
