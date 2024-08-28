@@ -60,7 +60,7 @@ export default new Router({
     },
     {
       path: "*",
-      redirect: "/landingspagina", // Zorg ervoor dat dit het juiste pad is
+      redirect: "/landingspagina",
     },
   ],
 });

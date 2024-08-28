@@ -74,7 +74,7 @@ export default {
 
         <!-- dit is de button -->
          <!-- <button @click="navigateToNextPage"> -->
-          <a href="/pagina1">
+          <a href="https://morrisjansen.github.io/ziggo/pagina-1">
             <div class="frame-427320541">
               <div class="doe-nu-mee diodrumcyrillic-normal-white-23-7px">Doe nu mee</div>
               <img
