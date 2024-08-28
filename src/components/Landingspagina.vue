@@ -37,12 +37,12 @@ export default {
     "group42Props",
     "frame1000004784Props",
   ],
-  async navigateToNextPage() {
-      // const isValid = await this.validateAddress();
-      // if (!isValid) return;
+  // async navigateToNextPage() {
+  //     const isValid = await this.validateAddress();
+  //     if (!isValid) return;
 
-      // this.$router.push('/ziggo/pagina-1');
-    },
+  //     this.$router.push('/ziggo/pagina-1');
+  //   },
 };
 </script>
 
@@ -73,7 +73,7 @@ export default {
 
 
         <!-- dit is de button -->
-         <!-- <button @click="navigateToNextPage"> -->
+         <button @click="navigateToNextPage">
           <a href="/pagina-1">
             <div class="frame-427320541">
               <div class="doe-nu-mee diodrumcyrillic-normal-white-23-7px">Doe nu mee</div>
@@ -84,7 +84,7 @@ export default {
               />
             </div>
             </a>
-         <!-- </button> -->
+         </button>
 
 
 
