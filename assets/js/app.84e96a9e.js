@@ -210,6 +210,13 @@ module.exports = __webpack_require__.p + "assets/img/naam-icoon.3e69b280.svg";
 
 /***/ }),
 
+/***/ "2786":
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
 /***/ "2dff":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -250,13 +257,6 @@ module.exports = __webpack_require__.p + "assets/img/email-icoon.dcaf59ed.svg";
 /***/ }),
 
 /***/ "42f2":
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ "505a":
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
@@ -315,8 +315,8 @@ var component = Object(componentNormalizer["a" /* default */])(
 // EXTERNAL MODULE: ./node_modules/vue-router/dist/vue-router.esm.js
 var vue_router_esm = __webpack_require__("8c4f");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"bc9a6042-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Landingspagina.vue?vue&type=template&id=63e664b6
-var Landingspaginavue_type_template_id_63e664b6_render = function render() {
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"bc9a6042-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Landingspagina.vue?vue&type=template&id=526fe8bd
+var Landingspaginavue_type_template_id_526fe8bd_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('center', [_c('div', {
@@ -360,9 +360,9 @@ var Landingspaginavue_type_template_id_63e664b6_render = function render() {
       "src": _vm.image2,
       "alt": "image 2"
     }
-  }), _c('button', {
-    on: {
-      "click": _vm.navigateToNextPage
+  }), _c('a', {
+    attrs: {
+      "href": "/ziggo/pagina-1"
     }
   }, [_c('div', {
     staticClass: "frame-427320541"
@@ -494,9 +494,9 @@ var Landingspaginavue_type_template_id_63e664b6_render = function render() {
     }
   })])])])]);
 };
-var Landingspaginavue_type_template_id_63e664b6_staticRenderFns = [];
+var Landingspaginavue_type_template_id_526fe8bd_staticRenderFns = [];
 
-// CONCATENATED MODULE: ./src/components/Landingspagina.vue?vue&type=template&id=63e664b6
+// CONCATENATED MODULE: ./src/components/Landingspagina.vue?vue&type=template&id=526fe8bd
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__("14d9");
@@ -803,8 +803,8 @@ var Frame1000004784_component = Object(componentNormalizer["a" /* default */])(
 });
 // CONCATENATED MODULE: ./src/components/Landingspagina.vue?vue&type=script&lang=js
  /* harmony default export */ var components_Landingspaginavue_type_script_lang_js = (Landingspaginavue_type_script_lang_js); 
-// EXTERNAL MODULE: ./src/components/Landingspagina.vue?vue&type=style&index=0&id=63e664b6&prod&lang=sass
-var Landingspaginavue_type_style_index_0_id_63e664b6_prod_lang_sass = __webpack_require__("ca04");
+// EXTERNAL MODULE: ./src/components/Landingspagina.vue?vue&type=style&index=0&id=526fe8bd&prod&lang=sass
+var Landingspaginavue_type_style_index_0_id_526fe8bd_prod_lang_sass = __webpack_require__("9838");
 
 // CONCATENATED MODULE: ./src/components/Landingspagina.vue
 
@@ -817,8 +817,8 @@ var Landingspaginavue_type_style_index_0_id_63e664b6_prod_lang_sass = __webpack_
 
 var Landingspagina_component = Object(componentNormalizer["a" /* default */])(
   components_Landingspaginavue_type_script_lang_js,
-  Landingspaginavue_type_template_id_63e664b6_render,
-  Landingspaginavue_type_template_id_63e664b6_staticRenderFns,
+  Landingspaginavue_type_template_id_526fe8bd_render,
+  Landingspaginavue_type_template_id_526fe8bd_staticRenderFns,
   false,
   null,
   null,
@@ -2496,7 +2496,6 @@ const pagina5Data = {
 
 
 
-
 vue_runtime_esm["a" /* default */].use(vue_router_esm["a" /* default */]);
 /* harmony default export */ var router = (new vue_router_esm["a" /* default */]({
   mode: "history",
@@ -2547,7 +2546,7 @@ vue_runtime_esm["a" /* default */].use(vue_router_esm["a" /* default */]);
     }
   }, {
     path: "*",
-    redirect: "/landingspagina"
+    redirect: "/landingspagina" // Zorg ervoor dat dit het juiste pad is
   }]
 }));
 // EXTERNAL MODULE: ./styleguide.sass
@@ -2639,6 +2638,17 @@ new vue_runtime_esm["a" /* default */]({
 
 /***/ }),
 
+/***/ "9838":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Landingspagina_vue_vue_type_style_index_0_id_526fe8bd_prod_lang_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("2786");
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Landingspagina_vue_vue_type_style_index_0_id_526fe8bd_prod_lang_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Landingspagina_vue_vue_type_style_index_0_id_526fe8bd_prod_lang_sass__WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+
+
+/***/ }),
+
 /***/ "9b28":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2700,17 +2710,6 @@ module.exports = __webpack_require__.p + "assets/img/tel-nummer-icoon.0bb0d9c7.s
 
 /***/ }),
 
-/***/ "ca04":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Landingspagina_vue_vue_type_style_index_0_id_63e664b6_prod_lang_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("505a");
-/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Landingspagina_vue_vue_type_style_index_0_id_63e664b6_prod_lang_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Landingspagina_vue_vue_type_style_index_0_id_63e664b6_prod_lang_sass__WEBPACK_IMPORTED_MODULE_0__);
-/* unused harmony reexport * */
-
-
-/***/ }),
-
 /***/ "d3a8":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2741,4 +2740,4 @@ module.exports = __webpack_require__.p + "assets/img/tel-nummer-icoon.0bb0d9c7.s
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.ac5b770f.js.map
+//# sourceMappingURL=app.84e96a9e.js.map
