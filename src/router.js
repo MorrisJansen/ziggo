@@ -21,7 +21,6 @@ import {
 Vue.use(Router);
 export default new Router({
   mode: "history",
-  // base: "/ziggo/",
   routes: [
     {
       path: "/landingspagina",
@@ -58,6 +57,7 @@ export default new Router({
       component: Pagina6,
       props: { ...pagina6Data },
     },
+    // Make sure this is the last route
     {
       path: "*",
       redirect: "/landingspagina",
