@@ -29,7 +29,7 @@ export default new Router({
       props: { ...landingspaginaData },
     },
     {
-      path: "/pagina1",
+      path: "/pagina-1",
       component: Pagina1,
       props: { ...pagina1Data },
     },

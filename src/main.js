@@ -4,10 +4,6 @@ import router from "./router";
 import "../styleguide.sass"
 import "../globals.sass"
 
-
-
-import store from './antwoorden'; 
-
 Vue.config.productionTip = false;
 
 new Vue({

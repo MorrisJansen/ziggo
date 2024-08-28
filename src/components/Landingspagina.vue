@@ -41,7 +41,7 @@ export default {
       // const isValid = await this.validateAddress();
       // if (!isValid) return;
 
-      this.$router.push('/ziggo/pagina-1');
+      // this.$router.push('/ziggo/pagina-1');
     },
 };
 </script>
