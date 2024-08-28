@@ -2506,7 +2506,7 @@ const pagina5Data = {
 vue_runtime_esm["a" /* default */].use(vue_router_esm["a" /* default */]);
 /* harmony default export */ var router = (new vue_router_esm["a" /* default */]({
   mode: "history",
-  // base: "/ziggo/", 
+  base: "/ziggo/",
   routes: [{
     path: "/landingspagina",
     component: Landingspagina,
@@ -2741,4 +2741,4 @@ module.exports = __webpack_require__.p + "assets/img/tel-nummer-icoon.0bb0d9c7.s
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.5b32125f.js.map
+//# sourceMappingURL=app.c1eff35c.js.map
