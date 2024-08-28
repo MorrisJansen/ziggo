@@ -73,8 +73,8 @@ export default {
 
 
         <!-- dit is de button -->
-         <button @click="navigateToNextPage">
-          <!-- <a href="/pagina-1"> -->
+         <!-- <button @click="navigateToNextPage"> -->
+          <a href="/ziggo/pagina-1">
             <div class="frame-427320541">
               <div class="doe-nu-mee diodrumcyrillic-normal-white-23-7px">Doe nu mee</div>
               <img
@@ -83,8 +83,8 @@ export default {
                 alt="rightArrow"
               />
             </div>
-            <!-- </a> -->
-         </button>
+            </a>
+         <!-- </button> -->
 
 
 

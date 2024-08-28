@@ -7,7 +7,6 @@ import Pagina3 from "./components/Pagina3";
 import Pagina4 from "./components/Pagina4";
 import Pagina5 from "./components/Pagina5";
 import Pagina6 from "./components/Pagina6";
-import antwoorden from "./antwoorden.js";
 import {
   landingspaginaData,
   pagina1Data,
@@ -19,6 +18,7 @@ import {
 } from "./data";
 
 Vue.use(Router);
+
 export default new Router({
   mode: "history",
   base: "/ziggo/", // Vervang dit met de naam van je GitHub-repository
@@ -61,7 +61,7 @@ export default new Router({
     },
     {
       path: "*",
-      redirect: "/landingspagina",
+      redirect: "/landingspagina", // Zorg ervoor dat dit het juiste pad is
     },
   ],
 });
