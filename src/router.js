@@ -59,7 +59,6 @@ export default new Router({
       component: Pagina6,
       props: { ...pagina6Data },
     },
-    // Make sure this is the last route
     {
       path: "*",
       redirect: "/landingspagina",
