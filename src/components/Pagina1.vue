@@ -153,21 +153,28 @@ export default {
 
 
             <form class="radio-form">
-              <div class="radio-option-1">
-                <input type="radio" id="option1" name="prijsoptie" value="option1">
-                <label class="text-radio-vraag1" for="option1">SAMSUNG 60" TV t.w.v. €699,-</label>
+              <div class="radio-option radio-option-1">
+                <label for="option1">
+                  <input type="radio" id="option1" name="prijsoptie" value="option1">
+                  <span class="text-radio-vraag1">SAMSUNG 60" TV t.w.v. €699,-</span>
+                </label>
               </div>
             
-              <div class="radio-option-2">
-                <input type="radio" id="option2" name="prijsoptie" value="option2">
-                <label class="text-radio-vraag1" for="option2">Playstation 5 Slim Disk t.w.v. €549,-</label>
+              <div class="radio-option radio-option-2">
+                <label for="option2">
+                  <input type="radio" id="option2" name="prijsoptie" value="option2">
+                  <span class="text-radio-vraag1">Playstation 5 Slim Disk t.w.v. €549,-</span>
+                </label>
               </div>
             
-              <div class="radio-option-3">
-                <input type="radio" id="option3" name="prijsoptie" value="option3">
-                <label class="text-radio-vraag1" for="option3">Bol.com cadeaubon t.w.v. €400,-</label>
+              <div class="radio-option radio-option-3">
+                <label for="option3">
+                  <input type="radio" id="option3" name="prijsoptie" value="option3">
+                  <span class="text-radio-vraag1">Bol.com cadeaubon t.w.v. €400,-</span>
+                </label>
               </div>
             </form>
+            
 
               <router-link class="router-link" to="/pagina-2">
                 <button class="doe-nu-mee-knop" href="/pagina-2">
