@@ -70,10 +70,10 @@ export default {
 
         
         <h1 class="maak-kans-op-1-van-de-3-prijzen" v-html="maakKansOp1VanDe3Prijzen"></h1>
-        <img
+        <!-- <img
           class="meer-voordeel-geeft"
           :src="meervoordeelGeeftInSamenwerkingMetZ"
-          alt="MeerVoordeel geeft in samenwerking met Ziggo prijzen weg."/>
+          alt="MeerVoordeel geeft in samenwerking met Ziggo prijzen weg."/> -->
           <img class="bolcom-bon-1" :src="bolcomBon1" alt="bolcom-bon 1" /><img class="image-2" :src="image2" alt="image 2"/>
 
 
@@ -198,7 +198,7 @@ export default {
         Maak kans op <br>1 van de 3 prijzen!
       </div>
 
-      <p class="meer-prijzen">MeerVoordeel geeft in samenwerking met Ziggo prijzen weg.</p>
+      <!-- <p class="meer-prijzen">MeerVoordeel geeft in samenwerking met Ziggo prijzen weg.</p> -->
 
 
       <div class="witte-container">
@@ -849,5 +849,8 @@ export default {
     font-weight: 400
     line-height: 1.125rem
     margin: 2rem 0
+
+
+
 
 </style>

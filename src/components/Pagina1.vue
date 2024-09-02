@@ -108,6 +108,105 @@ export default {
           <p class="meervoordeelnl-is-1 diodrumcyrillic-regular-normal-silver-16px" v-html="meervoordeelNlIs"></p>
         </div>
       </div>
+
+      
+
+
+      <div class="container-mobiel">
+
+        <div class="navbar-mobiel">
+    
+    
+          <img
+          class="logo-navbar-mobiel logo-navbar-mobiel-mv"
+          src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/mv-logo-1-4.svg"
+          alt="MV logo 1"
+        />
+      
+      
+          <img
+          class="logo-navbar-mobiel"
+          src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/image-6.png"
+          alt="logo ziggo"
+        />
+      
+    
+    
+      <img class="logo-navbar-mobiel" src="./trustpilot-mobiel.png" alt="">
+        </div>
+
+
+
+
+        <div class="achtergrond-pagina-1">
+
+
+          <div class="witte-container-pagina-1">
+
+            <p class="stap1">
+              stap 1 van de 3
+            </p>
+
+            <p class="vertel-ons">
+              Vertel ons welke prijs je wilt winnen:
+            </p>
+
+
+            <form class="radio-form">
+              <div class="radio-option-1">
+                <input type="radio" id="option1" name="prijsoptie" value="option1">
+                <label class="text-radio-vraag1" for="option1">SAMSUNG 60" TV t.w.v. €699,-</label>
+              </div>
+            
+              <div class="radio-option-2">
+                <input type="radio" id="option2" name="prijsoptie" value="option2">
+                <label class="text-radio-vraag1" for="option2">Playstation 5 Slim Disk t.w.v. €549,-</label>
+              </div>
+            
+              <div class="radio-option-3">
+                <input type="radio" id="option3" name="prijsoptie" value="option3">
+                <label class="text-radio-vraag1" for="option3">Bol.com cadeaubon t.w.v. €400,-</label>
+              </div>
+            </form>
+
+              <router-link class="router-link" to="/pagina-2">
+                <button class="doe-nu-mee-knop" href="/pagina-2">
+                  <div class="text-in-knop">
+                    Ga naar stap 2<img src="./rechterpijl.svg" alt="pijl-naar-rechts">
+                  </div>
+                </button>
+              </router-link>
+
+
+            <img style="margin-top:40px" src="./Samsung 2.png" alt="">
+            <img src="./Samsung 2.png" alt="">
+            
+
+
+
+          </div>
+
+        </div>
+
+        <hr class="lijn" style="margin-top: 3rem;">
+
+        <div class="footer-pagina1">
+          <p class="text-footer-pagina1">*Meervoordeel.nl is een officiële partner van Ziggo. Deelname mogelijk tot en met 31 juli 2024.
+            Actievoorwaarden van toepassing.</p>
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+
+
+
+
     </div>
   </center>
 </template>
@@ -394,10 +493,110 @@ input[type="radio"]
 
 
 // hieronder komen alle mobile styles
+
+
+@media (min-width: 500px)
+  .container-mobiel
+    display: none!important
+
+
+
 @media (max-width: 500px)
 
+  .container-center-horizontal *
+    display: none
+
+
+  .achtergrond-pagina-1
+    width: 23.4375rem
+    height: 72.5625rem
+    flex-shrink: 0
+    background: linear-gradient(90deg, #072148 0%, #40A59F 100%)
+
+
+
+  .witte-container-pagina-1
+    border-radius: 0.75rem
+    background: #FFF
+    box-shadow: 0px 31px 81px 0px rgba(0, 17, 77, 0.20)
+    width: 21.5625rem
+    height: 41rem
+    flex-shrink: 0
+    position: relative
+    top: 1rem
+
+  .footer-pagina1
+    background-color: #fff
+    height: 6rem
+
+  .text-footer-pagina1
+    color: #C1C1C1
+    text-align: center
+    font-family: $font-family-diodrum_cyrillic-regular
+    font-size: 0.75rem
+    font-style: normal
+    font-weight: 400
+    line-height: 1.125rem
+    margin-top: 1rem
+
+
+  .stap1
+    text-align: start
+    margin-left: 2rem
+    padding-top: 2rem
+    color: #F48C02
+    font-family: $font-family-diodrum_cyrillic-regular
+    font-size: 1.125rem
+    font-style: normal
+    font-weight: 400
+    line-height: 150%
+
+  .vertel-ons
+    color: #072249
+    font-family: $font-family-diodrum_cyrillic-semibold
+    font-size: 1.5625rem
+    font-style: normal
+    font-weight: 600
+    line-height: 135%
+    text-align: start
+    margin-left: 2rem
+
+
+  .radio-option-1, 
+  .radio-option-2, 
+  .radio-option-3 
+    margin-bottom: 2rem
+    margin-top: 2rem
+    border-radius: 3.125rem
+    background-color: #F1F1F1
+    height: 6rem
+    width: 90%
+    color: #072249
+    font-family: $font-family-diodrum_cyrillic-regular
+    font-size: 1.125rem
+    font-style: normal
+    font-weight: 400
+    line-height: normal
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    padding-left: 2rem
   
+  
+  .text-radio-vraag1 
+    text-align: start
+    margin-left: 1rem // Dit zorgt ervoor dat er wat ruimte is tussen de radio-knop en de tekst
+  
+  
+  .radio-option-1 input[type="radio"],
+  .radio-option-2 input[type="radio"],
+  .radio-option-3 input[type="radio"] 
+    transform: scale(2.5)
+    margin-right: 1rem
     
+    
+  
+  
 
 </style>
 

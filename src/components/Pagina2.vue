@@ -62,6 +62,7 @@ export default {
 <template>
   <center>
     <div class="overkoepelende-container">
+
       <div class="container-center-horizontal">
         <div class="pagina-2 screen">
           <div class="overlap-group3-3">
@@ -159,6 +160,100 @@ export default {
           <p class="meervoordeelnl-is-3 diodrumcyrillic-regular-normal-silver-16px" v-html="meervoordeelNlIs"></p>
         </div>
       </div>
+
+
+      <div class="container-mobiel">
+        <div class="navbar-mobiel">
+    
+    
+            <img
+            class="logo-navbar-mobiel logo-navbar-mobiel-mv"
+            src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/mv-logo-1-4.svg"
+            alt="MV logo 1"
+          />
+        
+        
+            <img
+            class="logo-navbar-mobiel"
+            src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/image-6.png"
+            alt="logo ziggo"
+          />
+
+          <img class="logo-navbar-mobiel" src="./trustpilot-mobiel.png" alt="">
+
+
+        </div>
+
+
+        <div class="achtergrond-pagina-1">
+
+
+          <div class="witte-container-pagina-1">
+
+            <p class="stap1">
+              stap 1 van de 3
+            </p>
+
+            <p class="vertel-ons">
+              Vertel ons welke prijs je wilt winnen:
+            </p>
+
+
+            <form class="radio-form">
+              <div class="radio-option-1">
+                <input type="radio" id="option1" name="prijsoptie" value="option1">
+                <label class="text-radio-vraag1" for="option1">Odido</label>
+              </div>
+            
+              <div class="radio-option-2">
+                <input type="radio" id="option2" name="prijsoptie" value="option2">
+                <label class="text-radio-vraag1" for="option2">KPN</label>
+              </div>
+            
+              <div class="radio-option-3">
+                <input type="radio" id="option3" name="prijsoptie" value="option3">
+                <label class="text-radio-vraag1" for="option3">Ziggo</label>
+              </div>
+
+              <div class="radio-option-3">
+                <input type="radio" id="option4" name="prijsoptie" value="option4">
+                <label class="text-radio-vraag1" for="option4">Anders</label>
+              </div>
+            </form>
+
+              <router-link class="router-link" to="/pagina-2">
+                <button class="doe-nu-mee-knop" href="/pagina-2">
+                  <div class="text-in-knop">
+                    Laatste stap<img src="./rechterpijl.svg" alt="pijl-naar-rechts">
+                  </div>
+                </button>
+              </router-link>
+
+
+            <img style="margin-top:40px" src="./Samsung 2.png" alt="">
+            <img src="./Samsung 2.png" alt="">
+            
+
+
+
+          </div>
+
+        </div>
+
+        <hr class="lijn" style="margin-top: 3rem;">
+
+        <div class="footer-pagina1">
+          <p class="text-footer-pagina1">*Meervoordeel.nl is een officiële partner van Ziggo. Deelname mogelijk tot en met 31 juli 2024.
+            Actievoorwaarden van toepassing.</p>
+
+        </div>
+
+
+      </div>
+
+
+
+
     </div>
   </center>
 </template>
@@ -475,11 +570,23 @@ input[type="radio"]:checked::after
 
 
 
+@media (min-width: 501px)
+  .container-mobiel
+    display: none!important
+
 // hieronder komen alle mobile styles
 @media (max-width: 500px)
-
+  .container-center-horizontal
+    display: none!important
   
-    
+
+  .witte-container-pagina-1
+    height: 48rem
+  
+
+  .radio-option-1, .radio-option-2, .radio-option-3 
+    margin-bottom: 1.8rem
+    margin-top: 1.8rem
 
 </style>
 
