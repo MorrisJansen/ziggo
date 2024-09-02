@@ -28,20 +28,18 @@ export default {
   data() {
     return {
       chosenProduct: '',
-      postcodeError: '', // Foutmelding voor de postcode
+      postcodeError: '', 
     };
   },
   mounted() {
     const antwoordenLijst = getAntwoorden();
-    this.chosenProduct = antwoordenLijst[antwoordenLijst.length - 2] || 'geen basta gekozen';
+    this.chosenProduct = antwoordenLijst[antwoordenLijst.length - 2] || '';
     console.log('Gekozen product:', this.chosenProduct);
     localStorage.setItem('antwoorden', JSON.stringify(antwoordenLijst));
 
-    // Voeg een event listener toe voor de Enter-toets
     window.addEventListener('keydown', this.handleKeyDown);
   },
   beforeDestroy() {
-    // Verwijder de event listener om geheugenlekken te voorkomen
     window.removeEventListener('keydown', this.handleKeyDown);
   },
   methods: {
@@ -50,25 +48,22 @@ export default {
       return postcodeRegex.test(postcode);
     },
     checkPostcode() {
-      const inputValue = this.$refs.postcodeInput.value; // Gebruik refs om toegang te krijgen tot het inputveld
+      const inputValue = this.$refs.postcodeInput.value;
       if (this.validatePostcode(inputValue)) {
-        this.postcodeError = ''; // Reset de foutmelding
+        this.postcodeError = ''; 
         console.log("Postcode is geldig:", inputValue);
         
-        // Sla de postcode op in localStorage
         localStorage.setItem('postcode', inputValue);
 
-        // Hier kun je doorgaan naar de volgende pagina
-        this.$router.push('/pagina-4'); // Navigeer naar de volgende pagina
+        this.$router.push('/pagina-4');
       } else {
-        this.postcodeError = 'Voer een geldige postcode in (bijv. 2222 AB)'; // Zet de foutmelding
+        this.postcodeError = 'Voer een geldige postcode in (bijv. 2222 AB)';
         console.log("Postcode is ongeldig:", inputValue);
       }
     },
     handleKeyDown(event) {
-      // Controleer of de Enter-toets is ingedrukt
       if (event.key === 'Enter') {
-        this.checkPostcode(); // Roep de checkPostcode methode aan
+        this.checkPostcode();
       }
     }
   }
@@ -135,6 +130,57 @@ export default {
           <div>{{ chosenProduct }}</div>
         </div>
       </div>
+
+
+
+
+
+      <div class="container-mobiel">
+        <div class="navbar-mobiel">
+    
+    
+          <img
+          class="logo-navbar-mobiel logo-navbar-mobiel-mv"
+          src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/mv-logo-1-4.svg"
+          alt="MV logo 1"
+        />
+      
+      
+          <img
+          class="logo-navbar-mobiel"
+          src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/image-6.png"
+          alt="logo ziggo"
+        />
+      
+    
+    
+      <img class="logo-navbar-mobiel" src="./trustpilot-mobiel.png" alt="">
+        </div>
+
+
+
+
+        <div class="achtergrond-pagina-1">
+
+
+          <div class="witte-container-pagina-1">
+
+            <p class="stap1">
+              stap 3 van de 3
+            </p>
+
+
+            <p class="vul-postcode-in">Vul je postcode in en check of je kans maakt op
+              <span class="gekozen-product-mobiel">
+                {{chosenProduct}}
+              </span>
+            </p>
+          
+          </div>
+          </div>
+
+      </div>
+
     </div>
   </center>
 </template>
@@ -334,4 +380,35 @@ export default {
   min-height: 48px
   text-align: center
   width: 874px
+
+
+
+
+@media (min-width: 501px)
+  .vul-postcode-in
+    display: none
+
+
+
+@media (max-width: 501px) 
+  .vul-postcode-in
+    color: #072249
+    font-family: $font-family-diodrum_cyrillic-semibold
+    font-size: 1.5625rem
+    font-style: normal
+    font-weight: 600
+    line-height: 135%
+    text-align: start
+    margin-left: 2rem
+    padding-right: 1rem
+
+
+  .gekozen-product-mobiel
+    color: #F48C02
+    font-family: $font-family-diodrum_cyrillic-semibold
+    font-size: 1.5625rem
+    font-style: normal
+    font-weight: 600
+    line-height: 135%
+    
 </style>

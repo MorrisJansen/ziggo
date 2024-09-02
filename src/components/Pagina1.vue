@@ -562,37 +562,85 @@ input[type="radio"]
     margin-left: 2rem
 
 
-  .radio-option-1, 
-  .radio-option-2, 
-  .radio-option-3 
-    margin-bottom: 2rem
-    margin-top: 2rem
-    border-radius: 3.125rem
-    background-color: #F1F1F1
-    height: 6rem
-    width: 90%
-    color: #072249
-    font-family: $font-family-diodrum_cyrillic-regular
-    font-size: 1.125rem
-    font-style: normal
-    font-weight: 400
-    line-height: normal
+            // .radio-option-1, 
+            // .radio-option-2, 
+            // .radio-option-3,
+            // .radio-option-4
+            //   margin-bottom: 2rem
+            //   margin-top: 2rem
+            //   border-radius: 3.125rem
+            //   background-color: #F1F1F1
+            //   height: 6rem
+            //   width: 90%
+            //   color: #072249
+            //   font-family: $font-family-diodrum_cyrillic-regular
+            //   font-size: 1.125rem
+            //   font-style: normal
+            //   font-weight: 400
+            //   line-height: normal
+            //   display: flex
+            //   align-items: center
+            //   justify-content: flex-start
+            //   padding-left: 2rem
+            // 
+            // 
+            // .text-radio-vraag1 
+            //   text-align: start
+            //   margin-left: 1rem
+            // 
+            // 
+            // .radio-option-1 input[type="radio"],
+            // .radio-option-2 input[type="radio"],
+            // .radio-option-3 input[type="radio"] 
+            //   transform: scale(2.5)
+            //   margin-right: 1rem
+
+
+
+.radio-option-1, 
+.radio-option-2, 
+.radio-option-3,
+.radio-option-4 
+  margin-bottom: 2rem
+  margin-top: 2rem
+  border-radius: 3.125rem
+  background-color: #F1F1F1
+  height: 6rem
+  width: 90%
+  color: #072249
+  font-family: $font-family-diodrum_cyrillic-regular
+  font-size: 1.125rem
+  font-style: normal
+  font-weight: 400
+  line-height: normal
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  padding-left: 2rem
+  label 
     display: flex
     align-items: center
-    justify-content: flex-start
-    padding-left: 2rem
+    width: 100%
+    height: 100%
+    cursor: pointer
   
-  
-  .text-radio-vraag1 
-    text-align: start
-    margin-left: 1rem // Dit zorgt ervoor dat er wat ruimte is tussen de radio-knop en de tekst
-  
-  
-  .radio-option-1 input[type="radio"],
-  .radio-option-2 input[type="radio"],
-  .radio-option-3 input[type="radio"] 
+
+  input[type="radio"] 
     transform: scale(2.5)
     margin-right: 1rem
+    pointer-events: none
+  
+
+  .text-radio-vraag1 
+    text-align: start
+    margin-left: 1rem 
+
+
+
+    
+
+
+
     
     
   

@@ -191,7 +191,7 @@ export default {
           <div class="witte-container-pagina-1">
 
             <p class="stap1">
-              stap 1 van de 3
+              stap 2 van de 3
             </p>
 
             <p class="vertel-ons">
@@ -200,29 +200,37 @@ export default {
 
 
             <form class="radio-form">
-              <div class="radio-option-1">
-                <input type="radio" id="option1" name="prijsoptie" value="option1">
-                <label class="text-radio-vraag1" for="option1">Odido</label>
+              <div class="radio-option radio-option-1">
+                <label for="option1">
+                  <input type="radio" id="option1" name="prijsoptie" value="option1">
+                  <span class="text-radio-vraag1">Odido</span>
+                </label>
               </div>
             
-              <div class="radio-option-2">
-                <input type="radio" id="option2" name="prijsoptie" value="option2">
-                <label class="text-radio-vraag1" for="option2">KPN</label>
+              <div class="radio-option radio-option-2">
+                <label for="option2">
+                  <input type="radio" id="option2" name="prijsoptie" value="option2">
+                  <span class="text-radio-vraag1">KPN</span>
+                </label>
               </div>
             
-              <div class="radio-option-3">
-                <input type="radio" id="option3" name="prijsoptie" value="option3">
-                <label class="text-radio-vraag1" for="option3">Ziggo</label>
+              <div class="radio-option radio-option-3">
+                <label for="option3">
+                  <input type="radio" id="option3" name="prijsoptie" value="option3">
+                  <span class="text-radio-vraag1">Ziggo</span>
+                </label>
               </div>
-
-              <div class="radio-option-3">
-                <input type="radio" id="option4" name="prijsoptie" value="option4">
-                <label class="text-radio-vraag1" for="option4">Anders</label>
+            
+              <div class="radio-option radio-option-4">
+                <label for="option4">
+                  <input type="radio" id="option4" name="prijsoptie" value="option4">
+                  <span class="text-radio-vraag1">Anders</span>
+                </label>
               </div>
             </form>
-
-              <router-link class="router-link" to="/pagina-2">
-                <button class="doe-nu-mee-knop" href="/pagina-2">
+            
+              <router-link class="router-link" to="/pagina-3">
+                <button class="doe-nu-mee-knop" href="/pagina-3">
                   <div class="text-in-knop">
                     Laatste stap<img src="./rechterpijl.svg" alt="pijl-naar-rechts">
                   </div>
@@ -426,13 +434,6 @@ input[type="radio"]:checked::after
   display: flex
   min-width: 300%
   cursor: pointer
-
-
-
-
-
-
-
 
   
 .rectangle-40377
