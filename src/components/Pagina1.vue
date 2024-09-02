@@ -245,6 +245,7 @@ input[type="radio"]
   cursor: pointer
   position: relative
   top: 0%
+  text-align: start
 
 
 

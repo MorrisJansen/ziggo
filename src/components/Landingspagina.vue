@@ -63,17 +63,18 @@ export default {
         <div class="rectangle-30"></div>
         <img class="samsung-1" :src="samsung1" alt="Samsung 1" />
         <div class="background"></div>
+
+
         <frame1 />
+
+
+        
         <h1 class="maak-kans-op-1-van-de-3-prijzen" v-html="maakKansOp1VanDe3Prijzen"></h1>
         <img
           class="meer-voordeel-geeft"
           :src="meervoordeelGeeftInSamenwerkingMetZ"
-          alt="MeerVoordeel geeft in samenwerking met Ziggo prijzen weg."
-        /><img class="bolcom-bon-1" :src="bolcomBon1" alt="bolcom-bon 1" /><img
-          class="image-2"
-          :src="image2"
-          alt="image 2"
-        />
+          alt="MeerVoordeel geeft in samenwerking met Ziggo prijzen weg."/>
+          <img class="bolcom-bon-1" :src="bolcomBon1" alt="bolcom-bon 1" /><img class="image-2" :src="image2" alt="image 2"/>
 
 
         <!-- dit is de button -->
@@ -161,6 +162,137 @@ export default {
       <p class="meervoordeelnl-is diodrumcyrillic-regular-normal-silver-16px" v-html="meervoordeelNlIs"></p>
     </div>
   </div>
+
+
+
+
+  <div class="container-mobiel">
+
+    <div class="navbar-mobiel">
+
+
+      <img
+      class="logo-navbar-mobiel logo-navbar-mobiel-mv"
+      src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/mv-logo-1-4.svg"
+      alt="MV logo 1"
+    />
+  
+  
+      <img
+      class="logo-navbar-mobiel"
+      src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/image-6.png"
+      alt="logo ziggo"
+    />
+  
+
+
+  <img class="logo-navbar-mobiel" src="./trustpilot-mobiel.png" alt="">
+    </div>
+
+
+
+    <div class="achtergrond">
+
+
+      <div class="maak-kans">
+        Maak kans op <br>1 van de 3 prijzen!
+      </div>
+
+      <p class="meer-prijzen">MeerVoordeel geeft in samenwerking met Ziggo prijzen weg.</p>
+
+
+      <div class="witte-container">
+        <p class="hoe-werkt-het">hoe werkt het?</p>
+
+        <!-- <img src="./Elipse 2.svg" alt=""> -->
+        <div class="container-lijst">
+
+          <div class="li-1">
+            <svg class="blauwe-bal" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle id="Ellipse 2" cx="17.5" cy="17.5" r="17.5" fill="#49B7AC"/>
+            </svg>
+            <p class="cijfer-li">1.</p>
+            <p class="text-hoe-werkt-het">kies jouw prijs</p>
+          </div>
+
+          <div class="li-1">
+            <svg class="blauwe-bal" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle id="Ellipse 2" cx="17.5" cy="17.5" r="17.5" fill="#49B7AC"/>
+            </svg>
+            <p class="cijfer-li">2.</p>
+            <p class="text-hoe-werkt-het"> Beantwoord de vraag</p>
+
+
+          </div>
+
+          <div class="li-1">
+            <svg class="blauwe-bal" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle id="Ellipse 2" cx="17.5" cy="17.5" r="17.5" fill="#49B7AC"/>
+            </svg>
+            <p class="cijfer-li">3.</p>
+            <p class="text-hoe-werkt-het-3">Controleer   eer of jouw postcode in aanmerking komt</p>
+
+
+          </div>
+
+        </div>
+
+        <div class="doe-nu-mee">
+          <router-link class="router-link" to="/pagina-1">
+            <button class="doe-nu-mee-knop" href="/pagina-1">
+              <div class="text-in-knop">
+                Doe nu mee <img src="./rechterpijl.svg" alt="pijl-naar-rechts">
+              </div>
+            </button>
+          </router-link>
+
+        </div>
+      </div>
+
+
+      
+      <img src="./Samsung 2.png" alt="">
+      <img src="./Samsung 2.png" alt="">
+
+     
+    </div>
+<!-- einde achtergrond -->
+
+<div class="container-voordeel">
+  <p class="meer-over-meer-titel">Meer over Meervoordeel</p>
+  <hr class="lijn">
+  <p class="meer-over-meer-text">MeerVoordeel biedt diverse kortings- en voordeelprogramma's aan, aan consumenten in Nederland. In samenwerking met Ziggo, een van de grootste aanbieders van kabeltelevisie, internet en telefoniediensten in Nederland, biedt MeerVoordeel speciale voordelen en kortingen aan nieuwe Ziggo-klanten.
+    Onder andere door deze samenwerking kunnen wij jou mooie acties zoals deze bieden.</p>
+</div>
+
+<div class="afbeelding-footer">
+  <img src="./afbeelding-footer-mobiel.png" alt="afbeelding-footer">
+</div>
+
+
+<div class="logos-footer">
+  <img style="margin-right: 5%;"
+  class="logo-navbar-mobiel logo-navbar-mobiel-mv"
+  src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/mv-logo-1-4.svg"
+  alt="MV logo 1"
+/>
+
+
+  <img
+  class="logo-navbar-mobiel"
+  src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/image-6.png"
+  alt="logo ziggo"
+/>
+</div>
+
+<hr class="lijn">
+
+
+<p class="kleine-letters">*Meervoordeel.nl is een officiële partner van Ziggo. Deelname mogelijk tot en met 31 juli 2024.
+  Actievoorwaarden van toepassing.</p>
+
+  </div>
+
 </div>
   </center>
 </template>
@@ -516,9 +648,206 @@ export default {
 
 
 //hieronder komen alle mobile styles
-@media (max-width: 500px)
 
-  
+@media (min-width: 500px) 
+  .container-mobiel
+    display: none
+
+@media (max-width: 501px)
+
+  .overkoepelende-container
+    height: auto!important
+    max-height: none!important
+    min-height: none
+
+  .container-center-horizontal *
+    display: none
+
+
+  .container-mobiel
+    height: auto
+
+
+  .navbar-mobiel
+    width: 100%!important
+    height: 6.6rem
+    display: flex
+    justify-content: space-around
+
+
+  .logo-navbar-mobiel
+    max-width: 25%
+    min-height: 100%
+    display: inline-flex
+    object-fit: contain
+
+
+  .achtergrond
+    background: linear-gradient(90deg, #072148 0%, #40A59F 100%)
+    height: 1000px!important
+    width: 100%
+
+
+  .maak-kans
+    color: #FFF
+    text-align: center
+    font-family: $font-family-diodrum_cyrillic-semibold
+    font-size: 2.33294rem
+    font-style: normal
+    font-weight: 600
+    line-height: 2.49894rem
+    padding-top: 1rem
     
+
+
+  .meer-prijzen
+    color: #FFF
+    text-align: center
+    font-family: $font-family-diodrum_cyrillic-regular
+    font-size: 1.125rem
+    font-style: normal
+    font-weight: 400
+    line-height: 150%
+    margin-top: 1rem
+
+
+  .witte-container
+    width: 90%
+    height: 20rem
+    margin-top: 1rem
+    background-color: #fff
+    border-radius: 0.75rem
+    box-shadow: 0px 31px 81px 0px rgba(0, 17, 77, 0.20)
+
+
+  .hoe-werkt-het
+    color: #072249
+    font-family: $font-family-diodrum_cyrillic-semibold
+    font-size: 1.5625rem
+    font-style: normal
+    font-weight: 600
+    line-height: 150%
+    position: relative
+    top: 1rem
+    left: -4rem
+
+
+  .container-lijst
+    margin-top: 2rem
+
+  .blauwe-bal 
+    width: 35px!important
+    height: 35px!important
+    max-width: 35px
+    max-height: 35px
+    
+    
+
+
+  .li-1
+    display: flex
+    width: 100%
+    color: #072249
+    font-family: $font-family-diodrum_cyrillic-regular
+    font-size: 1.125rem
+    font-style: normal
+    font-weight: 400
+    line-height: normal
+    text-align: start
+    flex: 1
+    margin-left: 1rem
+    margin-top: 1rem
+
+  .cijfer-li
+    position: relative
+    right: 24px
+    top: 7px
+    color: black
+
+
+  .text-hoe-werkt-het-3
+    width: 80%
+
+  .text-hoe-werkt-het
+    margin-top: 2%
+
+  .text-hoe-werkt-het, .text-hoe-werkt-het-3
+    font-family: $font-family-diodrum_cyrillic-regular
+    color: #072249
+    font-size: 1.125rem
+    font-style: normal
+    font-weight: 400
+    line-height: normal
+
+
+
+  .doe-nu-mee-knop
+    display: flex
+    width: 17.4375rem
+    padding: 0.9375rem 2.5rem
+    justify-content: center
+    align-items: center
+    gap: 1.53363rem
+    border-radius: 2.5rem
+    background: #F48C02
+    border: none
+    margin-top: 2rem
+
+
+  .text-in-knop
+    color: #FFF
+    font-family: $font-family-diodrum_cyrillic-semibold
+    font-size: 1.47881rem
+    font-style: normal
+    font-weight: 600
+    line-height: normal
+
+
+  .router-link
+    text-decoration: none
+
+
+  .container-voordeel
+    background-color: #fff
+    height: 500px!important
+
+
+  .meer-over-meer-titel
+    color: #072249
+    font-family: $font-family-diodrum_cyrillic-semibold
+    font-size: 1.5625rem
+    font-style: normal
+    font-weight: 600
+    line-height: 150%
+
+
+  .lijn
+    width: 80%
+    opacity: 0.3
+
+
+  .meer-over-meer-text
+    color: #072249
+    font-family: $font-family-diodrum_cyrillic-regular
+    font-size: 1.125rem
+    font-style: normal
+    font-weight: 400
+    line-height: 2.0625rem
+    width: 80%
+
+
+  .logos-footer
+    height: 100px
+    width: 80%
+
+  .kleine-letters
+    color: #C1C1C1
+    text-align: center
+    font-family: $font-family-diodrum_cyrillic-regular
+    font-size: 0.75rem
+    font-style: normal
+    font-weight: 400
+    line-height: 1.125rem
+    margin: 2rem 0
 
 </style>

@@ -299,7 +299,7 @@ export default {
   border-radius: 2.5rem
   border: 1px solid #ccc
   height: 70px
-  color: #B5B5B5
+  color: black
   font-family: $font-family-diodrum_cyrillic-regular
   font-size: 1.5625rem
   font-style: normal

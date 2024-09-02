@@ -1,4 +1,5 @@
 <template>
+
   <div :class="[`frame-1000004784`, className || ``]">
     <img
       class="mv-logo-1-1"
@@ -18,6 +19,7 @@
       </div>
     </div>
   </div>
+
 </template>
 
 <script>
@@ -39,6 +41,7 @@ export default {
   left: 146px
   position: absolute
   top: 31px
+  
 
 .mv-logo-1-1
   height: 76.38px
@@ -75,4 +78,10 @@ export default {
 
 .frame-1000004784.frame-1000004784-2
   left: 151px
+
+
+
+
+
+
 </style>
