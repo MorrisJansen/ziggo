@@ -29,14 +29,11 @@ export default {
   },
   mounted() {
     const antwoordenLijst = getAntwoorden();
-    // Toewijzen van het laatste antwoord aan chosenProduct
     this.chosenProduct = antwoordenLijst[antwoordenLijst.length - 2] || 'geen basta gekozen';
     console.log('Gekozen product:', this.chosenProduct);
   },
   mounted() {
-    // Start a 3-second timer
     setTimeout(() => {
-      // Redirect to /pagina-5 after 3 seconds
       this.$router.push("/pagina-6");
     }, 3000);
   },
@@ -68,11 +65,11 @@ export default {
           class="image-2-5"
           :src="image2"
           alt="image 2"
-        /><img
-          class="loading-sign-1"
-          src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/loading-sign-1.svg"
-          alt="loading-sign 1"
         />
+
+        
+        <img class="draaien-animatie loading-sign-1" src="./draaien.svg" alt="">
+
         <group1 :text1="group11Props.text1" :className="group11Props.className" />
         <group1 :text1="group12Props.text1" :className="group12Props.className" />
         <group1 :text1="group13Props.text1" :className="group13Props.className" />
@@ -89,13 +86,90 @@ export default {
       <p class="meervoordeelnl-is-5 diodrumcyrillic-regular-normal-silver-16px" v-html="meervoordeelNlIs"></p>
     </div>
   </div>
+
+
+
+
+<div class="container-mobiel">
+
+  <div class="navbar-mobiel">
+
+
+    <img
+    class="logo-navbar-mobiel logo-navbar-mobiel-mv"
+    src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/mv-logo-1-4.svg"
+    alt="MV logo 1"
+  />
+
+
+    <img
+    class="logo-navbar-mobiel"
+    src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/image-6.png"
+    alt="logo ziggo"
+  />
+
+
+
+  <img class="logo-navbar-mobiel" src="./trustpilot-mobiel.png" alt="">
+
+  </div>
+
+
+
+
+
+  <div class="achtergrond-pagina-4">
+
+
+    <div class="witte-achtergrond-pagina-4">
+
+      <div class="checken">
+      <span class="meervoordeel nl">
+        Meervoordeel.nl
+      </span>
+        checkt nu of jij kans maakt op de prijs...
+      </div>
+
+      <img class="draaien-animatie" src="./draaien.svg" alt="">
+    </div>
+
+    <img src="./afbeeldingen-samen.png" alt="">
+  </div>
+  
+
+
+
+
+
+
+  
+</div>
+
+
+
 </div>
 
 </center>
-</template>=
+</template>
 
 <style lang="sass">
 @import '../../variables'
+
+
+.draaien-animatie 
+  width: 50px
+  height: 50px
+  animation: draai 2s linear infinite
+
+
+@keyframes draai 
+  0% 
+      transform: rotate(0deg)
+  
+  100% 
+      transform: rotate(360deg)
+  
+
 
 .overkoepelende-container
   min-width: 100vw
@@ -209,4 +283,53 @@ export default {
   min-height: 48px
   text-align: center
   width: 874px
-</style>
+
+
+
+@media (min-width: 501px)
+  .mobiel-container
+    display: none
+
+
+
+
+@media (max-width: 501px)
+  .container-center-horizontal
+    display: none!important
+
+
+  .achtergrond-pagina-4
+    width: 23.4375rem
+    height: 61.875rem
+    flex-shrink: 0
+    background: linear-gradient(90deg, #072148 0%, #40A59F 100%)
+  
+
+  .witte-achtergrond-pagina-4
+    width: 21.5625rem
+    height: 22rem
+    flex-shrink: 0
+    border-radius: 0.75rem
+    background: #FFF
+    box-shadow: 0px 31px 81px 0px rgba(0, 17, 77, 0.20)
+    position: relative
+    top: 2rem
+
+  .meervoordeel.nl
+    color: #49B7AC
+    text-align: center
+    font-family: $font-family-diodrum_cyrillic-regular
+    font-size: 1.5625rem
+    font-style: normal
+    font-weight: 600
+    line-height: 135%
+
+  .checken
+    color: #072249
+    font-family: $font-family-diodrum_cyrillic-regular
+    font-size: 1.5625rem
+    font-style: normal
+    font-weight: 600
+    line-height: 135%
+    padding: 2rem
+  </style>

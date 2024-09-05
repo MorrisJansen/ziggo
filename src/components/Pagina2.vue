@@ -199,36 +199,36 @@ export default {
             </p>
 
 
-            <form class="radio-form">
-              <div class="radio-option radio-option-1">
-                <label for="option1">
-                  <input type="radio" id="option1" name="prijsoptie" value="option1">
-                  <span class="text-radio-vraag1">Odido</span>
-                </label>
-              </div>
-            
-              <div class="radio-option radio-option-2">
-                <label for="option2">
-                  <input type="radio" id="option2" name="prijsoptie" value="option2">
-                  <span class="text-radio-vraag1">KPN</span>
-                </label>
-              </div>
-            
-              <div class="radio-option radio-option-3">
-                <label for="option3">
-                  <input type="radio" id="option3" name="prijsoptie" value="option3">
-                  <span class="text-radio-vraag1">Ziggo</span>
-                </label>
-              </div>
-            
-              <div class="radio-option radio-option-4">
-                <label for="option4">
-                  <input type="radio" id="option4" name="prijsoptie" value="option4">
-                  <span class="text-radio-vraag1">Anders</span>
-                </label>
-              </div>
-            </form>
-            
+          <form class="radio-form">
+            <div class="radio-option radio-option-1">
+              <label for="option1">
+                <input type="radio" id="option1" name="prijsoptie" value="option1">
+                <span class="text-radio-vraag1">Odido</span>
+              </label>
+            </div>
+
+            <div class="radio-option radio-option-2">
+              <label for="option2">
+                <input type="radio" id="option2" name="prijsoptie" value="option2">
+                <span class="text-radio-vraag1">KPN</span>
+              </label>
+            </div>
+
+            <div class="radio-option radio-option-3">
+              <label for="option3">
+                <input type="radio" id="option3" name="prijsoptie" value="option3">
+                <span class="text-radio-vraag1">Ziggo</span>
+              </label>
+            </div>
+
+            <div class="radio-option radio-option-4">
+              <label for="option4">
+                <input type="radio" id="option4" name="prijsoptie" value="option4">
+                <span class="text-radio-vraag1">Anders</span>
+              </label>
+            </div>
+          </form>
+
               <router-link class="router-link" to="/pagina-3">
                 <button class="doe-nu-mee-knop" href="/pagina-3">
                   <div class="text-in-knop">
@@ -238,8 +238,7 @@ export default {
               </router-link>
 
 
-            <img style="margin-top:40px" src="./Samsung 2.png" alt="">
-            <img src="./Samsung 2.png" alt="">
+              <img src="./afbeeldingen-samen.png" alt="">
             
 
 
@@ -253,7 +252,6 @@ export default {
         <div class="footer-pagina1">
           <p class="text-footer-pagina1">*Meervoordeel.nl is een officiële partner van Ziggo. Deelname mogelijk tot en met 31 juli 2024.
             Actievoorwaarden van toepassing.</p>
-
         </div>
 
 

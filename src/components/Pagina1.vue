@@ -94,6 +94,10 @@ export default {
               </div>
             </form>
 
+
+
+            
+
             <div @click="goToStep2" class="frame-427320541-1">
               <div class="ga-naar-stap-2 diodrumcyrillic-normal-white-23-7px">Ga naar stap 2</div>
               <img class="right-arrow-1" src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/rightarrow.svg" alt="rightArrow"/>
@@ -155,25 +159,26 @@ export default {
             <form class="radio-form">
               <div class="radio-option radio-option-1">
                 <label for="option1">
-                  <input type="radio" id="option1" name="prijsoptie" value="option1">
+                  <input type="radio" id="option1" name="prijsoptie" value="SAMSUNG TV 60" v-model="chosenProduct">
                   <span class="text-radio-vraag1">SAMSUNG 60" TV t.w.v. €699,-</span>
                 </label>
               </div>
             
               <div class="radio-option radio-option-2">
                 <label for="option2">
-                  <input type="radio" id="option2" name="prijsoptie" value="option2">
+                  <input type="radio" id="option2" name="prijsoptie" value="Playstation 5 Slim Disk" v-model="chosenProduct">
                   <span class="text-radio-vraag1">Playstation 5 Slim Disk t.w.v. €549,-</span>
                 </label>
               </div>
             
               <div class="radio-option radio-option-3">
                 <label for="option3">
-                  <input type="radio" id="option3" name="prijsoptie" value="option3">
+                  <input type="radio" id="option3" name="prijsoptie" value="Bol.com cadeaubon" v-model="chosenProduct">
                   <span class="text-radio-vraag1">Bol.com cadeaubon t.w.v. €400,-</span>
                 </label>
               </div>
             </form>
+            
             
 
               <router-link class="router-link" to="/pagina-2">
@@ -185,8 +190,7 @@ export default {
               </router-link>
 
 
-            <img style="margin-top:40px" src="./Samsung 2.png" alt="">
-            <img src="./Samsung 2.png" alt="">
+            <img src="./afbeeldingen-samen.png" alt="">
             
 
 
@@ -397,6 +401,10 @@ input[type="radio"]
   padding: 29.8px 40px
   position: absolute
   top: 742px
+
+.frame-427320541-1:hover
+  cursor: pointer
+
 
 .ga-naar-stap-2
   letter-spacing: 0

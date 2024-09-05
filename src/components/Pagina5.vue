@@ -131,7 +131,7 @@ export default {
         src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/line-4.svg"
         alt="Line 4"
       />
-        <p class="hoe-kunnen-wij-jou-bereiken">{{ hoeKunnenWijJouBereiken }}</p>
+        <p class="hoe-kunnen-wij-jou-bereiken">Hoe kunnen wij jou bereiken?</p>
 
 
 
@@ -259,6 +259,73 @@ export default {
       <p class="meervoordeelnl-is-6 diodrumcyrillic-regular-normal-silver-16px" v-html="meervoordeelNlIs"></p>
     </div>
   </div>
+
+
+
+  <div class="container-mobiel container-mobiel-pagina-5">
+    <div class="navbar-mobiel">
+      <!-- Navbar content -->
+      <img  class="logo-navbar-mobiel logo-navbar-mobiel-mv"  src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/mv-logo-1-4.svg"  alt="MV logo 1" />  
+      <img  class="logo-navbar-mobiel" src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/image-6.png" alt="logo ziggo"/>
+      <img class="logo-navbar-mobiel" src="./trustpilot-mobiel.png" alt="">
+    </div>
+  
+    <div class="achtergrond-pagina-5">
+      <div class="witte-container-pagina-5">
+        <!-- Verplaats de elementen hierheen voor mobiele weergave -->
+        <p class="gewonnen-mobiel"><span class="gefeliciteerd-mobiel">Gefeliciteerd!<br></span> <span class="blauw-mobiel">Jij maakt nu kans op de </span><span class="gefeliciteerd-mobiel">{{ chosenProduct }}</span></p>
+        <hr class="lijn-2">
+        <p class="hoe-kunnen-wij-jou-bereiken-mobiel">Hoe kunnen wij jou bereiken?</p>
+        <form class="form-pagina5" @submit.prevent="submitForm">
+          <div class="form-group-mobiel full-width">
+            <label for="voornaam"></label>
+            <img class="form-icoon-mobiel" src="./naam-icoon.svg" alt="Naam Icon">
+            <input type="text" id="voornaam" v-model="voornaam" required placeholder="Vul je voornaam in" />
+          </div>
+          <div class="form-group-mobiel full-width">
+            <label for="achternaam"></label>
+            <img class="form-icoon-mobiel" src="./naam-icoon.svg" alt="Achternaam Icon">
+            <input type="text" id="achternaam" v-model="achternaam" required placeholder="Vul je achternaam in" />
+          </div>
+          <div class="form-group-mobiel full-width">
+            <label for="email"></label>
+            <img class="form-icoon-2-mobiel" src="./email-icoon.svg" alt="Email Icon">
+            <input type="email" id="email" v-model="email" required placeholder="Vul je e-mailadres in" />
+          </div>
+          <div class="form-group-mobiel full-width">
+            <label for="telefoonnummer"></label>
+            <img class="form-icoon-2-mobiel" src="./tel-nummer-icoon.svg" alt="Telefoonnummer Icon">
+            <input type="tel" id="telefoonnummer" v-model="telefoonnummer" required placeholder="Vul je telefoonnummer in" />
+          </div>
+        </form>
+        <button class="frame-2-1-mobiel invisible-button" @click="submitForm">
+          <div class="bevestig-mijn-deelname diodrumcyrillic-normal-white-23-7px">Bevestig deelname</div>
+          <span style="color: white; font-size: 22px;">&#8594;</span>
+        </button>
+        <p class="met-het-bevestigen-v-mobiel">Met het bevestigen van je deelname ga je er mee akkoord dat MeerVoordeel eenmalig telefonisch contact met je opneemt met een aanbieding voor een all-in abonnement van Ziggo.</p>
+        <!-- <img class="image-2-6" :src="image2" alt="image 2" />
+        <div class="group-2-6">
+          <div class="overlap-group-2">
+            <div class="twv-18">{{ tWV }}</div>
+            <h1 class="text-19 valign-text-bottom">{{ text19 }}</h1>
+          </div>
+        </div>
+        <img class="jouw-gekozen-prijs" :src="jouwGekozenPrijs" alt="Jouw gekozen prijs:" />
+        <div class="playstation-5-slim-disk">{{ playstation5SlimDisk }}</div> -->
+
+        <img src="./afbeeldingen-samen.png" alt="">
+        <hr class="lijn-3" style="margin-top: 6rem;">
+
+        <div class="footer-pagina1">
+          <p class="text-footer-pagina5">*Meervoordeel.nl is een officiële partner van Ziggo. Deelname mogelijk tot en met 31 juli 2024.
+            Actievoorwaarden van toepassing.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
 </div>
 </center>
 
@@ -640,4 +707,158 @@ export default {
   min-height: 48px
   text-align: center
   width: 874px
+
+
+
+@media (max-width: 500px)
+  .achtergrond-pagina-5
+    background: linear-gradient(90deg, #072148 0%, #40A59F 100%)
+    width: 100%
+    height: 86rem
+    padding-bottom: 2rem
+
+  .witte-container-pagina-5
+    width: 90%
+    height: 58rem
+    border-radius: 0.75rem
+    background: #FFF
+    box-shadow: 0px 31px 81px 0px rgba(0, 17, 77, 0.20)
+    position: relative
+    top: 2rem
+    display: flex
+    flex-direction: column
+    padding: 1rem
+  
+  .form-pagina5 
+    width: 100%
+    display: flex
+    flex-direction: column
+    gap: 1rem
+  
+  .form-group 
+    width: 100%
+  
+  .bevestig-mijn-deelname 
+    text-align: center
+    font-size: 1.2rem
+  
+  .gewonnen-mobiel
+    text-align: center
+    font-size: 1.5rem
+    text-align: left
+    margin-left: 10px
+
+  .group-2-6, .playstation-5-slim-disk 
+    text-align: center
+  
+  .image-2-6 
+    width: 100%
+    height: auto
+    margin: 0 auto
+
+  .gefeliciteerd-mobiel
+    color: #F48C02
+    font-family: $font-family-diodrum_cyrillic-semibold
+    font-size: 1.5625rem
+    font-style: normal
+    font-weight: 600
+    line-height: 135%
+
+  .blauw-mobiel
+    color: #072249
+    font-family: $font-family-diodrum_cyrillic-medium
+    font-size: 1.5625rem
+    font-style: normal
+    font-weight: 600
+    line-height: 135%
+
+
+  .form-group-mobiel input
+    width: 100%
+    padding: 0.625rem 0.625rem 0.625rem 4rem
+    border-radius: 2.5rem
+    border: 1px solid #ccc
+    height: 70px
+    color: black
+    font-family: $font-family-diodrum_cyrillic-regular
+    font-size: 1rem
+    font-style: normal
+    font-weight: 400
+    line-height: normal
+    background-color: #f1f1f1
+
+
+
+  .form-icoon-mobiel
+    width: 20px
+    height: 20px
+    position: relative
+    top: 50%
+    left: -37%
+  
+  .form-icoon-2-mobiel
+    width: 20px
+    height: 20px
+    position: relative
+    top: 50%
+    left: -37%  
+
+
+  .frame-2-1-mobiel
+    display: flex
+    height: 3.6875rem
+    padding: 1.86225rem 2.25rem
+    align-items: center
+    gap: 0.84625rem
+    border-radius: 2.5rem
+    background: #F48C02
+    margin-top: 2rem
+    color: #FFF
+    font-family: 'Diodrum Cyrillic-Semibold','Helvetica'
+    font-size: 1.47881rem
+    font-style: normal
+    font-weight: 700
+    line-height: normal
+
+  .lijn-2
+    width: 90%
+
+
+  .hoe-kunnen-wij-jou-bereiken-mobiel
+    font-family: $font-family-diodrum_cyrillic-regular
+    color: #072249
+    font-size: 1.3125rem
+    font-style: normal
+    font-weight: 400
+    line-height: 126%
+
+
+
+  .met-het-bevestigen-v-mobiel
+    color: #072249
+    font-family: $font-family-diodrum_cyrillic-medium
+    font-size: 1.2rem
+    font-style: normal
+    font-weight: 400
+    line-height: 150%
+    margin-top: 2rem
+    text-align: left
+
+
+  .text-footer-pagina5
+    color: #C1C1C1
+    text-align: center
+    font-family: $font-family-diodrum_cyrillic-regular
+    font-size: 0.75rem
+    font-style: normal
+    font-weight: 400
+    line-height: 1.125rem
+    margin-top: 1rem
+    padding-bottom: 5rem
+
+  .container-mobiel-pagina-5
+    padding-bottom: 12rem!important
+
+  .lijn-3
+    width: 100%
 </style>

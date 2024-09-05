@@ -44,23 +44,24 @@ export default {
   },
   methods: {
     validatePostcode(postcode) {
-      const postcodeRegex = /^\d{4}[- ]?[a-zA-Z]{2}$/;
-      return postcodeRegex.test(postcode);
-    },
-    checkPostcode() {
-      const inputValue = this.$refs.postcodeInput.value;
-      if (this.validatePostcode(inputValue)) {
-        this.postcodeError = ''; 
-        console.log("Postcode is geldig:", inputValue);
-        
-        localStorage.setItem('postcode', inputValue);
+      const postcodeRegex = /^\d{4}\s*[a-zA-Z]{2}$/;
+        return postcodeRegex.test(postcode);
+},
+checkPostcode() {
+  let inputValue = document.querySelector('.x2000-ab-input').value.trim() ||
+                   document.querySelector('.postcode-input-mobiel').value.trim();
+  console.log("Ingevoerde waarde:", inputValue);
+  if (this.validatePostcode(inputValue)) {
+    this.postcodeError = '';
+    console.log("Postcode is geldig:", inputValue);
+    localStorage.setItem('postcode', inputValue);
+    this.$router.push('/pagina-4');
+  } else {
+    this.postcodeError = 'Voer een geldige postcode in (bijv. 2222 AB)';
+    console.log("Postcode is ongeldig:", inputValue);
+  }
+},
 
-        this.$router.push('/pagina-4');
-      } else {
-        this.postcodeError = 'Voer een geldige postcode in (bijv. 2222 AB)';
-        console.log("Postcode is ongeldig:", inputValue);
-      }
-    },
     handleKeyDown(event) {
       if (event.key === 'Enter') {
         this.checkPostcode();
@@ -163,7 +164,7 @@ export default {
         <div class="achtergrond-pagina-1">
 
 
-          <div class="witte-container-pagina-1">
+          <div class="witte-container-pagina-3">
 
             <p class="stap1">
               stap 3 van de 3
@@ -175,9 +176,22 @@ export default {
                 {{chosenProduct}}
               </span>
             </p>
-          
+
+
+            <input 
+            class="postcode-input-mobiel 2000-ab-input"
+            type="text" 
+            placeholder="Vul hier je postcode in"
+            ref="postcodeInput" 
+          />
+          <button class="postcode-knop-mobiel" @click="checkPostcode">Check postcode <img src="./rechterpijl.svg" alt="">
+          </button>
+          <p v-if="postcodeError" style="color: red;">{{ postcodeError }}</p>
           </div>
           </div>
+
+
+          <img src="./afbeeldingen-samen.png" alt="">
 
       </div>
 
@@ -385,12 +399,19 @@ export default {
 
 
 @media (min-width: 501px)
-  .vul-postcode-in
+  .container-mobiel
     display: none
 
 
 
+
 @media (max-width: 501px) 
+
+
+  .witte-container-pagina-3
+    height: 24rem
+    background-color: #fff
+
   .vul-postcode-in
     color: #072249
     font-family: $font-family-diodrum_cyrillic-semibold
@@ -410,5 +431,38 @@ export default {
     font-style: normal
     font-weight: 600
     line-height: 135%
+
+  .container-center-horizontal
+    display: none!important
     
+
+
+  .postcode-input-mobiel
+    display: block
+    width: 90%
+    height: 4rem
+    border-radius: 75px
+    font-size: 24px
+    padding-left: 1rem
+    font-family: $font-family-diodrum_cyrillic-semibold
+    margin-bottom: 2rem
+    margin-top: 2rem
+
+
+  .postcode-knop-mobiel
+    display: flex
+    width: 90%
+    height: 4rem
+    justify-content: center
+    align-items: center
+    gap: 1.53363rem
+    border-radius: 2.5rem
+    background: #F48C02
+    color: $white
+    border: none
+    font-size: 22px
+    font-family: $font-family-diodrum_cyrillic-semibold!important 
+
+
+  
 </style>

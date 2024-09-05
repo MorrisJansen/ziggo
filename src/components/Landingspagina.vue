@@ -251,8 +251,7 @@ export default {
 
 
       
-      <img src="./Samsung 2.png" alt="">
-      <img src="./Samsung 2.png" alt="">
+      <img src="./afbeeldingen-samen.png" alt="">
 
      
     </div>
@@ -400,6 +399,9 @@ export default {
   position: relative
   white-space: nowrap
   width: fit-content
+
+.frame-427320541:hover
+  cursor: pointer
 
 .right-arrow
   height: 11.39px

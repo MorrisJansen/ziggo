@@ -1,3 +1,54 @@
+<script>
+import Frame1 from "./Frame1";
+import Group1 from "./Group1";
+import Frame1000004784 from "./Frame1000004784";
+import { getAntwoorden } from '../antwoorden';
+
+export default {
+  name: "Pagina6",
+  components: {
+    Frame1,
+    Group1,
+    Frame1000004784,
+  },
+  props: [
+    "samsung1",
+    "jouwPostcodeIsGoedgekeurd",
+    "bolcomBon1",
+    "image2",
+    "meervoordeelNlIs",
+    "group11Props",
+    "group12Props",
+    "group13Props",
+    "frame1000004784Props",
+  ],
+  data() {
+    return {
+      chosenProduct: '',
+    };
+  },
+  mounted() {
+    const antwoordenLijst = getAntwoorden();
+    // Toewijzen van het laatste antwoord aan chosenProduct
+    this.chosenProduct = antwoordenLijst[antwoordenLijst.length - 2] || 'geen basta gekozen';
+    console.log('Gekozen product:', this.chosenProduct);
+  },
+  mounted() {
+    setTimeout(() => {
+      this.$router.push("/pagina-5");
+    }, 3000);
+  },
+};
+</script>
+
+
+
+
+
+
+
+
+
 <template>
 
   <center>
@@ -39,55 +90,73 @@
       <p class="meervoordeelnl-is-2 diodrumcyrillic-regular-normal-silver-16px" v-html="meervoordeelNlIs"></p>
     </div>
   </div>
+
+
+<div class="container-mobiel">
+  <div class="navbar-mobiel">
+    <img
+    class="logo-navbar-mobiel logo-navbar-mobiel-mv"
+    src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/mv-logo-1-4.svg"
+    alt="MV logo 1"
+  />
+
+
+    <img
+    class="logo-navbar-mobiel"
+    src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/image-6.png"
+    alt="logo ziggo"
+  />
+
+
+
+<img class="logo-navbar-mobiel" src="./trustpilot-mobiel.png" alt="">
+  </div>
+
+
+  <div class="achtergrond-pagina-6">
+
+    <div class="witte-container-pagina-6">
+      <div class="postcode-goedgekeurd">
+        Jouw postcode is goedgekeurd!
+      </div>
+      <div class="icoon-pagina-6">
+        <img src="./tick-circle.svg" alt="">
+      </div>
+    </div>
+
+    <div class="afbeeldingen-samen">
+      <img src="./afbeeldingen-samen.png" alt="">
+    </div>
+
+
+
+    <div class="footer-container">
+      <hr class="lijn">
+
+
+      <p class="kleine-letters">*Meervoordeel.nl is een officiële partner van Ziggo. Deelname mogelijk tot en met 31 juli 2024.
+        Actievoorwaarden van toepassing.</p>
+    </div>
+
+
+
+
+  </div>
+
+
+
+
+</div>
+
+
+
+
 </div>
 </center>
 
 </template>
 
-<script>
-import Frame1 from "./Frame1";
-import Group1 from "./Group1";
-import Frame1000004784 from "./Frame1000004784";
-import { getAntwoorden } from '../antwoorden';
 
-export default {
-  name: "Pagina6",
-  components: {
-    Frame1,
-    Group1,
-    Frame1000004784,
-  },
-  props: [
-    "samsung1",
-    "jouwPostcodeIsGoedgekeurd",
-    "bolcomBon1",
-    "image2",
-    "meervoordeelNlIs",
-    "group11Props",
-    "group12Props",
-    "group13Props",
-    "frame1000004784Props",
-  ],
-  data() {
-    return {
-      chosenProduct: '',
-    };
-  },
-  mounted() {
-    const antwoordenLijst = getAntwoorden();
-    // Toewijzen van het laatste antwoord aan chosenProduct
-    this.chosenProduct = antwoordenLijst[antwoordenLijst.length - 2] || 'geen basta gekozen';
-    console.log('Gekozen product:', this.chosenProduct);
-  },
-  mounted() {
-    // Start a 3-second timer
-    setTimeout(() => {
-      // Redirect to /pagina-5 after 3 seconds
-      this.$router.push("/pagina-5");
-    }, 3000);
-  },
-};
-</script>
 
 <style lang="sass">
 @import '../../variables'
@@ -183,4 +252,46 @@ export default {
   min-height: 48px
   text-align: center
   width: 874px
+
+
+@media (max-width: 501px)
+  .achtergrond-pagina-6
+    background: linear-gradient(90deg, #072148 0%, #40A59F 100%)
+    width: 100%
+    height: 61.875rem
+
+  .witte-container-pagina-6
+    width: 90%
+    height: 22rem
+    flex-shrink: 0
+    border-radius: 0.75rem
+    background: #FFF
+    box-shadow: 0px 31px 81px 0px rgba(0, 17, 77, 0.20)
+    position: relative
+    top: 2rem
+
+  .postcode-goedgekeurd
+    color: #072249
+    text-align: center
+    font-family: $font-family-diodrum_cyrillic-semibold
+    font-size: 1.5625rem
+    font-style: normal
+    font-weight: 600
+    line-height: 135%
+    width: 16.1875rem
+    padding-top: 2rem
+
+
+  .icoon-pagina-6
+    margin-top: 3rem
+
+
+  .footer-container
+    background-color: $white
+    width: 100%
+    height: 800px
+    padding-top: 3rem
+
+  .container-mobiel
+    padding-bottom: 3rem
 </style>
