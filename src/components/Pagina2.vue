@@ -188,7 +188,7 @@ export default {
         <div class="achtergrond-pagina-1">
 
 
-          <div class="witte-container-pagina-1">
+          <div class="witte-container-pagina-1 hoogte-witte-container">
 
             <p class="stap1">
               stap 2 van de 3
@@ -200,28 +200,28 @@ export default {
 
 
           <form class="radio-form">
-            <div class="radio-option radio-option-1">
+            <div class="radio-option radio-option-1 radio-option-1-pagina2">
               <label for="option1">
                 <input type="radio" id="option1" name="prijsoptie" value="option1">
                 <span class="text-radio-vraag1">Odido</span>
               </label>
             </div>
 
-            <div class="radio-option radio-option-2">
+            <div class="radio-option radio-option-2 radio-option-2-pagina2">
               <label for="option2">
                 <input type="radio" id="option2" name="prijsoptie" value="option2">
                 <span class="text-radio-vraag1">KPN</span>
               </label>
             </div>
 
-            <div class="radio-option radio-option-3">
+            <div class="radio-option radio-option-3 radio-option-3-pagina2">
               <label for="option3">
                 <input type="radio" id="option3" name="prijsoptie" value="option3">
                 <span class="text-radio-vraag1">Ziggo</span>
               </label>
             </div>
 
-            <div class="radio-option radio-option-4">
+            <div class="radio-option radio-option-4 radio-option-4-pagina2">
               <label for="option4">
                 <input type="radio" id="option4" name="prijsoptie" value="option4">
                 <span class="text-radio-vraag1">Anders</span>
@@ -232,7 +232,7 @@ export default {
               <router-link class="router-link" to="/pagina-3">
                 <button class="doe-nu-mee-knop" href="/pagina-3">
                   <div class="text-in-knop">
-                    Laatste stap<img src="./rechterpijl.svg" alt="pijl-naar-rechts">
+                    Laatste stap<img class="marge-links-mobiel" src="./rechterpijl.svg" alt="pijl-naar-rechts">
                   </div>
                 </button>
               </router-link>
@@ -355,7 +355,7 @@ export default {
   background-color: $tangerine
   border-radius: 40px
   display: flex
-  gap: 24.54px
+  gap: 16px
   height: 76px
   left: 628px
   overflow: hidden
@@ -579,13 +579,26 @@ input[type="radio"]:checked::after
     display: none!important
   
 
-  .witte-container-pagina-1
-    height: 48rem
+  .hoogte-witte-container
+    height: 37rem 
   
 
   .radio-option-1, .radio-option-2, .radio-option-3 
-    margin-bottom: 1.8rem
-    margin-top: 1.8rem
+    margin-bottom: 0.7rem
+    margin-top: 0.7rem
+
+  .radio-option-1-pagina2, 
+  .radio-option-2-pagina2, 
+  .radio-option-3-pagina2,
+  .radio-option-4-pagina2 
+    height: 4.3rem!important
+
+  .radio-option-4
+    margin-top: 0.7rem
+    
+
+  .marge-links-mobiel
+    margin-left: 1rem
 
 </style>
 

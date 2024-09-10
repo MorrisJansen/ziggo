@@ -128,7 +128,9 @@ checkPostcode() {
           />
           
           <p class="meervoordeelnl-is-4 diodrumcyrillic-regular-normal-silver-16px" v-html="meervoordeelNlIs"></p>
-          <div>{{ chosenProduct }}</div>
+
+          <!-- onderkant pagina -->
+          <!-- <div style="display: none">{{ chosenProduct }}</div> -->
         </div>
       </div>
 
@@ -136,7 +138,7 @@ checkPostcode() {
 
 
 
-      <div class="container-mobiel">
+      <div class="container-mobiel5">
         <div class="navbar-mobiel">
     
     
@@ -161,7 +163,7 @@ checkPostcode() {
 
 
 
-        <div class="achtergrond-pagina-1">
+        <div class="achtergrond-pagina-5">
 
 
           <div class="witte-container-pagina-3">
@@ -188,10 +190,17 @@ checkPostcode() {
           </button>
           <p v-if="postcodeError" style="color: red;">{{ postcodeError }}</p>
           </div>
+          <img style="position: relative; bottom: 1.5rem" src="./afbeeldingen-samen.png" alt="">
+          </div>
+
+          <hr class="lijn" style="margin-top: 3rem;">
+
+          <div class="footer-pagina1">
+            <p class="text-footer-pagina1">*Meervoordeel.nl is een officiële partner van Ziggo. Deelname mogelijk tot en met 31 juli 2024.
+              Actievoorwaarden van toepassing.</p>
           </div>
 
 
-          <img src="./afbeeldingen-samen.png" alt="">
 
       </div>
 
@@ -399,13 +408,24 @@ checkPostcode() {
 
 
 @media (min-width: 501px)
-  .container-mobiel
+  .container-mobiel5
     display: none
 
 
 
 
 @media (max-width: 501px) 
+
+
+
+
+  .witte-container-pagina-3 
+    height: 24rem
+    background-color: #fff
+    width: 92vw
+    border-radius: 0.75rem
+    top: 2rem
+    position: relative
 
 
   .witte-container-pagina-3
@@ -463,6 +483,14 @@ checkPostcode() {
     font-size: 22px
     font-family: $font-family-diodrum_cyrillic-semibold!important 
 
+
+
+  .achtergrond-pagina-5 
+    background: linear-gradient(90deg, #072148 0%, #40A59F 100%)!important
+    width: 100%!important
+    height: 56rem!important
+    padding-bottom: 2rem!important
+  
 
   
 </style>

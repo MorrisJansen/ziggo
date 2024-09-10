@@ -36,7 +36,6 @@ export default {
     };
   },
   mounted() {
-    // Haal de antwoorden op uit localStorage
     const antwoordenLijst = JSON.parse(localStorage.getItem('antwoorden')) || [];
     this.chosenProduct = antwoordenLijst[antwoordenLijst.length - 2] || 'geen product gekozen';
   },
@@ -47,7 +46,6 @@ export default {
       const gekozenProductId = this.getProductId(this.chosenProduct);
       const gekozenMerkId = this.getMerkId(antwoordenLijst);
 
-      // Configuratie voor de API-aanroep
       const url = 'https://leadgen.republish.nl/api/sponsors/2410/leads';
       const username = '199';
       const password = 'b41c7c41c8d595fbd66dea6a4f70836fbc5e3afe';
@@ -58,7 +56,7 @@ export default {
         publisher_id: 'morris de publisher :)',
         site_custom_url: 'https://ziggoprijswinnnen.nl',
         site_custom_name: 'ziggo prijs winnen',
-        ip: '123.45.67.89', // een voorbeeld van een IP-adres
+        ip: '123.45.67.89',
         optin_timestamp: new Date().toISOString().slice(0, 19).replace('T', ' '),
         firstname: this.voornaam,
         lastname: this.achternaam,
@@ -79,7 +77,6 @@ export default {
 
         if (response.ok) {
           console.log('Lead succesvol verstuurd.');
-          // Eventueel een succesmelding of redirect hier
         } else {
           console.error('Fout bij versturen van lead:', await response.text());
         }
@@ -314,7 +311,7 @@ export default {
         <div class="playstation-5-slim-disk">{{ playstation5SlimDisk }}</div> -->
 
         <img src="./afbeeldingen-samen.png" alt="">
-        <hr class="lijn-3" style="margin-top: 6rem;">
+        <hr class="lijn-3" style="margin-top: 5rem;">
 
         <div class="footer-pagina1">
           <p class="text-footer-pagina5">*Meervoordeel.nl is een officiële partner van Ziggo. Deelname mogelijk tot en met 31 juli 2024.
@@ -380,7 +377,7 @@ export default {
 .form-group.full-width
   display: flex
   align-items: flex-start
-  gap: 0.625rem
+  // gap: 0.625rem
 
 
 .form-icoon
@@ -395,7 +392,7 @@ export default {
   width: 20px
   height: 20px
   position: relative
-  top: 57px
+  top: 47px
   left: 3%
 
 
@@ -479,6 +476,7 @@ export default {
   position: absolute
   top: 450px
   width: 800px
+  text-align: left
 
 .line-4
   height: 1px
@@ -714,12 +712,12 @@ export default {
   .achtergrond-pagina-5
     background: linear-gradient(90deg, #072148 0%, #40A59F 100%)
     width: 100%
-    height: 86rem
+    height: 82rem
     padding-bottom: 2rem
 
   .witte-container-pagina-5
     width: 90%
-    height: 58rem
+    height: 54.9rem
     border-radius: 0.75rem
     background: #FFF
     box-shadow: 0px 31px 81px 0px rgba(0, 17, 77, 0.20)
@@ -733,7 +731,6 @@ export default {
     width: 100%
     display: flex
     flex-direction: column
-    gap: 1rem
   
   .form-group 
     width: 100%
@@ -746,7 +743,6 @@ export default {
     text-align: center
     font-size: 1.5rem
     text-align: left
-    margin-left: 10px
 
   .group-2-6, .playstation-5-slim-disk 
     text-align: center
@@ -821,7 +817,7 @@ export default {
     line-height: normal
 
   .lijn-2
-    width: 90%
+    width: 100%
 
 
   .hoe-kunnen-wij-jou-bereiken-mobiel
@@ -831,6 +827,7 @@ export default {
     font-style: normal
     font-weight: 400
     line-height: 126%
+    text-align: left
 
 
 

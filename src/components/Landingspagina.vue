@@ -149,8 +149,8 @@ export default {
       />
       <div class="flex-row-1">
         <p class="meer-voordeel-biedt-d diodrumcyrillic-regular-normal-downriver-25px">
-          <span class="diodrumcyrillic-regular-normal-downriver-25px">MeerVoordeel biedt diverse kortings- en voordeelprogramma's aan, aan consumenten in Nederland. In samenwerking met Ziggo, een van de grootste aanbieders van kabeltelevisie, internet en telefoniediensten in Nederland, biedt MeerVoordeel speciale voordelen en kortingen aan nieuwe Ziggo-klanten.",</span>
-          <span class="diodrumcyrillic-regular-normal-downriver-25px">Onder andere door deze samenwerking kunnen wij jou mooie acties zoals deze bieden.</span>
+          <span class="diodrumcyrillic-regular-normal-downriver-25px">MeerVoordeel biedt diverse kortings- en voordeelprogramma's aan, aan consumenten in Nederland. In samenwerking met Ziggo, een van de grootste aanbieders van kabeltelevisie, internet en telefoniediensten in Nederland, biedt MeerVoordeel speciale voordelen en kortingen aan nieuwe Ziggo-klanten.",</span> <br><br>
+          <span class="diodrumcyrillic-regular-normal-downriver-25px dik">Onder andere door deze samenwerking kunnen wij jou mooie acties zoals deze bieden.</span>
         </p>
         <img class="image-8" :src="image8" alt="image 8" />
       </div>
@@ -260,7 +260,7 @@ export default {
 <div class="container-voordeel">
   <p class="meer-over-meer-titel">Meer over Meervoordeel</p>
   <hr class="lijn">
-  <p class="meer-over-meer-text">MeerVoordeel biedt diverse kortings- en voordeelprogramma's aan, aan consumenten in Nederland. In samenwerking met Ziggo, een van de grootste aanbieders van kabeltelevisie, internet en telefoniediensten in Nederland, biedt MeerVoordeel speciale voordelen en kortingen aan nieuwe Ziggo-klanten.
+  <p class="meer-over-meer-text">MeerVoordeel biedt diverse kortings- en voordeelprogramma's aan, aan consumenten in Nederland. In samenwerking met Ziggo, een van de grootste aanbieders van kabeltelevisie, internet en telefoniediensten in Nederland, biedt MeerVoordeel speciale voordelen en kortingen aan nieuwe Ziggo-klanten. <br><br>
     Onder andere door deze samenwerking kunnen wij jou mooie acties zoals deze bieden.</p>
 </div>
 
@@ -553,6 +553,10 @@ export default {
   margin-top: 18.0px
   min-height: 345px
   width: 727px
+  text-align: left
+
+.dik
+  font-weight: 900!important
 
 .image-8
   height: 403px
@@ -764,7 +768,7 @@ export default {
     position: relative
     right: 24px
     top: 7px
-    color: black
+    color: white
 
 
   .text-hoe-werkt-het-3
@@ -821,6 +825,7 @@ export default {
     font-style: normal
     font-weight: 600
     line-height: 150%
+    margin-top: 30px
 
 
   .lijn
@@ -836,7 +841,7 @@ export default {
     font-weight: 400
     line-height: 2.0625rem
     width: 80%
-
+    text-align: left
 
   .logos-footer
     height: 100px
