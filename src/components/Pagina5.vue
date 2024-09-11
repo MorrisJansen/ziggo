@@ -55,6 +55,7 @@ export default {
     // Stel chosenProduct direct in, zodra de pagina laadt
     this.chosenProduct = gekozenProduct || 'geen product gekozen';  // Gebruik de waarde van antwoord1
 
+
   },
   methods: {
     // Deze functie vergelijkt de antwoorden en verzendt de gegevens naar de API
@@ -94,6 +95,9 @@ export default {
         answers: [5269, gekozenProductId, gekozenMerkId], // Gebruik de dynamisch verkregen ID's
       };
 
+      // Voeg hier de console.log toe om de data te inspecteren voordat het verzonden wordt
+      console.log(data);
+
       try {
         const response = await fetch(url, {
           method: 'POST',
@@ -105,6 +109,7 @@ export default {
         });
 
         if (response.ok) {
+          console.log('Lead succesvol verstuurd.');
         } else {
           const errorMessage = await response.text();
           console.error('Fout bij versturen van lead:', errorMessage);
@@ -137,8 +142,6 @@ export default {
   }
 };
 </script>
-
-
 
 
 
