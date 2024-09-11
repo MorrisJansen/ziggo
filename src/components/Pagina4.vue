@@ -1,7 +1,7 @@
 <script>
 import Group1 from "./Group1";
 import Frame1000004784 from "./Frame1000004784";
-import { getAntwoorden } from '../antwoorden';
+import { getAntwoorden } from '../Store';
 
 export default {
   name: "Pagina4",

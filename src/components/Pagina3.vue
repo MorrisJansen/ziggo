@@ -2,7 +2,7 @@
 import Frame1 from "./Frame1";
 import Group1 from "./Group1";
 import Frame1000004784 from "./Frame1000004784";
-import { getAntwoorden } from '../antwoorden';
+import { mapGetters } from 'vuex'; // Voeg deze regel toe
 
 export default {
   name: "Pagina3",
@@ -31,48 +31,42 @@ export default {
       postcodeError: '', 
     };
   },
-  mounted() {
-    const antwoordenLijst = getAntwoorden();
-    this.chosenProduct = antwoordenLijst[antwoordenLijst.length - 2] || '';
-    console.log('Gekozen product:', this.chosenProduct);
-    localStorage.setItem('antwoorden', JSON.stringify(antwoordenLijst));
-
-    window.addEventListener('keydown', this.handleKeyDown);
+  computed: {
+    ...mapGetters(['getAntwoorden']), // Gebruik mapGetters om de antwoorden op te halen
   },
-  beforeDestroy() {
-    window.removeEventListener('keydown', this.handleKeyDown);
+  mounted() {
+    this.chosenProduct = this.getAntwoorden.antwoord1 || ''; // Haal het specifieke antwoord op
+    console.log('Gekozen product:', this.chosenProduct);
   },
   methods: {
     validatePostcode(postcode) {
       const postcodeRegex = /^\d{4}\s*[a-zA-Z]{2}$/;
-        return postcodeRegex.test(postcode);
-},
-checkPostcode() {
-  let inputValue = document.querySelector('.x2000-ab-input').value.trim() ||
-                   document.querySelector('.postcode-input-mobiel').value.trim();
-  console.log("Ingevoerde waarde:", inputValue);
-  if (this.validatePostcode(inputValue)) {
-    this.postcodeError = '';
-    console.log("Postcode is geldig:", inputValue);
-    localStorage.setItem('postcode', inputValue);
-    this.$router.push('/pagina-4');
-  } else {
-    this.postcodeError = 'Voer een geldige postcode in (bijv. 2222 AB)';
-    console.log("Postcode is ongeldig:", inputValue);
-  }
-},
-
+      return postcodeRegex.test(postcode);
+    },
+    checkPostcode() {
+      let inputValue = document.querySelector('.x2000-ab-input').value.trim() || 
+                       document.querySelector('.postcode-input-mobiel').value.trim();
+      console.log("Ingevoerde waarde:", inputValue);
+      if (this.validatePostcode(inputValue)) {
+        this.postcodeError = '';
+        console.log("Postcode is geldig:", inputValue);
+        this.$router.push('/pagina-4');
+      } else {
+        this.postcodeError = 'Voer een geldige postcode in (bijv. 2222 AB)';
+        console.log("Postcode is ongeldig:", inputValue);
+      }
+    },
     handleKeyDown(event) {
       if (event.key === 'Enter') {
         this.checkPostcode();
       }
-    }
-  }
+    },
+  },
+  beforeDestroy() {
+    window.removeEventListener('keydown', this.handleKeyDown);
+  },
 };
 </script>
-
-
-
 
 <template>
   <center>
@@ -128,26 +122,16 @@ checkPostcode() {
           />
           
           <p class="meervoordeelnl-is-4 diodrumcyrillic-regular-normal-silver-16px" v-html="meervoordeelNlIs"></p>
-
-          <!-- onderkant pagina -->
-          <!-- <div style="display: none">{{ chosenProduct }}</div> -->
         </div>
       </div>
 
-
-
-
-
       <div class="container-mobiel5">
         <div class="navbar-mobiel">
-    
-    
           <img
           class="logo-navbar-mobiel logo-navbar-mobiel-mv"
           src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/mv-logo-1-4.svg"
           alt="MV logo 1"
         />
-      
       
           <img
           class="logo-navbar-mobiel"
@@ -155,30 +139,20 @@ checkPostcode() {
           alt="logo ziggo"
         />
       
-    
-    
-      <img class="logo-navbar-mobiel" src="./trustpilot-mobiel.png" alt="">
+          <img class="logo-navbar-mobiel" src="./trustpilot-mobiel.png" alt="">
         </div>
 
-
-
-
         <div class="achtergrond-pagina-5">
-
-
           <div class="witte-container-pagina-3">
-
             <p class="stap1">
               stap 3 van de 3
             </p>
-
 
             <p class="vul-postcode-in">Vul je postcode in en check of je kans maakt op
               <span class="gekozen-product-mobiel">
                 {{chosenProduct}}
               </span>
             </p>
-
 
             <input 
             class="postcode-input-mobiel 2000-ab-input"
@@ -191,22 +165,19 @@ checkPostcode() {
           <p v-if="postcodeError" style="color: red;">{{ postcodeError }}</p>
           </div>
           <img style="position: relative; bottom: 1.5rem" src="./afbeeldingen-samen.png" alt="">
-          </div>
+        </div>
 
-          <hr class="lijn" style="margin-top: 3rem;">
+        <hr class="lijn" style="margin-top: 3rem;">
 
-          <div class="footer-pagina1">
-            <p class="text-footer-pagina1">*Meervoordeel.nl is een officiële partner van Ziggo. Deelname mogelijk tot en met 31 juli 2024.
-              Actievoorwaarden van toepassing.</p>
-          </div>
-
-
-
+        <div class="footer-pagina1">
+          <p class="text-footer-pagina1">*Meervoordeel.nl is een officiële partner van Ziggo. Deelname mogelijk tot en met 31 juli 2024.
+            Actievoorwaarden van toepassing.</p>
+        </div>
       </div>
-
     </div>
   </center>
 </template>
+
 
 
 <style lang="sass">
@@ -429,7 +400,7 @@ checkPostcode() {
 
 
   .witte-container-pagina-3
-    height: 24rem
+    height: 26rem
     background-color: #fff
 
   .vul-postcode-in

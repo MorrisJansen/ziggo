@@ -1,10 +1,11 @@
 
-
 <script>
+
+
 import Frame1 from "./Frame1";
 import Group1 from "./Group1";
 import Frame1000004784 from "./Frame1000004784";
-import { addAntwoord, getAntwoorden } from '../antwoorden';
+import { addAntwoord, getAntwoorden } from '../Store';
 
 export default {
   name: "Pagina2",
@@ -15,27 +16,27 @@ export default {
   },
   data() {
     return {
-      gekozenProduct: '',
       gekozenProvider: '', // Nieuwe eigenschap voor de geselecteerde provider
     };
   },
   mounted() {
-    const antwoordenLijst = getAntwoorden();
-    console.log('Alle antwoorden:', antwoordenLijst);
+    const antwoordenLijst = this.$store.getters.getAntwoorden();
+    console.log('Alle antwoorden uit store:', antwoordenLijst); // Log alle antwoorden
   },
   methods: {
-    selectProvider(event) {
-      this.gekozenProvider = event.target.value; // Sla de gekozen provider op
-    },
-    goToStep3() {
-      if (!this.gekozenProvider) {
-        alert('Kies alstublieft een provider voordat u doorgaat.'); // Waarschuwing als er geen provider is geselecteerd
-        return; // Stop de navigatie
-      }
-      addAntwoord(this.gekozenProvider);
-      this.$router.push({ path: '/pagina-3' }); // Navigeer naar Pagina 3
-    },
+  selectProvider(event) {
+    this.gekozenProvider = event.target.value;
   },
+  goToStep3() {
+    if (!this.gekozenProvider) {
+      alert('Kies alstublieft een provider voordat u doorgaat.');
+      return;
+    }
+    this.$store.commit('ADD_ANTWOORD', { vraag: 'antwoord2', antwoord: this.gekozenProvider }); // Opslaan met een sleutel
+    this.$router.push({ path: '/pagina-3' });
+  },
+},
+
   props: [
     "samsung1",
     "stap2Van3",

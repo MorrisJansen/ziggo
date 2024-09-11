@@ -1,12 +1,8 @@
-
-
 <script>
 import Frame1 from "./Frame1";
 import RadioButtonSelected from "./RadioButtonSelected";
 import Group1 from "./Group1";
 import Frame1000004784 from "./Frame1000004784";
-import { addAntwoord } from '../antwoorden';
-
 
 export default {
   name: "Pagina1",
@@ -18,7 +14,7 @@ export default {
   },
   data() {
     return {
-      chosenProduct: '',
+      chosenProduct: '',  // Hier wordt het geselecteerde product opgeslagen
       products: [
         { id: 1, name: "SAMSUNG 60\" TV t.w.v. €699,-", value: "SAMSUNG TV 60" },
         { id: 2, name: "Playstation 5 Slim Disk t.w.v. €549,-", value: "Playstation 5 Slim Disk" },
@@ -46,16 +42,17 @@ export default {
   ],
   methods: {
   goToStep2() {
-    console.log(this.chosenProduct)
     if (this.chosenProduct) {
-      addAntwoord(this.chosenProduct); 
+      console.log('Geselecteerd product:', this.chosenProduct);
+      this.$store.commit('ADD_ANTWOORD', { vraag: 'antwoord1', antwoord: this.chosenProduct }); // Opslaan met een sleutel
       this.$router.push({ path: '/pagina-2' });
     } else {
       alert('Kies alstublieft een product voordat je verder gaat.');
     }
   },
- },
- created() {
+},
+
+  created() {
     console.log("Pagina1 component is aangemaakt.");
   },
   mounted() {
@@ -178,17 +175,26 @@ export default {
                 </label>
               </div>
             </form>
+
+
+
+
+
+            
             
             
 
-              <router-link class="router-link" to="/pagina-2">
-                <button class="doe-nu-mee-knop" href="/pagina-2">
-                  <div class="text-in-knop">
-                    Ga naar stap 2<img src="./rechterpijl.svg" alt="pijl-naar-rechts">
-                  </div>
-                </button>
-              </router-link>
 
+
+
+              <div @click="goToStep2" class="">
+                <div class="doe-nu-mee-knop">
+                  <p class="text-in-knop">
+                    Ga naar stap 2
+                  </p>
+                </div>
+              </div>
+              
 
             <img src="./afbeeldingen-samen.png" alt="">
             

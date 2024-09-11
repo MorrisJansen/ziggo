@@ -1,7 +1,7 @@
 <script>
 import Frame1 from "./Frame1";
 import Frame1000004784 from "./Frame1000004784";
-import { getAntwoorden } from '../antwoorden';
+import { mapGetters } from 'vuex';
 
 export default {
   name: "Pagina5",
@@ -28,29 +28,60 @@ export default {
   ],
   data() {
     return {
-      chosenProduct: '',
       voornaam: '',
       achternaam: '',
       email: '',
       telefoonnummer: '',
+      gekozenProductId: null,
+      gekozenMerkId: null,
     };
   },
+  computed: {
+    ...mapGetters(['getAntwoorden']), // Vuex getter om antwoorden op te halen
+  },
   mounted() {
-    const antwoordenLijst = JSON.parse(localStorage.getItem('antwoorden')) || [];
-    this.chosenProduct = antwoordenLijst[antwoordenLijst.length - 2] || 'geen product gekozen';
+    // Haal antwoorden op uit Vuex
+    const antwoordenLijst = this.getAntwoorden;
+    console.log('Antwoordenlijst:', antwoordenLijst);
+
+    // Haal antwoord1 en antwoord2 op uit de antwoordenlijst (voor product en merk)
+    const gekozenProduct = antwoordenLijst.antwoord1; // Antwoord 1 is het gekozen product
+    const gekozenMerk = antwoordenLijst.antwoord2; // Antwoord 2 is het gekozen merk
+
+    // Haal de juiste ID's op
+    this.gekozenProductId = this.getProductId(gekozenProduct);
+    this.gekozenMerkId = this.getMerkId(gekozenMerk);
+
+    console.log('Gekozen Product ID:', this.gekozenProductId);
+    console.log('Gekozen Merk ID:', this.gekozenMerkId);
+
+    // We kunnen de gekozen productnaam ook weergeven
+    this.chosenProduct = gekozenProduct || 'geen product gekozen';
   },
   methods: {
+    // Deze functie vergelijkt de antwoorden en verzendt de gegevens naar de API
     async submitForm() {
+      const antwoordenLijst = this.getAntwoorden; // Haal antwoorden op via Vuex
+      if (!antwoordenLijst || !antwoordenLijst.antwoord1 || !antwoordenLijst.antwoord2) {
+        console.error('Onvoldoende antwoorden om te verwerken.');
+        return;
+      }
 
-      const antwoordenLijst = JSON.parse(localStorage.getItem('antwoorden')) || [];
-      const gekozenProductId = this.getProductId(this.chosenProduct);
-      const gekozenMerkId = this.getMerkId(antwoordenLijst);
+      // Haal de product- en merk-ID's op
+      const gekozenProductId = this.getProductId(antwoordenLijst.antwoord1);
+      const gekozenMerkId = this.getMerkId(antwoordenLijst.antwoord2);
+
+      // Controleer of de ID's correct zijn toegewezen
+      if (!gekozenProductId || !gekozenMerkId) {
+        console.error('Kon geen geldige ID\'s vinden voor het product of merk.');
+        return;
+      }
 
       const url = 'https://leadgen.republish.nl/api/sponsors/2410/leads';
       const username = '199';
       const password = 'b41c7c41c8d595fbd66dea6a4f70836fbc5e3afe';
       const authHeader = 'Basic ' + btoa(`${username}:${password}`);
-      
+
       const data = {
         language: 'nl_NL',
         publisher_id: 'morris de publisher :)',
@@ -62,7 +93,7 @@ export default {
         lastname: this.achternaam,
         email: this.email,
         phone_number: this.telefoonnummer,
-        answers: [5269, gekozenProductId, gekozenMerkId]
+        answers: [5269, gekozenProductId, gekozenMerkId], // Gebruik de dynamisch verkregen ID's
       };
 
       try {
@@ -70,45 +101,47 @@ export default {
           method: 'POST',
           headers: {
             'Authorization': authHeader,
-            'Content-Type': 'application/json; charset=utf-8'
+            'Content-Type': 'application/json; charset=utf-8',
           },
-          body: JSON.stringify(data)
+          body: JSON.stringify(data),
         });
 
         if (response.ok) {
           console.log('Lead succesvol verstuurd.');
         } else {
-          console.error('Fout bij versturen van lead:', await response.text());
+          const errorMessage = await response.text();
+          console.error('Fout bij versturen van lead:', errorMessage);
         }
       } catch (error) {
-        console.error('Netwerk- of serverfout:', error);
-      }
+        console.error('Netwerk- of serverfout:', error);      }
     },
+
+    // Functie om de product-ID op te halen
     getProductId(product) {
       const productMap = {
         'SAMSUNG 60" TV': 5284,
         'Playstation 5 Slim Disk': 5287,
-        'Bol.com cadeaubon t.w.v. €400': 5290
+        'Bol.com cadeaubon': 5290,
       };
       return productMap[product] || null;
     },
-    getMerkId(antwoordenLijst) {
+
+    // Functie om de merk-ID op te halen
+    getMerkId(merk) {
       const merkMap = {
         'Odido': 5272,
         'KPN': 5275,
         'Ziggo': 5278,
-        'Anders': 5281
+        'Anders': 5281,
       };
-      for (let antwoord of antwoordenLijst) {
-        if (merkMap[antwoord]) {
-          return merkMap[antwoord];
-        }
-      }
-      return null;
+      return merkMap[merk] || null;
     }
   }
 };
 </script>
+
+
+
 
 
 
