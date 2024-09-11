@@ -37,6 +37,13 @@ export default {
   mounted() {
     this.chosenProduct = this.getAntwoorden.antwoord1 || ''; // Haal het specifieke antwoord op
     console.log('Gekozen product:', this.chosenProduct);
+
+    // Luister naar de "keydown" gebeurtenis voor Enter
+    window.addEventListener('keydown', this.handleKeyDown);
+  },
+  beforeDestroy() {
+    // Verwijder de "keydown" eventlistener wanneer de component wordt vernietigd
+    window.removeEventListener('keydown', this.handleKeyDown);
   },
   methods: {
     validatePostcode(postcode) {
@@ -58,15 +65,13 @@ export default {
     },
     handleKeyDown(event) {
       if (event.key === 'Enter') {
-        this.checkPostcode();
+        this.checkPostcode();  // Voer de postcode-validatie en router-navigatie uit
       }
     },
   },
-  beforeDestroy() {
-    window.removeEventListener('keydown', this.handleKeyDown);
-  },
 };
 </script>
+
 
 <template>
   <center>

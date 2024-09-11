@@ -32,6 +32,7 @@ export default {
       achternaam: '',
       email: '',
       telefoonnummer: '',
+      chosenProduct: '',  // Zorg dat chosenProduct meteen wordt ingesteld
       gekozenProductId: null,
       gekozenMerkId: null,
     };
@@ -42,7 +43,6 @@ export default {
   mounted() {
     // Haal antwoorden op uit Vuex
     const antwoordenLijst = this.getAntwoorden;
-    console.log('Antwoordenlijst:', antwoordenLijst);
 
     // Haal antwoord1 en antwoord2 op uit de antwoordenlijst (voor product en merk)
     const gekozenProduct = antwoordenLijst.antwoord1; // Antwoord 1 is het gekozen product
@@ -52,11 +52,9 @@ export default {
     this.gekozenProductId = this.getProductId(gekozenProduct);
     this.gekozenMerkId = this.getMerkId(gekozenMerk);
 
-    console.log('Gekozen Product ID:', this.gekozenProductId);
-    console.log('Gekozen Merk ID:', this.gekozenMerkId);
+    // Stel chosenProduct direct in, zodra de pagina laadt
+    this.chosenProduct = gekozenProduct || 'geen product gekozen';  // Gebruik de waarde van antwoord1
 
-    // We kunnen de gekozen productnaam ook weergeven
-    this.chosenProduct = gekozenProduct || 'geen product gekozen';
   },
   methods: {
     // Deze functie vergelijkt de antwoorden en verzendt de gegevens naar de API
@@ -64,7 +62,7 @@ export default {
       const antwoordenLijst = this.getAntwoorden; // Haal antwoorden op via Vuex
       if (!antwoordenLijst || !antwoordenLijst.antwoord1 || !antwoordenLijst.antwoord2) {
         console.error('Onvoldoende antwoorden om te verwerken.');
-        return;
+        return; // Stop de verdere verwerking
       }
 
       // Haal de product- en merk-ID's op
@@ -107,13 +105,13 @@ export default {
         });
 
         if (response.ok) {
-          console.log('Lead succesvol verstuurd.');
         } else {
           const errorMessage = await response.text();
           console.error('Fout bij versturen van lead:', errorMessage);
         }
       } catch (error) {
-        console.error('Netwerk- of serverfout:', error);      }
+        console.error('Netwerk- of serverfout:', error);
+      }
     },
 
     // Functie om de product-ID op te halen

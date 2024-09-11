@@ -1,7 +1,4 @@
-
 <script>
-
-
 import Frame1 from "./Frame1";
 import Group1 from "./Group1";
 import Frame1000004784 from "./Frame1000004784";
@@ -16,26 +13,29 @@ export default {
   },
   data() {
     return {
-      gekozenProvider: '', // Nieuwe eigenschap voor de geselecteerde provider
+      gekozenProvider: '', 
     };
   },
   mounted() {
     const antwoordenLijst = this.$store.getters.getAntwoorden();
-    console.log('Alle antwoorden uit store:', antwoordenLijst); // Log alle antwoorden
+    console.log('Alle antwoorden uit store:', antwoordenLijst); 
   },
   methods: {
-  selectProvider(event) {
-    this.gekozenProvider = event.target.value;
+    selectProvider(event) {
+      this.gekozenProvider = event.target.value;
+      console.log("Gekozen provider:", this.gekozenProvider); 
+    },
+
+    goToStep3() {
+      if (!this.gekozenProvider) {
+        alert('Kies alstublieft een provider voordat u doorgaat.');
+        return;
+      }
+      this.$store.commit('ADD_ANTWOORD', { vraag: 'antwoord2', antwoord: this.gekozenProvider });
+      console.log('Provide r opgeslagen:', this.gekozenProvider); 
+      this.$router.push({ path: '/pagina-3' });
+    },
   },
-  goToStep3() {
-    if (!this.gekozenProvider) {
-      alert('Kies alstublieft een provider voordat u doorgaat.');
-      return;
-    }
-    this.$store.commit('ADD_ANTWOORD', { vraag: 'antwoord2', antwoord: this.gekozenProvider }); // Opslaan met een sleutel
-    this.$router.push({ path: '/pagina-3' });
-  },
-},
 
   props: [
     "samsung1",
@@ -59,11 +59,11 @@ export default {
 </script>
 
 
-
 <template>
   <center>
     <div class="overkoepelende-container">
 
+      <!-- Desktop versie -->
       <div class="container-center-horizontal">
         <div class="pagina-2 screen">
           <div class="overlap-group3-3">
@@ -162,105 +162,71 @@ export default {
         </div>
       </div>
 
-
+      <!-- Mobiele versie -->
       <div class="container-mobiel">
         <div class="navbar-mobiel">
-    
-    
-            <img
-            class="logo-navbar-mobiel logo-navbar-mobiel-mv"
-            src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/mv-logo-1-4.svg"
-            alt="MV logo 1"
-          />
-        
-        
-            <img
-            class="logo-navbar-mobiel"
-            src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/image-6.png"
-            alt="logo ziggo"
-          />
-
+          <img class="logo-navbar-mobiel logo-navbar-mobiel-mv"
+               src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/mv-logo-1-4.svg"
+               alt="MV logo 1" />
+          <img class="logo-navbar-mobiel"
+               src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/image-6.png"
+               alt="logo ziggo" />
           <img class="logo-navbar-mobiel" src="./trustpilot-mobiel.png" alt="">
-
-
         </div>
 
-
         <div class="achtergrond-pagina-1">
-
-
           <div class="witte-container-pagina-1 hoogte-witte-container">
+            <p class="stap1">Stap 2 van de 3</p>
+            <p class="vertel-ons">Vertel ons welke provider je hebt:</p>
 
-            <p class="stap1">
-              stap 2 van de 3
-            </p>
+            <!-- Mobiele providerkeuze -->
+            <form class="radio-form">
+              <div class="radio-option radio-option-1 radio-option-1-pagina2">
+                <label for="option1">
+                  <input type="radio" id="option1" name="provider" value="Odido" @change="selectProvider">
+                  <span class="text-radio-vraag1">Odido</span>
+                </label>
+              </div>
+              <div class="radio-option radio-option-2 radio-option-2-pagina2">
+                <label for="option2">
+                  <input type="radio" id="option2" name="provider" value="KPN" @change="selectProvider">
+                  <span class="text-radio-vraag1">KPN</span>
+                </label>
+              </div>
+              <div class="radio-option radio-option-3 radio-option-3-pagina2">
+                <label for="option3">
+                  <input type="radio" id="option3" name="provider" value="Ziggo" @change="selectProvider">
+                  <span class="text-radio-vraag1">Ziggo</span>
+                </label>
+              </div>
+              <div class="radio-option radio-option-4 radio-option-4-pagina2">
+                <label for="option4">
+                  <input type="radio" id="option4" name="provider" value="Anders" @change="selectProvider">
+                  <span class="text-radio-vraag1">Anders</span>
+                </label>
+              </div>
+            </form>
 
-            <p class="vertel-ons">
-              Vertel ons welke prijs je wilt winnen:
-            </p>
-
-
-          <form class="radio-form">
-            <div class="radio-option radio-option-1 radio-option-1-pagina2">
-              <label for="option1">
-                <input type="radio" id="option1" name="prijsoptie" value="option1">
-                <span class="text-radio-vraag1">Odido</span>
-              </label>
-            </div>
-
-            <div class="radio-option radio-option-2 radio-option-2-pagina2">
-              <label for="option2">
-                <input type="radio" id="option2" name="prijsoptie" value="option2">
-                <span class="text-radio-vraag1">KPN</span>
-              </label>
-            </div>
-
-            <div class="radio-option radio-option-3 radio-option-3-pagina2">
-              <label for="option3">
-                <input type="radio" id="option3" name="prijsoptie" value="option3">
-                <span class="text-radio-vraag1">Ziggo</span>
-              </label>
-            </div>
-
-            <div class="radio-option radio-option-4 radio-option-4-pagina2">
-              <label for="option4">
-                <input type="radio" id="option4" name="prijsoptie" value="option4">
-                <span class="text-radio-vraag1">Anders</span>
-              </label>
-            </div>
-          </form>
-
-              <router-link class="router-link" to="/pagina-3">
-                <button class="doe-nu-mee-knop" href="/pagina-3">
-                  <div class="text-in-knop">
-                    Laatste stap<img class="marge-links-mobiel" src="./rechterpijl.svg" alt="pijl-naar-rechts">
-                  </div>
-                </button>
-              </router-link>
-
-
-              <img src="./afbeeldingen-samen.png" alt="">
-            
+            <!-- Knop voor naar de volgende stap -->
+            <a href="/pagina-3" @click.prevent="goToStep3">
+              <button class="doe-nu-mee-knop">
+                <div class="text-in-knop">
+                  Laatste stap
+                  <img class="marge-links-mobiel" src="./rechterpijl.svg" alt="pijl-naar-rechts">
+                </div>
+              </button>
+            </a>
 
 
 
           </div>
-
         </div>
 
         <hr class="lijn" style="margin-top: 3rem;">
-
         <div class="footer-pagina1">
-          <p class="text-footer-pagina1">*Meervoordeel.nl is een officiële partner van Ziggo. Deelname mogelijk tot en met 31 juli 2024.
-            Actievoorwaarden van toepassing.</p>
+          <p class="text-footer-pagina1">*Meervoordeel.nl is een officiële partner van Ziggo. Deelname mogelijk tot en met 31 juli 2024. Actievoorwaarden van toepassing.</p>
         </div>
-
-
       </div>
-
-
-
-
     </div>
   </center>
 </template>
