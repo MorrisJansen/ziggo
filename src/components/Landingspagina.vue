@@ -107,7 +107,8 @@ export default {
             <div class="text-3 valign-text-bottom">{{ text12 }}</div>
           </div>
         </div>
-        <img class="hoe-werkt-het" :src="hoeWerktHet" alt="Hoe werkt het?" />
+        <!-- <img class="hoe-werkt-het" :src="hoeWerktHet" alt="Hoe werkt het?" /> -->
+         <div class="jaja" style="">Hoe werkt het?</div>
         <div class="frame-427320574">
           <div class="frame-42732057">
             <div class="group-4">
@@ -309,7 +310,17 @@ body
 body 
   font-family: 'DM Sans', sans-serif!important
 
-
+.jaja
+  color: #072249
+  font-family: "DM Sans"
+  font-size: 2.1875rem
+  font-style: normal
+  font-weight: 700
+  line-height: 150%
+  position: relative
+  top: 560px
+  z-index: 99
+  right: 610px
 
 
 .overkoepelende-container
