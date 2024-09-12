@@ -448,9 +448,9 @@ input::placeholder
 
 .gefeliciteerd
   color: #f48c02  
-  font-size: 2.1875rem
+  font-size: 2.875rem
   font-style: normal
-  font-weight: 600
+  font-weight: 700
   line-height: 150%
   font-family: $font-family-diodrum_cyrillic-regular
 
@@ -515,7 +515,7 @@ input::placeholder
   letter-spacing: 0
   line-height: 40.3px
   position: absolute
-  top: 450px
+  top: 475px
   width: 800px
   text-align: left
 
@@ -524,7 +524,7 @@ input::placeholder
   left: 214px
   object-fit: cover
   position: absolute
-  top: 422px
+  top: 436px
   width: 797px
 
 .frame-427320569
@@ -534,7 +534,7 @@ input::placeholder
   gap: 19px
   left: 213px
   position: absolute
-  top: 528px
+  top: 550px
 
 .frame-427320568
   align-items: flex-start

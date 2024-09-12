@@ -34,9 +34,9 @@ export default {
     console.log('Gekozen product:', this.chosenProduct);
   },
   mounted() {
-    setTimeout(() => {
-      this.$router.push("/pagina-5");
-    }, 3000);
+    // setTimeout(() => {
+    //   this.$router.push("/pagina-5");
+    // }, 3000);
   },
 };
 </script>

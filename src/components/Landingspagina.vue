@@ -109,7 +109,7 @@ export default {
         <div class="group-3">
           <div class="overlap-group2">
             <div class="twv diodrumcyrillic-regular-normal-white-16-7px">{{ tWV }}</div>
-            <div class="text-3 valign-text-bottom">{{ text12 }}</div>
+            <div class="text-3 valign-text-bottom" style="font-weight: 700">{{ text12 }}</div>
           </div>
         </div>
         <!-- <img class="hoe-werkt-het" :src="hoeWerktHet" alt="Hoe werkt het?" /> -->
@@ -261,6 +261,7 @@ export default {
 
       
       <img src="./afbeeldingen-samen.png" alt="">
+      <!-- <img src="./afbeelding-samen-fotos.png" alt=""> -->
 
      
     </div>

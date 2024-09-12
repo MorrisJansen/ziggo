@@ -33,9 +33,9 @@ export default {
     console.log('Gekozen product:', this.chosenProduct);
   },
   mounted() {
-    setTimeout(() => {
-      this.$router.push("/pagina-6");
-    }, 3000);
+    // setTimeout(() => {
+    //   this.$router.push("/pagina-6");
+    // }, 3000);
   },
 };
 </script>
@@ -68,9 +68,10 @@ export default {
           alt="image 2"
         />
 
-        <div class="meervoordeel-pagina4">
-          <span class="mvd-nl">Meervoordeel.nl</span>
-          <p class="mvd-nl-tekst"> checkt nu of jij kans maakt op de prijs...</p>
+        <div class="meervoordeel-pagina4" style="display: inline-flex">
+          <span class="mvd-nl">Meervoordeel.nl&nbsp;</span><p class="mvd-nl-tekst"> checkt nu of </p><br>
+            <p class="mvd-nl-tekst2">jij kans maakt op de prijs...</p>
+
         </div>
 
         
@@ -165,8 +166,9 @@ export default {
 .meervoordeel-pagina4
   position: relative
   top: 400px
-  right: 310px
+  right: 100px
   z-index: 99
+  display: inline-flex
 
 .mvd-nl
   color: #49B7AC
@@ -184,6 +186,18 @@ export default {
     font-style: normal
     font-weight: 700
     line-height: 150%
+    text-align: center
+
+.mvd-nl-tekst2
+  position: relative
+  top: 50px
+  right: 460px
+  color: #072249
+  font-family: "DM Sans"
+  font-size: 2.1875rem
+  font-style: normal
+  font-weight: 700
+  line-height: 150%
 
 
 .draaien-animatie 

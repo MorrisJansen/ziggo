@@ -31,9 +31,9 @@ export default {
 .overlap-group-6
   background-color: $puerto-rico
   border-radius: 63.27px
-  height: 127px
+  height: 133px
   position: relative
-  width: 127px
+  width: 133px
 
 .twv-1
   left: 46px
