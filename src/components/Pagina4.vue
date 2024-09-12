@@ -57,15 +57,21 @@ export default {
         <div class="frame-1-6">
           <img class="pagina-9" :src="pagina9" alt="Pagina 9" /><img class="image-6-6" :src="image6" alt="image 6" />
         </div>
-        <img
+        <!-- <img
           class="meervoordeelnl-check"
           :src="meervoordeelNlChecktNuOfJijKansMaak"
           alt="Meervoordeel.nl checkt nu of jij kans maakt op de prijs..."
-        /><img class="bolcom-bon-1-5" :src="bolcomBon1" alt="bolcom-bon 1" /><img
+        /> -->
+        <img class="bolcom-bon-1-5" :src="bolcomBon1" alt="bolcom-bon 1" /><img
           class="image-2-5"
           :src="image2"
           alt="image 2"
         />
+
+        <div class="meervoordeel-pagina4">
+          <span class="mvd-nl">Meervoordeel.nl</span>
+          <p class="mvd-nl-tekst"> checkt nu of jij kans maakt op de prijs...</p>
+        </div>
 
         
         <img class="draaien-animatie loading-sign-1" src="./draaien.svg" alt="">
@@ -154,6 +160,30 @@ export default {
 
 <style lang="sass">
 @import '../../variables'
+
+
+.meervoordeel-pagina4
+  position: relative
+  top: 400px
+  right: 310px
+  z-index: 99
+
+.mvd-nl
+  color: #49B7AC
+  text-align: center
+  font-family: "DM Sans"
+  font-size: 2.1875rem
+  font-style: normal
+  font-weight: 700
+  line-height: 150%
+
+.mvd-nl-tekst
+    color: #072249
+    font-family: "DM Sans"
+    font-size: 2.1875rem
+    font-style: normal
+    font-weight: 700
+    line-height: 150%
 
 
 .draaien-animatie 

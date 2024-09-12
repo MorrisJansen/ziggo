@@ -84,7 +84,10 @@ export default {
             <div class="background-4"></div>
             <frame1 />
             <div class="frame-427320545-2">
-              <img class="stap-3-van-3" :src="stap3Van3" alt="Stap 3 van 3" />
+              <!-- <img class="stap-3-van-3" :src="stap3Van3" alt="Stap 3 van 3" /> -->
+
+              <p class="stap-zoveel-pagina3">Stap 3 van de 3</p>
+
 
               <p class="maak-kans-op">Vul je postcode in en check of je kans maakt op <span class="gekozen-product">{{ chosenProduct }}</span></p>
 
@@ -102,7 +105,7 @@ export default {
             </div>
 
             <div class="frame-427320541-3">
-              <button @click="checkPostcode" class="invisible-button check-mijn-postcode diodrumcyrillic-normal-white-23-7px">Check mijn postcode</button>
+              <button @click="checkPostcode" class="invisible-button check-mijn-postcode diodrumcyrillic-normal-white-23-7px" style="font-weight: 700">Check mijn postcode</button>
               <img
                 class="right-arrow-3"
                 src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/rightarrow.svg"
@@ -187,6 +190,15 @@ export default {
 
 <style lang="sass">
 @import '../../variables'
+
+
+.stap-zoveel-pagina3
+  color: #F48C02
+  font-family: "DM Sans"
+  font-size: 1.25rem
+  font-style: normal
+  font-weight: 400
+  line-height: 150%
 
 
 .error-message-pagina-3

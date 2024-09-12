@@ -74,8 +74,13 @@ export default {
             <div class="background-1"></div>
             <frame1 />
             <div class="frame-427320545">
-              <img class="frame-427320545-item" :src="stap1Van3" alt="Stap 1 van 3" />
-              <img class="frame-427320545-item" :src="vertelOnsWelkePrijsJeWiltWinnen" alt="Vertel ons welke prijs je wilt winnen:" />
+              <!-- <img class="frame-427320545-item" :src="stap1Van3" alt="Stap 1 van 3" />
+              <img class="frame-427320545-item" :src="vertelOnsWelkePrijsJeWiltWinnen" alt="Vertel ons welke prijs je wilt winnen:" /> -->
+
+              <div class="container-vraag-zoveel">
+                <p class="stap-zoveel">Stap 1 van de 3</p>
+                <p class="vertel-ons">Vertel ons welke prijs je wilt winnen:</p>
+              </div>
             </div>
             <img class="bolcom-bon-1-1" :src="bolcomBon1" alt="bolcom-bon 1" />
             <img class="image-2-1" :src="image2" alt="image 2" />
@@ -96,7 +101,7 @@ export default {
             
 
             <div @click="goToStep2" class="frame-427320541-1">
-              <div class="ga-naar-stap-2 diodrumcyrillic-normal-white-23-7px">Ga naar stap 2</div>
+              <div class="ga-naar-stap-2 diodrumcyrillic-normal-white-23-7px" style="font-weight: 700">Ga naar stap 2</div>
               <img class="right-arrow-1" src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/rightarrow.svg" alt="rightArrow"/>
             </div>
 
@@ -234,6 +239,27 @@ export default {
 <style lang="sass">
 @import '../../variables'
 
+
+
+
+.stap-zoveel
+  color: #F48C02
+  font-family: "DM Sans"
+  font-size: 1.25rem
+  font-style: normal
+  font-weight: 400
+  line-height: 150%
+  position: relative
+  right: 235px
+
+.vertel-ons
+  color: #072249
+  font-family: "DM Sans"
+  font-size: 2.1875rem
+  font-style: normal
+  font-weight: 700
+  line-height: 150%
+
 .overkoepelende-container
   max-width: 100vw
   max-height: 100vw
@@ -338,6 +364,7 @@ input[type="radio"]
   cursor: pointer
   position: relative!important
   top:  24px!important
+  right: 50px
 
 
 

@@ -69,7 +69,12 @@ export default {
 
 
         
-        <h1 class="maak-kans-op-1-van-de-3-prijzen" v-html="maakKansOp1VanDe3Prijzen"></h1>
+        <!-- <h1 class="maak-kans-op-1-van-de-3-prijzen" v-html="maakKansOp1VanDe3Prijzen"></h1> -->
+         <h1 class="maak-kans-op-1-van-de-3-prijzen">
+          <span style="font-weight: 700">
+            Maak kans op <br>
+          </span>
+           1 van de 3 prijzen</h1>
         <!-- <img
           class="meer-voordeel-geeft"
           :src="meervoordeelGeeftInSamenwerkingMetZ"
@@ -83,7 +88,7 @@ export default {
          <button @click="navigateToNextPage">
           <!-- <a href="/pagina-1"> -->
             <div class="frame-427320541">
-              <div class="doe-nu-mee diodrumcyrillic-normal-white-23-7px">Doe nu mee</div>
+              <div class="doe-nu-mee diodrumcyrillic-normal-white-23-7px" style="font-weight: 700">Doe nu mee</div>
               <img
                 class="right-arrow"
                 src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/rightarrow.svg"
@@ -141,7 +146,7 @@ export default {
           src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/mv-logo-1-3.svg"
           alt="MV logo 1"
         />
-        <img class="image-7" :src="image7" alt="image 7" />
+        <img class="image-7" :src="image7" style="z-index: 99;" alt="image 7" />
       </div>
       <img
         class="line-6"
@@ -196,7 +201,10 @@ export default {
 
 
       <div class="maak-kans">
-        Maak kans op <br>1 van de 3 prijzen!
+        <span class="span-maak-kans">
+          Maak kans op 
+        </span>
+        <br>1 van de 3 prijzen!
       </div>
 
       <!-- <p class="meer-prijzen">MeerVoordeel geeft in samenwerking met Ziggo prijzen weg.</p> -->
@@ -301,6 +309,9 @@ export default {
 
 <style lang="sass">
 @import '../../variables'
+
+.span-maak-kans
+  font-weight: 700!important
 
 body 
   font-family: 'DM Sans', sans-serif!important

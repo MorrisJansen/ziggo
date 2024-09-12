@@ -70,19 +70,23 @@ export default {
               <div class="background-3"></div>
               <frame1 />
               <div class="frame-427320545-1">
-                <img class="frame-427320545-item-1" :src="stap2Van3" alt="Stap 2 van 3" />
+                <!-- <img class="frame-427320545-item-1" :src="stap2Van3" alt="Stap 2 van 3" />
                 <img
                   class="frame-427320545-item-1"
                   :src="watIsJouwHuidigeProvider"
                   alt="Wat is jouw huidige provider?"
-                />
+                /> -->
+                <div class="container-vraag-zoveel">
+                  <p class="stap-zoveel-pagina2">Stap 2 van de 3</p>
+                  <p class="vertel-ons">Wat is jouw huidige provider?</p>
+                </div>
               </div>
               <img class="bolcom-bon-1-3" :src="bolcomBon1" alt="bolcom-bon 1" />
               <img class="image-2-3" :src="image2" alt="image 2" />
 
               <a href="/pagina-3" @click.prevent="goToStep3">
                 <div class="frame-427320541-2">
-                  <p class="ga-naar-de-laatste-stap diodrumcyrillic-normal-white-23-7px">Ga naar de laatste stap</p>
+                  <p class="ga-naar-de-laatste-stap diodrumcyrillic-normal-white-23-7px" style="font-weight: 700;">Ga naar de laatste stap</p>
                   <img
                     class="right-arrow-2"
                     src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/rightarrow.svg"
@@ -232,7 +236,15 @@ export default {
 <style lang="sass">
 @import '../../variables'
 
-
+.stap-zoveel-pagina2
+  position: relative
+  right: 180px
+  color: #F48C02
+  font-family: "DM Sans"
+  font-size: 1.25rem
+  font-style: normal
+  font-weight: 400
+  line-height: 150%
 
 
 

@@ -184,7 +184,7 @@ export default {
               <div class="form-group">
                 <label for="achternaam"></label>
                 <img class="form-icoon" src="./naam-icoon.svg" alt="Achternaam Icon">
-                <input
+                <input style="color: purple!important;"
                   type="text"
                   id="achternaam"
                   v-model="achternaam"
@@ -229,7 +229,7 @@ export default {
             <div class="frame-2-1">
 
               <button class="frame-2-1 invisible-button" @click="submitForm">
-                <div class="bevestig-mijn-deelname diodrumcyrillic-normal-white-23-7px">{{ bevestigMijnDeelname }}</div>
+                <div class="bevestig-mijn-deelname diodrumcyrillic-normal-white-23-7px" style="font-weight: 700;">Bevestig mijn deelname</div>
                 <img
                   class="right-arrow-4"
                   src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/rightarrow-4.svg"
@@ -329,7 +329,7 @@ export default {
           </div>
         </form>
         <button class="frame-2-1-mobiel invisible-button" @click="submitForm">
-          <div class="bevestig-mijn-deelname diodrumcyrillic-normal-white-23-7px">Bevestig deelname</div>
+          <div class="bevestig-mijn-deelname diodrumcyrillic-normal-white-23-7px" style="font-weight: 700;">Bevestig deelname</div>
           <span style="color: white; font-size: 22px;">&#8594;</span>
         </button>
         <p class="met-het-bevestigen-v-mobiel">Met het bevestigen van je deelname ga je er mee akkoord dat MeerVoordeel eenmalig telefonisch contact met je opneemt met een aanbieding voor een all-in abonnement van Ziggo.</p>
@@ -363,6 +363,14 @@ export default {
 
 <style lang="sass">
 @import '../../variables'
+
+
+
+input::placeholder 
+  opacity: 1
+  color: #B5B5B5
+
+
 
 
 

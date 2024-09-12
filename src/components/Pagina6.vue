@@ -60,11 +60,14 @@ export default {
         <img class="samsung-1-2" :src="samsung1" alt="Samsung 1" />
         <div class="background-2"></div>
         <frame1 />
-        <img
+        <!-- <img
           class="jouw-postcode-is-goedgekeurd"
           :src="jouwPostcodeIsGoedgekeurd"
           alt="Jouw postcode is goedgekeurd!"
-        /><img class="bolcom-bon-1-2" :src="bolcomBon1" alt="bolcom-bon 1" /><img
+        /> -->
+        <p class="jouw-postcode-pagina6">Jouw postcode is goedgekeurd!</p>
+        
+        <img class="bolcom-bon-1-2" :src="bolcomBon1" alt="bolcom-bon 1" /><img
           class="image-2-2"
           :src="image2"
           alt="image 2"
@@ -160,6 +163,20 @@ export default {
 
 <style lang="sass">
 @import '../../variables'
+
+
+.jouw-postcode-pagina6
+  color: #072249
+  text-align: center
+  font-family: "DM Sans"
+  font-size: 2.1875rem
+  font-style: normal
+  font-weight: 700
+  line-height: 150%
+  z-index: 99
+  position: relative
+  top: 420px
+  right: 320px
 
 
 
