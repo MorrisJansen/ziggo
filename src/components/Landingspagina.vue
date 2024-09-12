@@ -285,7 +285,7 @@ export default {
     Onder andere door deze samenwerking kunnen wij jou mooie acties zoals deze bieden.</p>
 </div>
 
-<div class="afbeelding-footer">
+<div class="afbeelding-footer" style="margin-top: 80px">
   <img src="./afbeelding-footer-mobiel.png" alt="afbeelding-footer">
 </div>
 

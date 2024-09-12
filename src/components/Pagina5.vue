@@ -344,12 +344,18 @@ export default {
         <div class="playstation-5-slim-disk">{{ playstation5SlimDisk }}</div> -->
 
         <img src="./afbeeldingen-samen.png" alt="">
-        <hr class="lijn-3" style="margin-top: 5rem;">
 
-        <div class="footer-pagina1">
+
+
+
+
+        <!-- hier moet ik nog naar kijken -->
+        <!-- <hr class="lijn-3" style="margin-top: 5rem;"> -->
+
+        <!-- <div class="footer-pagina1" style="width: 100vw; text-align: center; display: block;">
           <p class="text-footer-pagina5">*Meervoordeel.nl is een officiële partner van Ziggo. Deelname mogelijk tot en met 31 juli 2024.
             Actievoorwaarden van toepassing.</p>
-        </div>
+        </div> -->
 
       </div>
     </div>
@@ -754,12 +760,12 @@ input::placeholder
   .achtergrond-pagina-5
     background: linear-gradient(90deg, #072148 0%, #40A59F 100%)
     width: 100%
-    height: 82rem
+    height: 77rem!important
     padding-bottom: 2rem
 
   .witte-container-pagina-5
     width: 90%
-    height: 54.9rem
+    height: 48.9rem
     border-radius: 0.75rem
     background: #FFF
     box-shadow: 0px 31px 81px 0px rgba(0, 17, 77, 0.20)
@@ -876,7 +882,7 @@ input::placeholder
   .met-het-bevestigen-v-mobiel
     color: #072249
     font-family: $font-family-diodrum_cyrillic-medium
-    font-size: 1.2rem
+    font-size: 12px
     font-style: normal
     font-weight: 400
     line-height: 150%
@@ -896,7 +902,10 @@ input::placeholder
     padding-bottom: 5rem
 
   .container-mobiel-pagina-5
-    padding-bottom: 12rem!important
+    padding: 0!important
+
+    // deze zal je nodig hebben voor de footer
+    // padding-bottom: 12rem!important
 
   .lijn-3
     width: 100%
