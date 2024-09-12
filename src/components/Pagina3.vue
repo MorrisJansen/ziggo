@@ -191,6 +191,9 @@ export default {
 <style lang="sass">
 @import '../../variables'
 
+.frame-427320541-3:hover
+  cursor: pointer
+
 
 .stap-zoveel-pagina3
   color: #F48C02
@@ -370,6 +373,9 @@ export default {
   position: relative
   white-space: nowrap
   width: fit-content
+  
+.check-mijn-postcode:hover
+  cursor: pointer
 
 .right-arrow-3
   height: 11.39px

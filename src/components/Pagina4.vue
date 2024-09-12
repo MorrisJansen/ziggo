@@ -376,4 +376,7 @@ export default {
     font-weight: 600
     line-height: 135%
     padding: 2rem
+
+  .draaien-animatie
+    zoom: 220%!important
   </style>

@@ -144,11 +144,15 @@ export default {
       <hr class="scheidingslijn">
 
       <div class="flex-row">
-        <img class="meer-over-meer-voordeel" :src="meerOverMeervoordeel" alt="Meer over MeerVoordeel" /><img
+        <p class="meer-voordeel-nu">Meer over MeerVoordeel</p>
+
+        <!-- <img class="meer-over-meer-voordeel" :src="meerOverMeervoordeel" alt="Meer over MeerVoordeel" /> -->
+        <img
           class="mv-logo-1"
           src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/mv-logo-1-3.svg"
           alt="MV logo 1"
         />
+
 
         <img class="image-7" :src="image7" style="z-index: 99;" alt="image 7" />
       </div>
@@ -246,7 +250,7 @@ export default {
             <circle id="Ellipse 2" cx="17.5" cy="17.5" r="17.5" fill="#49B7AC"/>
             </svg>
             <p class="cijfer-li">3.</p>
-            <p class="text-hoe-werkt-het-3">Controleer   eer of jouw postcode in aanmerking komt</p>
+            <p class="text-hoe-werkt-het-3">Controleer of jouw postcode in aanmerking komt</p>
 
 
           </div>
@@ -317,6 +321,14 @@ export default {
 
 <style lang="sass">
 @import '../../variables'
+
+.meer-voordeel-nu
+  color: #072249
+  font-family: "DM Sans"
+  font-size: 2.1875rem
+  font-style: normal
+  font-weight: 700
+  line-height: 150%
 
 .scheidingslijn
   position: absolute
@@ -489,7 +501,7 @@ body
 .text-3
   color: $white
   // font-family: $font-family-diodrum_cyrillic-medium
-  font-size: $font-size-xxxxl
+  font-size: $font-size-xxxl
   font-weight: 500
   height: 41px
   left: 11px

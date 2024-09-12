@@ -84,7 +84,7 @@ export default {
               <img class="bolcom-bon-1-3" :src="bolcomBon1" alt="bolcom-bon 1" />
               <img class="image-2-3" :src="image2" alt="image 2" />
 
-              <a href="/pagina-3" @click.prevent="goToStep3">
+              <a href="/pagina-3" @click.prevent="goToStep3" style="text-decoration: none">
                 <div class="frame-427320541-2">
                   <p class="ga-naar-de-laatste-stap diodrumcyrillic-normal-white-23-7px" style="font-weight: 700;">Ga naar de laatste stap</p>
                   <img
@@ -175,7 +175,7 @@ export default {
           <img class="logo-navbar-mobiel" src="./trustpilot-mobiel.png" alt="">
         </div>
 
-        <div class="achtergrond-pagina-1">
+        <div class="achtergrond-pagina-2">
           <div class="witte-container-pagina-1 hoogte-witte-container">
             <p class="stap1">Stap 2 van de 3</p>
             <p class="vertel-ons">Vertel ons welke provider je hebt:</p>
@@ -209,7 +209,7 @@ export default {
             </form>
 
             <!-- Knop voor naar de volgende stap -->
-            <a href="/pagina-3" @click.prevent="goToStep3">
+            <a href="/pagina-3" @click.prevent="goToStep3" style="text-decoration: none">
               <button class="doe-nu-mee-knop">
                 <div class="text-in-knop">
                   Laatste stap
@@ -551,6 +551,16 @@ input[type="radio"]:checked::after
 
 // hieronder komen alle mobile styles
 @media (max-width: 500px)
+
+.achtergrond-pagina-2
+  width: 23.4375rem
+  height: 42rem
+  flex-shrink: 0
+  background: linear-gradient(90deg, #072148 0%, #40A59F 100%)
+
+
+
+
   .container-center-horizontal
     display: none!important
   
