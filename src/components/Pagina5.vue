@@ -704,6 +704,7 @@ input::placeholder
   position: absolute
   top: 83px
   white-space: nowrap
+  font-weight: 550
 
 .vector-1
   height: 28px
