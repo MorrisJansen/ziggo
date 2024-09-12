@@ -356,6 +356,7 @@ export default {
   position: absolute
   top: 194px
   width: 743px
+  text-align: start
 
 .meer-voordeel-geeft
   height: 28px
@@ -588,6 +589,7 @@ export default {
   .container-center-horizontal
     min-width: 100vw!important
     max-width: 100vw!important
+    zoom: 95%
 
 
 @media (max-width: 1700px)
