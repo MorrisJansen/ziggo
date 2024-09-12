@@ -18,12 +18,10 @@ export default {
   },
   mounted() {
     const antwoordenLijst = this.$store.getters.getAntwoorden();
-    console.log('Alle antwoorden uit store:', antwoordenLijst); 
   },
   methods: {
     selectProvider(event) {
       this.gekozenProvider = event.target.value;
-      console.log("Gekozen provider:", this.gekozenProvider); 
     },
 
     goToStep3() {
@@ -32,7 +30,6 @@ export default {
         return;
       }
       this.$store.commit('ADD_ANTWOORD', { vraag: 'antwoord2', antwoord: this.gekozenProvider });
-      console.log('Provide r opgeslagen:', this.gekozenProvider); 
       this.$router.push({ path: '/pagina-3' });
     },
   },

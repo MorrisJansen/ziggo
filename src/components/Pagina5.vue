@@ -95,9 +95,6 @@ export default {
         answers: [5269, gekozenProductId, gekozenMerkId], // Gebruik de dynamisch verkregen ID's
       };
 
-      // Voeg hier de console.log toe om de data te inspecteren voordat het verzonden wordt
-      console.log(data);
-
       try {
         const response = await fetch(url, {
           method: 'POST',
@@ -142,6 +139,8 @@ export default {
   }
 };
 </script>
+
+
 
 
 
