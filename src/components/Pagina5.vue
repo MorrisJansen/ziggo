@@ -266,7 +266,7 @@ export default {
         <div class="group-2-6">
           <div class="overlap-group-2">
             <div class="twv-18">{{ tWV }}</div>
-            <h1 class="text-19 valign-text-bottom">{{ text19 }}</h1>
+            <h1 class="text-19 valign-text-bottom">€599,-</h1>
           </div>
         </div>
         <img

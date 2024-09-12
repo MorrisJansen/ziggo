@@ -2,7 +2,7 @@
   <div :class="[`group-1`, className || ``]">
     <div class="overlap-group-6">
       <div class="twv-1 diodrumcyrillic-regular-normal-white-16-7px">t.w.v.</div>
-      <div class="text valign-text-bottom diodrumcyrillic-normal-white-33-9px">{{ text1 }}</div>
+      <div class="text valign-text-bottom diodrumcyrillic-normal-white-33-9px">€599,-</div>
     </div>
   </div>
 </template>
