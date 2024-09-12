@@ -73,8 +73,8 @@ export default {
          <h1 class="maak-kans-op-1-van-de-3-prijzen">
           <span style="font-weight: 700">
             Maak kans op <br>
-          </span>
-           1 van de 3 prijzen</h1>
+           1 van de 3 prijzen</span></h1>          
+
         <!-- <img
           class="meer-voordeel-geeft"
           :src="meervoordeelGeeftInSamenwerkingMetZ"
@@ -140,12 +140,16 @@ export default {
           :group116046944Props="frame1000004784Props.group116046944Props"
         />
       </div>
+
+      <hr class="scheidingslijn">
+
       <div class="flex-row">
         <img class="meer-over-meer-voordeel" :src="meerOverMeervoordeel" alt="Meer over MeerVoordeel" /><img
           class="mv-logo-1"
           src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/mv-logo-1-3.svg"
           alt="MV logo 1"
         />
+
         <img class="image-7" :src="image7" style="z-index: 99;" alt="image 7" />
       </div>
       <img
@@ -165,7 +169,10 @@ export default {
         src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/line-2.svg"
         alt="Line 2"
       />
+      <!-- <div class="container-meervoordeelnl-is">
+      </div> -->
       <p class="meervoordeelnl-is diodrumcyrillic-regular-normal-silver-16px" v-html="meervoordeelNlIs"></p>
+
     </div>
   </div>
 
@@ -310,6 +317,13 @@ export default {
 
 <style lang="sass">
 @import '../../variables'
+
+.scheidingslijn
+  position: absolute
+  top: 900px
+  height: 10px
+  z-index: 999
+
 
 .span-maak-kans
   font-weight: 700!important
@@ -547,6 +561,10 @@ body
   margin-left: 65.52px
   margin-top: 218px
   min-width: 1550px
+  position: relative
+  z-index: 99999
+  padding-bottom: 5rem
+  padding-top: 6rem
 
 .meer-over-meer-voordeel
   align-self: flex-end
@@ -578,7 +596,7 @@ body
   display: flex
   gap: 155px
   margin-left: 63.0px
-  margin-top: 39px
+  // margin-top: 1050px
   min-width: 1553px
 
 .meer-voordeel-biedt-d
@@ -603,18 +621,25 @@ body
   margin-top: 115px
   object-fit: cover
   width: 1751px
+  position: relative
+  bottom: 85px
+
+.container-meervoordeelnl-is
+  height: 400px!important
+  background-color:  blue!important
 
 .meervoordeelnl-is
   letter-spacing: 0
   line-height: 24px
   margin-right: 14.0px
-  margin-top: 23px
+  padding-top: 1rem
+  margin-top: -100px
   min-height: 48px
   text-align: center
   width: 874px
-  padding-bottom:  24rem
-  position: relative
-  bottom: -20px
+  padding-top: 3rem
+  padding-bottom:  13rem
+
 
 
 
