@@ -464,24 +464,25 @@ input[type="radio"]:checked::after
 
 
 
-@media (max-width: 1800px)
+  @media (max-width: 1800px)
   .container-center-horizontal
     min-width: 100vw!important
     max-width: 100vw!important
+    zoom: 94%
 
 
 @media (max-width: 1700px)
   .container-center-horizontal
-    zoom: 95%
+    zoom: 88%
 
 
 @media (max-width: 1600px)
   .container-center-horizontal
-    zoom: 90%
+    zoom: 88%
 
 @media (max-width: 1500px)
   .container-center-horizontal
-    zoom: 85%
+    zoom: 82%
 
 @media (max-width: 1440px)
   .container-center-horizontal
@@ -530,7 +531,6 @@ input[type="radio"]:checked::after
 @media (max-width: 550px)
   .container-center-horizontal
     zoom: 29%
-
 
 
 @media (min-width: 501px)

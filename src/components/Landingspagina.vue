@@ -301,6 +301,16 @@ export default {
 <style lang="sass">
 @import '../../variables'
 
+body 
+  font-family: 'DM Sans', sans-serif!important
+
+
+*
+body 
+  font-family: 'DM Sans', sans-serif!important
+
+
+
 
 .overkoepelende-container
   max-width: 100vw
@@ -347,7 +357,7 @@ export default {
 
 .maak-kans-op-1-van-de-3-prijzen
   color: $white
-  font-family: $font-family-diodrum_cyrillic-semibold
+  // font-family: $font-family-diodrum_cyrillic-semibold
   font-size: $font-size-xxxxxl
   font-weight: 400
   left: 146px
@@ -441,7 +451,7 @@ export default {
 
 .text-3
   color: $white
-  font-family: $font-family-diodrum_cyrillic-medium
+  // font-family: $font-family-diodrum_cyrillic-medium
   font-size: $font-size-xxxxl
   font-weight: 500
   height: 41px
@@ -589,21 +599,21 @@ export default {
   .container-center-horizontal
     min-width: 100vw!important
     max-width: 100vw!important
-    zoom: 95%
+    zoom: 94%
 
 
 @media (max-width: 1700px)
   .container-center-horizontal
-    zoom: 95%
+    zoom: 88%
 
 
 @media (max-width: 1600px)
   .container-center-horizontal
-    zoom: 90%
+    zoom: 88%
 
 @media (max-width: 1500px)
   .container-center-horizontal
-    zoom: 85%
+    zoom: 82%
 
 @media (max-width: 1440px)
   .container-center-horizontal
@@ -699,7 +709,7 @@ export default {
   .maak-kans
     color: #FFF
     text-align: center
-    font-family: $font-family-diodrum_cyrillic-semibold
+    // font-family: 'dm-sans'
     font-size: 2.33294rem
     font-style: normal
     font-weight: 600
@@ -711,7 +721,7 @@ export default {
   .meer-prijzen
     color: #FFF
     text-align: center
-    font-family: $font-family-diodrum_cyrillic-regular
+    // font-family: $font-family-diodrum_cyrillic-regular
     font-size: 1.125rem
     font-style: normal
     font-weight: 400
@@ -730,7 +740,7 @@ export default {
 
   .hoe-werkt-het
     color: #072249
-    font-family: $font-family-diodrum_cyrillic-semibold
+    // font-family: $font-family-diodrum_cyrillic-semibold
     font-size: 1.5625rem
     font-style: normal
     font-weight: 600
@@ -756,7 +766,7 @@ export default {
     display: flex
     width: 100%
     color: #072249
-    font-family: $font-family-diodrum_cyrillic-regular
+    // font-family: $font-family-diodrum_cyrillic-regular
     font-size: 1.125rem
     font-style: normal
     font-weight: 400
@@ -780,7 +790,7 @@ export default {
     margin-top: 2%
 
   .text-hoe-werkt-het, .text-hoe-werkt-het-3
-    font-family: $font-family-diodrum_cyrillic-regular
+    //font-family: $font-family-diodrum_cyrillic-regular
     color: #072249
     font-size: 1.125rem
     font-style: normal
@@ -804,7 +814,7 @@ export default {
 
   .text-in-knop
     color: #FFF
-    font-family: $font-family-diodrum_cyrillic-semibold
+    // font-family: $font-family-diodrum_cyrillic-semibold
     font-size: 1.47881rem
     font-style: normal
     font-weight: 600
@@ -822,7 +832,7 @@ export default {
 
   .meer-over-meer-titel
     color: #072249
-    font-family: $font-family-diodrum_cyrillic-semibold
+    // font-family: $font-family-diodrum_cyrillic-semibold
     font-size: 1.5625rem
     font-style: normal
     font-weight: 600
@@ -837,7 +847,7 @@ export default {
 
   .meer-over-meer-text
     color: #072249
-    font-family: $font-family-diodrum_cyrillic-regular
+    // font-family: $font-family-diodrum_cyrillic-regular
     font-size: 1.125rem
     font-style: normal
     font-weight: 400
@@ -852,7 +862,7 @@ export default {
   .kleine-letters
     color: #C1C1C1
     text-align: center
-    font-family: $font-family-diodrum_cyrillic-regular
+    // font-family: $font-family-diodrum_cyrillic-regular
     font-size: 0.75rem
     font-style: normal
     font-weight: 400
