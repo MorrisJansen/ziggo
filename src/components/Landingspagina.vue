@@ -957,6 +957,7 @@ body
   .container-afbeelding-prijzen-mobiel
     margin-top: 3rem
     zoom: 95%
+    max-width: 90%
   
 
 
