@@ -955,10 +955,10 @@ body
 @media (max-width: 501px)
 
   .container-afbeelding-prijzen-mobiel
-    margin-top: 1rem
-    zoom: 83%
-    max-width: 80%
-    margin-right: 18vw
+    margin-top: 1rem!important
+    zoom: 83%!important
+    max-width: 80%!important
+    margin-right: 18vw!important
     
   
 
