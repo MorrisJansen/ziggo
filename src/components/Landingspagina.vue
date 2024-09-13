@@ -104,8 +104,14 @@ export default {
 
 
 
-        <group1 :text1="group11Props.text1" />
+        <!-- <group1 :text1="group11Props.text1" /> -->
         <group1 :text1="group12Props.text1" :className="group12Props.className" />
+        <div :class="[`group-1`, className || ``]">
+          <div class="overlap-group-6">
+            <div class="twv-1 diodrumcyrillic-regular-normal-white-16-7px">t.w.v.</div>
+            <div class="text valign-text-bottom diodrumcyrillic-normal-white-33-9px">€400,-</div>
+          </div>
+        </div>
         <div class="group-3">
           <div class="overlap-group2">
             <div class="twv diodrumcyrillic-regular-normal-white-16-7px">{{ tWV }}</div>

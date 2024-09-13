@@ -105,9 +105,37 @@ export default {
               <img class="right-arrow-1" src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/rightarrow.svg" alt="rightArrow"/>
             </div>
 
-            <group1 :text1="group11Props.text1" :className="group11Props.className" />
+
+
+
+<!-- Hier zorgen we ervoor dat de juiste className wordt doorgegeven -->
+            <div :class="['group-1', group11Props.className]">
+              <div class="overlap-group-6">
+                <div class="twv-1 diodrumcyrillic-regular-normal-white-16-7px">t.w.v.</div>
+                <div class="text valign-text-bottom diodrumcyrillic-normal-white-33-9px">€400,-</div>
+              </div>
+            </div>
+
+            <div :class="['group-1', group12Props.className]">
+              <div class="overlap-group-6">
+                <div class="twv-1 diodrumcyrillic-regular-normal-white-16-7px">t.w.v.</div>
+                <div class="text valign-text-bottom diodrumcyrillic-normal-white-33-9px">€599,-</div>
+              </div>
+            </div>
+
+            <div :class="['group-1', group13Props.className]">
+              <div class="overlap-group-6">
+                <div class="twv-1 diodrumcyrillic-regular-normal-white-16-7px">t.w.v.</div>
+                <div class="text valign-text-bottom diodrumcyrillic-normal-white-33-9px">€699,-</div>
+              </div>
+            </div>
+
+            <!-- <group1 :text1="group11Props.text1" :className="group11Props.className" />
+            
+
+            
             <group1 :text1="group12Props.text1" :className="group12Props.className" />
-            <group1 :text1="group13Props.text1" :className="group13Props.className" />
+            <group1 :text1="group13Props.text1" :className="group13Props.className" /> -->
             <frame1000004784 :group="frame1000004784Props.group" :group116046944Props="frame1000004784Props.group116046944Props" />
           </div>
           <img class="line-2-1" src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/line-2.svg" alt="Line 2" />

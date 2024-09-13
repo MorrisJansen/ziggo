@@ -707,7 +707,7 @@ input::placeholder
 .met-het-bevestigen-v
   color: $downriver
   font-family: $font-family-diodrum_cyrillic-regular
-  font-size: 24px
+  font-size: 14px
   font-weight: 400
   letter-spacing: 0
   line-height: 24px

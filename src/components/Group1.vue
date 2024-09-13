@@ -5,6 +5,10 @@
       <div class="text valign-text-bottom diodrumcyrillic-normal-white-33-9px">€599,-</div>
     </div>
   </div>
+
+
+
+
 </template>
 
 <script>
