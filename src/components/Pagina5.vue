@@ -1031,8 +1031,6 @@ input::placeholder
     right: 30px
     zoom: 83%
 
-  
-
   .footer-pagina5
     background-color: $white
     min-width: 100%
