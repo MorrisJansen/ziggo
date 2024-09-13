@@ -35,7 +35,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.$router.push("/pagina-6");
-    }, 3000);
+    }, 1500);
   },
 };
 </script>

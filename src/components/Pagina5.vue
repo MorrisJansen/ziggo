@@ -141,7 +141,7 @@ export default {
     },
 
     isValidPhoneNumber(phoneNumber) {
-      const regex = /^[0-9]{10,15}$/; // Pas dit aan voor de verwachte telefoonnummerformaat
+
       return regex.test(phoneNumber);
     },
 

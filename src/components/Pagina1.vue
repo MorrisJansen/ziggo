@@ -477,10 +477,7 @@ input[type="radio"]
   max-width: 100vw!important
   zoom: 110%
 
-.pagina-1
-  zoom: 100%!important
-  position: relative!important
-  right: 5%!important
+
 
 
 @media (min-width: 2080px)
@@ -774,8 +771,8 @@ input[type="radio"]
 .radio-option-2, 
 .radio-option-3,
 .radio-option-4 
-  margin-bottom: 2rem
-  margin-top: 2rem
+  margin-bottom: 0.7rem
+  margin-top: 0.7rem
   border-radius: 3.125rem
   background-color: #F1F1F1
   height: 5.5rem!important

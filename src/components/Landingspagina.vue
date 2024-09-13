@@ -71,7 +71,7 @@ export default {
         
         <!-- <h1 class="maak-kans-op-1-van-de-3-prijzen" v-html="maakKansOp1VanDe3Prijzen"></h1> -->
          <h1 class="maak-kans-op-1-van-de-3-prijzen">
-          <span style="font-weight: 700">
+          <span style="font-weight: 700; position: relative; top: 2vw">
             Maak kans op <br>
            1 van de 3 prijzen</span></h1>          
 
@@ -88,7 +88,7 @@ export default {
          <button @click="navigateToNextPage">
           <!-- <a href="/pagina-1"> -->
             <div class="frame-427320541">
-              <div class="doe-nu-mee diodrumcyrillic-normal-white-23-7px" style="font-weight: 700">Doe nu mee</div>
+              <div class="doe-nu-mee diodrumcyrillic-normal-white-23-7px" style="font-weight: 700; z-index: 999">Doe nu mee</div>
               <img
                 class="right-arrow"
                 src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/rightarrow.svg"
@@ -142,7 +142,7 @@ export default {
       </div>
 
       <!-- <hr class="scheidingslijn"> -->
-
+    <div class="container-flex-row">
       <div class="flex-row">
         <p class="meer-voordeel-nu">Meer over MeerVoordeel</p>
 
@@ -161,6 +161,9 @@ export default {
         src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/line-6.svg"
         alt="Line 6"
       />
+
+
+
       <div class="flex-row-1">
         <p class="meer-voordeel-biedt-d diodrumcyrillic-regular-normal-downriver-25px">
           <span class="diodrumcyrillic-regular-normal-downriver-25px">MeerVoordeel biedt diverse kortings- en voordeelprogramma's aan, aan consumenten in Nederland. In samenwerking met Ziggo, een van de grootste aanbieders van kabeltelevisie, internet en telefoniediensten in Nederland, biedt MeerVoordeel speciale voordelen en kortingen aan nieuwe Ziggo-klanten.",</span> <br><br>
@@ -168,6 +171,11 @@ export default {
         </p>
         <img class="image-8" :src="image8" alt="image 8" />
       </div>
+
+
+
+
+
       <img
         class="line-2"
         src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/line-2.svg"
@@ -176,6 +184,7 @@ export default {
       <!-- <div class="container-meervoordeelnl-is">
       </div> -->
       <p class="meervoordeelnl-is diodrumcyrillic-regular-normal-silver-16px" v-html="meervoordeelNlIs"></p>
+    </div>
 
     </div>
   </div>
@@ -222,7 +231,7 @@ export default {
 
 
       <div class="witte-container">
-        <p class="hoe-werkt-het">hoe werkt het?</p>
+        <p class="hoe-werkt-het">Hoe werkt het?</p>
 
         <!-- <img src="./Elipse 2.svg" alt=""> -->
         <div class="container-lijst">
@@ -231,8 +240,8 @@ export default {
             <svg class="blauwe-bal" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle id="Ellipse 2" cx="17.5" cy="17.5" r="17.5" fill="#49B7AC"/>
             </svg>
-            <p class="cijfer-li">1.</p>
-            <p class="text-hoe-werkt-het">kies jouw prijs</p>
+            <p class="cijfer-li cijfer-li-1">1.</p>
+            <p class="text-hoe-werkt-het text-hoe-werkt-het-1">Kies jouw prijs</p>
           </div>
 
           <div class="li-1">
@@ -321,6 +330,12 @@ export default {
 
 <style lang="sass">
 @import '../../variables'
+
+
+
+.container-flex-row
+  position: relative
+  top: 100px
 
 .meer-voordeel-nu
   color: #072249
@@ -958,6 +973,7 @@ body
     margin-top: 1rem
 
 
+  // geen position relative maar margin-top gebruikt (ligt aan ouder element)
   .witte-container
     width: 90%
     height: 20rem
@@ -976,7 +992,7 @@ body
     line-height: 150%
     position: relative
     top: 1rem
-    left: -4rem
+    left: -3.7rem
 
 
   .container-lijst
@@ -1011,12 +1027,20 @@ body
     top: 7px
     color: white
 
+  .cijfer-li-1
+    right: 22px
+
 
   .text-hoe-werkt-het-3
     width: 80%
+    padding-right: 25px
+
+  .text-hoe-werkt-het-1
+    margin-left: 5px 
 
   .text-hoe-werkt-het
     margin-top: 2%
+
 
   .text-hoe-werkt-het, .text-hoe-werkt-het-3
     //font-family: $font-family-diodrum_cyrillic-regular
@@ -1067,7 +1091,7 @@ body
     font-weight: 600
     line-height: 150%
     margin-top: 30px
-
+    width: 80%
 
   .lijn
     width: 80%

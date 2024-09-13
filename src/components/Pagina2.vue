@@ -391,10 +391,10 @@ input[type="radio"]::after
   width: 12px
   height: 12px
   background-color: transparent
-  border-radius: 50%
+  border-radius: 200%
   position: absolute
-  top: 50%
-  left: 50%
+  top: 49%
+  left: 49%
   transform: translate(-50%, -50%)
   transition: background-color 0.3s
 
