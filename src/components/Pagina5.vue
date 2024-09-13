@@ -35,9 +35,9 @@ export default {
       chosenProduct: '',  
       gekozenProductId: null,
       gekozenMerkId: null,
-      errors: {}, // Object om foutmeldingen op te slaan
-      successMessage: '', // Berichten bij succesvolle verzending
-      errorMessage: '' // Berichten bij fouten
+      errors: {}, 
+      successMessage: '',
+      errorMessage: ''
     };
   },
   computed: {

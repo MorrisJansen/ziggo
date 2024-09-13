@@ -766,7 +766,11 @@ input[type="radio"]
 
   .container-afbeelding-prijzen-mobiel-1
     position: relative
-    top: 610px
+    top: 743px
+    zoom: 83%!important
+    max-width: 80%!important
+    margin-right: 18vw!important
+    
 
 
   .container-center-horizontal *
@@ -775,7 +779,7 @@ input[type="radio"]
 
   .achtergrond-pagina-1
     // width: 23.4375rem
-    height: 72.5625rem
+    height: 63rem
     flex-shrink: 0
     background: linear-gradient(90deg, #072148 0%, #40A59F 100%)
 

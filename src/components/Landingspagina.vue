@@ -1012,7 +1012,7 @@ body
 
   .achtergrond
     background: linear-gradient(90deg, #072148 0%, #40A59F 100%)
-    height: 1000px!important
+    height: 900px!important
     width: 100%
 
 
