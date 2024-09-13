@@ -1029,7 +1029,7 @@ input::placeholder
     position: relative
     bottom: -75px
     right: 30px
-    zoom: 86%
+    zoom: 83%
 
   
 
