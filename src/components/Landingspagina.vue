@@ -977,11 +977,11 @@ body
   .blauwe-bal-mobiel-2
     position: relative
     bottom: 350px
-    left: 20px
+    left: -40px
 
   .blauwe-bal-mobiel-3
-    bottom: 180px
-    right: 120px
+    bottom: 300px
+    right: -10px
 
   .overkoepelende-container
     height: auto!important
