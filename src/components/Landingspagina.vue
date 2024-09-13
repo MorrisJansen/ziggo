@@ -955,7 +955,7 @@ body
 @media (max-width: 501px)
 
   .container-afbeelding-prijzen-mobiel
-    margin-top: 1rem
+    margin-top: 3rem
     zoom: 95%
   
 
