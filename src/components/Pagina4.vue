@@ -33,9 +33,9 @@ export default {
     console.log('Gekozen product:', this.chosenProduct);
   },
   mounted() {
-    setTimeout(() => {
-      this.$router.push("/pagina-6");
-    }, 1500);
+    // setTimeout(() => {
+    //   this.$router.push("/pagina-6");
+    // }, 1500);
   },
 };
 </script>
@@ -538,13 +538,19 @@ export default {
   .container-afbeelding-prijzen-mobiel-4
     top: 40px
     position: relative
+    margin-top: 1rem!important
+    zoom: 83%!important
+    max-width: 80%!important
+    margin-right: 18vw!important
+    
+
   .container-center-horizontal
     display: none!important
 
 
   .achtergrond-pagina-4
     // width: 23.4375rem
-    height: 55rem
+    height: 50rem
     flex-shrink: 0
     background: linear-gradient(90deg, #072148 0%, #40A59F 100%)
   

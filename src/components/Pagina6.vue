@@ -34,9 +34,9 @@ export default {
     console.log('Gekozen product:', this.chosenProduct);
   },
   mounted() {
-    setTimeout(() => {
-      this.$router.push("/pagina-5");
-    }, 1500);
+    // setTimeout(() => {
+    //   this.$router.push("/pagina-5");
+    // }, 1500);
   },
 };
 </script>
@@ -474,6 +474,11 @@ export default {
   .container-afbeelding-prijzen-mobiel-6
     position: relative
     top: 40px
+    margin-top: 1rem!important
+    zoom: 83%!important
+    max-width: 80%!important
+    margin-right: 18vw!important
+    
 
 
   .achtergrond-pagina-6
