@@ -958,7 +958,7 @@ body
     margin-top: 1rem
     zoom: 83%
     max-width: 80%
-    margin-right: 3.3rem
+    margin-right: 5rem
     
   
 
