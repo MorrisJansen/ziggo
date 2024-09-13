@@ -618,11 +618,14 @@ export default {
 
   .container-afbeelding-prijzen-mobiel-3
     position: relative
-    top: 40px
+    top: 46px
+    zoom: 83%!important
+    max-width: 80%!important
+    margin-right: 18vw!important
 
 
   .achtergrond-pagina-3
-    height: 60rem!important
+    height: 54rem!important
     height: 77rem
     flex-shrink: 0
     background: linear-gradient(90deg, #072148 0%, #40A59F 100%)

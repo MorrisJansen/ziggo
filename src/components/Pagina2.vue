@@ -760,8 +760,12 @@ input[type="radio"]:checked::after
 @media (max-width: 500px)
 
 .container-afbeelding-prijzen-mobiel-2
+
   position: relative
-  top: 700px
+  top: 843px
+  zoom: 83%!important
+  max-width: 80%!important
+  margin-right: 18vw!important
 
 
 .witte-container-pagina-2
@@ -778,7 +782,7 @@ input[type="radio"]:checked::after
 
 .achtergrond-pagina-2
   // width: 23.4375rem
-  height: 77rem
+  height: 69rem
   flex-shrink: 0
   background: linear-gradient(90deg, #072148 0%, #40A59F 100%)
 
