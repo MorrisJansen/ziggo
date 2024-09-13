@@ -955,9 +955,11 @@ body
 @media (max-width: 501px)
 
   .container-afbeelding-prijzen-mobiel
-    margin-top: 3rem
+    margin-top: 1rem
     zoom: 83%
     max-width: 80%
+    margin-right: 3.3rem
+    
   
 
 
@@ -1040,7 +1042,7 @@ body
   // geen position relative maar margin-top gebruikt (ligt aan ouder element)
   .witte-container
     width: 90%
-    height: 20rem
+    height: 22rem
     margin-top: 1rem
     background-color: #fff
     border-radius: 0.75rem
