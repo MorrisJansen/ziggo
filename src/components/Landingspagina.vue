@@ -141,7 +141,7 @@ export default {
         />
       </div>
 
-      <hr class="scheidingslijn">
+      <!-- <hr class="scheidingslijn"> -->
 
       <div class="flex-row">
         <p class="meer-voordeel-nu">Meer over MeerVoordeel</p>
@@ -650,9 +650,178 @@ body
   text-align: center
   width: 874px
   padding-top: 3rem
-  padding-bottom:  13rem
+  padding-bottom:  23rem
+  position: relative
+  bottom: 0px
+  display: block
 
 
+.flex-row
+  position: relative
+  top: 70px
+
+  
+.flex-row-1
+
+
+@media (min-width: 3650px)
+  .landingspagina
+    zoom: 182%!important
+    position: relative!important
+    right: 5%!important
+
+
+@media (min-width: 3450px)
+  .landingspagina
+    zoom: 177%!important
+    position: relative
+    right: 5%
+
+
+@media (min-width: 3250px)
+  .landingspagina
+    zoom: 170%!important
+    position: relative
+    right: 5%
+
+    
+
+
+
+
+@media (min-width: 1920px)
+  .container-center-horizontal
+    min-width: 100vw!important
+    max-width: 100vw!important
+    zoom: 110%
+
+  .landingspagina
+    zoom: 100%!important
+    position: relative!important
+    right: 5%!important
+
+
+@media (min-width: 2080px)
+  .landingspagina
+    zoom: 105%!important
+    position: relative!important
+    right: 5%!important
+
+@media (min-width: 2200px)
+  .landingspagina
+    zoom: 110%!important
+    position: relative!important
+    right: 5%!important
+
+@media (min-width: 2300px)
+  .landingspagina
+    zoom: 115%!important
+    position: relative!important
+    right: 5%!important
+
+
+@media (min-width: 2400px)
+  .landingspagina
+    zoom: 120%!important
+    position: relative!important
+    right: 5%!important
+
+@media (min-width: 2500px)
+  .landingspagina
+    zoom: 125%!important
+    position: relative!important
+    right: 5%!important
+
+  
+@media (min-width: 2600px)
+  .landingspagina
+    zoom: 130% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 2700px)
+  .landingspagina
+    zoom: 135% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 2800px)
+  .landingspagina
+    zoom: 140% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 2900px)
+  .landingspagina
+    zoom: 145% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3000px)
+  .landingspagina
+    zoom: 150% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3100px)
+  .landingspagina
+    zoom: 155% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3200px)
+  .landingspagina
+    zoom: 160% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3300px)
+  .landingspagina
+    zoom: 165% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3400px)
+  .landingspagina
+    zoom: 170% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3500px)
+  .landingspagina
+    zoom: 175% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3600px)
+  .landingspagina
+    zoom: 180% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3700px)
+  .landingspagina
+    zoom: 185% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3800px)
+  .landingspagina
+    zoom: 190% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3900px)
+  .landingspagina
+    zoom: 195% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 4000px)
+  .landingspagina
+    zoom: 200% !important
+    position: relative !important
+    right: 5% !important
 
 
 @media (max-width: 1800px)
@@ -928,6 +1097,7 @@ body
     font-weight: 400
     line-height: 1.125rem
     margin: 2rem 0
+    width: 80%
 
 
 

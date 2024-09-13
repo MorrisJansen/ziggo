@@ -271,6 +271,153 @@ export default {
   width: 874px
 
 
+
+
+
+@media (min-width: 1920px)
+  .container-center-horizontal
+    min-width: 100vw !important
+    max-width: 100vw !important
+    zoom: 110%
+
+  .pagina-6
+    zoom: 100% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 2080px)
+  .pagina-6
+    zoom: 105% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 2200px)
+  .pagina-6
+    zoom: 110% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 2300px)
+  .pagina-6
+    zoom: 115% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 2400px)
+  .pagina-6
+    zoom: 120% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 2500px)
+  .pagina-6
+    zoom: 125% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 2600px)
+  .pagina-6
+    zoom: 130% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 2700px)
+  .pagina-6
+    zoom: 135% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 2800px)
+  .pagina-6
+    zoom: 140% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 2900px)
+  .pagina-6
+    zoom: 145% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3000px)
+  .pagina-6
+    zoom: 150% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3100px)
+  .pagina-6
+    zoom: 155% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3200px)
+  .pagina-6
+    zoom: 160% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3300px)
+  .pagina-6
+    zoom: 165% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3400px)
+  .pagina-6
+    zoom: 170% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3500px)
+  .pagina-6
+    zoom: 175% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3600px)
+  .pagina-6
+    zoom: 180% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3700px)
+  .pagina-6
+    zoom: 185% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3800px)
+  .pagina-6
+    zoom: 190% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3900px)
+  .pagina-6
+    zoom: 195% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 4000px)
+  .pagina-6
+    zoom: 200% !important
+    position: relative !important
+    right: 5% !important
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 501px)
   .achtergrond-pagina-6
     background: linear-gradient(90deg, #072148 0%, #40A59F 100%)

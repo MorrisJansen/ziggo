@@ -401,6 +401,155 @@ export default {
 
 
 
+
+@media (min-width: 1920px)
+  .container-center-horizontal
+    min-width: 100vw !important
+    max-width: 100vw !important
+    zoom: 110%
+
+  .pagina-3
+    zoom: 100% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 2080px)
+  .pagina-3
+    zoom: 105% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 2200px)
+  .pagina-3
+    zoom: 110% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 2300px)
+  .pagina-3
+    zoom: 115% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 2400px)
+  .pagina-3
+    zoom: 120% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 2500px)
+  .pagina-3
+    zoom: 125% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 2600px)
+  .pagina-3
+    zoom: 130% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 2700px)
+  .pagina-3
+    zoom: 135% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 2800px)
+  .pagina-3
+    zoom: 140% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 2900px)
+  .pagina-3
+    zoom: 145% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3000px)
+  .pagina-3
+    zoom: 150% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3100px)
+  .pagina-3
+    zoom: 155% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3200px)
+  .pagina-3
+    zoom: 160% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3300px)
+  .pagina-3
+    zoom: 165% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3400px)
+  .pagina-3
+    zoom: 170% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3500px)
+  .pagina-3
+    zoom: 175% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3600px)
+  .pagina-3
+    zoom: 180% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3700px)
+  .pagina-3
+    zoom: 185% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3800px)
+  .pagina-3
+    zoom: 190% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3900px)
+  .pagina-3
+    zoom: 195% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 4000px)
+  .pagina-3
+    zoom: 200% !important
+    position: relative !important
+    right: 5% !important
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (min-width: 501px)
   .container-mobiel5
     display: none
@@ -416,7 +565,7 @@ export default {
   .witte-container-pagina-3 
     height: 24rem
     background-color: #fff
-    width: 92vw
+    width: 90%
     border-radius: 0.75rem
     top: 2rem
     position: relative

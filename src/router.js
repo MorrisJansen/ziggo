@@ -7,6 +7,7 @@ import Pagina3 from "./components/Pagina3";
 import Pagina4 from "./components/Pagina4";
 import Pagina5 from "./components/Pagina5";
 import Pagina6 from "./components/Pagina6";
+import bedankt from "./components/bedankt.vue";
 import {
   landingspaginaData,
   pagina1Data,
@@ -16,6 +17,7 @@ import {
   pagina5Data,
   pagina6Data,
 } from "./data";
+import Bedankt from "./components/bedankt.vue";
 
 Vue.use(Router);
 
@@ -57,6 +59,11 @@ export default new Router({
     {
       path: "/pagina-6",
       component: Pagina6,
+      props: { ...pagina6Data },
+    },
+    {
+      path: "/bedankt",
+      component: Bedankt,
       props: { ...pagina6Data },
     },
     {

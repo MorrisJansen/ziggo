@@ -32,45 +32,61 @@ export default {
       achternaam: '',
       email: '',
       telefoonnummer: '',
-      chosenProduct: '',  // Zorg dat chosenProduct meteen wordt ingesteld
+      chosenProduct: '',  
       gekozenProductId: null,
       gekozenMerkId: null,
+      errors: {}, // Object om foutmeldingen op te slaan
+      successMessage: '', // Berichten bij succesvolle verzending
+      errorMessage: '' // Berichten bij fouten
     };
   },
   computed: {
-    ...mapGetters(['getAntwoorden']), // Vuex getter om antwoorden op te halen
+    ...mapGetters(['getAntwoorden']),
   },
   mounted() {
-    // Haal antwoorden op uit Vuex
     const antwoordenLijst = this.getAntwoorden;
 
-    // Haal antwoord1 en antwoord2 op uit de antwoordenlijst (voor product en merk)
-    const gekozenProduct = antwoordenLijst.antwoord1; // Antwoord 1 is het gekozen product
-    const gekozenMerk = antwoordenLijst.antwoord2; // Antwoord 2 is het gekozen merk
+    const gekozenProduct = antwoordenLijst.antwoord1;
+    const gekozenMerk = antwoordenLijst.antwoord2;
 
-    // Haal de juiste ID's op
     this.gekozenProductId = this.getProductId(gekozenProduct);
     this.gekozenMerkId = this.getMerkId(gekozenMerk);
-
-    // Stel chosenProduct direct in, zodra de pagina laadt
-    this.chosenProduct = gekozenProduct || 'geen product gekozen';  // Gebruik de waarde van antwoord1
-
-
+    this.chosenProduct = gekozenProduct || 'geen product gekozen';
   },
   methods: {
-    // Deze functie vergelijkt de antwoorden en verzendt de gegevens naar de API
     async submitForm() {
-      const antwoordenLijst = this.getAntwoorden; // Haal antwoorden op via Vuex
-      if (!antwoordenLijst || !antwoordenLijst.antwoord1 || !antwoordenLijst.antwoord2) {
-        console.error('Onvoldoende antwoorden om te verwerken.');
+      this.errors = {}; // Reset de fouten
+      this.successMessage = ''; // Reset succesbericht
+      this.errorMessage = ''; // Reset foutbericht
+      const antwoordenLijst = this.getAntwoorden;
+
+      // Validatie
+      if (!this.isValidEmail(this.email)) {
+        this.errors.email = 'Voer een geldig e-mailadres in.';
+      }
+      if (!this.isValidPhoneNumber(this.telefoonnummer)) {
+        this.errors.telefoonnummer = 'Voer een geldig telefoonnummer in.';
+      }
+      if (!this.voornaam) {
+        this.errors.voornaam = 'Voornaam is verplicht.';
+      }
+      if (!this.achternaam) {
+        this.errors.achternaam = 'Achternaam is verplicht.';
+      }
+
+      // Controleer of er fouten zijn
+      if (Object.keys(this.errors).length > 0) {
         return; // Stop de verdere verwerking
       }
 
-      // Haal de product- en merk-ID's op
+      if (!antwoordenLijst || !antwoordenLijst.antwoord1 || !antwoordenLijst.antwoord2) {
+        console.error('Onvoldoende antwoorden om te verwerken.');
+        return;
+      }
+
       const gekozenProductId = this.getProductId(antwoordenLijst.antwoord1);
       const gekozenMerkId = this.getMerkId(antwoordenLijst.antwoord2);
 
-      // Controleer of de ID's correct zijn toegewezen
       if (!gekozenProductId || !gekozenMerkId) {
         console.error('Kon geen geldige ID\'s vinden voor het product of merk.');
         return;
@@ -92,7 +108,7 @@ export default {
         lastname: this.achternaam,
         email: this.email,
         phone_number: this.telefoonnummer,
-        answers: [5269, gekozenProductId, gekozenMerkId], // Gebruik de dynamisch verkregen ID's
+        answers: [5269, gekozenProductId, gekozenMerkId],
       };
 
       try {
@@ -106,17 +122,29 @@ export default {
         });
 
         if (response.ok) {
-          console.log('Lead succesvol verstuurd.');
+          this.successMessage = 'Lead succesvol verstuurd.';
+          console.log(this.successMessage);
         } else {
           const errorMessage = await response.text();
-          console.error('Fout bij versturen van lead:', errorMessage);
+          this.errorMessage = 'Fout bij versturen van lead: ' + errorMessage;
+          console.error(this.errorMessage);
         }
       } catch (error) {
-        console.error('Netwerk- of serverfout:', error);
+        this.errorMessage = 'Netwerk- of serverfout: ' + error.message;
+        console.error(this.errorMessage);
       }
     },
 
-    // Functie om de product-ID op te halen
+    isValidEmail(email) {
+      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return regex.test(email);
+    },
+
+    isValidPhoneNumber(phoneNumber) {
+      const regex = /^[0-9]{10,15}$/; // Pas dit aan voor de verwachte telefoonnummerformaat
+      return regex.test(phoneNumber);
+    },
+
     getProductId(product) {
       const productMap = {
         'SAMSUNG 60" TV': 5284,
@@ -126,7 +154,6 @@ export default {
       return productMap[product] || null;
     },
 
-    // Functie om de merk-ID op te halen
     getMerkId(merk) {
       const merkMap = {
         'Odido': 5272,
@@ -171,7 +198,7 @@ export default {
             <div class="name-group">
               <div class="form-group">
                 <label for="voornaam"></label>
-                <img class="form-icoon" src="./naam-icoon.svg" alt="Naam Icon">
+                <img class="form-icoon" src="./naam-icoon.svg" alt="Naam Icon" />
                 <input
                   type="text"
                   id="voornaam"
@@ -179,24 +206,26 @@ export default {
                   required
                   placeholder="Vul je voornaam in"
                 />
+                <span v-if="errors.voornaam" class="error-message-voornaam">{{ errors.voornaam }}</span>
               </div>
           
               <div class="form-group">
                 <label for="achternaam"></label>
-                <img class="form-icoon" src="./naam-icoon.svg" alt="Achternaam Icon">
-                <input style="color: purple!important;"
+                <img class="form-icoon" src="./naam-icoon.svg" alt="Achternaam Icon" />
+                <input
                   type="text"
                   id="achternaam"
                   v-model="achternaam"
                   required
                   placeholder="Vul je achternaam in"
                 />
+                <span v-if="errors.achternaam" class="error-message-achternaam">{{ errors.achternaam }}</span>
               </div>
             </div>
           
             <div class="form-group full-width">
               <label for="email"></label>
-              <img class="form-icoon-2" src="./email-icoon.svg" alt="Email Icon">
+              <img class="form-icoon-2" src="./email-icoon.svg" alt="Email Icon" />
               <input
                 type="email"
                 id="email"
@@ -204,11 +233,12 @@ export default {
                 required
                 placeholder="Vul je e-mailadres in"
               />
+              <span v-if="errors.email" class="error-message">{{ errors.email }}</span>
             </div>
           
             <div class="form-group full-width">
               <label for="telefoonnummer"></label>
-              <img class="form-icoon-2" src="./tel-nummer-icoon.svg" alt="Telefoonnummer Icon">
+              <img class="form-icoon-2" src="./tel-nummer-icoon.svg" alt="Telefoonnummer Icon" />
               <input
                 type="tel"
                 id="telefoonnummer"
@@ -216,8 +246,10 @@ export default {
                 required
                 placeholder="Vul je telefoonnummer in"
               />
+              <span v-if="errors.telefoonnummer" class="error-message">{{ errors.telefoonnummer }}</span>
             </div>
           </form>
+          
           
           
 
@@ -343,7 +375,7 @@ export default {
         <img class="jouw-gekozen-prijs" :src="jouwGekozenPrijs" alt="Jouw gekozen prijs:" />
         <div class="playstation-5-slim-disk">{{ playstation5SlimDisk }}</div> -->
 
-        <img src="./afbeeldingen-samen.png" alt="">
+        <img style="position: relative; top: 20px" src="./afbeeldingen-samen.png" alt="">
 
 
 
@@ -352,10 +384,10 @@ export default {
         <!-- hier moet ik nog naar kijken -->
         <!-- <hr class="lijn-3" style="margin-top: 5rem;"> -->
 
-        <!-- <div class="footer-pagina1" style="width: 100vw; text-align: center; display: block;">
+        <div class="footer-pagina5">
           <p class="text-footer-pagina5">*Meervoordeel.nl is een officiële partner van Ziggo. Deelname mogelijk tot en met 31 juli 2024.
             Actievoorwaarden van toepassing.</p>
-        </div> -->
+        </div>
 
       </div>
     </div>
@@ -369,6 +401,34 @@ export default {
 
 <style lang="sass">
 @import '../../variables'
+
+
+
+.error-message-voornaam
+  color: red
+  font-size: 24px
+  padding-top:  8px
+  margin-right:   10px
+  font-weight: 700
+  font-family: $font-weight-diodrum_cyrillic-regular
+
+
+
+.error-message-achternaam
+  color: red
+  font-size: 24px
+  padding-top:  8px
+  margin-right:   -6px
+  font-weight: 700
+  font-family: $font-weight-diodrum_cyrillic-regular
+
+.error-message
+  font-family: $font-weight-diodrum_cyrillic-regular
+  color: red
+  font-weight: 700
+  font-size: 24px
+  margin-left: 57px
+
 
 
 
@@ -647,7 +707,7 @@ input::placeholder
 .met-het-bevestigen-v
   color: $downriver
   font-family: $font-family-diodrum_cyrillic-regular
-  font-size: $font-size-m
+  font-size: 24px
   font-weight: 400
   letter-spacing: 0
   line-height: 24px
@@ -756,11 +816,167 @@ input::placeholder
 
 
 
+
+
+@media (min-width: 1920px)
+  .container-center-horizontal
+    min-width: 100vw !important
+    max-width: 100vw !important
+    zoom: 110%
+
+  .pagina-5
+    zoom: 100% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 2080px)
+  .pagina-5
+    zoom: 105% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 2200px)
+  .pagina-5
+    zoom: 110% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 2300px)
+  .pagina-5
+    zoom: 115% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 2400px)
+  .pagina-5
+    zoom: 120% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 2500px)
+  .pagina-5
+    zoom: 125% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 2600px)
+  .pagina-5
+    zoom: 130% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 2700px)
+  .pagina-5
+    zoom: 135% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 2800px)
+  .pagina-5
+    zoom: 140% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 2900px)
+  .pagina-5
+    zoom: 145% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3000px)
+  .pagina-5
+    zoom: 150% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3100px)
+  .pagina-5
+    zoom: 155% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3200px)
+  .pagina-5
+    zoom: 160% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3300px)
+  .pagina-5
+    zoom: 165% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3400px)
+  .pagina-5
+    zoom: 170% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3500px)
+  .pagina-5
+    zoom: 175% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3600px)
+  .pagina-5
+    zoom: 180% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3700px)
+  .pagina-5
+    zoom: 185% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3800px)
+  .pagina-5
+    zoom: 190% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 3900px)
+  .pagina-5
+    zoom: 195% !important
+    position: relative !important
+    right: 5% !important
+
+@media (min-width: 4000px)
+  .pagina-5
+    zoom: 200% !important
+    position: relative !important
+    right: 5% !important
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 500px)
+
+
+
+  .footer-pagina5
+    background-color: $white
+    min-width: 100%
+    position: absolute
+    bottom: -575px
+    right: 3px
+
+
   .achtergrond-pagina-5
     background: linear-gradient(90deg, #072148 0%, #40A59F 100%)
     width: 100%
-    height: 77rem!important
+    height: 80rem!important
     padding-bottom: 2rem
 
   .witte-container-pagina-5
@@ -899,13 +1115,11 @@ input::placeholder
     font-weight: 400
     line-height: 1.125rem
     margin-top: 1rem
-    padding-bottom: 5rem
+    padding-bottom: 2rem
 
   .container-mobiel-pagina-5
     padding: 0!important
-
-    // deze zal je nodig hebben voor de footer
-    // padding-bottom: 12rem!important
+    padding-bottom: 12rem!important
 
   .lijn-3
     width: 100%
