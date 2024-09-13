@@ -956,6 +956,8 @@ body
 
   .container-afbeelding-prijzen-mobiel
     margin-top: 1rem
+    zoom: 95%
+  
 
 
   .blauwe-bal-mobiel-1, , .blauwe-bal-mobiel-3
