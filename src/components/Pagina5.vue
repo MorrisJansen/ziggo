@@ -291,23 +291,37 @@ export default {
         /> -->
         
         
+
+
+
+
+        <!-- dit is de afbeelding voor de gekozen prijs -->
         <img class="image-2-6" :src="image2" alt="image 2" />
         
         
+        <!-- dit is het bolletje met de prijs -->
         
         <div class="group-2-6">
           <div class="overlap-group-2">
             <div class="twv-18">{{ tWV }}</div>
-            <h1 class="text-19 valign-text-bottom">€599,-</h1>
+            <h1 class="text-19 valign-text-bottom" style="font-weight: 700;">€599,-</h1>
           </div>
         </div>
+
+
         <img
           class="vector-1"
           src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/vector-1.svg"
           alt="Vector"
         />
-        <img class="jouw-gekozen-prijs" :src="jouwGekozenPrijs" alt="Jouw gekozen prijs:" />
-        <div class="playstation-5-slim-disk">{{ playstation5SlimDisk }}</div>
+
+        <!-- dit moet nog dynamisch worden gerenderd -->
+         <p class="jouw-gekozen-prijs">Jouw gekozen prijs:</p>
+        <!-- <img class="jouw-gekozen-prijs" :src="jouwGekozenPrijs" alt="Jouw gekozen prijs:" /> -->
+        <div class="playstation-5-slim-disk">Playstation 5 Slim Disk</div>
+
+
+        <!-- dit heeft te maken met de afbeelding in de navbar -->
         <frame1000004784
           :group="frame1000004784Props.group"
           :group116046944Props="frame1000004784Props.group116046944Props"
@@ -375,26 +389,57 @@ export default {
         <img class="jouw-gekozen-prijs" :src="jouwGekozenPrijs" alt="Jouw gekozen prijs:" />
         <div class="playstation-5-slim-disk">{{ playstation5SlimDisk }}</div> -->
 
-        <img style="position: relative; top: 20px" src="./afbeeldingen-samen.png" alt="">
 
-
-
-
-
-        <!-- hier moet ik nog naar kijken -->
-        <!-- <hr class="lijn-3" style="margin-top: 5rem;"> -->
-
-        <div class="footer-pagina5">
-          <p class="text-footer-pagina5">*Meervoordeel.nl is een officiële partner van Ziggo. Deelname mogelijk tot en met 31 juli 2024.
-            Actievoorwaarden van toepassing.</p>
+        <div class="container-afbeelding-prijzen-mobiel-5">
+          <img src="./afbeeldingen-samen-mobiel.png" alt="">
+  
+  
+            <svg class="blauwe-bal-mobiel-1" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
+              <circle cx="63.973" cy="63.973" r="63.2691" transform="rotate(4.4359 63.973 63.973)" fill="#49B7AC"/>
+              <text x="50%" y="36%" text-anchor="middle" dy="0.3em" fill="#FFF" font-family="DM Sans" font-size="1.04275rem" font-style="normal" font-weight="400" line-height="normal" transform="rotate(4.436 64 64)">t.w.v</text>
+              <text x="50%" y="55%" text-anchor="middle" dy="0.3em" fill="#FFF" font-family="DM Sans" font-size="1.88506rem" font-style="normal" font-weight="700" line-height="normal" transform="rotate(4.436 64 64)">€699,-</text>
+            </svg>
+          
+          
+            <svg class="blauwe-bal-mobiel-2" xmlns="http://www.w3.org/2000/svg" width="105" height="105" viewBox="0 0 105 105" fill="none">
+              <circle cx="52.7158" cy="52.7158" r="52.0939" transform="rotate(-6.575 52.7158 52.7158)" fill="#49B7AC"/>
+              <text x="50%" y="36%" text-anchor="middle" dy="0.3em" fill="#FFF" font-family="DM Sans" font-size="0.85856rem" font-style="normal" font-weight="400" line-height="normal" transform="rotate(-6.575 52.7158 52.7158)">t.w.v</text>
+              <text x="50%" y="57%" text-anchor="middle" dy="0.3em" fill="#FFF" font-family="DM Sans" font-size="1.5rem" font-style="normal" font-weight="700" line-height="normal" transform="rotate(-6.575 52.7158 52.7158)">          €400,-
+              </text>
+            </svg>
+  
+  
+            
+            
+  
+            <svg class="blauwe-bal-mobiel-3" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
+              <circle cx="64.0511" cy="64.0511" r="63.2691" transform="rotate(-12.012 64.0511 64.0511)" fill="#49B7AC"/>
+              <text x="50%" y="36%" text-anchor="middle" dy="0.3em" fill="#FFF" font-family="DM Sans" font-size="1.04275rem" font-style="normal" font-weight="400" line-height="normal" transform="rotate(-12.012 64.0511 64.0511)">t.w.v</text>
+              <text x="50%" y="55%" text-anchor="middle" dy="0.3em" fill="#FFF" font-family="DM Sans" font-size="1.88506rem" font-style="normal" font-weight="700" line-height="normal" transform="rotate(-12.012 64.0511 64.0511)">          €599,-
+              </text>
+            </svg>
         </div>
+      </div>
+
+
+    
+      <div class="container-footer-5">
+        <hr class="lijn" style="margin-top: 3rem;">
+        <div class="footer-pagina1">
+          <p class="text-footer-pagina1">*Meervoordeel.nl is een officiële partner van Ziggo. Deelname mogelijk tot en met 31 juli 2024. Actievoorwaarden van toepassing.</p>
+        </div>
+      </div>
+
+
+
+
+
 
       </div>
     </div>
   </div>
 
 
-</div>
 </center>
 
 </template>
@@ -402,6 +447,16 @@ export default {
 <style lang="sass">
 @import '../../variables'
 
+
+
+.jouw-gekozen-prijs
+  color: #FFF
+  font-family: "DM Sans"
+  font-size: 2.02rem
+  font-style: normal
+  font-weight: 600
+  line-height: 150%
+  width: 305px!important
 
 
 .error-message-voornaam
@@ -761,7 +816,7 @@ input::placeholder
 .text-19
   color: $white
   font-family: $font-family-diodrum_cyrillic-semibold
-  font-size: 57px
+  font-size: 53px
   font-weight: 400
   height: 68px
   left: 18px
@@ -770,7 +825,7 @@ input::placeholder
   position: absolute
   top: 83px
   white-space: nowrap
-  font-weight: 550
+  font-weight: 700
 
 .vector-1
   height: 28px
@@ -797,6 +852,7 @@ input::placeholder
   position: absolute
   top: 402px
   white-space: nowrap
+  margin-top: 1rem
 
 .line-2-6
   height: 1px
@@ -964,6 +1020,18 @@ input::placeholder
 @media (max-width: 500px)
 
 
+  .container-footer-5
+    position: relative
+    top: 32rem
+
+
+  .container-afbeelding-prijzen-mobiel-5
+    position: relative
+    bottom: -75px
+    right: 30px
+    zoom: 86%
+
+  
 
   .footer-pagina5
     background-color: $white
@@ -976,7 +1044,7 @@ input::placeholder
   .achtergrond-pagina-5
     background: linear-gradient(90deg, #072148 0%, #40A59F 100%)
     width: 100%
-    height: 80rem!important
+    height: 82rem!important
     padding-bottom: 2rem
 
   .witte-container-pagina-5

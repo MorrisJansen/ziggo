@@ -205,7 +205,7 @@ export default {
         </div>
 
         <div class="achtergrond-pagina-2">
-          <div class="witte-container-pagina-1 hoogte-witte-container">
+          <div class="witte-container-pagina-2 hoogte-witte-container">
             <p class="stap1">Stap 2 van de 3</p>
             <p class="vertel-ons">Vertel ons welke provider je hebt:</p>
 
@@ -250,7 +250,35 @@ export default {
 
 
           </div>
-          <!-- <img style="margin-top: 5.5rem;" src="./afbeeldingen-samen-alleen-mobiel.png" alt=""> -->
+          <div class="container-afbeelding-prijzen-mobiel-2">
+            <img src="./afbeeldingen-samen-mobiel.png" alt="">
+    
+    
+              <svg class="blauwe-bal-mobiel-1" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
+                <circle cx="63.973" cy="63.973" r="63.2691" transform="rotate(4.4359 63.973 63.973)" fill="#49B7AC"/>
+                <text x="50%" y="36%" text-anchor="middle" dy="0.3em" fill="#FFF" font-family="DM Sans" font-size="1.04275rem" font-style="normal" font-weight="400" line-height="normal" transform="rotate(4.436 64 64)">t.w.v</text>
+                <text x="50%" y="55%" text-anchor="middle" dy="0.3em" fill="#FFF" font-family="DM Sans" font-size="1.88506rem" font-style="normal" font-weight="700" line-height="normal" transform="rotate(4.436 64 64)">€699,-</text>
+              </svg>
+            
+            
+              <svg class="blauwe-bal-mobiel-2" xmlns="http://www.w3.org/2000/svg" width="105" height="105" viewBox="0 0 105 105" fill="none">
+                <circle cx="52.7158" cy="52.7158" r="52.0939" transform="rotate(-6.575 52.7158 52.7158)" fill="#49B7AC"/>
+                <text x="50%" y="36%" text-anchor="middle" dy="0.3em" fill="#FFF" font-family="DM Sans" font-size="0.85856rem" font-style="normal" font-weight="400" line-height="normal" transform="rotate(-6.575 52.7158 52.7158)">t.w.v</text>
+                <text x="50%" y="57%" text-anchor="middle" dy="0.3em" fill="#FFF" font-family="DM Sans" font-size="1.5rem" font-style="normal" font-weight="700" line-height="normal" transform="rotate(-6.575 52.7158 52.7158)">          €400,-
+                </text>
+              </svg>
+    
+    
+              
+              
+    
+              <svg class="blauwe-bal-mobiel-3" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
+                <circle cx="64.0511" cy="64.0511" r="63.2691" transform="rotate(-12.012 64.0511 64.0511)" fill="#49B7AC"/>
+                <text x="50%" y="36%" text-anchor="middle" dy="0.3em" fill="#FFF" font-family="DM Sans" font-size="1.04275rem" font-style="normal" font-weight="400" line-height="normal" transform="rotate(-12.012 64.0511 64.0511)">t.w.v</text>
+                <text x="50%" y="55%" text-anchor="middle" dy="0.3em" fill="#FFF" font-family="DM Sans" font-size="1.88506rem" font-style="normal" font-weight="700" line-height="normal" transform="rotate(-12.012 64.0511 64.0511)">          €599,-
+                </text>
+              </svg>
+          </div>
         </div>
 
         <hr class="lijn" style="margin-top: 3rem;">
@@ -731,11 +759,31 @@ input[type="radio"]:checked::after
 // hieronder komen alle mobile styles
 @media (max-width: 500px)
 
+.container-afbeelding-prijzen-mobiel-2
+  position: relative
+  top: 700px
+
+
+.witte-container-pagina-2
+  border-radius: 0.75rem
+  background: #FFF
+  box-shadow: 0px 31px 81px 0px rgba(0, 17, 77, 0.2)
+  width: 90%
+  height: 41rem
+  flex-shrink: 0
+  position: absolute
+  top: 9rem
+  left: 5vw
+
+
 .achtergrond-pagina-2
   // width: 23.4375rem
-  height: 42rem
+  height: 77rem
   flex-shrink: 0
   background: linear-gradient(90deg, #072148 0%, #40A59F 100%)
+
+.container-afbeelding-prijzen-mobiel
+  
 
 
 

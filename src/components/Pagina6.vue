@@ -150,19 +150,48 @@ export default {
       </div>
     </div>
 
-    <div class="afbeeldingen-samen">
+    <!-- <div class="afbeeldingen-samen">
       <img src="./afbeeldingen-samen.png" alt="">
+    </div> -->
+
+    <div class="container-afbeelding-prijzen-mobiel-6">
+      <img src="./afbeeldingen-samen-mobiel.png" alt="">
+
+
+        <svg class="blauwe-bal-mobiel-1" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
+          <circle cx="63.973" cy="63.973" r="63.2691" transform="rotate(4.4359 63.973 63.973)" fill="#49B7AC"/>
+          <text x="50%" y="36%" text-anchor="middle" dy="0.3em" fill="#FFF" font-family="DM Sans" font-size="1.04275rem" font-style="normal" font-weight="400" line-height="normal" transform="rotate(4.436 64 64)">t.w.v</text>
+          <text x="50%" y="55%" text-anchor="middle" dy="0.3em" fill="#FFF" font-family="DM Sans" font-size="1.88506rem" font-style="normal" font-weight="700" line-height="normal" transform="rotate(4.436 64 64)">€699,-</text>
+        </svg>
+      
+      
+        <svg class="blauwe-bal-mobiel-2" xmlns="http://www.w3.org/2000/svg" width="105" height="105" viewBox="0 0 105 105" fill="none">
+          <circle cx="52.7158" cy="52.7158" r="52.0939" transform="rotate(-6.575 52.7158 52.7158)" fill="#49B7AC"/>
+          <text x="50%" y="36%" text-anchor="middle" dy="0.3em" fill="#FFF" font-family="DM Sans" font-size="0.85856rem" font-style="normal" font-weight="400" line-height="normal" transform="rotate(-6.575 52.7158 52.7158)">t.w.v</text>
+          <text x="50%" y="57%" text-anchor="middle" dy="0.3em" fill="#FFF" font-family="DM Sans" font-size="1.5rem" font-style="normal" font-weight="700" line-height="normal" transform="rotate(-6.575 52.7158 52.7158)">          €400,-
+          </text>
+        </svg>
+
+
+        
+        
+
+        <svg class="blauwe-bal-mobiel-3" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
+          <circle cx="64.0511" cy="64.0511" r="63.2691" transform="rotate(-12.012 64.0511 64.0511)" fill="#49B7AC"/>
+          <text x="50%" y="36%" text-anchor="middle" dy="0.3em" fill="#FFF" font-family="DM Sans" font-size="1.04275rem" font-style="normal" font-weight="400" line-height="normal" transform="rotate(-12.012 64.0511 64.0511)">t.w.v</text>
+          <text x="50%" y="55%" text-anchor="middle" dy="0.3em" fill="#FFF" font-family="DM Sans" font-size="1.88506rem" font-style="normal" font-weight="700" line-height="normal" transform="rotate(-12.012 64.0511 64.0511)">          €599,-
+          </text>
+        </svg>
     </div>
+  </div>
 
 
+  <hr class="lijn" style="margin-top: 3rem;">
+  <div class="footer-pagina1">
+    <p class="text-footer-pagina1">*Meervoordeel.nl is een officiële partner van Ziggo. Deelname mogelijk tot en met 31 juli 2024. Actievoorwaarden van toepassing.</p>
+  </div>
 
-    <div class="footer-container">
-      <hr class="lijn">
 
-
-      <p class="kleine-letters">*Meervoordeel.nl is een officiële partner van Ziggo. Deelname mogelijk tot en met 31 juli 2024.
-        Actievoorwaarden van toepassing.</p>
-    </div>
 
 
 
@@ -177,7 +206,6 @@ export default {
 
 
 
-</div>
 </center>
 
 </template>
@@ -442,10 +470,16 @@ export default {
 
 
 @media (max-width: 501px)
+
+  .container-afbeelding-prijzen-mobiel-6
+    position: relative
+    top: 40px
+
+
   .achtergrond-pagina-6
     background: linear-gradient(90deg, #072148 0%, #40A59F 100%)
     width: 100%
-    height: 61.875rem
+    height: 55rem
 
   .witte-container-pagina-6
     width: 90%
