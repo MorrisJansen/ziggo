@@ -2,10 +2,11 @@
 import Frame1 from "./Frame1";
 import Group1 from "./Group1";
 import Frame1000004784 from "./Frame1000004784";
-import { mapGetters } from 'vuex'; 
+import { v4 as uuidv4 } from 'uuid';
+
 
 export default {
-  name: "bedankt",
+  name: "bedanktimage",
   components: {
     Frame1,
     Group1,
@@ -29,8 +30,14 @@ export default {
     return {
       chosenProduct: '',
       postcodeError: '', 
+      uniqueConversionId: uuidv4(),
     };
-  },
+  }, 
+  computed: {
+    pixelUrl() {
+      return `https://republish.gratismeedoen.nl/m/6337/9d85475ce4f0/?event=7417&unique_conversion_id=${this.uniqueConversionId}`;
+    }
+    }
 };
 </script>
 
@@ -50,7 +57,6 @@ export default {
 
             <div class="bedankt-container">
                 <p class="bedankt">Bedankt!</p>
-
             </div>
 
             <div class="bedankt-text-container">
@@ -64,8 +70,12 @@ export default {
 
             <p v-if="postcodeError" class="error-message-pagina-3">{{ postcodeError }}</p>
 
-
-
+            <img 
+              referrerpolicy="no-referrer-when-downgrade" 
+              :src="pixelUrl" 
+              style="width: 1px; height: 1px; border: 0px;" 
+              alt="tracking-pixel"
+            />
 
             <div :class="['group-1', group11Props.className]">
               <div class="overlap-group-6">

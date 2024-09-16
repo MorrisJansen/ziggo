@@ -8,6 +8,7 @@ import Pagina4 from "./components/Pagina4";
 import Pagina5 from "./components/Pagina5";
 import Pagina6 from "./components/Pagina6";
 import bedankt from "./components/bedankt.vue";
+import Bedankt2 from "./components/bedankt-img.vue"
 import {
   landingspaginaData,
   pagina1Data,
@@ -66,6 +67,15 @@ export default new Router({
       component: Bedankt,
       props: { ...pagina6Data },
     },
+
+    {
+      path: "/bedankt2",
+      component: Bedankt2,
+      props: { ...pagina6Data },
+    },
+    
+
+    
     {
       path: "*",
       redirect: "/landingspagina",
