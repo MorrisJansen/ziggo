@@ -37,11 +37,20 @@ export default {
       gekozenMerkId: null,
       errors: {}, 
       successMessage: '',
-      errorMessage: ''
+      errorMessage: '',
+      formData: {
+        voornaam: '',
+        achternaam: '',
+        email: '',
+        telefoonnummer: ''
+      }
     };
   },
   computed: {
     ...mapGetters(['getAntwoorden']),
+    heeftNaamFout() {
+    return this.errors.voornaam || this.errors.achternaam;
+  }
   },
   mounted() {
     const antwoordenLijst = this.getAntwoorden;
@@ -55,30 +64,17 @@ export default {
   },
   methods: {
     async submitForm() {
-      this.errors = {}; // Reset de fouten
-      this.successMessage = ''; // Reset succesbericht
-      this.errorMessage = ''; // Reset foutbericht
+      this.errors = {}; 
+      this.successMessage = ''; 
+      this.errorMessage = '';
+
+      // Validaties
+      if (!this.validateVoornaam()) return;
+      if (!this.validateAchternaam()) return;
+      if (!this.validateEmail()) return;
+      if (!this.validateTelefoonnummer()) return;
+
       const antwoordenLijst = this.getAntwoorden;
-
-      // Validatie
-      if (!this.isValidEmail(this.email)) {
-        this.errors.email = 'Voer een geldig e-mailadres in.';
-      }
-      if (!this.isValidPhoneNumber(this.telefoonnummer)) {
-        this.errors.telefoonnummer = 'Voer een geldig telefoonnummer in.';
-      }
-      if (!this.voornaam) {
-        this.errors.voornaam = 'Voornaam is verplicht.';
-      }
-      if (!this.achternaam) {
-        this.errors.achternaam = 'Achternaam is verplicht.';
-      }
-
-      // Controleer of er fouten zijn
-      if (Object.keys(this.errors).length > 0) {
-        return; // Stop de verdere verwerking
-      }
-
       if (!antwoordenLijst || !antwoordenLijst.antwoord1 || !antwoordenLijst.antwoord2) {
         console.error('Onvoldoende antwoorden om te verwerken.');
         return;
@@ -104,10 +100,10 @@ export default {
         site_custom_name: 'ziggo prijs winnen',
         ip: '123.45.67.89',
         optin_timestamp: new Date().toISOString().slice(0, 19).replace('T', ' '),
-        firstname: this.voornaam,
-        lastname: this.achternaam,
-        email: this.email,
-        phone_number: this.telefoonnummer,
+        firstname: this.formData.voornaam,
+        lastname: this.formData.achternaam,
+        email: this.formData.email,
+        phone_number: this.formData.telefoonnummer,
         answers: [5269, gekozenProductId, gekozenMerkId],
       };
 
@@ -135,15 +131,74 @@ export default {
       }
     },
 
-    isValidEmail(email) {
-      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return regex.test(email);
+    validateVoornaam() {
+  const regex = /^[a-zA-Z\s.,'-]{1,}$/;
+
+  if (!this.formData.voornaam.match(regex)) {
+    this.errors.voornaam = 'Ongeldige voornaam.';
+    console.log(this.errors.voornaam);
+    return false;
+  }
+
+  this.errors.voornaam = '';
+  return true;
+},
+
+validateAchternaam() {
+  const regex = /^[a-zA-Z\s.,'-]{1,}$/;
+
+  if (!this.formData.achternaam.match(regex)) {
+    this.errors.achternaam = 'Ongeldige achternaam.';
+    console.log(this.errors.achternaam);
+    return false;
+  }
+
+  this.errors.achternaam = '';
+  return true;
+},
+
+validateEmail() {
+  const regex = /^[^\s@]+@[^\s@]+\.(com|org|net|edu|gov|nl|info|biz|co|io|me|tv)$/i;
+  const containsApostrophe = /'/;
+
+  if (!this.formData.email.match(regex) || this.formData.email.match(containsApostrophe)) {
+    this.errors.email = 'Ongeldig e-mailadres.';
+    console.log(this.errors.email);
+    return false;
+  }
+
+  this.errors.email = '';
+  return true;
+},
+
+validateAndFormatPhoneNumber(phoneNumber) {
+        phoneNumber = phoneNumber.replace(/[^0-9+]/g, '');
+        
+        const dutchRegex = /^(06[0-9]{8}|[+]{0,1}31[0]?[0-9]{9,10}|0031[0]?[0-9]{9,10})$/;
+
+        if (!phoneNumber.match(dutchRegex)) {
+            console.error('Ongeldig telefoonnummer');
+            return null;
+        }
+        
+
+        return phoneNumber;
     },
 
-    isValidPhoneNumber(phoneNumber) {
 
-      return regex.test(phoneNumber);
+validateTelefoonnummer() {
+        const phoneNumber = this.validateAndFormatPhoneNumber(this.formData.telefoonnummer);
+
+        if (!phoneNumber) {
+            this.errors.telefoonnummer = 'Ongeldig telefoonnummer.';
+            console.log(this.errors.telefoonnummer);
+            return false;
+        }
+
+        this.errors.telefoonnummer = '';
+        return true;
     },
+
 
     getProductId(product) {
       const productMap = {
@@ -166,6 +221,8 @@ export default {
   }
 };
 </script>
+
+
 
 
 
@@ -198,56 +255,82 @@ export default {
             <div class="name-group">
               <div class="form-group">
                 <label for="voornaam"></label>
-                <img class="form-icoon" src="./naam-icoon.svg" alt="Naam Icon" />
-                <input
-                  type="text"
-                  id="voornaam"
-                  v-model="voornaam"
-                  required
-                  placeholder="Vul je voornaam in"
-                />
-                <span v-if="errors.voornaam" class="error-message-voornaam">{{ errors.voornaam }}</span>
+
+                <!-- <img class="form-icoon" src="./naam-icoon.svg" alt="Naam Icon" /> -->
+                <img 
+                class="form-icoon" 
+                src="./naam-icoon.svg" 
+                alt="Naam Icon" 
+                :class="{'input-error-icoon': heeftNaamFout}" 
+              />
+              <input
+              type="text"
+              id="voornaam"
+              v-model="formData.voornaam"
+              @blur="validateVoornaam"
+              :class="{'input-error': errors.voornaam}"
+              required
+              placeholder="Vul je voornaam in"
+            />
+                <span v-if="errors.voornaam" class="error-message">{{ errors.voornaam }}</span>
               </div>
-          
+        
               <div class="form-group">
                 <label for="achternaam"></label>
-                <img class="form-icoon" src="./naam-icoon.svg" alt="Achternaam Icon" />
-                <input
-                  type="text"
-                  id="achternaam"
-                  v-model="achternaam"
-                  required
-                  placeholder="Vul je achternaam in"
+                <img 
+                  class="form-icoon" 
+                  src="./naam-icoon.svg" 
+                  alt="Achternaam Icon" 
+                  :class="{'input-error-icoon': heeftNaamFout}" 
                 />
-                <span v-if="errors.achternaam" class="error-message-achternaam">{{ errors.achternaam }}</span>
+
+                <!-- <img class="form-icoon" src="./naam-icoon.svg" alt="Achternaam Icon" /> -->
+                <input
+                type="text"
+                id="achternaam"
+                v-model="formData.achternaam"
+                @blur="validateAchternaam"
+                :class="{'input-error': errors.achternaam}"
+                required
+                placeholder="Vul je achternaam in"
+              />
+              
+                <span v-if="errors.achternaam" class="error-message">{{ errors.achternaam }}</span>
               </div>
             </div>
-          
+        
             <div class="form-group full-width">
               <label for="email"></label>
               <img class="form-icoon-2" src="./email-icoon.svg" alt="Email Icon" />
               <input
-                type="email"
-                id="email"
-                v-model="email"
-                required
-                placeholder="Vul je e-mailadres in"
-              />
-              <span v-if="errors.email" class="error-message">{{ errors.email }}</span>
+              type="email"
+              id="email"
+              v-model="formData.email"
+              @blur="validateEmail"
+              :class="{'input-error': errors.email}"
+              required
+              placeholder="Vul je e-mailadres in"
+            />
+
+              <span v-if="errors.email" class="error-message error-message-email">{{ errors.email }}</span>
             </div>
-          
+        
             <div class="form-group full-width">
               <label for="telefoonnummer"></label>
               <img class="form-icoon-2" src="./tel-nummer-icoon.svg" alt="Telefoonnummer Icon" />
               <input
-                type="tel"
-                id="telefoonnummer"
-                v-model="telefoonnummer"
-                required
-                placeholder="Vul je telefoonnummer in"
-              />
-              <span v-if="errors.telefoonnummer" class="error-message">{{ errors.telefoonnummer }}</span>
-            </div>
+              type="tel"
+              id="telefoonnummer"
+              v-model="formData.telefoonnummer"
+              @blur="validateTelefoonnummer"
+              :class="{'input-error': errors.telefoonnummer}"
+              required
+              placeholder="Vul je telefoonnummer in"
+            />
+            
+            
+            <span v-if="errors.telefoonnummer" class="error-message error-message-tel">{{ errors.telefoonnummer }}</span>
+          </div>
           </form>
           
           
@@ -345,6 +428,8 @@ export default {
       <img  class="logo-navbar-mobiel" src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/image-6.png" alt="logo ziggo"/>
       <img class="logo-navbar-mobiel" src="./trustpilot-mobiel.png" alt="">
     </div>
+
+
   
     <div class="achtergrond-pagina-5">
       <div class="witte-container-pagina-5">
@@ -352,31 +437,90 @@ export default {
         <p class="gewonnen-mobiel"><span class="gefeliciteerd-mobiel">Gefeliciteerd!<br></span> <span class="blauw-mobiel">Jij maakt nu kans op de </span><span class="gefeliciteerd-mobiel">{{ chosenProduct }}</span></p>
         <hr class="lijn-2">
         <p class="hoe-kunnen-wij-jou-bereiken-mobiel">Hoe kunnen wij jou bereiken?</p>
-        <form class="form-pagina5" @submit.prevent="submitForm">
-          <div class="form-group-mobiel full-width">
-            <label for="voornaam"></label>
-            <img class="form-icoon-mobiel" src="./naam-icoon.svg" alt="Naam Icon">
-            <input type="text" id="voornaam" v-model="voornaam" required placeholder="Vul je voornaam in" />
-          </div>
-          <div class="form-group-mobiel full-width">
-            <label for="achternaam"></label>
-            <img class="form-icoon-mobiel" src="./naam-icoon.svg" alt="Achternaam Icon">
-            <input type="text" id="achternaam" v-model="achternaam" required placeholder="Vul je achternaam in" />
-          </div>
-          <div class="form-group-mobiel full-width">
-            <label for="email"></label>
-            <img class="form-icoon-2-mobiel" src="./email-icoon.svg" alt="Email Icon">
-            <input type="email" id="email" v-model="email" required placeholder="Vul je e-mailadres in" />
-          </div>
-          <div class="form-group-mobiel full-width">
-            <label for="telefoonnummer"></label>
-            <img class="form-icoon-2-mobiel" src="./tel-nummer-icoon.svg" alt="Telefoonnummer Icon">
-            <input type="tel" id="telefoonnummer" v-model="telefoonnummer" required placeholder="Vul je telefoonnummer in" />
-          </div>
-        </form>
+
+
+  <form class="form-pagina5" @submit.prevent="submitForm">
+    <div class="form-group-mobiel full-width">
+      <label for="voornaam"></label>
+      <img 
+      class="form-icoon-mobiel" 
+      src="./naam-icoon.svg" 
+      alt="Naam Icon" 
+      :class="{'input-error-icoon-mobiel': errors.voornaam || errors.achternaam}" 
+    />      
+    
+        <input
+      type="text"
+      id="voornaam"
+      v-model="formData.voornaam"
+      @blur="validateVoornaam"
+      :class="{'input-error-mobiel': errors.voornaam}"
+      required
+      placeholder="Vul je voornaam in"
+    />
+      <span v-if="errors.voornaam" class="error-message">{{ errors.voornaam }}</span>
+    </div>
+    <div class="form-group-mobiel full-width">
+      <label for="achternaam"></label>
+      <img 
+      class="form-icoon-mobiel" 
+      src="./naam-icoon.svg" 
+      alt="Achternaam Icon" 
+      :class="{'input-error-icoon-mobiel': errors.voornaam || errors.achternaam}" 
+    />      <input
+    type="text"
+    id="achternaam"
+    v-model="formData.achternaam"
+    @blur="validateAchternaam"
+    :class="{'input-error-mobiel': errors.achternaam}"
+    required
+    placeholder="Vul je achternaam in"
+  />
+      <span v-if="errors.achternaam" class="error-message">{{ errors.achternaam }}</span>
+    </div>
+    <div class="form-group-mobiel full-width">
+      <label for="email"></label>
+      <img 
+      class="form-icoon-2-mobiel" 
+      src="./email-icoon.svg" 
+      alt="Email Icon" 
+      :class="{'input-error-icoon-mobiel': errors.email}" 
+    />
+    <input
+    type="email"
+    id="email"
+    v-model="formData.email"
+    @blur="validateEmail"
+    :class="{'input-error-mobiel': errors.email}"
+    required
+    placeholder="Vul je e-mailadres in"
+  />
+      <span v-if="errors.email" class="error-message">{{ errors.email }}</span>
+    </div>
+    <div class="form-group-mobiel full-width">
+      <label for="telefoonnummer"></label>
+      <img 
+      class="form-icoon-2-mobiel" 
+      src="./tel-nummer-icoon.svg" 
+      alt="Telefoonnummer Icon" 
+      :class="{'input-error-icoon-mobiel': errors.telefoonnummer}" 
+    />      
+    <input
+    type="tel"
+    id="telefoonnummer"
+    v-model="formData.telefoonnummer"
+    @blur="validateTelefoonnummer"
+    :class="{'input-error-mobiel': errors.telefoonnummer}"
+    required
+    placeholder="Vul je telefoonnummer in"
+  />
+      <span v-if="errors.telefoonnummer" class="error-message">{{ errors.telefoonnummer }}</span>
+    </div>
+  </form>
+
         <button class="frame-2-1-mobiel invisible-button" @click="submitForm">
-          <div class="bevestig-mijn-deelname diodrumcyrillic-normal-white-23-7px" style="font-weight: 700;">Bevestig deelname</div>
-          <span style="color: white; font-size: 22px;">&#8594;</span>
+          <div class="bevestig-mijn-deelname diodrumcyrillic-normal-white-23-7px" style="font-weight: 700; font-size: 22px">Bevestig deelname</div>
+          <span style="color: white; font-size: 22px;  position: relative; right: 6px">&#8594;</span>
         </button>
         <p class="met-het-bevestigen-v-mobiel">Met het bevestigen van je deelname ga je er mee akkoord dat MeerVoordeel eenmalig telefonisch contact met je opneemt met een aanbieding voor een all-in abonnement van Ziggo.</p>
         <!-- <img class="image-2-6" :src="image2" alt="image 2" />
@@ -448,6 +592,46 @@ export default {
 @import '../../variables'
 
 
+.form-group input.input-error 
+  border: 2px solid red
+
+
+.input-error-icoon-mobiel 
+  position: relative!important
+  top: 48px!important
+
+@media (max-width: 501px)
+  .error-message
+    position: relative
+    top: 10px
+    font-size: 16px!important
+
+  .form-group-mobiel input.input-error-mobiel
+    border: 2px solid red
+
+
+
+
+.input-error-icoon 
+  top: 39%!important
+
+.input-error 
+  border: 2px solid red
+
+
+.error-border 
+  border: 2px solid red
+
+.error-message 
+  color: red
+
+
+
+.error-input 
+  border: 2px solid red
+
+
+
 
 .jouw-gekozen-prijs
   color: #FFF
@@ -459,30 +643,24 @@ export default {
   width: 305px!important
 
 
-.error-message-voornaam
-  color: red
-  font-size: 24px
-  padding-top:  8px
-  margin-right:   10px
-  font-weight: 700
-  font-family: $font-weight-diodrum_cyrillic-regular
+
+.error-message-email 
+  margin-left: 65px!important
 
 
 
-.error-message-achternaam
-  color: red
-  font-size: 24px
-  padding-top:  8px
-  margin-right:   -6px
-  font-weight: 700
-  font-family: $font-weight-diodrum_cyrillic-regular
+.error-message-tel 
+  margin-left: 65px!important
+  
+
 
 .error-message
   font-family: $font-weight-diodrum_cyrillic-regular
   color: red
   font-weight: 700
   font-size: 24px
-  margin-left: 57px
+  // margin-left: 57px
+  margin-top: 10px
 
 
 
@@ -1042,7 +1220,7 @@ input::placeholder
   .achtergrond-pagina-5
     background: linear-gradient(90deg, #072148 0%, #40A59F 100%)
     width: 100%
-    height: 82rem!important
+    height: 77rem!important
     padding-bottom: 2rem
 
   .witte-container-pagina-5
