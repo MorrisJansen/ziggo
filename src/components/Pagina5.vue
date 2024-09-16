@@ -513,7 +513,7 @@ validateTelefoonnummer() {
     </div>
   </form>
 
-        <button class="frame-2-1-mobiel invisible-button" @click="submitForm">
+        <button class="frame-2-1-mobiel" @click="submitForm" style="border: none">
           <div class="bevestig-mijn-deelname diodrumcyrillic-normal-white-23-7px" style="font-weight: 700; font-size: 22px">Bevestig deelname</div>
           <span style="color: white; font-size: 22px;  position: relative; right: 6px">&#8594;</span>
         </button>
