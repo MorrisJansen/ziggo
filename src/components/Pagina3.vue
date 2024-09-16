@@ -701,7 +701,7 @@ export default {
   .achtergrond-pagina-5 
     background: linear-gradient(90deg, #072148 0%, #40A59F 100%)!important
     width: 100%!important
-    height: 56rem!important
+    // height: 77rem!important
     padding-bottom: 2rem!important
   
 

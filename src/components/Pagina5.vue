@@ -426,9 +426,11 @@ validateTelefoonnummer() {
 
 
   
-    <div class="achtergrond-pagina-5">
+    <div class="achtergrond-pagina-5"
+    :style="errorMessage ? {height: '77rem' } : {}">
       <div class="witte-container-pagina-5">
-        <!-- Verplaats de elementen hierheen voor mobiele weergave -->
+
+
         <p class="gewonnen-mobiel"><span class="gefeliciteerd-mobiel">Gefeliciteerd!<br></span> <span class="blauw-mobiel">Jij maakt nu kans op de </span><span class="gefeliciteerd-mobiel">{{ chosenProduct }}</span></p>
         <hr class="lijn-2">
         <p class="hoe-kunnen-wij-jou-bereiken-mobiel">Hoe kunnen wij jou bereiken?</p>
@@ -1215,7 +1217,7 @@ input::placeholder
   .achtergrond-pagina-5
     background: linear-gradient(90deg, #072148 0%, #40A59F 100%)
     width: 100%
-    height: 77rem!important
+    height: 76rem!important
     padding-bottom: 2rem
 
   .witte-container-pagina-5
