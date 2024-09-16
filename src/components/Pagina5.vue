@@ -125,6 +125,8 @@ export default {
 
         if (response.ok) {
           this.successMessage = 'Lead succesvol verstuurd.';
+          this.$router.push('/bedankt');
+
           console.log(this.successMessage);
         } else {
           const errorMessage = await response.text();
