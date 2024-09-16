@@ -35,7 +35,7 @@ export default {
   }, 
   computed: {
     pixelUrl() {
-      return `https://republish.gratismeedoen.nl/m/6337/9d85475ce4f0/?event=7417&unique_conversion_id=${this.uniqueConversionId}`;
+        return `https://republish.prijzenpakket.nl/m/6337/9d85475ce4f0/?event=7417&unique_conversion_id=${this.uniqueConversionId}`;
     }
     }
 };
@@ -76,6 +76,9 @@ export default {
               style="width: 1px; height: 1px; border: 0px;" 
               alt="tracking-pixel"
             />
+
+
+
 
             <div :class="['group-1', group11Props.className]">
               <div class="overlap-group-6">

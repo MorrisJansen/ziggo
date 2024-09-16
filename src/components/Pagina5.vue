@@ -124,20 +124,16 @@ export default {
         });
 
         if (response.status === 201) {
-    // Als het succesvol is, ga naar de eerste bedankt pagina
     this.$router.push('/bedankt2');
   } else {
-    // Voor andere succesvolle reacties, ga naar de tweede bedankt pagina
     this.$router.push('/bedankt');
   }
 } catch (error) {
   console.error('Er is een fout opgetreden bij het versturen van het formulier', error);
   if (error.response && error.response.status === 409) {
-    // Specifieke foutafhandeling voor duplicaat e-mail
     console.log('Duplicaat e-mailadres gedetecteerd.');
     this.$router.push('/bedankt');
   } else {
-    // Algemene foutmelding
     this.errorMessage = 'Netwerk- of serverfout: ' + error.message;
   }
 }
@@ -268,7 +264,6 @@ validateTelefoonnummer() {
               <div class="form-group">
                 <label for="voornaam"></label>
 
-                <!-- <img class="form-icoon" src="./naam-icoon.svg" alt="Naam Icon" /> -->
                 <img 
                 class="form-icoon" 
                 src="./naam-icoon.svg" 
@@ -296,7 +291,6 @@ validateTelefoonnummer() {
                   :class="{'input-error-icoon': heeftNaamFout}" 
                 />
 
-                <!-- <img class="form-icoon" src="./naam-icoon.svg" alt="Achternaam Icon" /> -->
                 <input
                 type="text"
                 id="achternaam"
