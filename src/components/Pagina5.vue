@@ -43,7 +43,9 @@ export default {
         achternaam: '',
         email: '',
         telefoonnummer: ''
-      }
+      },
+      twoHoursLater: new Date(Date.now() + 7200000) // Voeg dit toe
+
     };
   },
   computed: {
@@ -61,6 +63,9 @@ export default {
     this.gekozenProductId = this.getProductId(gekozenProduct);
     this.gekozenMerkId = this.getMerkId(gekozenMerk);
     this.chosenProduct = gekozenProduct || 'geen product gekozen';
+
+    this.twoHoursLater = new Date(Date.now() + 7200000);
+
   },
   methods: {
     async submitForm() {
@@ -99,12 +104,12 @@ export default {
         site_custom_url: 'https://ziggoprijswinnnen.nl',
         site_custom_name: 'ziggo prijs winnen',
         ip: '123.45.67.89',
-        optin_timestamp: new Date().toISOString().slice(0, 19).replace('T', ' '),
+        optin_timestamp: this.twoHoursLater.toISOString().slice(0, 19).replace('T', ' '),
         firstname: this.formData.voornaam,
         lastname: this.formData.achternaam,
         email: this.formData.email,
         phone_number: this.formData.telefoonnummer,
-        answers: [5269, gekozenProductId, gekozenMerkId],
+        answers: [5269, gekozenProductId, 5278],
       };
 
       try {

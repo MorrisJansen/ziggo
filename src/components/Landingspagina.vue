@@ -276,7 +276,7 @@ export default {
           <router-link class="router-link" to="/pagina-1">
             <button class="doe-nu-mee-knop" href="/pagina-1">
               <div class="text-in-knop">
-                Doe nu mee <img src="./rechterpijl.svg" alt="pijl-naar-rechts">
+                Doe nu mee <img style="margin-left: 27px" src="./rechterpijl.svg" alt="pijl-naar-rechts">
               </div>
             </button>
           </router-link>
