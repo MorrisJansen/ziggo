@@ -367,12 +367,7 @@ validateTelefoonnummer() {
 
         <p class="gewonnen"><span class="gefeliciteerd">Gefeliciteerd!<br></span> Jij maakt nu kans op de <span class="gekozen-prijs">{{ chosenProduct }}</span></p>
         
-        <!-- <img
-          class="gefeliciteerd-jij-ma"
-          :src="gefeliciteerdJijMaaktNuKansOpDeGeko"
-          alt="Gefeliciteerd! Jij maakt nu kans op de {gekozen prijs}."
-        /> -->
-        
+
         
 
 

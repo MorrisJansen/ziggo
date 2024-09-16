@@ -14,7 +14,8 @@ export default {
   },
   data() {
     return {
-      chosenProduct: '',  // Hier wordt het geselecteerde product opgeslagen
+      chosenProduct: '', 
+      errorMessage: '',
       products: [
         { id: 1, name: "SAMSUNG 60\" TV t.w.v. €699,-", value: "SAMSUNG TV 60" },
         { id: 2, name: "Playstation 5 Slim Disk t.w.v. €549,-", value: "Playstation 5 Slim Disk" },
@@ -47,7 +48,7 @@ export default {
       this.$store.commit('ADD_ANTWOORD', { vraag: 'antwoord1', antwoord: this.chosenProduct }); // Opslaan met een sleutel
       this.$router.push({ path: '/pagina-2' });
     } else {
-      alert('Kies alstublieft een product voordat je verder gaat.');
+      this.errorMessage = 'Kies alstublieft een product voordat je verder gaat.'; // Stel de foutmelding in
     }
   },
 },
@@ -74,8 +75,7 @@ export default {
             <div class="background-1"></div>
             <frame1 />
             <div class="frame-427320545">
-              <!-- <img class="frame-427320545-item" :src="stap1Van3" alt="Stap 1 van 3" />
-              <img class="frame-427320545-item" :src="vertelOnsWelkePrijsJeWiltWinnen" alt="Vertel ons welke prijs je wilt winnen:" /> -->
+
 
               <div class="container-vraag-zoveel">
                 <p class="stap-zoveel">Stap 1 van de 3</p>
@@ -93,7 +93,10 @@ export default {
                     <span class="pointer-1">{{ product.name }}</span>
                   </p>
                 </label>
+                
               </div>
+              <p v-if="errorMessage" class="error-text-1">{{ errorMessage }}</p>
+
             </form>
 
 
@@ -130,12 +133,7 @@ export default {
               </div>
             </div>
 
-            <!-- <group1 :text1="group11Props.text1" :className="group11Props.className" />
-            
 
-            
-            <group1 :text1="group12Props.text1" :className="group12Props.className" />
-            <group1 :text1="group13Props.text1" :className="group13Props.className" /> -->
             <frame1000004784 :group="frame1000004784Props.group" :group116046944Props="frame1000004784Props.group116046944Props" />
           </div>
           <img class="line-2-1" src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/line-2.svg" alt="Line 2" />
@@ -175,7 +173,8 @@ export default {
         <div class="achtergrond-pagina-1">
 
 
-          <div class="witte-container-pagina-1">
+          <div class="witte-container-pagina-1"
+          :style="errorMessage ? { height: '39rem'} : {}">
 
             <p class="stap1">
               stap 1 van de 3
@@ -207,7 +206,9 @@ export default {
                   <span class="text-radio-vraag1">Bol.com cadeaubon <br class="mobiel">t.w.v. €400,-</span>
                 </label>
               </div>
+
             </form>
+
 
 
 
@@ -226,7 +227,10 @@ export default {
                     Ga naar stap 2
                   </p>
                 </div>
+                <p v-if="errorMessage" class="error-text-1-mobiel">{{ errorMessage }}</p>
+
               </div>
+
               
 
 
@@ -240,7 +244,9 @@ export default {
           </div>
 
 
-          <div class="container-afbeelding-prijzen-mobiel-1">
+          <div class="container-afbeelding-prijzen-mobiel-1"
+          :style="errorMessage ? { top: '803px'} : {}">
+            
             <img src="./afbeeldingen-samen-mobiel.png" alt="">
     
     
@@ -300,7 +306,28 @@ export default {
 
 <style lang="sass">
 @import '../../variables'
+.error-text-1-mobiel
+    color: red!important
+    font-size: 1.3rem!important
+    z-index: 99!important
+    position: relative
+    font-family: "DM Sans"
+    font-weight: 700
+    width:  85%
+    margin-top: 12px
+    text-align: left
 
+.error-text-1
+  color: red!important
+  font-size: 1.5rem!important
+  z-index: 99!important
+  position: relative
+  font-family: "DM Sans"
+  font-weight: 700
+  width:  56%
+  margin-top: 12px
+  margin-left: 3px
+  text-align: left
 
 
 

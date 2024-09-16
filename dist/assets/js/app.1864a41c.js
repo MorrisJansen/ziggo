@@ -3068,8 +3068,8 @@ var Pagina4_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var Pagina4 = (Pagina4_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2d5dac05-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Pagina5.vue?vue&type=template&id=5155846c
-var Pagina5vue_type_template_id_5155846c_render = function render() {
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2d5dac05-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Pagina5.vue?vue&type=template&id=99f601a6
+var Pagina5vue_type_template_id_99f601a6_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('center', [_c('div', {
@@ -3112,6 +3112,9 @@ var Pagina5vue_type_template_id_5155846c_render = function render() {
     }
   }), _c('img', {
     staticClass: "form-icoon",
+    class: {
+      'input-error-icoon': _vm.heeftNaamFout
+    },
     attrs: {
       "src": __webpack_require__("03c5"),
       "alt": "Naam Icon"
@@ -3120,9 +3123,12 @@ var Pagina5vue_type_template_id_5155846c_render = function render() {
     directives: [{
       name: "model",
       rawName: "v-model",
-      value: _vm.voornaam,
-      expression: "voornaam"
+      value: _vm.formData.voornaam,
+      expression: "formData.voornaam"
     }],
+    class: {
+      'input-error': _vm.errors.voornaam
+    },
     attrs: {
       "type": "text",
       "id": "voornaam",
@@ -3130,16 +3136,17 @@ var Pagina5vue_type_template_id_5155846c_render = function render() {
       "placeholder": "Vul je voornaam in"
     },
     domProps: {
-      "value": _vm.voornaam
+      "value": _vm.formData.voornaam
     },
     on: {
+      "blur": _vm.validateVoornaam,
       "input": function ($event) {
         if ($event.target.composing) return;
-        _vm.voornaam = $event.target.value;
+        _vm.$set(_vm.formData, "voornaam", $event.target.value);
       }
     }
   }), _vm.errors.voornaam ? _c('span', {
-    staticClass: "error-message-voornaam"
+    staticClass: "error-message"
   }, [_vm._v(_vm._s(_vm.errors.voornaam))]) : _vm._e()]), _c('div', {
     staticClass: "form-group"
   }, [_c('label', {
@@ -3148,6 +3155,9 @@ var Pagina5vue_type_template_id_5155846c_render = function render() {
     }
   }), _c('img', {
     staticClass: "form-icoon",
+    class: {
+      'input-error-icoon': _vm.heeftNaamFout
+    },
     attrs: {
       "src": __webpack_require__("03c5"),
       "alt": "Achternaam Icon"
@@ -3156,9 +3166,12 @@ var Pagina5vue_type_template_id_5155846c_render = function render() {
     directives: [{
       name: "model",
       rawName: "v-model",
-      value: _vm.achternaam,
-      expression: "achternaam"
+      value: _vm.formData.achternaam,
+      expression: "formData.achternaam"
     }],
+    class: {
+      'input-error': _vm.errors.achternaam
+    },
     attrs: {
       "type": "text",
       "id": "achternaam",
@@ -3166,16 +3179,17 @@ var Pagina5vue_type_template_id_5155846c_render = function render() {
       "placeholder": "Vul je achternaam in"
     },
     domProps: {
-      "value": _vm.achternaam
+      "value": _vm.formData.achternaam
     },
     on: {
+      "blur": _vm.validateAchternaam,
       "input": function ($event) {
         if ($event.target.composing) return;
-        _vm.achternaam = $event.target.value;
+        _vm.$set(_vm.formData, "achternaam", $event.target.value);
       }
     }
   }), _vm.errors.achternaam ? _c('span', {
-    staticClass: "error-message-achternaam"
+    staticClass: "error-message"
   }, [_vm._v(_vm._s(_vm.errors.achternaam))]) : _vm._e()])]), _c('div', {
     staticClass: "form-group full-width"
   }, [_c('label', {
@@ -3192,9 +3206,12 @@ var Pagina5vue_type_template_id_5155846c_render = function render() {
     directives: [{
       name: "model",
       rawName: "v-model",
-      value: _vm.email,
-      expression: "email"
+      value: _vm.formData.email,
+      expression: "formData.email"
     }],
+    class: {
+      'input-error': _vm.errors.email
+    },
     attrs: {
       "type": "email",
       "id": "email",
@@ -3202,16 +3219,17 @@ var Pagina5vue_type_template_id_5155846c_render = function render() {
       "placeholder": "Vul je e-mailadres in"
     },
     domProps: {
-      "value": _vm.email
+      "value": _vm.formData.email
     },
     on: {
+      "blur": _vm.validateEmail,
       "input": function ($event) {
         if ($event.target.composing) return;
-        _vm.email = $event.target.value;
+        _vm.$set(_vm.formData, "email", $event.target.value);
       }
     }
   }), _vm.errors.email ? _c('span', {
-    staticClass: "error-message"
+    staticClass: "error-message error-message-email"
   }, [_vm._v(_vm._s(_vm.errors.email))]) : _vm._e()]), _c('div', {
     staticClass: "form-group full-width"
   }, [_c('label', {
@@ -3228,9 +3246,12 @@ var Pagina5vue_type_template_id_5155846c_render = function render() {
     directives: [{
       name: "model",
       rawName: "v-model",
-      value: _vm.telefoonnummer,
-      expression: "telefoonnummer"
+      value: _vm.formData.telefoonnummer,
+      expression: "formData.telefoonnummer"
     }],
+    class: {
+      'input-error': _vm.errors.telefoonnummer
+    },
     attrs: {
       "type": "tel",
       "id": "telefoonnummer",
@@ -3238,16 +3259,17 @@ var Pagina5vue_type_template_id_5155846c_render = function render() {
       "placeholder": "Vul je telefoonnummer in"
     },
     domProps: {
-      "value": _vm.telefoonnummer
+      "value": _vm.formData.telefoonnummer
     },
     on: {
+      "blur": _vm.validateTelefoonnummer,
       "input": function ($event) {
         if ($event.target.composing) return;
-        _vm.telefoonnummer = $event.target.value;
+        _vm.$set(_vm.formData, "telefoonnummer", $event.target.value);
       }
     }
   }), _vm.errors.telefoonnummer ? _c('span', {
-    staticClass: "error-message"
+    staticClass: "error-message error-message-tel"
   }, [_vm._v(_vm._s(_vm.errors.telefoonnummer))]) : _vm._e()])]), _c('div', {
     staticClass: "frame-427320570"
   }, [_c('div', {
@@ -3373,6 +3395,9 @@ var Pagina5vue_type_template_id_5155846c_render = function render() {
     }
   }), _c('img', {
     staticClass: "form-icoon-mobiel",
+    class: {
+      'input-error-icoon-mobiel': _vm.errors.voornaam || _vm.errors.achternaam
+    },
     attrs: {
       "src": __webpack_require__("03c5"),
       "alt": "Naam Icon"
@@ -3381,9 +3406,12 @@ var Pagina5vue_type_template_id_5155846c_render = function render() {
     directives: [{
       name: "model",
       rawName: "v-model",
-      value: _vm.voornaam,
-      expression: "voornaam"
+      value: _vm.formData.voornaam,
+      expression: "formData.voornaam"
     }],
+    class: {
+      'input-error-mobiel': _vm.errors.voornaam
+    },
     attrs: {
       "type": "text",
       "id": "voornaam",
@@ -3391,15 +3419,18 @@ var Pagina5vue_type_template_id_5155846c_render = function render() {
       "placeholder": "Vul je voornaam in"
     },
     domProps: {
-      "value": _vm.voornaam
+      "value": _vm.formData.voornaam
     },
     on: {
+      "blur": _vm.validateVoornaam,
       "input": function ($event) {
         if ($event.target.composing) return;
-        _vm.voornaam = $event.target.value;
+        _vm.$set(_vm.formData, "voornaam", $event.target.value);
       }
     }
-  })]), _c('div', {
+  }), _vm.errors.voornaam ? _c('span', {
+    staticClass: "error-message"
+  }, [_vm._v(_vm._s(_vm.errors.voornaam))]) : _vm._e()]), _c('div', {
     staticClass: "form-group-mobiel full-width"
   }, [_c('label', {
     attrs: {
@@ -3407,17 +3438,23 @@ var Pagina5vue_type_template_id_5155846c_render = function render() {
     }
   }), _c('img', {
     staticClass: "form-icoon-mobiel",
+    class: {
+      'input-error-icoon-mobiel': _vm.errors.voornaam || _vm.errors.achternaam
+    },
     attrs: {
       "src": __webpack_require__("03c5"),
       "alt": "Achternaam Icon"
     }
-  }), _c('input', {
+  }), _vm._v(" "), _c('input', {
     directives: [{
       name: "model",
       rawName: "v-model",
-      value: _vm.achternaam,
-      expression: "achternaam"
+      value: _vm.formData.achternaam,
+      expression: "formData.achternaam"
     }],
+    class: {
+      'input-error-mobiel': _vm.errors.achternaam
+    },
     attrs: {
       "type": "text",
       "id": "achternaam",
@@ -3425,15 +3462,18 @@ var Pagina5vue_type_template_id_5155846c_render = function render() {
       "placeholder": "Vul je achternaam in"
     },
     domProps: {
-      "value": _vm.achternaam
+      "value": _vm.formData.achternaam
     },
     on: {
+      "blur": _vm.validateAchternaam,
       "input": function ($event) {
         if ($event.target.composing) return;
-        _vm.achternaam = $event.target.value;
+        _vm.$set(_vm.formData, "achternaam", $event.target.value);
       }
     }
-  })]), _c('div', {
+  }), _vm.errors.achternaam ? _c('span', {
+    staticClass: "error-message"
+  }, [_vm._v(_vm._s(_vm.errors.achternaam))]) : _vm._e()]), _c('div', {
     staticClass: "form-group-mobiel full-width"
   }, [_c('label', {
     attrs: {
@@ -3441,6 +3481,9 @@ var Pagina5vue_type_template_id_5155846c_render = function render() {
     }
   }), _c('img', {
     staticClass: "form-icoon-2-mobiel",
+    class: {
+      'input-error-icoon-mobiel': _vm.errors.email
+    },
     attrs: {
       "src": __webpack_require__("349e"),
       "alt": "Email Icon"
@@ -3449,9 +3492,12 @@ var Pagina5vue_type_template_id_5155846c_render = function render() {
     directives: [{
       name: "model",
       rawName: "v-model",
-      value: _vm.email,
-      expression: "email"
+      value: _vm.formData.email,
+      expression: "formData.email"
     }],
+    class: {
+      'input-error-mobiel': _vm.errors.email
+    },
     attrs: {
       "type": "email",
       "id": "email",
@@ -3459,15 +3505,18 @@ var Pagina5vue_type_template_id_5155846c_render = function render() {
       "placeholder": "Vul je e-mailadres in"
     },
     domProps: {
-      "value": _vm.email
+      "value": _vm.formData.email
     },
     on: {
+      "blur": _vm.validateEmail,
       "input": function ($event) {
         if ($event.target.composing) return;
-        _vm.email = $event.target.value;
+        _vm.$set(_vm.formData, "email", $event.target.value);
       }
     }
-  })]), _c('div', {
+  }), _vm.errors.email ? _c('span', {
+    staticClass: "error-message"
+  }, [_vm._v(_vm._s(_vm.errors.email))]) : _vm._e()]), _c('div', {
     staticClass: "form-group-mobiel full-width"
   }, [_c('label', {
     attrs: {
@@ -3475,6 +3524,9 @@ var Pagina5vue_type_template_id_5155846c_render = function render() {
     }
   }), _c('img', {
     staticClass: "form-icoon-2-mobiel",
+    class: {
+      'input-error-icoon-mobiel': _vm.errors.telefoonnummer
+    },
     attrs: {
       "src": __webpack_require__("9d82"),
       "alt": "Telefoonnummer Icon"
@@ -3483,9 +3535,12 @@ var Pagina5vue_type_template_id_5155846c_render = function render() {
     directives: [{
       name: "model",
       rawName: "v-model",
-      value: _vm.telefoonnummer,
-      expression: "telefoonnummer"
+      value: _vm.formData.telefoonnummer,
+      expression: "formData.telefoonnummer"
     }],
+    class: {
+      'input-error-mobiel': _vm.errors.telefoonnummer
+    },
     attrs: {
       "type": "tel",
       "id": "telefoonnummer",
@@ -3493,15 +3548,18 @@ var Pagina5vue_type_template_id_5155846c_render = function render() {
       "placeholder": "Vul je telefoonnummer in"
     },
     domProps: {
-      "value": _vm.telefoonnummer
+      "value": _vm.formData.telefoonnummer
     },
     on: {
+      "blur": _vm.validateTelefoonnummer,
       "input": function ($event) {
         if ($event.target.composing) return;
-        _vm.telefoonnummer = $event.target.value;
+        _vm.$set(_vm.formData, "telefoonnummer", $event.target.value);
       }
     }
-  })])]), _c('button', {
+  }), _vm.errors.telefoonnummer ? _c('span', {
+    staticClass: "error-message"
+  }, [_vm._v(_vm._s(_vm.errors.telefoonnummer))]) : _vm._e()])]), _c('button', {
     staticClass: "frame-2-1-mobiel invisible-button",
     on: {
       "click": _vm.submitForm
@@ -3509,12 +3567,15 @@ var Pagina5vue_type_template_id_5155846c_render = function render() {
   }, [_c('div', {
     staticClass: "bevestig-mijn-deelname diodrumcyrillic-normal-white-23-7px",
     staticStyle: {
-      "font-weight": "700"
+      "font-weight": "700",
+      "font-size": "22px"
     }
   }, [_vm._v("Bevestig deelname")]), _c('span', {
     staticStyle: {
       "color": "white",
-      "font-size": "22px"
+      "font-size": "22px",
+      "position": "relative",
+      "right": "6px"
     }
   }, [_vm._v("→")])]), _c('p', {
     staticClass: "met-het-bevestigen-v-mobiel"
@@ -3673,9 +3734,9 @@ var Pagina5vue_type_template_id_5155846c_render = function render() {
     staticClass: "text-footer-pagina1"
   }, [_vm._v("*Meervoordeel.nl is een officiële partner van Ziggo. Deelname mogelijk tot en met 31 juli 2024. Actievoorwaarden van toepassing.")])])])])])])]);
 };
-var Pagina5vue_type_template_id_5155846c_staticRenderFns = [];
+var Pagina5vue_type_template_id_99f601a6_staticRenderFns = [];
 
-// CONCATENATED MODULE: ./src/components/Pagina5.vue?vue&type=template&id=5155846c
+// CONCATENATED MODULE: ./src/components/Pagina5.vue?vue&type=template&id=99f601a6
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/web.dom-exception.stack.js
 var web_dom_exception_stack = __webpack_require__("b7ef");
@@ -3703,11 +3764,20 @@ var web_dom_exception_stack = __webpack_require__("b7ef");
       gekozenMerkId: null,
       errors: {},
       successMessage: '',
-      errorMessage: ''
+      errorMessage: '',
+      formData: {
+        voornaam: '',
+        achternaam: '',
+        email: '',
+        telefoonnummer: ''
+      }
     };
   },
   computed: {
-    ...Object(vuex_esm["b" /* mapGetters */])(['getAntwoorden'])
+    ...Object(vuex_esm["b" /* mapGetters */])(['getAntwoorden']),
+    heeftNaamFout() {
+      return this.errors.voornaam || this.errors.achternaam;
+    }
   },
   mounted() {
     const antwoordenLijst = this.getAntwoorden;
@@ -3719,29 +3789,16 @@ var web_dom_exception_stack = __webpack_require__("b7ef");
   },
   methods: {
     async submitForm() {
-      this.errors = {}; // Reset de fouten
-      this.successMessage = ''; // Reset succesbericht
-      this.errorMessage = ''; // Reset foutbericht
+      this.errors = {};
+      this.successMessage = '';
+      this.errorMessage = '';
+
+      // Validaties
+      if (!this.validateVoornaam()) return;
+      if (!this.validateAchternaam()) return;
+      if (!this.validateEmail()) return;
+      if (!this.validateTelefoonnummer()) return;
       const antwoordenLijst = this.getAntwoorden;
-
-      // Validatie
-      if (!this.isValidEmail(this.email)) {
-        this.errors.email = 'Voer een geldig e-mailadres in.';
-      }
-      if (!this.isValidPhoneNumber(this.telefoonnummer)) {
-        this.errors.telefoonnummer = 'Voer een geldig telefoonnummer in.';
-      }
-      if (!this.voornaam) {
-        this.errors.voornaam = 'Voornaam is verplicht.';
-      }
-      if (!this.achternaam) {
-        this.errors.achternaam = 'Achternaam is verplicht.';
-      }
-
-      // Controleer of er fouten zijn
-      if (Object.keys(this.errors).length > 0) {
-        return; // Stop de verdere verwerking
-      }
       if (!antwoordenLijst || !antwoordenLijst.antwoord1 || !antwoordenLijst.antwoord2) {
         console.error('Onvoldoende antwoorden om te verwerken.');
         return;
@@ -3763,10 +3820,10 @@ var web_dom_exception_stack = __webpack_require__("b7ef");
         site_custom_name: 'ziggo prijs winnen',
         ip: '123.45.67.89',
         optin_timestamp: new Date().toISOString().slice(0, 19).replace('T', ' '),
-        firstname: this.voornaam,
-        lastname: this.achternaam,
-        email: this.email,
-        phone_number: this.telefoonnummer,
+        firstname: this.formData.voornaam,
+        lastname: this.formData.achternaam,
+        email: this.formData.email,
+        phone_number: this.formData.telefoonnummer,
         answers: [5269, gekozenProductId, gekozenMerkId]
       };
       try {
@@ -3791,12 +3848,55 @@ var web_dom_exception_stack = __webpack_require__("b7ef");
         console.error(this.errorMessage);
       }
     },
-    isValidEmail(email) {
-      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return regex.test(email);
+    validateVoornaam() {
+      const regex = /^[a-zA-Z\s.,'-]{1,}$/;
+      if (!this.formData.voornaam.match(regex)) {
+        this.errors.voornaam = 'Ongeldige voornaam.';
+        console.log(this.errors.voornaam);
+        return false;
+      }
+      this.errors.voornaam = '';
+      return true;
     },
-    isValidPhoneNumber(phoneNumber) {
-      return regex.test(phoneNumber);
+    validateAchternaam() {
+      const regex = /^[a-zA-Z\s.,'-]{1,}$/;
+      if (!this.formData.achternaam.match(regex)) {
+        this.errors.achternaam = 'Ongeldige achternaam.';
+        console.log(this.errors.achternaam);
+        return false;
+      }
+      this.errors.achternaam = '';
+      return true;
+    },
+    validateEmail() {
+      const regex = /^[^\s@]+@[^\s@]+\.(com|org|net|edu|gov|nl|info|biz|co|io|me|tv)$/i;
+      const containsApostrophe = /'/;
+      if (!this.formData.email.match(regex) || this.formData.email.match(containsApostrophe)) {
+        this.errors.email = 'Ongeldig e-mailadres.';
+        console.log(this.errors.email);
+        return false;
+      }
+      this.errors.email = '';
+      return true;
+    },
+    validateAndFormatPhoneNumber(phoneNumber) {
+      phoneNumber = phoneNumber.replace(/[^0-9+]/g, '');
+      const dutchRegex = /^(06[0-9]{8}|[+]{0,1}31[0]?[0-9]{9,10}|0031[0]?[0-9]{9,10})$/;
+      if (!phoneNumber.match(dutchRegex)) {
+        console.error('Ongeldig telefoonnummer');
+        return null;
+      }
+      return phoneNumber;
+    },
+    validateTelefoonnummer() {
+      const phoneNumber = this.validateAndFormatPhoneNumber(this.formData.telefoonnummer);
+      if (!phoneNumber) {
+        this.errors.telefoonnummer = 'Ongeldig telefoonnummer.';
+        console.log(this.errors.telefoonnummer);
+        return false;
+      }
+      this.errors.telefoonnummer = '';
+      return true;
     },
     getProductId(product) {
       const productMap = {
@@ -3819,8 +3919,8 @@ var web_dom_exception_stack = __webpack_require__("b7ef");
 });
 // CONCATENATED MODULE: ./src/components/Pagina5.vue?vue&type=script&lang=js
  /* harmony default export */ var components_Pagina5vue_type_script_lang_js = (Pagina5vue_type_script_lang_js); 
-// EXTERNAL MODULE: ./src/components/Pagina5.vue?vue&type=style&index=0&id=5155846c&prod&lang=sass
-var Pagina5vue_type_style_index_0_id_5155846c_prod_lang_sass = __webpack_require__("5ea6");
+// EXTERNAL MODULE: ./src/components/Pagina5.vue?vue&type=style&index=0&id=99f601a6&prod&lang=sass
+var Pagina5vue_type_style_index_0_id_99f601a6_prod_lang_sass = __webpack_require__("70cd");
 
 // CONCATENATED MODULE: ./src/components/Pagina5.vue
 
@@ -3833,8 +3933,8 @@ var Pagina5vue_type_style_index_0_id_5155846c_prod_lang_sass = __webpack_require
 
 var Pagina5_component = Object(componentNormalizer["a" /* default */])(
   components_Pagina5vue_type_script_lang_js,
-  Pagina5vue_type_template_id_5155846c_render,
-  Pagina5vue_type_template_id_5155846c_staticRenderFns,
+  Pagina5vue_type_template_id_99f601a6_render,
+  Pagina5vue_type_template_id_99f601a6_staticRenderFns,
   false,
   null,
   null,
@@ -4540,17 +4640,6 @@ new vue_runtime_esm["a" /* default */]({
 
 /***/ }),
 
-/***/ "5ea6":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Pagina5_vue_vue_type_style_index_0_id_5155846c_prod_lang_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("bff4");
-/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Pagina5_vue_vue_type_style_index_0_id_5155846c_prod_lang_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Pagina5_vue_vue_type_style_index_0_id_5155846c_prod_lang_sass__WEBPACK_IMPORTED_MODULE_0__);
-/* unused harmony reexport * */
-
-
-/***/ }),
-
 /***/ "6613":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4562,6 +4651,17 @@ new vue_runtime_esm["a" /* default */]({
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ "70cd":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Pagina5_vue_vue_type_style_index_0_id_99f601a6_prod_lang_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("fee4");
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Pagina5_vue_vue_type_style_index_0_id_99f601a6_prod_lang_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Pagina5_vue_vue_type_style_index_0_id_99f601a6_prod_lang_sass__WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+
 
 /***/ }),
 
@@ -4686,13 +4786,6 @@ module.exports = __webpack_require__.p + "assets/img/rechterpijl.b315258a.svg";
 
 /***/ }),
 
-/***/ "bff4":
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
 /***/ "d3a8":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -4734,7 +4827,14 @@ module.exports = __webpack_require__.p + "assets/img/tick-circle.b6a7feec.svg";
 /* unused harmony reexport * */
 
 
+/***/ }),
+
+/***/ "fee4":
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.0f25c005.js.map
+//# sourceMappingURL=app.1864a41c.js.map

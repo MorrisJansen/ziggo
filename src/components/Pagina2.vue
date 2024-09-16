@@ -14,6 +14,8 @@ export default {
   data() {
     return {
       gekozenProvider: '', 
+      errorMessage: '',
+
     };
   },
   mounted() {
@@ -22,11 +24,13 @@ export default {
   methods: {
     selectProvider(event) {
       this.gekozenProvider = event.target.value;
+      this.errorMessage = '';
     },
 
     goToStep3() {
       if (!this.gekozenProvider) {
-        alert('Kies alstublieft een provider voordat u doorgaat.');
+        this.errorMessage = 'Kies alstublieft een provider voordat u doorgaat.';
+        console.log(this.errorMessage); // Controleer of de foutmelding wordt ingesteld
         return;
       }
       this.$store.commit('ADD_ANTWOORD', { vraag: 'antwoord2', antwoord: this.gekozenProvider });
@@ -70,12 +74,6 @@ export default {
               <div class="background-3"></div>
               <frame1 />
               <div class="frame-427320545-1">
-                <!-- <img class="frame-427320545-item-1" :src="stap2Van3" alt="Stap 2 van 3" />
-                <img
-                  class="frame-427320545-item-1"
-                  :src="watIsJouwHuidigeProvider"
-                  alt="Wat is jouw huidige provider?"
-                /> -->
                 <div class="container-vraag-zoveel">
                   <p class="stap-zoveel-pagina2">Stap 2 van de 3</p>
                   <p class="vertel-ons">Wat is jouw huidige provider?</p>
@@ -83,6 +81,8 @@ export default {
               </div>
               <img class="bolcom-bon-1-3" :src="bolcomBon1" alt="bolcom-bon 1" />
               <img class="image-2-3" :src="image2" alt="image 2" />
+
+
 
               <a href="/pagina-3" @click.prevent="goToStep3" style="text-decoration: none">
                 <div class="frame-427320541-2">
@@ -94,10 +94,6 @@ export default {
                   />
                 </div>
               </a>
-
-              <!-- <group1 :text1="group11Props.text1" :className="group11Props.className" />
-              <group1 :text1="group12Props.text1" :className="group12Props.className" />
-              <group1 :text1="group13Props.text1" :className="group13Props.className" /> -->
 
 
 
@@ -157,6 +153,7 @@ export default {
                 </div>
               </div>
             </div>
+          
 
             <div class="frame-427320542-2">
               <div class="frame-2">
@@ -179,10 +176,16 @@ export default {
                       <span class="pointer">KPN</span>                   
                     </p>
                   </label>
+
                 </div>
+
               </div>
+              <p v-if="errorMessage" class="error-text">{{ errorMessage }}</p>
+
             </div>
           </div>
+
+
           <img
             class="line-2-3"
             src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/line-2.svg"
@@ -205,7 +208,9 @@ export default {
         </div>
 
         <div class="achtergrond-pagina-2">
-          <div class="witte-container-pagina-2 hoogte-witte-container">
+          <div class="witte-container-pagina-2 hoogte-witte-container" 
+          :style="errorMessage ? { height: '45rem' } : {}">
+ 
             <p class="stap1">Stap 2 van de 3</p>
             <p class="vertel-ons">Vertel ons welke provider je hebt:</p>
 
@@ -237,6 +242,9 @@ export default {
               </div>
             </form>
 
+            <p v-if="errorMessage" class="error-text-mobiel">{{ errorMessage }}</p>
+
+
             <!-- Knop voor naar de volgende stap -->
             <a href="/pagina-3" @click.prevent="goToStep3" style="text-decoration: none">
               <button class="doe-nu-mee-knop">
@@ -250,8 +258,9 @@ export default {
 
 
           </div>
-          <div class="container-afbeelding-prijzen-mobiel-2">
-            <img src="./afbeeldingen-samen-mobiel.png" alt="">
+          <div class="container-afbeelding-prijzen-mobiel-2"
+          :style="errorMessage ? { top: '912px' } : {}">
+          <img src="./afbeeldingen-samen-mobiel.png" alt="">
     
     
               <svg class="blauwe-bal-mobiel-1" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
@@ -293,6 +302,29 @@ export default {
 
 <style lang="sass">
 @import '../../variables'
+
+.error-text-mobiel
+  color: red!important
+  font-size: 1.3rem!important
+  z-index: 99!important
+  position: relative
+  font-family: "DM Sans"
+  font-weight: 700
+  width:  90%
+  margin-top: 22px
+  text-align: left
+
+
+.error-text
+  color: red!important
+  font-size: 1.3rem!important
+  z-index: 99!important
+  position: relative
+  font-family: "DM Sans"
+  font-weight: 700
+  width:  75%
+  margin-top: 12px
+  text-align: left
 
 .stap-zoveel-pagina2
   position: relative
@@ -411,6 +443,7 @@ export default {
   height: 11.39px
   margin-right: -7.57px
   position: relative
+  right: 5px 
   width: 21.03px
 
 .frame-427320542-1
