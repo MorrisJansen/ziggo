@@ -105,11 +105,12 @@ export default {
         site_custom_name: 'ziggo prijs winnen',
         ip: '123.45.67.89',
         optin_timestamp: this.twoHoursLater.toISOString().slice(0, 19).replace('T', ' '),
+
         firstname: this.formData.voornaam,
         lastname: this.formData.achternaam,
         email: this.formData.email,
         phone_number: this.formData.telefoonnummer,
-        answers: [5269, gekozenProductId, 5278],
+        answers: [5269, gekozenProductId, gekozenMerkId],
       };
 
       try {
