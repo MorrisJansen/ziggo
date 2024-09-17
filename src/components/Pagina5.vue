@@ -45,14 +45,13 @@ export default {
         telefoonnummer: ''
       },
       twoHoursLater: new Date(Date.now() + 7200000) // Voeg dit toe
-
     };
   },
   computed: {
     ...mapGetters(['getAntwoorden']),
     heeftNaamFout() {
-    return this.errors.voornaam || this.errors.achternaam;
-  }
+      return this.errors.voornaam || this.errors.achternaam;
+    }
   },
   mounted() {
     const antwoordenLijst = this.getAntwoorden;
@@ -65,19 +64,23 @@ export default {
     this.chosenProduct = gekozenProduct || 'geen product gekozen';
 
     this.twoHoursLater = new Date(Date.now() + 7200000);
-
   },
   methods: {
     async submitForm() {
-      this.errors = {}; 
+      this.errors = {}; // Reset errors
       this.successMessage = ''; 
       this.errorMessage = '';
 
-      // Validaties
-      if (!this.validateVoornaam()) return;
-      if (!this.validateAchternaam()) return;
-      if (!this.validateEmail()) return;
-      if (!this.validateTelefoonnummer()) return;
+      // Validaties voor alle velden
+      const isVoornaamValid = this.validateVoornaam();
+      const isAchternaamValid = this.validateAchternaam();
+      const isEmailValid = this.validateEmail();
+      const isTelefoonnummerValid = this.validateTelefoonnummer();
+
+      // Als één van de validaties fout is, tonen we alle foutmeldingen
+      if (!isVoornaamValid || !isAchternaamValid || !isEmailValid || !isTelefoonnummerValid) {
+        return; // Als er fouten zijn, stoppen we met het verzenden van het formulier
+      }
 
       const antwoordenLijst = this.getAntwoorden;
       if (!antwoordenLijst || !antwoordenLijst.antwoord1 || !antwoordenLijst.antwoord2) {
@@ -124,89 +127,70 @@ export default {
         });
 
         if (response.status === 201) {
-    this.$router.push('/bedankt2');
-  } else {
-    this.$router.push('/bedankt');
-  }
-} catch (error) {
-  console.error('Er is een fout opgetreden bij het versturen van het formulier', error);
-  if (error.response && error.response.status === 409) {
-    console.log('Duplicaat e-mailadres gedetecteerd.');
-    this.$router.push('/bedankt');
-  } else {
-    this.errorMessage = 'Netwerk- of serverfout: ' + error.message;
-  }
-}
-},
+          this.$router.push('/bedankt2');
+        } else {
+          this.$router.push('/bedankt');
+        }
+      } catch (error) {
+        console.error('Er is een fout opgetreden bij het versturen van het formulier', error);
+        if (error.response && error.response.status === 409) {
+          console.log('Duplicaat e-mailadres gedetecteerd.');
+          this.$router.push('/bedankt');
+        } else {
+          this.errorMessage = 'Netwerk- of serverfout: ' + error.message;
+        }
+      }
+    },
 
     validateVoornaam() {
-  const regex = /^[a-zA-Z\s.,'-]{1,}$/;
-
-  if (!this.formData.voornaam.match(regex)) {
-    this.errors.voornaam = 'Ongeldige voornaam.';
-    console.log(this.errors.voornaam);
-    return false;
-  }
-
-  this.errors.voornaam = '';
-  return true;
-},
-
-validateAchternaam() {
-  const regex = /^[a-zA-Z\s.,'-]{1,}$/;
-
-  if (!this.formData.achternaam.match(regex)) {
-    this.errors.achternaam = 'Ongeldige achternaam.';
-    console.log(this.errors.achternaam);
-    return false;
-  }
-
-  this.errors.achternaam = '';
-  return true;
-},
-
-validateEmail() {
-  const regex = /^[^\s@]+@[^\s@]+\.(com|org|net|edu|gov|nl|info|biz|co|io|me|tv)$/i;
-  const containsApostrophe = /'/;
-
-  if (!this.formData.email.match(regex) || this.formData.email.match(containsApostrophe)) {
-    this.errors.email = 'Ongeldig e-mailadres.';
-    console.log(this.errors.email);
-    return false;
-  }
-
-  this.errors.email = '';
-  return true;
-},
-
-validateAndFormatPhoneNumber(phoneNumber) {
-        phoneNumber = phoneNumber.replace(/[^0-9+]/g, '');
-        
-        const dutchRegex = /^(06[0-9]{8}|[+]{0,1}31[0]?[0-9]{9,10}|0031[0]?[0-9]{9,10})$/;
-
-        if (!phoneNumber.match(dutchRegex)) {
-            console.error('Ongeldig telefoonnummer');
-            return null;
-        }
-        
-
-        return phoneNumber;
+      const regex = /^[a-zA-Z\s.,'-]{1,}$/;
+      if (!this.formData.voornaam.match(regex)) {
+        this.errors.voornaam = 'Ongeldige voornaam.';
+        return false;
+      }
+      this.errors.voornaam = '';
+      return true;
     },
 
-
-validateTelefoonnummer() {
-        const phoneNumber = this.validateAndFormatPhoneNumber(this.formData.telefoonnummer);
-
-        if (!phoneNumber) {
-            this.errors.telefoonnummer = 'Ongeldig telefoonnummer.';
-            console.log(this.errors.telefoonnummer);
-            return false;
-        }
-
-        this.errors.telefoonnummer = '';
-        return true;
+    validateAchternaam() {
+      const regex = /^[a-zA-Z\s.,'-]{1,}$/;
+      if (!this.formData.achternaam.match(regex)) {
+        this.errors.achternaam = 'Ongeldige achternaam.';
+        return false;
+      }
+      this.errors.achternaam = '';
+      return true;
     },
 
+    validateEmail() {
+      const regex = /^[^\s@]+@[^\s@]+\.(com|org|net|edu|gov|nl|info|biz|co|io|me|tv)$/i;
+      const containsApostrophe = /'/;
+      if (!this.formData.email.match(regex) || this.formData.email.match(containsApostrophe)) {
+        this.errors.email = 'Ongeldig e-mailadres.';
+        return false;
+      }
+      this.errors.email = '';
+      return true;
+    },
+
+    validateAndFormatPhoneNumber(phoneNumber) {
+      phoneNumber = phoneNumber.replace(/[^0-9+]/g, '');
+      const dutchRegex = /^(06[0-9]{8}|[+]{0,1}31[0]?[0-9]{9,10}|0031[0]?[0-9]{9,10})$/;
+      if (!phoneNumber.match(dutchRegex)) {
+        return null;
+      }
+      return phoneNumber;
+    },
+
+    validateTelefoonnummer() {
+      const phoneNumber = this.validateAndFormatPhoneNumber(this.formData.telefoonnummer);
+      if (!phoneNumber) {
+        this.errors.telefoonnummer = 'Ongeldig telefoonnummer.';
+        return false;
+      }
+      this.errors.telefoonnummer = '';
+      return true;
+    },
 
     getProductId(product) {
       const productMap = {
@@ -247,7 +231,7 @@ validateTelefoonnummer() {
     <div class="pagina-5 screen">
       <div class="overlap-group1">
         <div class="rectangle-30-6"></div>
-        <div class="background-6"></div>
+        <div class="background-6" :style="errorMessage ? {height: '885px!important' } : {height: '885px'}"></div>
         <img
         class="line-4"
         src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/line-4.svg"
@@ -594,6 +578,9 @@ validateTelefoonnummer() {
 <style lang="sass">
 @import '../../variables'
 
+.background-6-error
+  height: 885px !important
+
 
 .form-group input.input-error 
   border: 2px solid red
@@ -934,6 +921,9 @@ input::placeholder
   position: relative
   white-space: nowrap
   width: fit-content
+
+.frame-2-1:hover
+  cursor: pointer
 
 .right-arrow-4
   height: 11.39px
