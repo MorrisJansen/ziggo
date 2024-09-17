@@ -279,7 +279,9 @@ export default {
           <router-link class="router-link" to="/pagina-1">
             <button class="doe-nu-mee-knop" href="/pagina-1">
               <div class="text-in-knop">
-                Doe nu mee <img style="margin-left: 27px" src="./rechterpijl.svg" alt="pijl-naar-rechts">
+                Doe nu mee
+                <span style="margin-left: 27px">&#8594;</span>
+                <!--  <img style="margin-left: 27px" src="./rechterpijl.svg" alt="pijl-naar-rechts"> -->
               </div>
             </button>
           </router-link>
@@ -292,7 +294,7 @@ export default {
       <!-- <img src="./afbeeldingen-samen.png" alt=""> -->
 
       <div class="container-afbeelding-prijzen-mobiel">
-        <img src="./afbeeldingen-samen-mobiel.png" alt="">
+        <img src="/ziggo/assets/img/afbeeldingen-samen-mobiel.png" alt="">
 
 
           <svg class="blauwe-bal-mobiel-1" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
