@@ -294,7 +294,7 @@ export default {
       <!-- <img src="./afbeeldingen-samen.png" alt=""> -->
 
       <div class="container-afbeelding-prijzen-mobiel">
-        <img src="/ziggo/assets/img/afbeeldingen-samen-mobiel.png" alt="">
+        <img src="/ziggo/assets/img/afbeeldingen-samen-mobiel.b5031825.png" alt="">
 
 
           <svg class="blauwe-bal-mobiel-1" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
