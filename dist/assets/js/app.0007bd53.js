@@ -170,23 +170,19 @@ module.exports = __webpack_require__.p + "assets/img/naam-icoon.3e69b280.svg";
 
 /***/ }),
 
+/***/ "0529":
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
 /***/ "0766":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Group4_vue_vue_type_style_index_0_id_1590cf6d_prod_lang_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("2dff");
 /* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Group4_vue_vue_type_style_index_0_id_1590cf6d_prod_lang_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Group4_vue_vue_type_style_index_0_id_1590cf6d_prod_lang_sass__WEBPACK_IMPORTED_MODULE_0__);
-/* unused harmony reexport * */
-
-
-/***/ }),
-
-/***/ "0a7d":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Pagina5_vue_vue_type_style_index_0_id_40f44cdc_prod_lang_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("e9be");
-/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Pagina5_vue_vue_type_style_index_0_id_40f44cdc_prod_lang_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Pagina5_vue_vue_type_style_index_0_id_40f44cdc_prod_lang_sass__WEBPACK_IMPORTED_MODULE_0__);
 /* unused harmony reexport * */
 
 
@@ -200,13 +196,6 @@ module.exports = __webpack_require__.p + "assets/img/naam-icoon.3e69b280.svg";
 /* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_bedankt_vue_vue_type_style_index_0_id_236a4e88_prod_lang_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_bedankt_vue_vue_type_style_index_0_id_236a4e88_prod_lang_sass__WEBPACK_IMPORTED_MODULE_0__);
 /* unused harmony reexport * */
 
-
-/***/ }),
-
-/***/ "147d":
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "assets/img/draaien.0a349425.svg";
 
 /***/ }),
 
@@ -254,17 +243,6 @@ module.exports = __webpack_require__.p + "assets/img/draaien.0a349425.svg";
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ "31a8":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Pagina4_vue_vue_type_style_index_0_id_9ab50f84_prod_lang_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("73b3");
-/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Pagina4_vue_vue_type_style_index_0_id_9ab50f84_prod_lang_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Pagina4_vue_vue_type_style_index_0_id_9ab50f84_prod_lang_sass__WEBPACK_IMPORTED_MODULE_0__);
-/* unused harmony reexport * */
-
 
 /***/ }),
 
@@ -2800,8 +2778,8 @@ var Pagina3_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var Pagina3 = (Pagina3_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2d5dac05-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Pagina4.vue?vue&type=template&id=9ab50f84
-var Pagina4vue_type_template_id_9ab50f84_render = function render() {
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2d5dac05-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Pagina4.vue?vue&type=template&id=f59bb4d0
+var Pagina4vue_type_template_id_f59bb4d0_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('center', [_c('div', {
@@ -2859,13 +2837,26 @@ var Pagina4vue_type_template_id_9ab50f84_render = function render() {
     staticClass: "mvd-nl-tekst"
   }, [_vm._v(" checkt nu of ")]), _c('br'), _c('p', {
     staticClass: "mvd-nl-tekst2"
-  }, [_vm._v("jij kans maakt op de prijs...")])]), _c('img', {
+  }, [_vm._v("jij kans maakt op de prijs...")])]), _c('svg', {
     staticClass: "draaien-animatie loading-sign-1",
     attrs: {
-      "src": __webpack_require__("147d"),
-      "alt": ""
+      "width": "94",
+      "height": "94",
+      "viewBox": "0 0 94 94",
+      "fill": "none",
+      "xmlns": "http://www.w3.org/2000/svg"
     }
-  }), _c('div', {
+  }, [_c('g', {
+    attrs: {
+      "id": "loading-sign 1"
+    }
+  }, [_c('path', {
+    attrs: {
+      "id": "Vector",
+      "d": "M46.9997 9.79194C46.6104 9.78643 46.224 9.85834 45.8627 10.0035C45.5015 10.1486 45.1727 10.3641 44.8955 10.6375C44.6183 10.9108 44.3982 11.2365 44.248 11.5956C44.0977 11.9547 44.0203 12.3401 44.0203 12.7294C44.0203 13.1187 44.0977 13.5041 44.248 13.8633C44.3982 14.2224 44.6183 14.5481 44.8955 14.8214C45.1727 15.0947 45.5015 15.3102 45.8627 15.4554C46.224 15.6005 46.6104 15.6724 46.9997 15.6669C65.4203 15.6669 80.2913 30.5379 80.2913 48.9586C80.2913 67.3793 65.4203 82.2503 46.9997 82.2503C36.0072 82.2503 26.2957 76.9426 20.2294 68.7523C19.7658 68.1259 19.0724 67.7093 18.3016 67.5942C17.5309 67.4791 16.746 67.6748 16.1196 68.1384C15.4932 68.602 15.0766 69.2954 14.9615 70.0662C14.8463 70.8369 15.0421 71.6218 15.5057 72.2482C22.6386 81.8787 34.1122 88.1253 46.9997 88.1253C68.5956 88.1253 86.1663 70.5545 86.1663 48.9586C86.1663 27.3627 68.5956 9.79194 46.9997 9.79194ZM35.7622 11.5628C34.9831 11.5628 34.236 11.8723 33.6851 12.4232C33.1342 12.9741 32.8247 13.7213 32.8247 14.5003C32.8247 15.2794 33.1342 16.0266 33.6851 16.5775C34.236 17.1284 34.9831 17.4378 35.7622 17.4378C36.5413 17.4378 37.2884 17.1284 37.8393 16.5775C38.3902 16.0266 38.6997 15.2794 38.6997 14.5003C38.6997 13.7213 38.3902 12.9741 37.8393 12.4232C37.2884 11.8723 36.5413 11.5628 35.7622 11.5628ZM25.6722 16.7302C24.8931 16.7302 24.146 17.0397 23.5951 17.5906C23.0442 18.1415 22.7347 18.8887 22.7347 19.6677C22.7347 20.4468 23.0442 21.194 23.5951 21.7449C24.146 22.2958 24.8931 22.6052 25.6722 22.6052C26.4513 22.6052 27.1984 22.2958 27.7493 21.7449C28.3002 21.194 28.6097 20.4468 28.6097 19.6677C28.6097 18.8887 28.3002 18.1415 27.7493 17.5906C27.1984 17.0397 26.4513 16.7302 25.6722 16.7302ZM17.6744 24.751C16.8953 24.751 16.1482 25.0605 15.5973 25.6114C15.0464 26.1623 14.7369 26.9094 14.7369 27.6885C14.7369 28.4676 15.0464 29.2147 15.5973 29.7656C16.1482 30.3165 16.8953 30.626 17.6744 30.626C18.4535 30.626 19.2006 30.3165 19.7515 29.7656C20.3024 29.2147 20.6119 28.4676 20.6119 27.6885C20.6119 26.9094 20.3024 26.1623 19.7515 25.6114C19.2006 25.0605 18.4535 24.751 17.6744 24.751ZM12.5299 34.8487C11.7509 34.8487 11.0037 35.1581 10.4528 35.709C9.90193 36.2599 9.59245 37.0071 9.59245 37.7862C9.59245 38.5652 9.90193 39.3124 10.4528 39.8633C11.0037 40.4142 11.7509 40.7237 12.5299 40.7237C13.309 40.7237 14.0562 40.4142 14.6071 39.8633C15.158 39.3124 15.4674 38.5652 15.4674 37.7862C15.4674 37.0071 15.158 36.2599 14.6071 35.709C14.0562 35.1581 13.309 34.8487 12.5299 34.8487ZM10.7705 46.0211C9.99143 46.0211 9.24427 46.3306 8.69338 46.8815C8.14249 47.4324 7.83301 48.1795 7.83301 48.9586C7.83301 49.7377 8.14249 50.4848 8.69338 51.0357C9.24427 51.5866 9.99143 51.8961 10.7705 51.8961C11.5496 51.8961 12.2967 51.5866 12.8476 51.0357C13.3985 50.4848 13.708 49.7377 13.708 48.9586C13.708 48.1795 13.3985 47.4324 12.8476 46.8815C12.2967 46.3306 11.5496 46.0211 10.7705 46.0211ZM12.5376 57.2318C11.7585 57.2318 11.0114 57.5413 10.4605 58.0922C9.90958 58.6431 9.6001 59.3902 9.6001 60.1693C9.6001 60.9484 9.90958 61.6955 10.4605 62.2464C11.0114 62.7973 11.7585 63.1068 12.5376 63.1068C13.3167 63.1068 14.0638 62.7973 14.6147 62.2464C15.1656 61.6955 15.4751 60.9484 15.4751 60.1693C15.4751 59.3902 15.1656 58.6431 14.6147 58.0922C14.0638 57.5413 13.3167 57.2318 12.5376 57.2318Z",
+      "fill": "#F48C02"
+    }
+  })])]), _c('div', {
     class: ['group-1', _vm.group11Props.className]
   }, [_c('div', {
     staticClass: "overlap-group-6"
@@ -2935,13 +2926,26 @@ var Pagina4vue_type_template_id_9ab50f84_render = function render() {
     staticClass: "checken"
   }, [_c('span', {
     staticClass: "meervoordeel nl"
-  }, [_vm._v(" Meervoordeel.nl ")]), _vm._v(" checkt nu of jij kans maakt op de prijs... ")]), _c('img', {
+  }, [_vm._v(" Meervoordeel.nl ")]), _vm._v(" checkt nu of jij kans maakt op de prijs... ")]), _c('svg', {
     staticClass: "draaien-animatie",
     attrs: {
-      "src": __webpack_require__("147d"),
-      "alt": ""
+      "width": "94",
+      "height": "94",
+      "viewBox": "0 0 94 94",
+      "fill": "none",
+      "xmlns": "http://www.w3.org/2000/svg"
     }
-  })]), _c('div', {
+  }, [_c('g', {
+    attrs: {
+      "id": "loading-sign 1"
+    }
+  }, [_c('path', {
+    attrs: {
+      "id": "Vector",
+      "d": "M46.9997 9.79194C46.6104 9.78643 46.224 9.85834 45.8627 10.0035C45.5015 10.1486 45.1727 10.3641 44.8955 10.6375C44.6183 10.9108 44.3982 11.2365 44.248 11.5956C44.0977 11.9547 44.0203 12.3401 44.0203 12.7294C44.0203 13.1187 44.0977 13.5041 44.248 13.8633C44.3982 14.2224 44.6183 14.5481 44.8955 14.8214C45.1727 15.0947 45.5015 15.3102 45.8627 15.4554C46.224 15.6005 46.6104 15.6724 46.9997 15.6669C65.4203 15.6669 80.2913 30.5379 80.2913 48.9586C80.2913 67.3793 65.4203 82.2503 46.9997 82.2503C36.0072 82.2503 26.2957 76.9426 20.2294 68.7523C19.7658 68.1259 19.0724 67.7093 18.3016 67.5942C17.5309 67.4791 16.746 67.6748 16.1196 68.1384C15.4932 68.602 15.0766 69.2954 14.9615 70.0662C14.8463 70.8369 15.0421 71.6218 15.5057 72.2482C22.6386 81.8787 34.1122 88.1253 46.9997 88.1253C68.5956 88.1253 86.1663 70.5545 86.1663 48.9586C86.1663 27.3627 68.5956 9.79194 46.9997 9.79194ZM35.7622 11.5628C34.9831 11.5628 34.236 11.8723 33.6851 12.4232C33.1342 12.9741 32.8247 13.7213 32.8247 14.5003C32.8247 15.2794 33.1342 16.0266 33.6851 16.5775C34.236 17.1284 34.9831 17.4378 35.7622 17.4378C36.5413 17.4378 37.2884 17.1284 37.8393 16.5775C38.3902 16.0266 38.6997 15.2794 38.6997 14.5003C38.6997 13.7213 38.3902 12.9741 37.8393 12.4232C37.2884 11.8723 36.5413 11.5628 35.7622 11.5628ZM25.6722 16.7302C24.8931 16.7302 24.146 17.0397 23.5951 17.5906C23.0442 18.1415 22.7347 18.8887 22.7347 19.6677C22.7347 20.4468 23.0442 21.194 23.5951 21.7449C24.146 22.2958 24.8931 22.6052 25.6722 22.6052C26.4513 22.6052 27.1984 22.2958 27.7493 21.7449C28.3002 21.194 28.6097 20.4468 28.6097 19.6677C28.6097 18.8887 28.3002 18.1415 27.7493 17.5906C27.1984 17.0397 26.4513 16.7302 25.6722 16.7302ZM17.6744 24.751C16.8953 24.751 16.1482 25.0605 15.5973 25.6114C15.0464 26.1623 14.7369 26.9094 14.7369 27.6885C14.7369 28.4676 15.0464 29.2147 15.5973 29.7656C16.1482 30.3165 16.8953 30.626 17.6744 30.626C18.4535 30.626 19.2006 30.3165 19.7515 29.7656C20.3024 29.2147 20.6119 28.4676 20.6119 27.6885C20.6119 26.9094 20.3024 26.1623 19.7515 25.6114C19.2006 25.0605 18.4535 24.751 17.6744 24.751ZM12.5299 34.8487C11.7509 34.8487 11.0037 35.1581 10.4528 35.709C9.90193 36.2599 9.59245 37.0071 9.59245 37.7862C9.59245 38.5652 9.90193 39.3124 10.4528 39.8633C11.0037 40.4142 11.7509 40.7237 12.5299 40.7237C13.309 40.7237 14.0562 40.4142 14.6071 39.8633C15.158 39.3124 15.4674 38.5652 15.4674 37.7862C15.4674 37.0071 15.158 36.2599 14.6071 35.709C14.0562 35.1581 13.309 34.8487 12.5299 34.8487ZM10.7705 46.0211C9.99143 46.0211 9.24427 46.3306 8.69338 46.8815C8.14249 47.4324 7.83301 48.1795 7.83301 48.9586C7.83301 49.7377 8.14249 50.4848 8.69338 51.0357C9.24427 51.5866 9.99143 51.8961 10.7705 51.8961C11.5496 51.8961 12.2967 51.5866 12.8476 51.0357C13.3985 50.4848 13.708 49.7377 13.708 48.9586C13.708 48.1795 13.3985 47.4324 12.8476 46.8815C12.2967 46.3306 11.5496 46.0211 10.7705 46.0211ZM12.5376 57.2318C11.7585 57.2318 11.0114 57.5413 10.4605 58.0922C9.90958 58.6431 9.6001 59.3902 9.6001 60.1693C9.6001 60.9484 9.90958 61.6955 10.4605 62.2464C11.0114 62.7973 11.7585 63.1068 12.5376 63.1068C13.3167 63.1068 14.0638 62.7973 14.6147 62.2464C15.1656 61.6955 15.4751 60.9484 15.4751 60.1693C15.4751 59.3902 15.1656 58.6431 14.6147 58.0922C14.0638 57.5413 13.3167 57.2318 12.5376 57.2318Z",
+      "fill": "#F48C02"
+    }
+  })])])]), _c('div', {
     staticClass: "container-afbeelding-prijzen-mobiel-4"
   }, [_c('img', {
     attrs: {
@@ -3094,9 +3098,9 @@ var Pagina4vue_type_template_id_9ab50f84_render = function render() {
     staticClass: "text-footer-pagina1"
   }, [_vm._v("*Meervoordeel.nl is een officiële partner van Ziggo. Deelname mogelijk tot en met 31 juli 2024. Actievoorwaarden van toepassing.")])])])])]);
 };
-var Pagina4vue_type_template_id_9ab50f84_staticRenderFns = [];
+var Pagina4vue_type_template_id_f59bb4d0_staticRenderFns = [];
 
-// CONCATENATED MODULE: ./src/components/Pagina4.vue?vue&type=template&id=9ab50f84
+// CONCATENATED MODULE: ./src/components/Pagina4.vue?vue&type=template&id=f59bb4d0
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Pagina4.vue?vue&type=script&lang=js
 
@@ -3128,8 +3132,8 @@ var Pagina4vue_type_template_id_9ab50f84_staticRenderFns = [];
 });
 // CONCATENATED MODULE: ./src/components/Pagina4.vue?vue&type=script&lang=js
  /* harmony default export */ var components_Pagina4vue_type_script_lang_js = (Pagina4vue_type_script_lang_js); 
-// EXTERNAL MODULE: ./src/components/Pagina4.vue?vue&type=style&index=0&id=9ab50f84&prod&lang=sass
-var Pagina4vue_type_style_index_0_id_9ab50f84_prod_lang_sass = __webpack_require__("31a8");
+// EXTERNAL MODULE: ./src/components/Pagina4.vue?vue&type=style&index=0&id=f59bb4d0&prod&lang=sass
+var Pagina4vue_type_style_index_0_id_f59bb4d0_prod_lang_sass = __webpack_require__("6f97");
 
 // CONCATENATED MODULE: ./src/components/Pagina4.vue
 
@@ -3142,8 +3146,8 @@ var Pagina4vue_type_style_index_0_id_9ab50f84_prod_lang_sass = __webpack_require
 
 var Pagina4_component = Object(componentNormalizer["a" /* default */])(
   components_Pagina4vue_type_script_lang_js,
-  Pagina4vue_type_template_id_9ab50f84_render,
-  Pagina4vue_type_template_id_9ab50f84_staticRenderFns,
+  Pagina4vue_type_template_id_f59bb4d0_render,
+  Pagina4vue_type_template_id_f59bb4d0_staticRenderFns,
   false,
   null,
   null,
@@ -3152,8 +3156,8 @@ var Pagina4_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var Pagina4 = (Pagina4_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2d5dac05-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Pagina5.vue?vue&type=template&id=40f44cdc
-var Pagina5vue_type_template_id_40f44cdc_render = function render() {
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2d5dac05-vue-loader-template"}!./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Pagina5.vue?vue&type=template&id=8522eccc
+var Pagina5vue_type_template_id_8522eccc_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('center', [_c('div', {
@@ -3343,13 +3347,56 @@ var Pagina5vue_type_template_id_40f44cdc_render = function render() {
     attrs: {
       "for": "email"
     }
-  }), _c('img', {
+  }), _c('svg', {
     staticClass: "form-icoon-2",
     attrs: {
-      "src": __webpack_require__("349e"),
-      "alt": "Email Icon"
+      "width": "21",
+      "height": "15",
+      "viewBox": "0 0 21 15",
+      "fill": "none",
+      "xmlns": "http://www.w3.org/2000/svg"
     }
-  }), _c('input', {
+  }, [_c('g', {
+    attrs: {
+      "id": "Layer 2"
+    }
+  }, [_c('g', {
+    attrs: {
+      "id": "14 Mail"
+    }
+  }, [_c('path', {
+    attrs: {
+      "id": "Vector",
+      "d": "M19.5 0.5H1.5C0.947715 0.5 0.5 0.947715 0.5 1.5V13.5C0.5 14.0523 0.947715 14.5 1.5 14.5H19.5C20.0523 14.5 20.5 14.0523 20.5 13.5V1.5C20.5 0.947715 20.0523 0.5 19.5 0.5Z",
+      "stroke": "#49B7AC",
+      "stroke-linecap": "round",
+      "stroke-linejoin": "round"
+    }
+  }), _c('path', {
+    attrs: {
+      "id": "Vector_2",
+      "d": "M0.847656 0.743286L9.92671 7.09829C10.0948 7.21594 10.295 7.27905 10.5002 7.27905C10.7053 7.27905 10.9055 7.21594 11.0736 7.09829L20.1527 0.743286",
+      "stroke": "#49B7AC",
+      "stroke-linecap": "round",
+      "stroke-linejoin": "round"
+    }
+  }), _c('path', {
+    attrs: {
+      "id": "Vector_3",
+      "d": "M20.2073 14.2071L12.4922 6.49194",
+      "stroke": "#49B7AC",
+      "stroke-linecap": "round",
+      "stroke-linejoin": "round"
+    }
+  }), _c('path', {
+    attrs: {
+      "id": "Vector_4",
+      "d": "M8.50812 6.49194L0.792969 14.2071",
+      "stroke": "#49B7AC",
+      "stroke-linecap": "round",
+      "stroke-linejoin": "round"
+    }
+  })])])]), _c('input', {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -3383,13 +3430,44 @@ var Pagina5vue_type_template_id_40f44cdc_render = function render() {
     attrs: {
       "for": "telefoonnummer"
     }
-  }), _c('img', {
+  }), _c('svg', {
     staticClass: "form-icoon-2",
     attrs: {
-      "src": __webpack_require__("9d82"),
-      "alt": "Telefoonnummer Icon"
+      "width": "23",
+      "height": "23",
+      "viewBox": "0 0 23 23",
+      "fill": "none",
+      "xmlns": "http://www.w3.org/2000/svg"
     }
-  }), _c('input', {
+  }, [_c('g', {
+    attrs: {
+      "id": "Group"
+    }
+  }, [_c('path', {
+    attrs: {
+      "id": "Vector",
+      "d": "M17.9615 14.0704C17.7115 13.8208 17.3726 13.6806 17.0192 13.6806C16.6659 13.6806 16.327 13.8208 16.0769 14.0704L14.6339 15.5134C13.403 16.7458 10.8512 14.8893 9.61435 13.6522C7.80256 11.8406 6.51948 9.37584 7.5082 8.3871L8.95139 6.94407C9.20096 6.69401 9.34112 6.35513 9.34112 6.00183C9.34112 5.64853 9.20096 5.30966 8.95139 5.05959L5.47391 1.58202C5.22381 1.33243 4.88492 1.19226 4.53159 1.19226C4.17827 1.19226 3.83937 1.33243 3.58928 1.58202L2.14628 3.02505C-1.50473 6.67616 1.45865 12.9659 5.75722 17.2644C9.66627 21.1736 16.1602 24.7116 19.9962 20.8755L21.4394 19.4324C21.6889 19.1823 21.829 18.8435 21.829 18.4902C21.829 18.1369 21.6889 17.7981 21.4394 17.5479L17.9615 14.0704ZM4.07791 2.07047C4.19845 1.95024 4.36174 1.88273 4.53199 1.88273C4.70223 1.88273 4.86553 1.95024 4.98607 2.07047L8.46276 5.54823C8.58287 5.66863 8.65032 5.83176 8.65032 6.00183C8.65032 6.1719 8.58287 6.33503 8.46276 6.45543L7.26398 7.65424L2.87913 3.26928L4.07791 2.07047ZM6.24585 16.776C2.84458 13.3746 -0.743254 7.36855 2.39879 3.76621L6.79746 8.16559C5.78032 9.64968 7.23417 12.2495 9.12552 14.1409C10.5715 15.5867 13.1866 17.4151 14.8586 16.2263L19.2551 20.6235C15.6564 23.7627 9.65442 20.1846 6.24585 16.776ZM20.9508 18.9438L19.752 20.1428L15.3672 15.7576L16.5659 14.5588C16.6865 14.4386 16.8498 14.3711 17.02 14.3711C17.1903 14.3711 17.3536 14.4386 17.4741 14.5588L20.9508 18.0372C21.0707 18.1576 21.1381 18.3206 21.1381 18.4905C21.1381 18.6604 21.0707 18.8234 20.9508 18.9438Z",
+      "fill": "#49B7AC"
+    }
+  }), _c('path', {
+    attrs: {
+      "id": "Vector_2",
+      "d": "M11.414 7.91122C13.206 8.4966 14.3618 9.65257 14.9479 11.4452C14.989 11.5761 15.0556 11.6975 15.1439 11.8025C15.2322 11.9074 15.3405 11.9937 15.4624 12.0565C15.5843 12.1193 15.7175 12.1573 15.8542 12.1682C15.9909 12.1792 16.1285 12.1629 16.2588 12.1203C16.3892 12.0777 16.5098 12.0096 16.6137 11.9201C16.7176 11.8305 16.8026 11.7212 16.864 11.5986C16.9253 11.4759 16.9617 11.3423 16.971 11.2054C16.9803 11.0686 16.9624 10.9313 16.9182 10.8014C16.1246 8.37025 14.4899 6.73433 12.0584 5.94124C11.929 5.89898 11.7926 5.88262 11.6569 5.89308C11.5212 5.90355 11.3889 5.94064 11.2675 6.00224C11.1462 6.06384 11.0381 6.14874 10.9496 6.2521C10.861 6.35545 10.7937 6.47524 10.7514 6.60461C10.7092 6.73399 10.6928 6.87042 10.7033 7.00613C10.7137 7.14183 10.7508 7.27414 10.8124 7.3955C10.874 7.51687 10.9589 7.62491 11.0623 7.71347C11.1656 7.80202 11.2854 7.86935 11.4148 7.91161L11.414 7.91122ZM11.4069 6.81883C11.4355 6.73177 11.4974 6.65959 11.5791 6.6181C11.6608 6.57662 11.7556 6.56921 11.8428 6.59751C14.0524 7.31932 15.5392 8.80578 16.2606 11.0154C16.289 11.1026 16.2817 11.1974 16.2402 11.2792C16.1988 11.3609 16.1266 11.4228 16.0395 11.4514C15.9524 11.4785 15.8581 11.4706 15.7767 11.4293C15.6954 11.388 15.6333 11.3166 15.6038 11.2302C14.9454 9.21348 13.6451 7.91339 11.6286 7.25456C11.5415 7.22605 11.4693 7.16417 11.4277 7.0825C11.3862 7.00083 11.3787 6.90601 11.4069 6.81883Z",
+      "fill": "#49B7AC"
+    }
+  }), _c('path', {
+    attrs: {
+      "id": "Vector_3",
+      "d": "M12.528 5.2831C15.0892 6.11863 16.7409 7.77074 17.5772 10.3314C17.6626 10.5927 17.8483 10.8094 18.0934 10.9338C18.3385 11.0582 18.6231 11.0802 18.8844 10.9948C19.1457 10.9094 19.3624 10.7237 19.4868 10.4786C19.6112 10.2334 19.6331 9.94892 19.5477 9.6876C18.5061 6.49829 16.3611 4.35319 13.1718 3.31174C13.042 3.2676 12.9047 3.24967 12.7678 3.25899C12.631 3.26831 12.4974 3.30469 12.3747 3.36602C12.252 3.42736 12.1428 3.51243 12.0532 3.61631C11.9637 3.72019 11.8956 3.84081 11.853 3.97117C11.8104 4.10154 11.7941 4.23907 11.8051 4.37578C11.816 4.5125 11.854 4.64568 11.9167 4.76761C11.9795 4.88955 12.0659 4.99781 12.1708 5.08613C12.2757 5.17444 12.3972 5.24106 12.528 5.28211V5.2831ZM12.5213 4.19071C12.5354 4.14752 12.5578 4.10753 12.5873 4.07302C12.6168 4.03852 12.6529 4.01017 12.6934 3.98962C12.7338 3.96906 12.778 3.95669 12.8233 3.95322C12.8686 3.94975 12.9141 3.95524 12.9572 3.96938C15.9251 4.93779 17.9215 6.93422 18.8901 9.903C18.9185 9.99013 18.9111 10.085 18.8696 10.1667C18.8282 10.2484 18.756 10.3103 18.669 10.3389C18.5819 10.3661 18.4876 10.3581 18.4062 10.3168C18.3249 10.2755 18.2628 10.2041 18.2333 10.1178C17.3239 7.33224 15.5285 5.53601 12.742 4.62644C12.6549 4.59773 12.5827 4.53562 12.5413 4.45374C12.4999 4.37186 12.4927 4.2769 12.5213 4.18972V4.19071Z",
+      "fill": "#49B7AC"
+    }
+  }), _c('path', {
+    attrs: {
+      "id": "Vector_4",
+      "d": "M22.4485 8.89822C21.0811 4.7105 18.2637 1.89216 14.075 0.524943C13.9456 0.482695 13.8092 0.466348 13.6735 0.476836C13.5378 0.487324 13.4054 0.524441 13.2841 0.586068C13.1627 0.647695 13.0547 0.732626 12.9661 0.83601C12.8776 0.939394 12.8102 1.05921 12.768 1.18861C12.7257 1.31801 12.7094 1.45447 12.7199 1.59019C12.7304 1.72591 12.7675 1.85823 12.8291 1.97961C12.8907 2.10098 12.9757 2.20903 13.079 2.29758C13.1824 2.38614 13.3022 2.45346 13.4316 2.49571C17.006 3.66273 19.3106 5.96755 20.4778 9.54185C20.5631 9.80319 20.7487 10.0199 20.9938 10.1444C21.1152 10.2061 21.2475 10.2432 21.3832 10.2537C21.5189 10.2642 21.6554 10.2479 21.7848 10.2056C21.9142 10.1634 22.034 10.0961 22.1374 10.0075C22.2407 9.91899 22.3257 9.81095 22.3873 9.68959C22.449 9.56822 22.4861 9.4359 22.4966 9.30019C22.5071 9.16447 22.4907 9.02802 22.4485 8.89862V8.89822ZM21.57 9.54837C21.483 9.57522 21.389 9.56713 21.3079 9.52581C21.2268 9.48449 21.165 9.41319 21.1356 9.32705C19.8942 5.52826 17.4447 3.07872 13.646 1.83826C13.6024 1.82458 13.562 1.80239 13.527 1.77296C13.492 1.74353 13.4632 1.70745 13.4423 1.66682C13.4213 1.62618 13.4087 1.58179 13.405 1.53623C13.4014 1.49066 13.4068 1.44482 13.421 1.40137C13.4351 1.35791 13.4578 1.3177 13.4876 1.28307C13.5175 1.24844 13.5539 1.22007 13.5948 1.19961C13.6356 1.17915 13.6802 1.16701 13.7258 1.16388C13.7714 1.16076 13.8172 1.16671 13.8604 1.1814C17.8279 2.47675 20.4962 5.14485 21.7919 9.11323C21.8199 9.20025 21.8123 9.29486 21.7707 9.37628C21.7291 9.45771 21.6569 9.51931 21.57 9.54758V9.54837Z",
+      "fill": "#49B7AC"
+    }
+  })])]), _c('input', {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -3887,9 +3965,9 @@ var Pagina5vue_type_template_id_40f44cdc_render = function render() {
     staticClass: "text-footer-pagina1"
   }, [_vm._v("*Meervoordeel.nl is een officiële partner van Ziggo. Deelname mogelijk tot en met 31 juli 2024. Actievoorwaarden van toepassing.")])])])])])])]);
 };
-var Pagina5vue_type_template_id_40f44cdc_staticRenderFns = [];
+var Pagina5vue_type_template_id_8522eccc_staticRenderFns = [];
 
-// CONCATENATED MODULE: ./src/components/Pagina5.vue?vue&type=template&id=40f44cdc
+// CONCATENATED MODULE: ./src/components/Pagina5.vue?vue&type=template&id=8522eccc
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/web.dom-exception.stack.js
 var web_dom_exception_stack = __webpack_require__("b7ef");
@@ -4077,8 +4155,8 @@ var web_dom_exception_stack = __webpack_require__("b7ef");
 });
 // CONCATENATED MODULE: ./src/components/Pagina5.vue?vue&type=script&lang=js
  /* harmony default export */ var components_Pagina5vue_type_script_lang_js = (Pagina5vue_type_script_lang_js); 
-// EXTERNAL MODULE: ./src/components/Pagina5.vue?vue&type=style&index=0&id=40f44cdc&prod&lang=sass
-var Pagina5vue_type_style_index_0_id_40f44cdc_prod_lang_sass = __webpack_require__("0a7d");
+// EXTERNAL MODULE: ./src/components/Pagina5.vue?vue&type=style&index=0&id=8522eccc&prod&lang=sass
+var Pagina5vue_type_style_index_0_id_8522eccc_prod_lang_sass = __webpack_require__("bf38");
 
 // CONCATENATED MODULE: ./src/components/Pagina5.vue
 
@@ -4091,8 +4169,8 @@ var Pagina5vue_type_style_index_0_id_40f44cdc_prod_lang_sass = __webpack_require
 
 var Pagina5_component = Object(componentNormalizer["a" /* default */])(
   components_Pagina5vue_type_script_lang_js,
-  Pagina5vue_type_template_id_40f44cdc_render,
-  Pagina5vue_type_template_id_40f44cdc_staticRenderFns,
+  Pagina5vue_type_template_id_8522eccc_render,
+  Pagina5vue_type_template_id_8522eccc_staticRenderFns,
   false,
   null,
   null,
@@ -5484,6 +5562,17 @@ new vue_runtime_esm["a" /* default */]({
 
 /***/ }),
 
+/***/ "6f97":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Pagina4_vue_vue_type_style_index_0_id_f59bb4d0_prod_lang_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("e126");
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Pagina4_vue_vue_type_style_index_0_id_f59bb4d0_prod_lang_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Pagina4_vue_vue_type_style_index_0_id_f59bb4d0_prod_lang_sass__WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+
+
+/***/ }),
+
 /***/ "7259":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5499,13 +5588,6 @@ new vue_runtime_esm["a" /* default */]({
 /* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RadioButtonSelected_vue_vue_type_style_index_0_id_788309c1_prod_lang_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RadioButtonSelected_vue_vue_type_style_index_0_id_788309c1_prod_lang_sass__WEBPACK_IMPORTED_MODULE_0__);
 /* unused harmony reexport * */
 
-
-/***/ }),
-
-/***/ "73b3":
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
 
 /***/ }),
 
@@ -5583,6 +5665,17 @@ module.exports = __webpack_require__.p + "assets/img/rechterpijl.b315258a.svg";
 
 /***/ }),
 
+/***/ "bf38":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Pagina5_vue_vue_type_style_index_0_id_8522eccc_prod_lang_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("0529");
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Pagina5_vue_vue_type_style_index_0_id_8522eccc_prod_lang_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_10_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_10_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_10_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_10_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Pagina5_vue_vue_type_style_index_0_id_8522eccc_prod_lang_sass__WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+
+
+/***/ }),
+
 /***/ "d3a8":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -5601,14 +5694,14 @@ module.exports = __webpack_require__.p + "assets/img/tick-circle.b6a7feec.svg";
 
 /***/ }),
 
-/***/ "e7c2":
+/***/ "e126":
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
 
-/***/ "e9be":
+/***/ "e7c2":
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
@@ -5627,4 +5720,4 @@ module.exports = __webpack_require__.p + "assets/img/tick-circle.b6a7feec.svg";
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.1abb44f9.js.map
+//# sourceMappingURL=app.0007bd53.js.map

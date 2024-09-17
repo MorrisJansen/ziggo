@@ -89,11 +89,14 @@ export default {
           <!-- <a href="/pagina-1"> -->
             <div class="frame-427320541">
               <div class="doe-nu-mee diodrumcyrillic-normal-white-23-7px" style="font-weight: 700; z-index: 999">Doe nu mee</div>
-              <img
+              <!-- <img
                 class="right-arrow"
                 src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/rightarrow.svg"
                 alt="rightArrow"
-              />
+              /> -->
+              <span class="" style="color: white; font-size: 33px">
+                &#8594;
+              </span>
             </div>
             <!-- </a> -->
          </button>
