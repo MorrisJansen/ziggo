@@ -372,6 +372,10 @@ export default {
 @import '../../variables'
 
 
+.frame-42732057
+  margin-right: 65%!important
+
+
 
 .container-flex-row
   position: relative
@@ -586,7 +590,8 @@ body
   display: inline-flex
   flex: 0 0 auto
   gap: 24px
-  position: relative
+  position: relative!important
+  left: 0!important
 
 .group-4
   height: 55.81px

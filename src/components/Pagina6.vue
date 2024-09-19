@@ -29,14 +29,13 @@ export default {
   },
   mounted() {
     const antwoordenLijst = getAntwoorden();
-    // Toewijzen van het laatste antwoord aan chosenProduct
     this.chosenProduct = antwoordenLijst[antwoordenLijst.length - 2] || 'geen basta gekozen';
     console.log('Gekozen product:', this.chosenProduct);
   },
   mounted() {
-    // setTimeout(() => {
-    //   this.$router.push("/pagina-5");
-    // }, 1500);
+    setTimeout(() => {
+      this.$router.push("/pagina-5");
+    }, 1500);
   },
 };
 </script>

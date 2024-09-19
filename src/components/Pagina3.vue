@@ -259,6 +259,11 @@ export default {
   font-style: normal
   font-weight: 400
   line-height: 150%
+  position: relative
+  left: 0
+  margin-left: 0!important
+  margin-right: 91%!important
+  max-width: 40%!important
 
 
 .error-message-pagina-3
@@ -297,6 +302,13 @@ export default {
   font-style: normal
   font-weight: 700
   line-height: 150%
+  margin: 0!important
+  margin-left: 0!important
+  padding: 0!important
+  padding-left: 0!important
+  max-width: 91%!important
+  margin-right: 811px !important
+
 
 
 .gekozen-product

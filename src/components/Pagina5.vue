@@ -801,6 +801,7 @@ input::placeholder
   position: relative
   top: 50%
   left: 8%
+  margin-right: 95%
 
 
 .form-icoon-2
@@ -809,6 +810,7 @@ input::placeholder
   position: relative
   top: 47px
   left: 3%
+  margin-right: 96%
 
 
 
