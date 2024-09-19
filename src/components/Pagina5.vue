@@ -741,13 +741,13 @@ export default {
   margin-top: 10px
 
 .error-message-email, .error-message-tel
-  margin-left: 8.5%
+  margin-left: 8.5%!important
 
 .error-message-tel
-  margin-right: 51%
+  margin-right: 51%!important
 
 .error-message-email
-  margin-right: 58%
+  margin-right: 58%!important
 
 
 
