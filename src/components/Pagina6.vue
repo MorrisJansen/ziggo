@@ -146,7 +146,9 @@ export default {
         Jouw postcode is goedgekeurd!
       </div>
       <div class="icoon-pagina-6">
-        <img src="./tick-circle.svg" alt="">
+        <!-- <img src="./tick-circle.svg" alt=""> -->
+        <img src="/img/tick-circle.b6a7feec.svg" alt="Tick Circle">
+
       </div>
     </div>
 
