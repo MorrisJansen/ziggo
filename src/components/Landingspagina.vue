@@ -977,7 +977,7 @@ body
     // max-width: 80%!important
     // margin-right: 18vw!important
     margin-top: 1rem !important
-    zoom: 89% !important
+    zoom: 86% !important
     max-width: 80% !important
     margin-right: 9vw !important
 

@@ -558,7 +558,7 @@ export default {
     required
     placeholder="Vul je e-mailadres in"
   />
-      <span v-if="errors.email" class="error-message">{{ errors.email }}</span>
+      <span v-if="errors.email" class="error-message-mail">{{ errors.email }}</span>
     </div>
     <div class="form-group-mobiel full-width">
       <label for="telefoonnummer"></label>
@@ -586,7 +586,7 @@ export default {
     required
     placeholder="Vul je telefoonnummer in"
   />
-      <span v-if="errors.telefoonnummer" class="error-message">{{ errors.telefoonnummer }}</span>
+      <span v-if="errors.telefoonnummer" class="error-message-tel">{{ errors.telefoonnummer }}</span>
     </div>
   </form>
 
@@ -686,7 +686,11 @@ export default {
 
 
 
+  .error-message-mail, .error-message-tel
+    color: red
+    font-weight: 700
 
+    
 .input-error-icoon 
   top: 39%!important
 
@@ -699,6 +703,8 @@ export default {
 
 .error-message 
   color: red
+
+
 
 
 
@@ -719,14 +725,14 @@ export default {
 
 
 
-.error-message-email 
-  margin-left: 65px!important
-
-
-
-.error-message-tel 
-  margin-left: 65px!important
-  
+//.error-message-email 
+//  margin-left: 65px!important
+//
+//
+//
+//.error-message-tel 
+//  margin-left: 65px!important
+//  
 
 
 .error-message
