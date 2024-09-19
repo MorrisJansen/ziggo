@@ -337,7 +337,8 @@ export default {
 </div>
 
 <div class="afbeelding-footer" style="margin-top: 80px">
-  <img src="./afbeelding-footer-mobiel.png" alt="afbeelding-footer">
+  <img class="afbeelding-footer-mobiel" :src="image8" alt="image">
+  <!-- <img src="./afbeelding-footer-mobiel.png" alt="afbeelding-footer"> -->
 </div>
 
 
@@ -958,6 +959,15 @@ body
     display: none
 
 @media (max-width: 501px)
+
+
+
+
+  .afbeelding-footer-mobiel
+    object-fit: cover
+    width: 19.75rem
+    height: 25.1875rem
+    border-radius: 0.75rem
 
   .container-afbeelding-prijzen-mobiel
     margin-top: 1rem!important
