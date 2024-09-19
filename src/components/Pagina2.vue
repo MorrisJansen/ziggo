@@ -250,7 +250,7 @@ export default {
               <button class="doe-nu-mee-knop">
                 <div class="text-in-knop">
                   Laatste stap
-                  <img class="marge-links-mobiel" src="./rechterpijl.svg" alt="pijl-naar-rechts">
+                  <span style="margin-left: 27px">&#8594;</span>
                 </div>
               </button>
             </a>
