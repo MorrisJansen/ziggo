@@ -607,7 +607,7 @@ export default {
 
 
         <div class="container-afbeelding-prijzen-mobiel-5">
-          <img src="./afbeeldingen-samen-mobiel.png" alt="">
+          <img src="/img/afbeeldingen-samen-mobiel.b5031825.png" alt="doe het alsjeblieft">
   
   
             <svg class="blauwe-bal-mobiel-1" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
