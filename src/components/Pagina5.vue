@@ -418,13 +418,10 @@ export default {
           alt="Vector"
         />
 
-        <!-- dit moet nog dynamisch worden gerenderd -->
          <p class="jouw-gekozen-prijs">Jouw gekozen prijs:</p>
-        <!-- <img class="jouw-gekozen-prijs" :src="jouwGekozenPrijs" alt="Jouw gekozen prijs:" /> -->
         <div class="playstation-5-slim-disk">Playstation 5 Slim Disk</div>
 
 
-        <!-- dit heeft te maken met de afbeelding in de navbar -->
         <frame1000004784
           :group="frame1000004784Props.group"
           :group116046944Props="frame1000004784Props.group116046944Props"
@@ -690,7 +687,7 @@ export default {
     color: red
     font-weight: 700
 
-    
+
 .input-error-icoon 
   top: 39%!important
 
@@ -740,8 +737,17 @@ export default {
   color: red
   font-weight: 700
   font-size: 24px
-  // margin-left: 57px
+  //margin-left: 57px
   margin-top: 10px
+
+.error-message-email, .error-message-tel
+  margin-left: 8.5%
+
+.error-message-tel
+  margin-right: 51%
+
+.error-message-email
+  margin-right: 58%
 
 
 
