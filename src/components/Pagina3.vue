@@ -311,9 +311,10 @@ export default {
 .x2000-ab-input
   background-color: transparent
   border: none
-  font-size:28px
+  font-size:  24px!important
   width: 50%
   height: 36px
+  font-family: $font-family-diodrum_cyrillic-regular
 
 .pagina-3
   align-items: center

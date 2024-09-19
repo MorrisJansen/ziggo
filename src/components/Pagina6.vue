@@ -34,9 +34,9 @@ export default {
     console.log('Gekozen product:', this.chosenProduct);
   },
   mounted() {
-    setTimeout(() => {
-      this.$router.push("/pagina-5");
-    }, 1500);
+    // setTimeout(() => {
+    //   this.$router.push("/pagina-5");
+    // }, 1500);
   },
 };
 </script>
@@ -97,11 +97,25 @@ export default {
             <div class="text valign-text-bottom diodrumcyrillic-normal-white-33-9px">€699,-</div>
           </div>
         </div>
-        <img
+
+
+        <!-- <img
           class="defaultoutlinetick-circle"
           src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/default-outline-tick-circle.svg"
           alt="default/outline/tick-circle"
-        />
+        /> -->
+
+        <svg class="defaultoutlinetick-circle" xmlns="http://www.w3.org/2000/svg" width="119" height="119" viewBox="0 0 119 119" fill="none">
+          <g id="vuesax/outline/tick-circle">
+          <g id="tick-circle">
+          <path id="Vector" d="M59.5001 112.802C30.0972 112.802 6.198 88.9029 6.198 59.5C6.198 30.0971 30.0972 6.19792 59.5001 6.19792C88.903 6.19792 112.802 30.0971 112.802 59.5C112.802 88.9029 88.903 112.802 59.5001 112.802ZM59.5001 13.6354C34.2126 13.6354 13.6355 34.2125 13.6355 59.5C13.6355 84.7875 34.2126 105.365 59.5001 105.365C84.7876 105.365 105.365 84.7875 105.365 59.5C105.365 34.2125 84.7876 13.6354 59.5001 13.6354Z" fill="#28d648"/>
+          <path id="Vector_2" d="M52.4613 77.2507C51.4697 77.2507 50.5276 76.854 49.8334 76.1599L35.8013 62.1278C34.3634 60.6899 34.3634 58.3099 35.8013 56.872C37.2393 55.434 39.6193 55.434 41.0572 56.872L52.4613 68.2761L77.9472 42.7903C79.3851 41.3524 81.7651 41.3524 83.203 42.7903C84.6409 44.2282 84.6409 46.6082 83.203 48.0461L55.0893 76.1599C54.3951 76.854 53.453 77.2507 52.4613 77.2507Z" fill="#28d648"/>
+          </g>
+          </g>
+          </svg>
+
+
+
         <frame1000004784
           :group="frame1000004784Props.group"
           :className="frame1000004784Props.className"
@@ -146,27 +160,29 @@ export default {
         Jouw postcode is goedgekeurd!
       </div>
       <div class="icoon-pagina-6">
-        <!-- <img src="./tick-circle.svg" alt=""> -->
-        <!-- <img src="/img/tick-circle.b6a7feec.svg" alt="Tick Circle"> -->
-        <svg width="119" height="119" viewBox="0 0 119 119" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- <svg width="119" height="119" viewBox="0 0 119 119" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g id="vuesax/outline/tick-circle">
           <g id="tick-circle">
           <path id="Vector" d="M59.5001 112.802C30.0972 112.802 6.198 88.9029 6.198 59.5C6.198 30.0971 30.0972 6.19792 59.5001 6.19792C88.903 6.19792 112.802 30.0971 112.802 59.5C112.802 88.9029 88.903 112.802 59.5001 112.802ZM59.5001 13.6354C34.2126 13.6354 13.6355 34.2125 13.6355 59.5C13.6355 84.7875 34.2126 105.365 59.5001 105.365C84.7876 105.365 105.365 84.7875 105.365 59.5C105.365 34.2125 84.7876 13.6354 59.5001 13.6354Z" fill="#F48C02"/>
           <path id="Vector_2" d="M52.4613 77.2507C51.4697 77.2507 50.5276 76.854 49.8334 76.1599L35.8013 62.1278C34.3634 60.6899 34.3634 58.3099 35.8013 56.872C37.2393 55.434 39.6193 55.434 41.0572 56.872L52.4613 68.2761L77.9472 42.7903C79.3851 41.3524 81.7651 41.3524 83.203 42.7903C84.6409 44.2282 84.6409 46.6082 83.203 48.0461L55.0893 76.1599C54.3951 76.854 53.453 77.2507 52.4613 77.2507Z" fill="#F48C02"/>
           </g>
           </g>
-          </svg>
+          </svg> -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="119" height="119" viewBox="0 0 119 119" fill="none">
+            <g id="vuesax/outline/tick-circle">
+            <g id="tick-circle">
+            <path id="Vector" d="M59.5001 112.802C30.0972 112.802 6.198 88.9029 6.198 59.5C6.198 30.0971 30.0972 6.19792 59.5001 6.19792C88.903 6.19792 112.802 30.0971 112.802 59.5C112.802 88.9029 88.903 112.802 59.5001 112.802ZM59.5001 13.6354C34.2126 13.6354 13.6355 34.2125 13.6355 59.5C13.6355 84.7875 34.2126 105.365 59.5001 105.365C84.7876 105.365 105.365 84.7875 105.365 59.5C105.365 34.2125 84.7876 13.6354 59.5001 13.6354Z" fill="#28d648"/>
+            <path id="Vector_2" d="M52.4613 77.2507C51.4697 77.2507 50.5276 76.854 49.8334 76.1599L35.8013 62.1278C34.3634 60.6899 34.3634 58.3099 35.8013 56.872C37.2393 55.434 39.6193 55.434 41.0572 56.872L52.4613 68.2761L77.9472 42.7903C79.3851 41.3524 81.7651 41.3524 83.203 42.7903C84.6409 44.2282 84.6409 46.6082 83.203 48.0461L55.0893 76.1599C54.3951 76.854 53.453 77.2507 52.4613 77.2507Z" fill="#28d648"/>
+            </g>
+            </g>
+            </svg>
           
 
       </div>
     </div>
 
-    <!-- <div class="afbeeldingen-samen">
-      <img src="./afbeeldingen-samen.png" alt="">
-    </div> -->
-
     <div class="container-afbeelding-prijzen-mobiel-6">
-      <img src="/img/afbeeldingen-samen-mobiel.b5031825.png" alt="doe het alsjeblieft">
+      <img src="/img/afbeeldingen-samen-mobiel.b5031825.png" alt="afbeelding prijzen samen">
 
 
         <svg class="blauwe-bal-mobiel-1" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
