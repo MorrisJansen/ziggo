@@ -1064,6 +1064,7 @@ body
     background-color: #fff
     border-radius: 0.75rem
     box-shadow: 0px 31px 81px 0px rgba(0, 17, 77, 0.20)
+    padding: 1rem
 
 
   .hoe-werkt-het
@@ -1145,7 +1146,7 @@ body
     border-radius: 2.5rem
     background: #F48C02
     border: none
-    margin-top: 2rem
+    margin-top: 2.5rem
 
 
   .text-in-knop
