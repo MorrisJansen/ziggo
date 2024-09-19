@@ -323,11 +323,9 @@ export default {
           </svg>
       </div>
 
-      <!-- <img src="./afbeelding-samen-fotos.png" alt=""> -->
 
      
     </div>
-<!-- einde achtergrond -->
 
 <div class="container-voordeel">
   <p class="meer-over-meer-titel">Meer over Meervoordeel</p>
@@ -338,7 +336,6 @@ export default {
 
 <div class="afbeelding-footer" style="margin-top: 80px">
   <img class="afbeelding-footer-mobiel" :src="image8" alt="image">
-  <!-- <img src="./afbeelding-footer-mobiel.png" alt="afbeelding-footer"> -->
 </div>
 
 

@@ -1,7 +1,7 @@
 module.exports = {
   publicPath: '/ziggo/',
   outputDir: 'dist',
-  assetsDir: 'assets',
+  // assetsDir: 'assets',
   lintOnSave: false,
   devServer: {
     proxy: 'http://localhost:8080',
