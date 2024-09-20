@@ -270,7 +270,7 @@ export default {
               @blur="validateVoornaam"
               :class="{'input-error': errors.voornaam}"
               required
-              placeholder="Vul je voornaam in"
+              placeholder="Voornaam"
             />
                 <span v-if="errors.voornaam" class="error-message">{{ errors.voornaam }}</span>
               </div>
@@ -294,7 +294,7 @@ export default {
                 @blur="validateAchternaam"
                 :class="{'input-error': errors.achternaam}"
                 required
-                placeholder="Vul je achternaam in"
+                placeholder="Achternaam"
               />
               
                 <span v-if="errors.achternaam" class="error-message">{{ errors.achternaam }}</span>
@@ -323,7 +323,7 @@ export default {
               @blur="validateEmail"
               :class="{'input-error': errors.email}"
               required
-              placeholder="Vul je e-mailadres in"
+              placeholder="E-mailadres"
             />
 
               <span v-if="errors.email" class="error-message error-message-email">{{ errors.email }}</span>
@@ -350,7 +350,7 @@ export default {
               @blur="validateTelefoonnummer"
               :class="{'input-error': errors.telefoonnummer}"
               required
-              placeholder="Vul je telefoonnummer in"
+              placeholder="Telefoonnummer"
             />
             
             
@@ -455,6 +455,7 @@ export default {
 
         <p class="gewonnen-mobiel"><span class="gefeliciteerd-mobiel">Gefeliciteerd!<br></span> <span class="blauw-mobiel">Jij maakt nu kans op de </span><span class="gefeliciteerd-mobiel">{{ chosenProduct }}</span></p>
         <hr class="lijn-2">
+
         <p class="hoe-kunnen-wij-jou-bereiken-mobiel">Hoe kunnen wij jou bereiken?</p>
 
 
@@ -518,7 +519,7 @@ export default {
     @blur="validateAchternaam"
     :class="{'input-error-mobiel': errors.achternaam}"
     required
-    placeholder="Vul je achternaam in"
+    placeholder="Achternaam"
   />
       <span v-if="errors.achternaam" class="error-message">{{ errors.achternaam }}</span>
     </div>
@@ -553,7 +554,7 @@ export default {
     @blur="validateEmail"
     :class="{'input-error-mobiel': errors.email}"
     required
-    placeholder="Vul je e-mailadres in"
+    placeholder="E-mailadres"
   />
       <span v-if="errors.email" class="error-message-mail">{{ errors.email }}</span>
     </div>
@@ -581,7 +582,7 @@ export default {
     @blur="validateTelefoonnummer"
     :class="{'input-error-mobiel': errors.telefoonnummer}"
     required
-    placeholder="Vul je telefoonnummer in"
+    placeholder="Telefoonnummer"
   />
       <span v-if="errors.telefoonnummer" class="error-message-tel">{{ errors.telefoonnummer }}</span>
     </div>
@@ -1418,6 +1419,7 @@ input::placeholder
 
   .lijn-2
     width: 100%
+    color: grey
 
 
   .hoe-kunnen-wij-jou-bereiken-mobiel
