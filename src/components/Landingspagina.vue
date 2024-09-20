@@ -1117,7 +1117,7 @@ body
   // geen position relative maar margin-top gebruikt (ligt aan ouder element)
   .witte-container
     width: 90%
-    height: 22rem
+    height: 23rem
     margin-top: 1rem
     background-color: #fff
     border-radius: 0.75rem
