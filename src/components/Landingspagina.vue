@@ -84,6 +84,7 @@ export default {
 
         <!-- dit is de button -->
          <!-- <router-link to="/pagina-1"> -->
+        <div class="pointer" style="width: 100%">
 
          <button @click="navigateToNextPage">
           <!-- <a href="/pagina-1"> -->
@@ -94,12 +95,14 @@ export default {
                 src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/rightarrow.svg"
                 alt="rightArrow"
               /> -->
-              <span class="" style="color: white; font-size: 33px">
+              <span class="pijl-home" style="">
                 &#8594;
               </span>
             </div>
             <!-- </a> -->
          </button>
+        </div>
+
         <!-- </router-link> -->
 
 
@@ -121,7 +124,6 @@ export default {
             <div class="text-3 valign-text-bottom" style="font-weight: 700">{{ text12 }}</div>
           </div>
         </div>
-        <!-- <img class="hoe-werkt-het" :src="hoeWerktHet" alt="Hoe werkt het?" /> -->
          <div class="jaja" style="">Hoe werkt het?</div>
         <div class="frame-427320574">
           <div class="frame-42732057">
@@ -433,9 +435,25 @@ export default {
 <style lang="sass">
 @import '../../variables'
 
+.pijl-home
+  color: white 
+  font-size: 33px
+  position: relative
+  right: 87px
+  bottom: 3px
+  padding-right: 15px
+
+.pijl-home:hover
+  cursor: pointer
+
+
+.pointer:hover
+  cursor: pointer
+
 
 .frame-42732057
   margin-right: 65%!important
+
 
 
 
@@ -564,13 +582,13 @@ body
   background-color: $tangerine
   border-radius: 40px
   display: inline-flex
-  gap: 24.54px
-  height: 76px
+  // gap: 24.54px
   left: 589px
   overflow: hidden
-  padding: 29.8px 40px
   position: absolute
   top: 912px
+  width: 278px
+  height: 72px
 
 .doe-nu-mee
   letter-spacing: 0
@@ -580,6 +598,8 @@ body
   position: relative
   white-space: nowrap
   width: fit-content
+  padding: 29.8px 81px
+  right: 27px 
 
 .frame-427320541:hover
   cursor: pointer

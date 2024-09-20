@@ -246,7 +246,7 @@ export default {
               <div class="radio-option radio-option-2">
                 <label for="option2">
                   <input type="radio" id="option2" name="prijsoptie" value="Playstation 5 Slim Disk" v-model="chosenProduct">
-                  <span class="text-radio-vraag1">Playstation 5 Slim Disk <br class="mobiel"> t.w.v. €549,-</span>
+                  <span class="text-radio-vraag1">Playstation 5 Slim Disk <br class="mobiel"> t.w.v. €599,-</span>
                 </label>
               </div>
             
