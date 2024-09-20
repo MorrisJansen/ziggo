@@ -44,7 +44,9 @@ export default {
         email: '',
         telefoonnummer: ''
       },
-      twoHoursLater: new Date(Date.now() + 7200000) // Voeg dit toe
+      twoHoursLater: new Date(Date.now() + 7200000),
+      containerHeight: 704,
+
     };
   },
   computed: {
@@ -53,6 +55,15 @@ export default {
       return this.errors.voornaam || this.errors.achternaam;
     }
   },
+  watch: {
+    errors: {
+      handler(newErrors) {
+        this.updateContainerHeight();
+      },
+      deep: true,
+    },
+  },
+
   mounted() {
     const antwoordenLijst = this.getAntwoorden;
 
@@ -140,6 +151,13 @@ export default {
         }
       }
     },
+
+
+    updateContainerHeight() {
+      const errorCount = Object.keys(this.errors).filter(key => this.errors[key]).length;
+      this.containerHeight = 704 + errorCount * 20;
+    },
+
 
     validateVoornaam() {
       const regex = /^[a-zA-Z\s.,'-]{1,}$/;
@@ -505,7 +523,9 @@ export default {
   
     <div class="achtergrond-pagina-5"
     :style="errorMessage ? {height: '77rem' } : {}">
-      <div class="witte-container-pagina-5">
+      <div class="witte-container-pagina-5"
+      :style="{ height: containerHeight + 'px' }">
+      >
 
 
         <p class="gewonnen-mobiel"><span class="gefeliciteerd-mobiel">Gefeliciteerd!<br></span> <span class="blauw-mobiel">Jij maakt nu kans op de </span><span class="gefeliciteerd-mobiel">{{ chosenProduct }}</span></p>
@@ -515,17 +535,11 @@ export default {
 
 
   <form class="form-pagina5" @submit.prevent="submitForm">
-    <div class="form-group-mobiel full-width">
+    <div class="form-group-mobiel full-width"
+    :style="{ height: errors.voornaam ? '100px' : '80px' }"
+
+    >
       <label for="voornaam"></label>
-
-
-
-      <!-- <img 
-      class="form-icoon-mobiel" 
-      src="./naam-icoon.svg" 
-      alt="Naam Icon" 
-      :class="{'input-error-icoon-mobiel': errors.voornaam || errors.achternaam}" 
-    />       -->
     
 
     <svg class="form-icoon-mobiel" :class="{'input-error-icoon-mobiel': errors.voornaam || errors.achternaam}"  width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -549,7 +563,11 @@ export default {
     />
       <span v-if="errors.voornaam" class="error-message">{{ errors.voornaam }}</span>
     </div>
-    <div class="form-group-mobiel full-width">
+    <div class="form-group-mobiel full-width"
+    :style="{ height: errors.achternaam ? '100px' : '80px' }"
+
+
+    >
       <label for="achternaam"></label>
 
 
@@ -561,12 +579,10 @@ export default {
         </g>
         </g>
         </svg>
-      <!-- <img 
-      class="form-icoon-mobiel" 
-      src="./naam-icoon.svg" 
-      alt="Achternaam Icon" 
-      :class="{'input-error-icoon-mobiel': errors.voornaam || errors.achternaam}" 
-    />       -->
+
+
+
+
     <input
     type="text"
     id="achternaam"
@@ -578,16 +594,10 @@ export default {
   />
       <span v-if="errors.achternaam" class="error-message">{{ errors.achternaam }}</span>
     </div>
-    <div class="form-group-mobiel full-width">
+    <div class="form-group-mobiel full-width"
+    :style="{ height: errors.email ? '100px' : '80px' }"
+    >
       <label for="email"></label>
-
-
-      <!-- <img 
-      class="form-icoon-2-mobiel" 
-      src="./email-icoon.svg" 
-      alt="Email Icon" 
-      :class="{'input-error-icoon-mobiel': errors.email}" 
-    /> -->
 
 
     <svg :class="{'input-error-icoon-mobiel': errors.email}" class="form-icoon-2-mobiel" width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -613,7 +623,9 @@ export default {
   />
       <span v-if="errors.email" class="error-message-mail">{{ errors.email }}</span>
     </div>
-    <div class="form-group-mobiel full-width">
+    <div class="form-group-mobiel full-width"
+    :style="{ height: errors.telefoonnummer ? '100px' : '80px' }"
+    >
       <label for="telefoonnummer"></label>
 
       <svg class="form-icoon-2-mobiel"  :class="{'input-error-icoon-mobiel': errors.telefoonnummer}" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -624,12 +636,8 @@ export default {
         <path id="Vector_4" d="M22.4485 8.89822C21.0811 4.7105 18.2637 1.89216 14.075 0.524943C13.9456 0.482695 13.8092 0.466348 13.6735 0.476836C13.5378 0.487324 13.4054 0.524441 13.2841 0.586068C13.1627 0.647695 13.0547 0.732626 12.9661 0.83601C12.8776 0.939394 12.8102 1.05921 12.768 1.18861C12.7257 1.31801 12.7094 1.45447 12.7199 1.59019C12.7304 1.72591 12.7675 1.85823 12.8291 1.97961C12.8907 2.10098 12.9757 2.20903 13.079 2.29758C13.1824 2.38614 13.3022 2.45346 13.4316 2.49571C17.006 3.66273 19.3106 5.96755 20.4778 9.54185C20.5631 9.80319 20.7487 10.0199 20.9938 10.1444C21.1152 10.2061 21.2475 10.2432 21.3832 10.2537C21.5189 10.2642 21.6554 10.2479 21.7848 10.2056C21.9142 10.1634 22.034 10.0961 22.1374 10.0075C22.2407 9.91899 22.3257 9.81095 22.3873 9.68959C22.449 9.56822 22.4861 9.4359 22.4966 9.30019C22.5071 9.16447 22.4907 9.02802 22.4485 8.89862V8.89822ZM21.57 9.54837C21.483 9.57522 21.389 9.56713 21.3079 9.52581C21.2268 9.48449 21.165 9.41319 21.1356 9.32705C19.8942 5.52826 17.4447 3.07872 13.646 1.83826C13.6024 1.82458 13.562 1.80239 13.527 1.77296C13.492 1.74353 13.4632 1.70745 13.4423 1.66682C13.4213 1.62618 13.4087 1.58179 13.405 1.53623C13.4014 1.49066 13.4068 1.44482 13.421 1.40137C13.4351 1.35791 13.4578 1.3177 13.4876 1.28307C13.5175 1.24844 13.5539 1.22007 13.5948 1.19961C13.6356 1.17915 13.6802 1.16701 13.7258 1.16388C13.7714 1.16076 13.8172 1.16671 13.8604 1.1814C17.8279 2.47675 20.4962 5.14485 21.7919 9.11323C21.8199 9.20025 21.8123 9.29486 21.7707 9.37628C21.7291 9.45771 21.6569 9.51931 21.57 9.54758V9.54837Z" fill="#49B7AC"/>
         </g>
         </svg>
-      <!-- <img 
-      class="form-icoon-2-mobiel" 
-      src="./tel-nummer-icoon.svg" 
-      alt="Telefoonnummer Icon" 
-      :class="{'input-error-icoon-mobiel': errors.telefoonnummer}" 
-    />       -->
+
+
     <input
     type="tel"
     id="telefoonnummer"
@@ -731,7 +739,7 @@ export default {
 @media (max-width: 499px)
   .error-message
     position: relative
-    top: 10px
+    top: 7px
     font-size: 16px!important
 
   .form-group-mobiel input.input-error-mobiel
@@ -742,6 +750,8 @@ export default {
   .error-message-mail, .error-message-tel
     color: red
     font-weight: 700
+    top: 7px
+    position: relative
 
 
 .input-error-icoon 
@@ -836,6 +846,7 @@ input::placeholder
 .full-width
   width: 100%
   border-radius: 2.5rem
+  height: 82px
 
 
 
@@ -1393,7 +1404,7 @@ input::placeholder
 
   .witte-container-pagina-5
     width: 90%
-    height: 48.9rem
+    height: 44rem
     border-radius: 0.75rem
     background: #FFF
     box-shadow: 0px 31px 81px 0px rgba(0, 17, 77, 0.20)
@@ -1465,14 +1476,14 @@ input::placeholder
     width: 20px
     height: 20px
     position: relative
-    top: 50%
+    top: 58%
     left: -37%
   
   .form-icoon-2-mobiel
     width: 20px
     height: 20px
     position: relative
-    top: 50%
+    top: 58%
     left: -37%  
 
 

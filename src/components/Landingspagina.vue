@@ -1262,7 +1262,7 @@ body
     font-weight: 600
     line-height: 150%
     margin-top: 30px
-    width: 80%
+    width: 95%
 
   .lijn
     width: 80%
