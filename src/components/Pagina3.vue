@@ -239,8 +239,11 @@ export default {
             placeholder="Vul hier je postcode in"
             ref="postcodeInput" 
           />
-          <button class="postcode-knop-mobiel" style="font-weight: 700" @click="checkPostcode">Check postcode <img src="./rechterpijl.svg" alt="">
+
+          <button class="postcode-knop-mobiel" style="font-weight: 700" @click="checkPostcode"> <span style="margin-left: 30px">Check postcode</span>           <span style="margin-left: 10px">&#8594;</span>
+
           </button>
+
           <p v-if="postcodeError" style="color: red;">{{ postcodeError }}</p>
           </div>
 
