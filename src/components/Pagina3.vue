@@ -240,7 +240,7 @@ export default {
             ref="postcodeInput" 
           />
 
-          <button class="postcode-knop-mobiel" style="font-weight: 700" @click="checkPostcode"> <span style="margin-left: 30px">Check postcode</span>           <span style="margin-left: 10px">&#8594;</span>
+          <button class="postcode-knop-mobiel" style="font-weight: 700" @click="checkPostcode"> <span style="margin-left: 30px">Check postcode</span>           &#8594;
 
           </button>
 

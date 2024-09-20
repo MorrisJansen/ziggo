@@ -1528,7 +1528,7 @@ input::placeholder
 
   .container-mobiel-pagina-5
     padding: 0!important
-    padding-bottom: 30rem!important
+    padding-bottom: 25rem!important
 
   .lijn-3
     width: 100%
