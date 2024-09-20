@@ -689,7 +689,7 @@ export default {
 
     
       <div class="container-footer-5">
-        <hr class="lijn" style="margin-top: 3rem;">
+        <hr class="lijn-mobiel-pagina-5" style="margin-top: 3rem;">
         <div class="footer-pagina1">
           <p class="text-footer-pagina1">*Meervoordeel.nl is een officiële partner van Ziggo. Deelname mogelijk tot en met 31 juli 2024. Actievoorwaarden van toepassing.</p>
         </div>
@@ -1342,6 +1342,13 @@ input::placeholder
 @media (max-width: 500px)
 
 
+
+  .lijn-mobiel-pagina-5
+    width: 80%
+    opacity: .3
+    position: relative
+    bottom: 83px
+
   .bevestig-mijn-deelname
     position: relative
     left: 25px
@@ -1521,7 +1528,7 @@ input::placeholder
 
   .container-mobiel-pagina-5
     padding: 0!important
-    padding-bottom: 12rem!important
+    padding-bottom: 30rem!important
 
   .lijn-3
     width: 100%

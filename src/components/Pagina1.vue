@@ -44,10 +44,10 @@ export default {
   methods: {
   goToStep2() {
     if (this.chosenProduct) {
-      this.$store.commit('ADD_ANTWOORD', { vraag: 'antwoord1', antwoord: this.chosenProduct }); // Opslaan met een sleutel
+      this.$store.commit('ADD_ANTWOORD', { vraag: 'antwoord1', antwoord: this.chosenProduct });
       this.$router.push({ path: '/pagina-2' });
     } else {
-      this.errorMessage = 'Kies alstublieft een product voordat je verder gaat.'; // Stel de foutmelding in
+      this.errorMessage = 'Kies alstublieft een product voordat je verder gaat.';
     }
   },
 },
