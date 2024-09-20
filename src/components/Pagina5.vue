@@ -438,6 +438,8 @@ export default {
 
 
   <div class="container-mobiel container-mobiel-pagina-5">
+    <a href="/landingspagina">
+
     <div class="navbar-mobiel">
       <!-- Navbar content -->
       <img  class="logo-navbar-mobiel logo-navbar-mobiel-mv"  src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/mv-logo-1-4.svg"  alt="MV logo 1" />  
@@ -496,6 +498,8 @@ export default {
         </defs>
         </svg>
     </div>
+  </a>
+
 
 
   

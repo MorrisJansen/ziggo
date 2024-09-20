@@ -139,6 +139,8 @@ export default {
 
 
 <div class="container-mobiel">
+  <a href="/landingspagina">
+
   <div class="navbar-mobiel">
     <img
     class="logo-navbar-mobiel logo-navbar-mobiel-mv"
@@ -209,6 +211,7 @@ export default {
   </defs>
   </svg>
   </div>
+</a>
 
 
   <div class="achtergrond-pagina-6">

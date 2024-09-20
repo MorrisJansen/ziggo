@@ -128,6 +128,9 @@ export default {
 
 <div class="container-mobiel">
 
+
+<a href="/landingspagina">
+
   <div class="navbar-mobiel">
 
 
@@ -201,6 +204,8 @@ export default {
     </svg>
 
   </div>
+</a>
+
 
 
 

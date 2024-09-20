@@ -153,6 +153,10 @@ export default {
       </div>
 
       <div class="container-mobiel5">
+        
+        
+        
+        <a href="/landingspagina" style="text-decoration: none; color: inherit; cursor: pointer">
         <div class="navbar-mobiel">
           <img
           class="logo-navbar-mobiel logo-navbar-mobiel-mv"
@@ -220,6 +224,14 @@ export default {
             </defs>
             </svg>
         </div>
+      </a>
+
+
+
+
+
+
+
 
         <div class="achtergrond-pagina-3">
           <div class="witte-container-pagina-3">
