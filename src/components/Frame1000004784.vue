@@ -1,5 +1,5 @@
 <template>
-
+<a href="/landingspagina">
   <div :class="[`frame-1000004784`, className || ``]">
     <img
       class="mv-logo-1-1"
@@ -72,7 +72,7 @@
       </svg>
       
   </div>
-
+</a>
 </template>
 
 <script>
