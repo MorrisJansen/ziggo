@@ -71,9 +71,8 @@ export default {
         
         <!-- <h1 class="maak-kans-op-1-van-de-3-prijzen" v-html="maakKansOp1VanDe3Prijzen"></h1> -->
          <h1 class="maak-kans-op-1-van-de-3-prijzen">
-          <span style="font-weight: 700; position: relative; top: 2vw">
-            Maak kans op <br>
-           1 van de 3 prijzen</span></h1>          
+          <span style="font-weight: 700; position: relative; top: 2vw; width: 100%">
+            Maak kans op <br> 1 van de 3 prijzen!</span></h1>          
 
         <!-- <img
           class="meer-voordeel-geeft"
@@ -460,6 +459,8 @@ export default {
 .container-flex-row
   position: relative
   top: 100px
+  padding-bottom: 6rem
+
 
 .meer-voordeel-nu
   color: #072249
@@ -716,7 +717,6 @@ body
   margin-top: 218px
   min-width: 1550px
   position: relative
-  z-index: 99999
   padding-bottom: 5rem
   padding-top: 6rem
 
@@ -1295,6 +1295,16 @@ body
     width: 80%
 
 
+@media (max-width:  1530px)
+  .flex-row
+    padding-bottom: 5rem
 
+
+@media (max-width: 499px)
+  .doe-nu-mee-knop
+    position: relative
+    right: 7%
+    font-family: $font-family-diodrum_cyrillic-regular
+    font-weight: 700
 
 </style>

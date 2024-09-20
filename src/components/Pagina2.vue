@@ -74,7 +74,7 @@ export default {
               <frame1 />
               <div class="frame-427320545-1">
                 <div class="container-vraag-zoveel">
-                  <p class="stap-zoveel-pagina2">Stap 2 van de 3</p>
+                  <p class="stap-zoveel-pagina2">Stap 2 van 3</p>
                   <p class="vertel-ons">Wat is jouw huidige provider?</p>
                 </div>
               </div>
@@ -264,7 +264,7 @@ export default {
           <div class="witte-container-pagina-2 hoogte-witte-container" 
           :style="errorMessage ? { height: '45rem' } : {}">
  
-            <p class="stap1">Stap 2 van de 3</p>
+            <p class="stap1">Stap 2 van 3</p>
             <p class="vertel-ons">Vertel ons welke provider je hebt:</p>
 
             <!-- Mobiele providerkeuze -->
@@ -381,7 +381,7 @@ export default {
 
 .stap-zoveel-pagina2
   position: relative
-  right: 180px
+  right: 190px
   color: #F48C02
   font-family: "DM Sans"
   font-size: 1.25rem

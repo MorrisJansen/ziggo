@@ -72,7 +72,7 @@ export default {
 
 
               <div class="container-vraag-zoveel">
-                <p class="stap-zoveel">Stap 1 van de 3</p>
+                <p class="stap-zoveel">Stap 1 van 3</p>
                 <p class="vertel-ons">Vertel ons welke prijs je wilt winnen:</p>
               </div>
             </div>
@@ -227,7 +227,7 @@ export default {
           :style="errorMessage ? { height: '39rem'} : {}">
 
             <p class="stap1">
-              stap 1 van de 3
+              Stap 1 van 3
             </p>
 
             <p class="vertel-ons">
@@ -389,7 +389,7 @@ export default {
   font-weight: 400
   line-height: 150%
   position: relative
-  right: 235px
+  right: 250px
 
 .vertel-ons
   color: #072249
@@ -774,59 +774,59 @@ input[type="radio"]
 
 @media (max-width: 1600px)
   .container-center-horizontal
-    zoom: 90%
+    zoom: 86%!important
 
 @media (max-width: 1500px)
   .container-center-horizontal
-    zoom: 85%
+    zoom: 83%!important
 
 @media (max-width: 1440px)
   .container-center-horizontal
-    zoom: 80%
+    zoom: 77%!important
 
 @media (max-width: 1340px)
   .container-center-horizontal
-    zoom: 75%
+    zoom: 73%!important
 
 @media (max-width: 1260px)
   .container-center-horizontal
-    zoom: 70%
+    zoom: 67%!important
 
 @media (max-width: 1190px)
   .container-center-horizontal
-    zoom: 65%
+    zoom: 63%!important
 
 @media (max-width: 1100px)
   .container-center-horizontal
-    zoom: 60%
+    zoom: 57%!important
 
 @media (max-width: 1030px)
   .container-center-horizontal
-    zoom: 55%
+    zoom: 54%!important
 
 @media (max-width: 950px)
   .container-center-horizontal
-    zoom: 50%
+    zoom: 51%!important
 
 @media (max-width: 870px)
   .container-center-horizontal
-    zoom: 45%
+    zoom: 48%!important
 
 @media (max-width: 778px)
   .container-center-horizontal
-    zoom: 40%
+    zoom: 37%!important
 
 @media (max-width: 680px)
   .container-center-horizontal
-    zoom: 36%
+    zoom: 33%!important
 
 @media (max-width: 610px)
   .container-center-horizontal
-    zoom: 32%
+    zoom: 29%!important
 
 @media (max-width: 550px)
   .container-center-horizontal
-    zoom: 29%
+    zoom: 29%!important
 
 
 
@@ -944,7 +944,7 @@ input[type="radio"]
   
 
   input[type="radio"] 
-    transform: scale(2.5)
+    transform: scale(1.9)
     margin-right: 1rem
     pointer-events: none
   

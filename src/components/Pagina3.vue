@@ -79,7 +79,7 @@ export default {
             <frame1 />
             <div class="frame-427320545-2">
 
-              <p class="stap-zoveel-pagina3">Stap 3 van de 3</p>
+              <p class="stap-zoveel-pagina3">Stap 3 van 3</p>
 
 
               <p class="maak-kans-op">Vul je postcode in en check of je kans maakt op <span class="gekozen-product">{{ chosenProduct }}</span></p>
@@ -236,7 +236,7 @@ export default {
         <div class="achtergrond-pagina-3">
           <div class="witte-container-pagina-3">
             <p class="stap1">
-              stap 3 van de 3
+              Stap 3 van 3
             </p>
 
             <p class="vul-postcode-in">Vul je postcode in en check of je kans maakt op
