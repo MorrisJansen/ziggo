@@ -44,7 +44,6 @@ export default {
   methods: {
   goToStep2() {
     if (this.chosenProduct) {
-      console.log('Geselecteerd product:', this.chosenProduct);
       this.$store.commit('ADD_ANTWOORD', { vraag: 'antwoord1', antwoord: this.chosenProduct }); // Opslaan met een sleutel
       this.$router.push({ path: '/pagina-2' });
     } else {
@@ -53,12 +52,7 @@ export default {
   },
 },
 
-  created() {
-    console.log("Pagina1 component is aangemaakt.");
-  },
-  mounted() {
-    console.log("Pagina1 component is gemonteerd.");
-  },
+
 };
 </script>
 

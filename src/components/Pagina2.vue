@@ -30,7 +30,6 @@ export default {
     goToStep3() {
       if (!this.gekozenProvider) {
         this.errorMessage = 'Kies alstublieft een provider voordat u doorgaat.';
-        console.log(this.errorMessage);
         return;
       }
       this.$store.commit('ADD_ANTWOORD', { vraag: 'antwoord2', antwoord: this.gekozenProvider });

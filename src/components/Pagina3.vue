@@ -32,17 +32,14 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(['getAntwoorden']), // Gebruik mapGetters om de antwoorden op te halen
+    ...mapGetters(['getAntwoorden']),
   },
   mounted() {
-    this.chosenProduct = this.getAntwoorden.antwoord1 || ''; // Haal het specifieke antwoord op
-    console.log('Gekozen product:', this.chosenProduct);
+    this.chosenProduct = this.getAntwoorden.antwoord1 || 'Nog geen prijs gekozen!';
 
-    // Luister naar de "keydown" gebeurtenis voor Enter
     window.addEventListener('keydown', this.handleKeyDown);
   },
   beforeDestroy() {
-    // Verwijder de "keydown" eventlistener wanneer de component wordt vernietigd
     window.removeEventListener('keydown', this.handleKeyDown);
   },
   methods: {
@@ -53,19 +50,16 @@ export default {
     checkPostcode() {
       let inputValue = document.querySelector('.x2000-ab-input').value.trim() || 
                        document.querySelector('.postcode-input-mobiel').value.trim();
-      console.log("Ingevoerde waarde:", inputValue);
       if (this.validatePostcode(inputValue)) {
         this.postcodeError = '';
-        console.log("Postcode is geldig:", inputValue);
         this.$router.push('/pagina-4');
       } else {
         this.postcodeError = 'Voer een geldige postcode in (bijv. 2222 AB)';
-        console.log("Postcode is ongeldig:", inputValue);
       }
     },
     handleKeyDown(event) {
       if (event.key === 'Enter') {
-        this.checkPostcode();  // Voer de postcode-validatie en router-navigatie uit
+        this.checkPostcode();
       }
     },
   },
@@ -84,7 +78,6 @@ export default {
             <div class="background-4"></div>
             <frame1 />
             <div class="frame-427320545-2">
-              <!-- <img class="stap-3-van-3" :src="stap3Van3" alt="Stap 3 van 3" /> -->
 
               <p class="stap-zoveel-pagina3">Stap 3 van de 3</p>
 

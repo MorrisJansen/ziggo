@@ -134,7 +134,6 @@ export default {
       } catch (error) {
         console.error('Er is een fout opgetreden bij het versturen van het formulier', error);
         if (error.response && error.response.status === 409) {
-          console.log('Duplicaat e-mailadres gedetecteerd.');
           this.$router.push('/bedankt');
         } else {
           this.errorMessage = 'Netwerk- of serverfout: ' + error.message;
@@ -642,7 +641,7 @@ export default {
 
         <button class="frame-2-1-mobiel" @click="submitForm" style="border: none">
           <div class="bevestig-mijn-deelname diodrumcyrillic-normal-white-23-7px" style="font-weight: 700; font-size: 22px">Bevestig deelname</div>
-          <span style="color: white; font-size: 22px;  position: relative; right: 6px">&#8594;</span>
+          <span style="color: white; font-size: 22px;  position: relative; right: -36px">&#8594;</span>
         </button>
         <p class="met-het-bevestigen-v-mobiel">Met het bevestigen van je deelname ga je er mee akkoord dat MeerVoordeel eenmalig telefonisch contact met je opneemt met een aanbieding voor een all-in abonnement van Ziggo.</p>
         <!-- <img class="image-2-6" :src="image2" alt="image 2" />
@@ -1341,6 +1340,11 @@ input::placeholder
 
 
 @media (max-width: 500px)
+
+
+  .bevestig-mijn-deelname
+    position: relative
+    left: 25px
 
   .error-message-tel 
     margin-right: 2%!important

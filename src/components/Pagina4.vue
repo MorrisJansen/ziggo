@@ -30,7 +30,6 @@ export default {
   mounted() {
     const antwoordenLijst = getAntwoorden();
     this.chosenProduct = antwoordenLijst[antwoordenLijst.length - 2] || 'geen basta gekozen';
-    console.log('Gekozen product:', this.chosenProduct);
   },
   mounted() {
     setTimeout(() => {
