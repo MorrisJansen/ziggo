@@ -1342,6 +1342,14 @@ input::placeholder
 
 @media (max-width: 500px)
 
+  .error-message-tel 
+    margin-right: 2%!important
+    position: relative
+    top: 10px
+
+  .error-message-mail
+    position: relative
+    top: 10px
 
   .container-footer-5
     position: relative
