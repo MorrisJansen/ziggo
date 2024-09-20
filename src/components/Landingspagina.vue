@@ -1038,11 +1038,11 @@ body
 
 //hieronder komen alle mobile styles
 
-@media (min-width: 500px) 
+@media (min-width: 504px) 
   .container-mobiel
     display: none
 
-@media (max-width: 501px)
+@media (max-width: 499px)
 
 
 

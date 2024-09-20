@@ -838,12 +838,12 @@ input[type="radio"]:checked::after
     zoom: 29%
 
 
-@media (min-width: 501px)
+@media (min-width: 505px)
   .container-mobiel
     display: none!important
 
 // hieronder komen alle mobile styles
-@media (max-width: 500px)
+@media (max-width: 499px)
 
 .container-afbeelding-prijzen-mobiel-2
 

@@ -199,7 +199,7 @@ export default {
 <style lang="sass">
 @import '../../variables'
 
-@media (max-width: 501px)
+@media (max-width:  499px)
     .bedankt-mobiel
         font-size: 44px
         color: #072249
@@ -595,14 +595,14 @@ export default {
 
 
 
-@media (min-width: 501px)
+@media (min-width: 550px)
   .container-mobiel5
     display: none
 
 
 
 
-@media (max-width: 501px) 
+@media (max-width: 499px) 
 
   .container-afbeelding-prijzen-mobiel-3
     position: relative

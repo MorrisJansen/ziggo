@@ -833,13 +833,13 @@ input[type="radio"]
 // hieronder komen alle mobile styles
 
 
-@media (min-width: 500px)
+@media (min-width: 505px)
   .container-mobiel
     display: none!important
 
 
 
-@media (max-width: 500px)
+@media (max-width: 499px)
 
   .container-afbeelding-prijzen-mobiel-1
     position: relative

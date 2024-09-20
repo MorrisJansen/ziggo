@@ -548,7 +548,7 @@ export default {
 
 
 
-@media (max-width: 501px)
+@media (max-width: 499px)
 
   .container-afbeelding-prijzen-mobiel-6
     position: relative

@@ -680,14 +680,14 @@ export default {
 
 
 
-@media (min-width: 501px)
+@media (min-width: 505px)
   .container-mobiel5
     display: none
 
 
 
 
-@media (max-width: 501px) 
+@media (max-width: 499px) 
 
   .container-afbeelding-prijzen-mobiel-3
     position: relative

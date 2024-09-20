@@ -204,7 +204,7 @@ export default {
     </svg>
 
   </div>
-</a>
+  </a>
 
 
 
@@ -456,7 +456,7 @@ export default {
 
 
 
-@media (min-width: 501px)
+@media (min-width: 550px)
   .mobiel-container
     display: none
 
@@ -601,7 +601,7 @@ export default {
 
 
 
-@media (max-width: 501px)
+@media (max-width: 499px)
 
 
 

@@ -728,7 +728,7 @@ export default {
   position: relative!important
   top: 48px!important
 
-@media (max-width: 501px)
+@media (max-width: 499px)
   .error-message
     position: relative
     top: 10px
@@ -1343,7 +1343,7 @@ input::placeholder
 
 
 
-@media (max-width: 500px)
+@media (max-width: 499px)
 
 
 
