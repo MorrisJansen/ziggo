@@ -18,7 +18,7 @@ export default {
       errorMessage: '',
       products: [
         { id: 1, name: "SAMSUNG 60\" TV t.w.v. €699,-", value: "SAMSUNG TV 60" },
-        { id: 2, name: "Playstation 5 Slim Disk t.w.v. €549,-", value: "Playstation 5 Slim Disk" },
+        { id: 2, name: "Playstation 5 Slim Disk t.w.v. €599,-", value: "Playstation 5 Slim Disk" },
         { id: 3, name: "Bol.com cadeaubon t.w.v. €400,-", value: "Bol.com cadeaubon" },
       ],
     };
