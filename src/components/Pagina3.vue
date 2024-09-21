@@ -723,7 +723,7 @@ export default {
     font-family: $font-family-diodrum_cyrillic-semibold
     font-size: 1.5625rem
     font-style: normal
-    font-weight: 600
+    font-weight: 700!important
     line-height: 135%
     text-align: start
     margin-left: 2rem

@@ -265,7 +265,7 @@ export default {
           :style="errorMessage ? { height: '45rem' } : {}">
  
             <p class="stap1">Stap 2 van 3</p>
-            <p class="vertel-ons">Vertel ons welke provider je hebt:</p>
+            <p class="vertel-ons">Wat is jouw huidige provider?</p>
 
             <!-- Mobiele providerkeuze -->
             <form class="radio-form">
@@ -864,6 +864,8 @@ input[type="radio"]:checked::after
   position: absolute
   top: 9rem
   left: 5vw
+  padding: 0 1rem
+  // deze padding toegevoegd, wel testen met safari moebiel
 
 
 .achtergrond-pagina-2

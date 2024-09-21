@@ -358,14 +358,14 @@ export default {
 @import '../../variables'
 .error-text-1-mobiel
     color: red!important
-    font-size: 1.3rem!important
     z-index: 99!important
     position: relative
     font-family: "DM Sans"
     font-weight: 700
-    width:  85%
     margin-top: 12px
     text-align: left
+    font-size: 1rem !important
+    width: 80%
 
 .error-text-1
   color: red!important
@@ -908,7 +908,7 @@ input[type="radio"]
     font-family: $font-family-diodrum_cyrillic-semibold
     font-size: 1.5625rem
     font-style: normal
-    font-weight: 600
+    font-weight: 700
     line-height: 135%
     text-align: start
     margin-left: 2rem
