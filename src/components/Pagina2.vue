@@ -300,7 +300,7 @@ export default {
 
             <!-- Knop voor naar de volgende stap -->
             <a href="/pagina-3" @click.prevent="goToStep3" style="text-decoration: none">
-              <button class="doe-nu-mee-knop">
+              <button class="doe-nu-mee-knop doe-nu-mee-knop-2">
                 <div class="text-in-knop">
                   Laatste stap
                   <span style="margin-left: 27px">&#8594;</span>
@@ -845,36 +845,41 @@ input[type="radio"]:checked::after
 // hieronder komen alle mobile styles
 @media (max-width: 499px)
 
-.container-afbeelding-prijzen-mobiel-2
 
-  position: relative
-  top: 843px
-  zoom: 83%!important
-  max-width: 80%!important
-  margin-right: 18vw!important
+  .doe-nu-mee-knop-2
+    position: relative
+    left: 20%
 
+  .container-afbeelding-prijzen-mobiel-2
 
-.witte-container-pagina-2
-  border-radius: 0.75rem
-  background: #FFF
-  box-shadow: 0px 31px 81px 0px rgba(0, 17, 77, 0.2)
-  width: 90%
-  height: 41rem
-  flex-shrink: 0
-  position: absolute
-  top: 9rem
-  left: 5vw
-  padding: 0 1rem
-  // deze padding toegevoegd, wel testen met safari moebiel
+    position: relative
+    top: 843px
+    zoom: 83%!important
+    max-width: 80%!important
+    margin-right: 18vw!important
 
 
-.achtergrond-pagina-2
-  // width: 23.4375rem
-  height: 69rem
-  flex-shrink: 0
-  background: linear-gradient(90deg, #072148 0%, #40A59F 100%)
+  .witte-container-pagina-2
+    border-radius: 0.75rem
+    background: #FFF
+    box-shadow: 0px 31px 81px 0px rgba(0, 17, 77, 0.2)
+    width: 90%
+    height: 41rem
+    flex-shrink: 0
+    position: absolute
+    top: 9rem
+    left: 5vw
+    padding: 0 1rem
+    // deze padding toegevoegd, wel testen met safari moebiel
 
-.container-afbeelding-prijzen-mobiel
+
+  .achtergrond-pagina-2
+    // width: 23.4375rem
+    height: 69rem
+    flex-shrink: 0
+    background: linear-gradient(90deg, #072148 0%, #40A59F 100%)
+
+  .container-afbeelding-prijzen-mobiel
   
 
 

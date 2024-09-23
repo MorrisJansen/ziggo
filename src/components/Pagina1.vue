@@ -272,7 +272,7 @@ export default {
 
 
               <div @click="goToStep2" class="">
-                <div class="doe-nu-mee-knop">
+                <div class="doe-nu-mee-knop doe-nu-mee-knop-1">
                   <p class="text-in-knop">
                     Ga naar stap 2
                   </p>
@@ -840,6 +840,10 @@ input[type="radio"]
 
 
 @media (max-width: 499px)
+
+  .doe-nu-mee-knop-1
+    position: relative
+    left: 20%
 
   .container-afbeelding-prijzen-mobiel-1
     position: relative
