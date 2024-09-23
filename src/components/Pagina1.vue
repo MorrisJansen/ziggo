@@ -843,7 +843,10 @@ input[type="radio"]
 
   .doe-nu-mee-knop-1
     position: relative
-    left: 20%
+    left: 0%!important
+    top: 0%!important
+    right: 0%!important
+    bottom: 0%!important
 
   .container-afbeelding-prijzen-mobiel-1
     position: relative
