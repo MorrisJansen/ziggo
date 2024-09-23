@@ -42,7 +42,6 @@ export default {
 </script>
 
 
-
 <template>
   <center>
     <div class="overkoepelende-container">
@@ -58,7 +57,6 @@ export default {
 
             <div class="bedankt-container">
                 <p class="bedankt">Bedankt!</p>
-
             </div>
 
             <div class="bedankt-text-container">
@@ -71,6 +69,13 @@ export default {
 
 
             <p v-if="postcodeError" class="error-message-pagina-3">{{ postcodeError }}</p>
+
+            <img 
+              referrerpolicy="no-referrer-when-downgrade" 
+              :src="pixelUrl" 
+              style="width: 1px; height: 1px; border: 0px;" 
+              alt="tracking-pixel"
+            />
 
 
 
@@ -147,7 +152,7 @@ export default {
 
 
           <div class="container-afbeelding-prijzen-mobiel-3">
-            <img src="/img/afbeeldingen-samen-mobiel.b5031825.png" alt="doe het alsjeblieft">
+            <img src="./afbeeldingen-samen-mobiel.png" alt="">
     
     
               <svg class="blauwe-bal-mobiel-1" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">

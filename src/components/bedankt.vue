@@ -35,6 +35,13 @@ export default {
 </script>
 
 
+
+
+
+
+
+
+
 <template>
   <center>
     <div class="overkoepelende-container">
