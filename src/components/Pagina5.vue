@@ -1538,7 +1538,7 @@ input::placeholder
     font-style: normal
     font-weight: 400
     line-height: 1.125rem
-    margin-top: -3rem!important
+    margin-top: 0rem!important
     padding-bottom: 2rem
 
   .footer-pagina1-2
@@ -1550,4 +1550,163 @@ input::placeholder
 
   .lijn-3
     width: 100%
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1920px) and (min-width: 1600px)
+  .overkoepelende-container
+    height: 120vw!important
+    max-height: 120vw!important
+
+    
+  .flex-row
+    position: relative
+    top: 300px!important
+
+  .container-flex-row-1-lijn
+    position: relative
+    top: 140px!important
+  
+  
+  .flex-row-1
+    position: relative
+    bottom: -200px!important
+
+
+  .line-6
+    position: relative
+    top: 100px!important
+  
+
+  .footer-container-desktop
+    position: relative
+    top: 450px!important
+
+@media (max-width: 1600px) and (min-width: 1350px)
+  .overkoepelende-container
+    height: 130vw !important
+    max-height: 130vw!important
+
+  .flex-row
+    position: relative
+    top: 300px!important
+
+  .container-flex-row-1-lijn
+    position: relative
+    top: 140px!important
+
+
+  .flex-row-1
+    position: relative
+    bottom: -200px!important
+
+
+  .line-6
+    position: relative
+    top: 100px!important
+
+
+  .footer-container-desktop
+    position: relative
+    top: 450px!important
+
+
+  
+
+
+@media (max-width: 1350px) and (min-width: 1260px)
+  .overkoepelende-container
+    height: 130vw !important
+    max-height: 130vw!important
+
+  .flex-row
+    position: relative
+    top: 300px!important
+
+  .container-flex-row-1-lijn
+    position: relative
+    top: 140px!important
+
+
+  .flex-row-1
+    position: relative
+    bottom: -200px!important
+
+
+  .line-6
+    position: relative
+    top: 120px!important
+
+
+  .footer-container-desktop
+    position: relative
+    top: 450px!important
+
+
+@media (max-width: 1260px) and (min-width: 1110px)
+  .overkoepelende-container
+    height: 130vw !important
+    max-height: 130vw!important
+
+  .flex-row
+    position: relative
+    top: 400px!important
+
+  .container-flex-row-1-lijn
+    position: relative
+    top: 240px!important
+
+
+  .flex-row-1
+    position: relative
+    bottom: -200px!important
+
+
+  .line-6
+    position: relative
+    top: 120px!important
+
+
+  .footer-container-desktop
+    position: relative
+    top: 550px!important
+
+
+
+@media (max-width: 1110px) and (min-width: 800px)
+  .overkoepelende-container
+    height: 130vw !important
+    max-height: 130vw!important
+
+  .flex-row
+    position: relative
+    top: 425px!important
+
+  .container-flex-row-1-lijn
+    position: relative
+    top: 130px!important
+
+
+  .flex-row-1
+    position: relative
+    bottom: -250px!important
+
+
+  .line-6
+    position: relative
+    top: 220px!important
+
+
+  .footer-container-desktop
+    position: relative
+    top: 550px!important
 </style>

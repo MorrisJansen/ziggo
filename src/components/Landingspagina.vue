@@ -166,7 +166,11 @@ export default {
 
         <img class="image-7" :src="image7" style="z-index: 99;" alt="image 7" />
       </div>
-      <img
+
+
+
+      <div class="container-flex-row-1-lijn">
+        <img
         class="line-6"
         src="https://cdn.animaapp.com/projects/668fabe1a9b7d2ad0686601a/releases/66b60546a796126d7b57a6f8/img/line-6.svg"
         alt="Line 6"
@@ -180,6 +184,7 @@ export default {
           <span class="diodrumcyrillic-regular-normal-downriver-25px dik">Onder andere door deze samenwerking kunnen wij jou mooie acties zoals deze bieden.</span>
         </p>
         <img class="image-8" :src="image8" alt="image 8" />
+      </div>
       </div>
 
 
@@ -719,6 +724,11 @@ body
   position: relative
   padding-bottom: 5rem
   padding-top: 6rem
+  position: relative
+  // top: -378px
+  top: -280px
+  width: 100%
+  height: 18px
 
 .meer-over-meer-voordeel
   align-self: flex-end
@@ -1326,6 +1336,152 @@ body
     font-family: $font-family-diodrum_cyrillic-regular
     font-weight: 700
 
+@media (max-width: 1920px) and (min-width: 1600px)
+  .overkoepelende-container
+    height: 120vw!important
+    max-height: 120vw!important
+
+    
+  .flex-row
+    position: relative
+    top: 300px!important
+
+  .container-flex-row-1-lijn
+    position: relative
+    top: 140px!important
   
+  
+  .flex-row-1
+    position: relative
+    bottom: -200px!important
+
+
+  .line-6
+    position: relative
+    top: 100px!important
+  
+
+  .footer-container-desktop
+    position: relative
+    top: 450px!important
+
+@media (max-width: 1600px) and (min-width: 1350px)
+  .overkoepelende-container
+    height: 130vw !important
+    max-height: 130vw!important
+
+  .flex-row
+    position: relative
+    top: 300px!important
+
+  .container-flex-row-1-lijn
+    position: relative
+    top: 140px!important
+
+
+  .flex-row-1
+    position: relative
+    bottom: -200px!important
+
+
+  .line-6
+    position: relative
+    top: 100px!important
+
+
+  .footer-container-desktop
+    position: relative
+    top: 450px!important
+
+
+  
+
+
+@media (max-width: 1350px) and (min-width: 1260px)
+  .overkoepelende-container
+    height: 130vw !important
+    max-height: 130vw!important
+
+  .flex-row
+    position: relative
+    top: 300px!important
+
+  .container-flex-row-1-lijn
+    position: relative
+    top: 140px!important
+
+
+  .flex-row-1
+    position: relative
+    bottom: -200px!important
+
+
+  .line-6
+    position: relative
+    top: 120px!important
+
+
+  .footer-container-desktop
+    position: relative
+    top: 450px!important
+
+
+@media (max-width: 1260px) and (min-width: 1110px)
+  .overkoepelende-container
+    height: 130vw !important
+    max-height: 130vw!important
+
+  .flex-row
+    position: relative
+    top: 400px!important
+
+  .container-flex-row-1-lijn
+    position: relative
+    top: 240px!important
+
+
+  .flex-row-1
+    position: relative
+    bottom: -200px!important
+
+
+  .line-6
+    position: relative
+    top: 120px!important
+
+
+  .footer-container-desktop
+    position: relative
+    top: 550px!important
+
+
+
+@media (max-width: 1110px) and (min-width: 800px)
+  .overkoepelende-container
+    height: 130vw !important
+    max-height: 130vw!important
+
+  .flex-row
+    position: relative
+    top: 425px!important
+
+  .container-flex-row-1-lijn
+    position: relative
+    top: 130px!important
+
+
+  .flex-row-1
+    position: relative
+    bottom: -250px!important
+
+
+  .line-6
+    position: relative
+    top: 220px!important
+
+
+  .footer-container-desktop
+    position: relative
+    top: 550px!important
 
 </style>
