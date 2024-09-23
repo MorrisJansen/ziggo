@@ -654,7 +654,6 @@ export default {
         <button class="frame-2-1-mobiel" @click="submitForm" style="border: none">
           <div class="bevestig-mijn-deelname diodrumcyrillic-normal-white-23-7px" style="font-weight: 700; font-size: 22px; position: absolute; margin-left: 30px;">Bevestig deelname</div>
           <!-- pijl even weggelaten zodat de knoper er cleaner uitziet -->
-          <!-- <span style="color: white; font-size: 22px;  position: relative; right: -36px">&#8594;</span> -->
         </button>
         <p class="met-het-bevestigen-v-mobiel">Met het bevestigen van je deelname ga je er mee akkoord dat MeerVoordeel eenmalig telefonisch contact met je opneemt met een aanbieding voor een all-in abonnement van Ziggo.</p>
         <!-- <img class="image-2-6" :src="image2" alt="image 2" />
@@ -1539,7 +1538,7 @@ input::placeholder
     font-style: normal
     font-weight: 400
     line-height: 1.125rem
-    margin-top: -3rem
+    margin-top: -3rem!important
     padding-bottom: 2rem
 
   .container-mobiel-pagina-5
