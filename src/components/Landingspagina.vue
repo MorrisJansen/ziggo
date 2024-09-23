@@ -340,7 +340,7 @@ export default {
 
         <div class="doe-nu-mee">
           <router-link class="router-link" to="/pagina-1">
-            <button class="doe-nu-mee-knop" href="/pagina-1">
+            <button class="doe-nu-mee-knop doe-nu-mee-knop-home" href="/pagina-1">
               <div class="text-in-knop">
                 Doe nu mee
                 <span style="margin-left: 27px">&#8594;</span>
@@ -1235,6 +1235,18 @@ body
     border: none
     margin-top: 2.5rem
 
+  .doe-nu-mee-knop-home
+    display: flex
+    width: 17.4375rem
+    padding: 0.9375rem 2.5rem
+    justify-content: center
+    align-items: center
+    gap: 1.53363rem
+    border-radius: 2.5rem
+    background: #F48C02
+    border: none
+    margin-top: 2.5rem
+
 
   .text-in-knop
     color: #FFF
@@ -1301,10 +1313,19 @@ body
 
 
 @media (max-width: 499px)
+  .doe-nu-mee-knop-home
+    position: relative
+    right: 16%
+    bottom: 30px
+    font-family: $font-family-diodrum_cyrillic-regular
+    font-weight: 700
+
   .doe-nu-mee-knop
     position: relative
     right: 7%
     font-family: $font-family-diodrum_cyrillic-regular
     font-weight: 700
+
+  
 
 </style>
