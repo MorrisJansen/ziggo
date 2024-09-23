@@ -848,8 +848,10 @@ input[type="radio"]:checked::after
 
   .doe-nu-mee-knop-2
     position: relative
-    left: 20%
-
+    left: 0%
+    right: 0%
+    bottom: 0%
+    top: 0%
   .container-afbeelding-prijzen-mobiel-2
 
     position: relative
