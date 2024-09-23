@@ -1498,10 +1498,10 @@ body
 
 
 
-@media not all and (min-resolution: 0.001dpcm) 
-  @supports (-webkit-appearance: none)
-    .container-flex-row-1-lijn
-      margin-top: 1000px!important
+@supports (-webkit-appearance: none)
+  .container-flex-row-1-lijn
+    margin-top: 200px!important
+      
 
 
 </style>
