@@ -652,7 +652,7 @@ export default {
   </form>
 
         <button class="frame-2-1-mobiel" @click="submitForm" style="border: none">
-          <div class="bevestig-mijn-deelname diodrumcyrillic-normal-white-23-7px" style="font-weight: 700; font-size: 22px; position: absolute; margin-left: 16%;">Bevestig deelname</div>
+          <div class="bevestig-mijn-deelname diodrumcyrillic-normal-white-23-7px" style="font-weight: 700; font-size: 22px; position: absolute; margin-left: 13%;">Bevestig deelname</div>
           <!-- pijl even weggelaten zodat de knoper er cleaner uitziet -->
         </button>
         <p class="met-het-bevestigen-v-mobiel">Met het bevestigen van je deelname ga je er mee akkoord dat MeerVoordeel eenmalig telefonisch contact met je opneemt met een aanbieding voor een all-in abonnement van Ziggo.</p>
@@ -1562,151 +1562,8 @@ input::placeholder
 
 
 
-@media (max-width: 1920px) and (min-width: 1600px)
-  .overkoepelende-container
-    height: 120vw!important
-    max-height: 120vw!important
-
-    
-  .flex-row
-    position: relative
-    top: 300px!important
-
-  .container-flex-row-1-lijn
-    position: relative
-    top: 140px!important
-  
-  
-  .flex-row-1
-    position: relative
-    bottom: -200px!important
-
-
-  .line-6
-    position: relative
-    top: 100px!important
-  
-
-  .footer-container-desktop
-    position: relative
-    top: 450px!important
-
-@media (max-width: 1600px) and (min-width: 1350px)
-  .overkoepelende-container
-    height: 130vw !important
-    max-height: 130vw!important
-
-  .flex-row
-    position: relative
-    top: 300px!important
-
-  .container-flex-row-1-lijn
-    position: relative
-    top: 140px!important
-
-
-  .flex-row-1
-    position: relative
-    bottom: -200px!important
-
-
-  .line-6
-    position: relative
-    top: 100px!important
-
-
-  .footer-container-desktop
-    position: relative
-    top: 450px!important
-
-
-  
-
-
-@media (max-width: 1350px) and (min-width: 1260px)
-  .overkoepelende-container
-    height: 130vw !important
-    max-height: 130vw!important
-
-  .flex-row
-    position: relative
-    top: 300px!important
-
-  .container-flex-row-1-lijn
-    position: relative
-    top: 140px!important
-
-
-  .flex-row-1
-    position: relative
-    bottom: -200px!important
-
-
-  .line-6
-    position: relative
-    top: 120px!important
-
-
-  .footer-container-desktop
-    position: relative
-    top: 450px!important
-
-
-@media (max-width: 1260px) and (min-width: 1110px)
-  .overkoepelende-container
-    height: 130vw !important
-    max-height: 130vw!important
-
-  .flex-row
-    position: relative
-    top: 400px!important
-
-  .container-flex-row-1-lijn
-    position: relative
-    top: 240px!important
-
-
-  .flex-row-1
-    position: relative
-    bottom: -200px!important
-
-
-  .line-6
-    position: relative
-    top: 120px!important
-
-
-  .footer-container-desktop
-    position: relative
-    top: 550px!important
 
 
 
-@media (max-width: 1110px) and (min-width: 800px)
-  .overkoepelende-container
-    height: 130vw !important
-    max-height: 130vw!important
 
-  .flex-row
-    position: relative
-    top: 425px!important
-
-  .container-flex-row-1-lijn
-    position: relative
-    top: 130px!important
-
-
-  .flex-row-1
-    position: relative
-    bottom: -250px!important
-
-
-  .line-6
-    position: relative
-    top: 220px!important
-
-
-  .footer-container-desktop
-    position: relative
-    top: 550px!important
 </style>

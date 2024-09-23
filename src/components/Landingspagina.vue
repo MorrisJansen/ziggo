@@ -1426,6 +1426,7 @@ body
     top: 450px!important
 
 
+
 @media (max-width: 1260px) and (min-width: 1110px)
   .overkoepelende-container
     height: 130vw !important
@@ -1454,34 +1455,49 @@ body
     position: relative
     top: 550px!important
 
+  .line-2, .meervoordeelnl-is
+    position: relative
+    bottom: -400px!important
+
 
 
 @media (max-width: 1110px) and (min-width: 800px)
   .overkoepelende-container
     height: 130vw !important
-    max-height: 130vw!important
+    max-height: 130vw !important
 
   .flex-row
     position: relative
-    top: 425px!important
+    top: 425px !important
 
   .container-flex-row-1-lijn
     position: relative
-    top: 130px!important
-
+    top: 130px !important
 
   .flex-row-1
     position: relative
-    bottom: -250px!important
-
+    bottom: -250px !important
 
   .line-6
     position: relative
-    top: 220px!important
-
+    top: 220px !important
 
   .footer-container-desktop
     position: relative
-    top: 550px!important
+    top: 550px !important
+
+  .line-2, .meervoordeelnl-is
+    position: relative
+    bottom: -320px !important
+
+  // Stijlen specifiek voor Safari
+  @media not all and (min-resolution: 0.001dpcm) 
+    @supports (-webkit-appearance: none)
+      .container-flex-row-1-lijn
+        margin-top: 100px
+
+
+
+
 
 </style>
