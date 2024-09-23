@@ -838,9 +838,12 @@ input[type="radio"]:checked::after
     zoom: 29%
 
 
-@media (min-width: 505px)
+@media (min-width: 499px)
   .container-mobiel
     display: none!important
+
+  .container-mobiel5
+    display: none
 
 // hieronder komen alle mobile styles
 @media (max-width: 499px)

@@ -1315,7 +1315,7 @@ body
 @media (max-width: 499px)
   .doe-nu-mee-knop-home
     position: relative
-    right: 14%!important
+    right: 13%!important
     bottom: 30px
     font-family: $font-family-diodrum_cyrillic-regular
     font-weight: 700

@@ -748,7 +748,7 @@ export default {
     width: 90%
     height: 4rem
     border-radius: 75px
-    font-size: 22px
+    font-size: 20px!important
     padding-left: 1rem
     font-family: $font-family-diodrum_cyrillic-semibold
     margin-bottom: 2rem
