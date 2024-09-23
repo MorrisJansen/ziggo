@@ -1472,7 +1472,7 @@ body
 
   .container-flex-row-1-lijn
     position: relative
-    top: 130px !important
+    top: 130px
 
   .flex-row-1
     position: relative
@@ -1494,10 +1494,14 @@ body
   @media not all and (min-resolution: 0.001dpcm) 
     @supports (-webkit-appearance: none)
       .container-flex-row-1-lijn
-        margin-top: 100px
+        margin-top: 200px!important
 
 
 
+@media not all and (min-resolution: 0.001dpcm) 
+  @supports (-webkit-appearance: none)
+    .container-flex-row-1-lijn
+      margin-top: 1000px!important
 
 
 </style>
