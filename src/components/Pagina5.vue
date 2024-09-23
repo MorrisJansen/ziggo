@@ -652,7 +652,7 @@ export default {
   </form>
 
         <button class="frame-2-1-mobiel" @click="submitForm" style="border: none">
-          <div class="bevestig-mijn-deelname diodrumcyrillic-normal-white-23-7px" style="font-weight: 700; font-size: 22px; position: absolute; margin-left: 30px;">Bevestig deelname</div>
+          <div class="bevestig-mijn-deelname diodrumcyrillic-normal-white-23-7px" style="font-weight: 700; font-size: 22px; position: absolute; margin-left: 16%;">Bevestig deelname</div>
           <!-- pijl even weggelaten zodat de knoper er cleaner uitziet -->
         </button>
         <p class="met-het-bevestigen-v-mobiel">Met het bevestigen van je deelname ga je er mee akkoord dat MeerVoordeel eenmalig telefonisch contact met je opneemt met een aanbieding voor een all-in abonnement van Ziggo.</p>
@@ -702,7 +702,7 @@ export default {
     
       <div class="container-footer-5">
         <hr class="lijn-mobiel-pagina-5" style="margin-top: 3rem;">
-        <div class="footer-pagina1">
+        <div class="footer-pagina1 footer-pagina-1-2">
           <p class="text-footer-pagina5">*Meervoordeel.nl is een officiële partner van Ziggo. Deelname mogelijk tot en met 31 juli 2024. Actievoorwaarden van toepassing.</p>
         </div>
       </div>
@@ -1362,7 +1362,7 @@ input::placeholder
     width: 80%
     opacity: .3
     position: relative
-    bottom: 83px
+    bottom: 20px
 
   .bevestig-mijn-deelname
     position: relative
@@ -1540,6 +1540,9 @@ input::placeholder
     line-height: 1.125rem
     margin-top: -3rem!important
     padding-bottom: 2rem
+
+  .footer-pagina1-2
+    margin-top: 3rem
 
   .container-mobiel-pagina-5
     padding: 0!important
